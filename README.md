@@ -1,5 +1,7 @@
 # Ares({A}PI {R}elated {E}rror {S}pecification Inference)
 
+### video: https://youtu.be/8lbhs7j7GkA
+
 ### What is Ares?
 
 An important category of API-related defects is error handling defects, which may result in security and reliability flaws. They can be detected under the help of static program analysis, provided that error specifications are known. Writing error specifications manually is time-consuming and tedious, therefore automatic inference from API usage patterns is preferred. 
