@@ -1,0 +1,6 @@
+AllocaInst
+BitCastInst
+CallInst
+LoadInst
+ReturnInst
+StoreInst
