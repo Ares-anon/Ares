@@ -1,6 +1,5 @@
 # Ares({A}PI {R}elated {E}rror {S}pecification Inference)
 
-### video: https://youtu.be/8lbhs7j7GkA
 
 ### What is Ares?
 
