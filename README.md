@@ -3,7 +3,7 @@
 ### What is in this repo?
 
 - Empirical Study
-  - [GitGrabber](empirical_study/GitGrabber): a tool to extract commits based on the pre-defined keyword matching
+  - [GitGrabber](empirical_study/Gitgrabber): a tool to extract commits based on the pre-defined keyword matching
   - Commits related to EH-bugs in the studied projects (study period from 2014-01-01 to 2019-01-01) 
 - Prototype Tool: Ares
   - Evaluation Process ([evaluation_data](evaluation_data))
@@ -29,9 +29,9 @@ To better understand the properties of EH-bugs occur in real C projects, we manu
 
 #### GitGrabber
 
-[GitGrabber](empirical_study/GitGrabber) is a tool to extract commits based on the pre-defined messgaes.  To help readers extract the commits message, changed files and patch files, we open source our GitGrabber tool. Any problems on GitGrabber, please feel free to contact us!
+[GitGrabber](empirical_study/Gitgrabber) is a tool to extract commits based on the pre-defined messgaes.  To help readers extract the commits message, changed files and patch files, we open source our GitGrabber tool. Any problems on GitGrabber, please feel free to contact us!
 
-We describe the [usages](empirical_study/GitGrabber/README.md) of the tool in detail.  We defined our info at the [config.yml](empirical_study/GitGrabber/config.yml) file, then GitGrabber can extract the commits that matching our pre-defined info.  First, as shown in the [config.yml](empirical_study/GitGrabber/config.yml) file, we extracted the bug fix related commits using the pre-defined the keywords (bug, fix, check, issue, mistake, etc.). Then, based on the first iteration results, we then used the keywords (error path, exception handle, error handle, error check, etc.) related to the EH-bug fixing. 
+We describe the [usages](empirical_study/Gitgrabber/README.md) of the tool in detail.  We defined our info at the [config.yml](empirical_study/Gitgrabber/config.yml) file, then GitGrabber can extract the commits that matching our pre-defined info.  First, as shown in the [config.yml](empirical_study/Gitgrabber/config.yml) file, we extracted the bug fix related commits using the pre-defined the keywords (bug, fix, check, issue, mistake, etc.). Then, based on the first iteration results, we then used the keywords (error path, exception handle, error handle, error check, etc.) related to the EH-bug fixing. 
 
 For each extracted commit, we totally collect 4 types of items ([see this example](empirical_study/Example)), including a description file, the source file before patching, the source file after patching, and a diff file that shows the changes of patching.
 
