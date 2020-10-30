@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak in HTTP_GET/SSL_GET\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "a298f48a088fd1b0c8031ace1c22974aa0919dca",
+    "summary": "Fix memory leak in HTTP_GET/SSL_GET",
+    "date": "2018-08-26 15:03:42",
+    "hash": "0faa6773ffd213447c7acb7d2713270445de50fc"
+}

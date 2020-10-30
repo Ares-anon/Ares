@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak if setup fails.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak if setup fails.\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "891eac4604b5f05413e59602fae1f11136f4719a",
+    "date": "2015-08-12 13:54:56",
+    "parent_hash": "a187e08d856690b5c1da3184d0ff560d572f893b"
+}

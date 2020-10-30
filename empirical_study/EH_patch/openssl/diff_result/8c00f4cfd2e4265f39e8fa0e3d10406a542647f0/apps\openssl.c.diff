@@ -1,0 +1,26 @@
+apps/openssl.c
+=======================================================
+lhs: 100644 | 71e1e48ece40579234bf4578c2d2b02b6fc40b3c
+rhs: 100644 | 5372459456a37ea34845c7208bcbd64753d48b2a
+---@@ -435,9 +435,7 @@ end:
+ 	if (prog != NULL) lh_FUNCTION_free(prog);
+ 	if (arg.data != NULL) OPENSSL_free(arg.data);
+ 
+-	apps_shutdown();
+ 
+-	CRYPTO_mem_leaks(bio_err);
+ 	if (bio_err != NULL)
+ 		{
+ 		BIO_free(bio_err);
+@@ -450,6 +448,9 @@ end:
+ 		OPENSSL_free(Argv);
+ 		}
+ #endif
++	apps_shutdown();
++	CRYPTO_mem_leaks(bio_err);
++
+ 	OPENSSL_EXIT(ret);
+ 	}
+ 
+
+---

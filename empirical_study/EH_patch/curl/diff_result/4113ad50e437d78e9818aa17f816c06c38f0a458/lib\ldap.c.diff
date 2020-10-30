@@ -1,0 +1,15 @@
+lib/ldap.c
+=======================================================
+lhs: 100644 | f9b287cbf5c3d86f855f7160562c196cd5367d33
+rhs: 100644 | 96d8ac78fe327725d44e0df1e51f9acd9e38bc89
+---@@ -842,6 +842,8 @@ static int _ldap_url_parse2 (const struct connectdata *conn, LDAPURLDesc *ludp)
+ 
+       ludp->lud_attrs_dups++;
+     }
++
++    Curl_safefree(attributes);
+   }
+ 
+   p = q;
+
+---

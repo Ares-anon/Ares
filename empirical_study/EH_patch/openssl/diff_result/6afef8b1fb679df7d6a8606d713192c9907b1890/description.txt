@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak on invalid CertificateRequest.",
+    "author": "David Benjamin",
+    "description": "Fix memory leak on invalid CertificateRequest.\n\nFree up parsed X509_NAME structure if the CertificateRequest message\ncontains excess data.\n\nThe security impact is considered insignificant. This is a client side\nonly leak and a large number of connections to malicious servers would\nbe needed to have a significant impact.\n\nThis was found by libFuzzer.\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\nReviewed-by: Stephen Henson <steve@openssl.org>\n",
+    "hash": "6afef8b1fb679df7d6a8606d713192c9907b1890",
+    "date": "2016-04-07 19:22:20",
+    "parent_hash": "d1094383df07cc8ae266c04cf3ace782447b4d5b"
+}

@@ -1,0 +1,16 @@
+crypto/ocsp/ocsp_ext.c
+=======================================================
+lhs: 100644 | 151cafaca45d0e34c2dc50989f5116381205d862
+rhs: 100644 | e60a8d3677adcfc4d119ce5ebb4a83756ca53765
+---@@ -256,6 +256,9 @@ static int ocsp_add1_nonce(STACK_OF(X509_EXTENSION) **exts,
+      * relies on library internals.
+      */
+     os.length = ASN1_object_size(0, len, V_ASN1_OCTET_STRING);
++    if (os.length < 0)
++        goto err;
++
+     os.data = OPENSSL_malloc(os.length);
+     if (os.data == NULL)
+         goto err;
+
+---

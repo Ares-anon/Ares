@@ -1,0 +1,12 @@
+tests/data/DISABLED
+=======================================================
+lhs: 100644 | fcbf0ffc4d47ce9415429873a10e0809d2c6655b
+rhs: 100644 | 11d54b4637777f411c2d771d7edc100c0b77b140
+---@@ -18,5 +18,3 @@
+ 1510
+ # Pipelining test that is causing false positives a little too often
+ 1903
+-# causes memory leaks for now:
+-1553
+
+---

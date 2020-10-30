@@ -1,0 +1,19 @@
+src/core/network.c
+=======================================================
+lhs: 100644 | 76659f3edcadda08e7f9e5ecb458c99d81ae9dfb
+rhs: 100644 | 3e1b7c70781ebfdaafba5bc54fc55e14d2f90af6
+---@@ -510,7 +510,11 @@ const char *net_gethosterror(int error)
+ {
+ 	g_return_val_if_fail(error != 0, NULL);
+ 
+-	return gai_strerror(error);
++	if (error == EAI_SYSTEM) {
++		return strerror(errno);
++	} else {
++		return gai_strerror(error);
++	}
+ }
+ 
+ /* return TRUE if host lookup failed because it didn't exist (ie. not
+
+---

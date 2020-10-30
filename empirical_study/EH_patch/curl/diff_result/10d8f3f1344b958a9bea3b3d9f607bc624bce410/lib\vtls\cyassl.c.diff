@@ -1,0 +1,15 @@
+lib/vtls/cyassl.c
+=======================================================
+lhs: 100644 | 0e940487a07d2bb4ad02daeeb3fb4f319e9fd145
+rhs: 100644 | e10398ac3f762ca2388945a9c06cd182a0459f00
+---@@ -968,6 +968,8 @@ static CURLcode Curl_cyassl_random(struct Curl_easy *data,
+     return CURLE_FAILED_INIT;
+   if(RNG_GenerateBlock(&rng, entropy, (unsigned)length))
+     return CURLE_FAILED_INIT;
++  if(FreeRng(&rng))
++    return CURLE_FAILED_INIT;
+   return CURLE_OK;
+ }
+ 
+
+---

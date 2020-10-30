@@ -1,0 +1,20 @@
+src/core/nicklist.c
+=======================================================
+lhs: 100644 | c88f5d6d1c75cd604f231548e8d538428c33123f
+rhs: 100644 | 160deb6ae5fe9199507d50bfede791c8d13f826d
+---@@ -577,7 +577,12 @@ int nick_match_msg_everywhere(CHANNEL_REC *channel, const char *msg, const char
+ 	g_return_val_if_fail(nick != NULL, FALSE);
+ 	g_return_val_if_fail(msg != NULL, FALSE);
+ 
+-	return stristr_full(msg, nick);
++	char *ret = stristr_full(msg, nick);
++
++	if (ret != NULL)
++		return TRUE;
++
++	return FALSE;
+ }
+ 
+ void nicklist_init(void)
+
+---

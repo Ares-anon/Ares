@@ -1,0 +1,8 @@
+{
+    "summary": "RT1834: Fix PKCS7_verify return value",
+    "author": "Rich Salz",
+    "description": "RT1834: Fix PKCS7_verify return value\n\nThe function returns 0 or 1, only.\n\nReviewed-by: Dr. Stephen Henson <steve@openssl.org>\n",
+    "hash": "4f13dabe72a43234435b96c8cbdaf77337e3532d",
+    "date": "2014-09-08 10:43:08",
+    "parent_hash": "8842987e5a76535597b9795b0408565baabf18d1"
+}

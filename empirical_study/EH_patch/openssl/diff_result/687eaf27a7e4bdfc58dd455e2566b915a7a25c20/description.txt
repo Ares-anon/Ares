@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing return value checks.",
+    "author": "Matt Caswell",
+    "description": "Fix missing return value checks.\n\nFixed various missing return value checks in ssl3_send_newsession_ticket.\nAlso a mem leak on error.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "687eaf27a7e4bdfc58dd455e2566b915a7a25c20",
+    "date": "2015-02-27 15:09:02",
+    "parent_hash": "366448ec5e28df12d75e9e7f8908078573ef2585"
+}

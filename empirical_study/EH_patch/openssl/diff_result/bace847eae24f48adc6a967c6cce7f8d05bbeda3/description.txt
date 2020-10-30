@@ -1,0 +1,8 @@
+{
+    "summary": "Always check that the value returned by asn1_do_adb() is non-NULL",
+    "author": "Richard Levitte",
+    "description": "Always check that the value returned by asn1_do_adb() is non-NULL\n\nReviewed-by: Stephen Henson <steve@openssl.org>\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "bace847eae24f48adc6a967c6cce7f8d05bbeda3",
+    "date": "2016-06-15 01:36:11",
+    "parent_hash": "4e3d2866b6e8e7a700ea22e05840a093bfd7a4b1"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "16fefeee1e4d6d8534f97f8c133b2e509cca4d9e",
+    "date": "2018-09-25 10:30:08",
+    "author": "Daniel Stenberg",
+    "description": "http: fix memleak in rewind error path\n\nIf the rewind would fail, a strdup() would not get freed.\n\nDetected by OSS-Fuzz\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=10665\nCloses #3044\n",
+    "summary": "http: fix memleak in rewind error path",
+    "hash": "4058cf2a7f7e2590c26588c4eb476ac5c029cb5a"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in compression",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in compression\n\nThe function RECORD_LAYER_clear() is supposed to clear the contents of the\nRECORD_LAYER structure, but retain certain data such as buffers that are\nallocated. Unfortunately one buffer (for compression) got missed and was\ninadvertently being wiped, thus causing a memory leak.\n\nIn part this is due to the fact that RECORD_LAYER_clear() was reaching\ninside SSL3_BUFFERs and SSL3_RECORDs, which it really shouldn't. So, I've\nrewritten it to only clear the data it knows about, and to defer clearing\nof SSL3_RECORD and SSL3_BUFFER structures to SSL_RECORD_clear() and the\nnew function SSL3_BUFFER_clear().\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "6b41b3f5eacc6b1bb851c9dce22d6e893f32ea7d",
+    "date": "2015-05-22 08:08:45",
+    "parent_hash": "3a752c85ee38a92d7777b8fe1cce2e54bf619529"
+}

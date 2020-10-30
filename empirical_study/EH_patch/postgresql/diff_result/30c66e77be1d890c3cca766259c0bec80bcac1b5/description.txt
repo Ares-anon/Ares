@@ -1,0 +1,8 @@
+{
+    "author": "Peter Eisentraut",
+    "description": "Fix SPI error cleanup and memory leak\n\nSince the SPI stack has been moved from TopTransactionContext to\nTopMemoryContext, setting _SPI_stack to NULL in AtEOXact_SPI() leaks\nmemory.  In fact, we don't need to do that anymore: We just leave the\nallocated stack around for the next SPI use.\n\nAlso, refactor the SPI cleanup so that it is run both at transaction end\nand when returning to the main loop on an exception.  The latter is\nnecessary when a procedure calls a COMMIT or ROLLBACK command that\nitself causes an error.\n",
+    "summary": "Fix SPI error cleanup and memory leak",
+    "date": "2018-05-03 08:39:15",
+    "parent_hash": "a365f52d58317e3b24e06564e1f6474ffa3221d4",
+    "hash": "30c66e77be1d890c3cca766259c0bec80bcac1b5"
+}

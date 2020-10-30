@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in ssltest",
+    "author": "Matt Caswell",
+    "description": "Fix memory leak in ssltest\n\nThe new Rand usage of Thread API exposed a bug in ssltest. ssltest \"cheats\"\nand uses internal headers to directly call functions that normally you\nwouldn't be able to do. This means that auto-init doesn't happen, and\ntherefore auto-deinit doesn't happen either, meaning that the new rand locks\ndon't get cleaned up properly.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "f58cee8fb47da29ec44e3429e8cf630afd046b79",
+    "date": "2016-03-09 01:14:57",
+    "parent_hash": "8eed7e873bb54ab46b15e6efa3aff416e02f4d7f"
+}

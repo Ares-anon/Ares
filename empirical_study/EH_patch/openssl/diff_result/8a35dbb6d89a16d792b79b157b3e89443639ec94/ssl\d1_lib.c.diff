@@ -1,0 +1,25 @@
+ssl/d1_lib.c
+=======================================================
+lhs: 100644 | 5f7a3582cc4b3ee34e63e6c00d04446b79028c41
+rhs: 100644 | ab8730c8838b11735a3f96e68adc74f2af3b23cd
+---@@ -187,16 +187,14 @@ static void dtls1_clear_queues(SSL *s)
+     while( (item = pqueue_pop(s->d1->buffered_messages)) != NULL)
+         {
+         frag = (hm_fragment *)item->data;
+-        OPENSSL_free(frag->fragment);
+-        OPENSSL_free(frag);
++        dtls1_hm_fragment_free(frag);
+         pitem_free(item);
+         }
+ 
+     while ( (item = pqueue_pop(s->d1->sent_messages)) != NULL)
+         {
+         frag = (hm_fragment *)item->data;
+-        OPENSSL_free(frag->fragment);
+-        OPENSSL_free(frag);
++        dtls1_hm_fragment_free(frag);
+         pitem_free(item);
+         }
+ 
+
+---

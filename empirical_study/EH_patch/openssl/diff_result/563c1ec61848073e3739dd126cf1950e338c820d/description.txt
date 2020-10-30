@@ -1,0 +1,8 @@
+{
+    "summary": "fix memory leaks",
+    "author": "Miroslav Franc",
+    "description": "fix memory leaks\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1313)",
+    "hash": "563c1ec61848073e3739dd126cf1950e338c820d",
+    "date": "2016-07-16 12:32:34",
+    "parent_hash": "28e90f69fbcdcd3c06359a53adceb2dbdfaba614"
+}

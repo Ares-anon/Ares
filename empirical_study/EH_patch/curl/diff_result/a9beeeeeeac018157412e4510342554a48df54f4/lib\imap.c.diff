@@ -1,0 +1,24 @@
+lib/imap.c
+=======================================================
+lhs: 100644 | 9fc472866d14a1166fc9713639dbc8ca0e4aaede
+rhs: 100644 | ee1bad2952982d6a16b613ff7fad22a2a6364367
+---@@ -634,8 +634,6 @@ static CURLcode imap_perform_authentication(struct connectdata *conn)
+     if(mech && (imapc->preftype & IMAP_TYPE_SASL)) {
+       /* Perform SASL based authentication */
+       result = imap_perform_authenticate(conn, mech, initresp, state1, state2);
+-
+-      Curl_safefree(initresp);
+     }
+     else if((!imapc->login_disabled) &&
+             (imapc->preftype & IMAP_TYPE_CLEARTEXT))
+@@ -648,6 +646,8 @@ static CURLcode imap_perform_authentication(struct connectdata *conn)
+     }
+   }
+ 
++  Curl_safefree(initresp);
++
+   return result;
+ }
+ 
+
+---

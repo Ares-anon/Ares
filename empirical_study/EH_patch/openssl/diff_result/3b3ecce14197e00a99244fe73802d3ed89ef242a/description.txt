@@ -1,0 +1,8 @@
+{
+    "summary": "Set authkey to NULL and check malloc return value.",
+    "author": "Kurt Roeckx",
+    "description": "Set authkey to NULL and check malloc return value.\n",
+    "hash": "3b3ecce14197e00a99244fe73802d3ed89ef242a",
+    "date": "2014-05-12 00:20:08",
+    "parent_hash": "00f3a236e0d6aec991377d7f65015e6deeecdcb1"
+}

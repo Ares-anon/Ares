@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak when adding iptables entries\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "8cedfdb52913f05cc20fc441aea59f18672eca40",
+    "summary": "Fix memory leak when adding iptables entries",
+    "date": "2017-03-27 13:02:31",
+    "hash": "3316f2a4daf6f444737abe5663bbf3f62b11550a"
+}

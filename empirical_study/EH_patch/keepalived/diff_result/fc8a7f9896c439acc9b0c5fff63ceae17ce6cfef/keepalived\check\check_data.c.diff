@@ -1,0 +1,15 @@
+keepalived/check/check_data.c
+=======================================================
+lhs: 100644 | 2f730883f8136683293c57f8a025e669b4e5e754
+rhs: 100644 | 4129cfff70bce761f49c6363502d658f13af5190
+---@@ -316,7 +316,7 @@ alloc_rs(char *ip, char *port)
+ 	new->iweight = 1;
+ 	new->failed_checkers = alloc_list(free_failed_checkers, NULL);
+ 
+-	if (LIST_ISEMPTY(vs->rs))
++	if (!LIST_EXISTS(vs->rs))
+ 		vs->rs = alloc_list(free_rs, dump_rs);
+ 	list_add(vs->rs, new);
+ 
+
+---

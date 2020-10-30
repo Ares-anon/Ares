@@ -1,0 +1,8 @@
+{
+    "summary": "More through error checks in set_up",
+    "author": "Mike Bland",
+    "description": "More through error checks in set_up\n\nChecks the return values of ssl_init_wbio_buffer() and ssl3_setup_buffers().\n",
+    "hash": "f5ad068b01a4adae1e1dd4103b5ce7e5e1442f6c",
+    "date": "2014-05-19 17:39:41",
+    "parent_hash": "f41231d62aaa25630e241a0e94780c6d9b43bc37"
+}

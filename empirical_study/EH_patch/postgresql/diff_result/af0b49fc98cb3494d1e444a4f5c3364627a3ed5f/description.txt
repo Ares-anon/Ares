@@ -1,0 +1,8 @@
+{
+    "author": "Michael Meskes",
+    "description": "Fix memory leak in ecpglib's connect function.\n\nPatch by Michael Paquier\n",
+    "summary": "Fix memory leak in ecpglib's connect function.",
+    "date": "2015-06-15 14:20:09",
+    "parent_hash": "2bed1cd7519fb9f017a8e2ce9881086f14a31d7c",
+    "hash": "af0b49fc98cb3494d1e444a4f5c3364627a3ed5f"
+}

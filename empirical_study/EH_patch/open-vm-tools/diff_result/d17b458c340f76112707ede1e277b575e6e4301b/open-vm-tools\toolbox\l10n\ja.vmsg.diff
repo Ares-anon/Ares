@@ -1,0 +1,28 @@
+open-vm-tools/toolbox/l10n/ja.vmsg
+=======================================================
+lhs: 100644 | c9927d4f829554491c22db86305533e11c05bcb9
+rhs: 100644 | ea7256f9b235eb9f4be6d8782d56cb4920fc6782
+---@@ -1,5 +1,5 @@
+ ##########################################################
+-# Copyright (C) 2010-2016 VMware, Inc. All rights reserved.
++# Copyright (C) 2010-2017 VMware, Inc. All rights reserved.
+ #
+ # This program is free software; you can redistribute it and/or modify it
+ # under the terms of the GNU Lesser General Public License as published
+@@ -76,12 +76,12 @@ disk.shrink.ignoreFreeSpaceWarnings = "圧縮プロセス中に表示される
+ 
+ disk.wipe.ignoreFreeSpaceWarnings = "ワイプ プロセス中に表示されるディスク領域に関する警告はすべて無視してください。\n"
+ 
+-disk.wiper.error = "エラー: %1$s"
+-
+ disk.wiper.file.error = "エラー。ワイパー ファイルを作成できません。\n"
+ 
+ disk.wiper.progress = "\r進行状況: %1$d"
+ 
++error.message = "エラー: %1$s\n"
++
+ error.missing = "%1$s: %2$s が見つかりません\n"
+ 
+ error.noadmin.posix = "%1$s: %2$s 操作を実行するには、root ユーザーである必要があります。\n"
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing return value checks",
+    "author": "Matt Caswell",
+    "description": "Fix missing return value checks\n\nEnsure that all functions have their return values checked where\nappropriate. This covers all functions defined and called from within\nlibssl.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "69f682374868ba2b19a8aeada496bf03dbb037cf",
+    "date": "2015-03-23 15:23:11",
+    "parent_hash": "4bcdb4a6019e57b3de077b17940e18befe745531"
+}

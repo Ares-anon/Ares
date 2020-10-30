@@ -1,0 +1,23 @@
+src/include/pg_config_manual.h
+=======================================================
+lhs: 100644 | b0481753210a9987dccbed891411d09aa5d02a7e
+rhs: 100644 | 6f2238b330a277f27538f60020e2ecfe14cd63a6
+---@@ -73,16 +73,6 @@
+ #define NUM_ATOMICS_SEMAPHORES		64
+ 
+ /*
+- * Define this if you want to allow the lo_import and lo_export SQL
+- * functions to be executed by ordinary users.  By default these
+- * functions are only available to the Postgres superuser.  CAUTION:
+- * These functions are SECURITY HOLES since they can read and write
+- * any file that the PostgreSQL server has permission to access.  If
+- * you turn this on, don't say we didn't warn you.
+- */
+-/* #define ALLOW_DANGEROUS_LO_FUNCTIONS */
+-
+-/*
+  * MAXPGPATH: standard size of a pathname buffer in PostgreSQL (hence,
+  * maximum usable pathname length is one less).
+  *
+
+---

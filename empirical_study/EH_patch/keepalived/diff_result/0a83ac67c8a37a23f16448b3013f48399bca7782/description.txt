@@ -1,0 +1,8 @@
+{
+    "description": "vrrp: Fix a memory leak while dropping incoming IPSEC-AH authenticated advert.\n\nJay True fixed a memory leak in IPSEC-AH sanity check. Digest was allocated in\nprevious code without freing it on HMAC-MD5 missmatch. good catch Jay !\n",
+    "author": "Alexandre Cassen",
+    "parent_hash": "f0f7cbd14f51ebe0aada7d253811e776b868af5c",
+    "summary": "vrrp: Fix a memory leak while dropping incoming IPSEC-AH authenticated advert.",
+    "date": "2014-06-23 11:54:50",
+    "hash": "0a83ac67c8a37a23f16448b3013f48399bca7782"
+}

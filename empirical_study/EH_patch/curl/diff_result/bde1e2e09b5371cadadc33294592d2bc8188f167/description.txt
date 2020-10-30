@@ -1,0 +1,8 @@
+{
+    "parent_hash": "e1187c42a4b58f16343d2da653be00c36d930e16",
+    "date": "2017-02-13 10:35:18",
+    "author": "Daniel Stenberg",
+    "description": "http2: fix memory-leak when denying push streams\n\nReported-by: zelinchen@users.noreply.github.com\nFixes #1229\n",
+    "summary": "http2: fix memory-leak when denying push streams",
+    "hash": "bde1e2e09b5371cadadc33294592d2bc8188f167"
+}

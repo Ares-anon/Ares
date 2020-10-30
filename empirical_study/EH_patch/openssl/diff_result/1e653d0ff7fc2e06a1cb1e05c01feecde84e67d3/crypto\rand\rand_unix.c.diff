@@ -1,0 +1,15 @@
+crypto/rand/rand_unix.c
+=======================================================
+lhs: 100644 | e698dfde651fbe69983ffc8450e8674a78d0f3d3
+rhs: 100644 | 9f17494d118816af7eef2026300b1c0e439698e6
+---@@ -249,7 +249,7 @@ int syscall_random(void *buf, size_t buflen)
+      */
+     p_getentropy.p = DSO_global_lookup("getentropy");
+     if (p_getentropy.p != NULL)
+-        return p_getentropy.f(buf, buflen);
++        return p_getentropy.f(buf, buflen) == 0 ? buflen : 0;
+ 
+     /* Linux supports this since version 3.17 */
+ #  if defined(__linux) && defined(SYS_getrandom)
+
+---

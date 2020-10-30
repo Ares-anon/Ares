@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak introduced in commit dbc6c1a\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "4abde602227273361ad87428e65ccc88645c657e",
+    "summary": "Fix memory leak introduced in commit dbc6c1a",
+    "date": "2016-12-06 13:03:13",
+    "hash": "02635c9c641a8c2007edb165d9db95588556bd2e"
+}

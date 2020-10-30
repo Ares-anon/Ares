@@ -1,0 +1,8 @@
+{
+    "parent_hash": "1e548f77847ac51a7054adef24825624fb73b219",
+    "date": "2017-09-20 12:03:44",
+    "author": "Daniel Stenberg",
+    "description": "curl: check fseek() return code and bail on error\n\nDetected by coverity. CID 1418137.\n",
+    "summary": "curl: check fseek() return code and bail on error",
+    "hash": "299896ca0963a79d5ec4de8ca83922c48f16f1bb"
+}

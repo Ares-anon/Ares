@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in BIO_free if there is no destroy function.",
+    "author": "Matt Caswell",
+    "description": "Fix memory leak in BIO_free if there is no destroy function.\nBased on an original patch by Neitrino Photonov <neitrinoph@gmail.com>\n\nPR#3439\n",
+    "hash": "66816c53bea0ecddb9448da7ea9a51a334496127",
+    "date": "2014-07-09 23:29:17",
+    "parent_hash": "1b0fe79f3ee27ebd20510da3af9ec04c6ee0f800"
+}

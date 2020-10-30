@@ -1,0 +1,36 @@
+ssl/ssltest.c
+=======================================================
+lhs: 100644 | efcd6686b8bace67c445693c4363c45c0eb51a4c
+rhs: 100644 | f20553fc2f1226252cb7023549446fb50dcc8d76
+---@@ -2103,6 +2103,7 @@ int doit_biopair(SSL *s_ssl, SSL *c_ssl, long count,
+ #endif
+ 	if (verify_serverinfo() < 0)
+ 		{
++		fprintf(stderr, "Server info verify error\n");
+ 		ret = 1;
+ 		goto err;
+ 		}
+@@ -2114,6 +2115,7 @@ int doit_biopair(SSL *s_ssl, SSL *c_ssl, long count,
+ 
+ 	if (custom_ext_error)
+ 		{
++		fprintf(stderr, "Custom extension error\n");
+ 		ret = 1;
+ 		goto err;
+ 		}
+@@ -2435,11 +2437,13 @@ int doit(SSL *s_ssl, SSL *c_ssl, long count)
+ #endif
+ 	if (verify_serverinfo() < 0)
+ 		{
++		fprintf(stderr, "Server info verify error\n");
+ 		ret = 1;
+ 		goto err;
+ 		}
+ 	if (custom_ext_error)
+ 		{
++		fprintf(stderr, "Custom extension error\n");
+ 		ret = 1;
+ 		goto err;
+ 		}
+
+---

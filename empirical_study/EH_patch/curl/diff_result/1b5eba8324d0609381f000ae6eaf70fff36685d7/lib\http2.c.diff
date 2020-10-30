@@ -1,0 +1,15 @@
+lib/http2.c
+=======================================================
+lhs: 100644 | a6e2cc6586a7598482301c33345fd9eb9b238139
+rhs: 100644 | fc0d5de913d55cd8a5347ea232c803d1d7ba8faa
+---@@ -721,7 +721,7 @@ static int on_header(nghttp2_session *session, const nghttp2_frame *frame,
+       if(!headp) {
+         free(stream->push_headers);
+         stream->push_headers = NULL;
+-        return 1;
++        return NGHTTP2_ERR_TEMPORAL_CALLBACK_FAILURE;
+       }
+       stream->push_headers = headp;
+     }
+
+---

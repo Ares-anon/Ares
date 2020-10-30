@@ -1,0 +1,23 @@
+apps/s_server.c
+=======================================================
+lhs: 100644 | 08753c30fdb337acc144fbf9f75f48f033debd37
+rhs: 100644 | c998fcdebcc17d48ab4f35986660aea997a7ca7f
+---@@ -576,13 +576,13 @@ static int cert_status_cb(SSL *s, void *arg)
+         BIO_puts(bio_err, "cert_status: Can't retrieve issuer certificate.\n");
+         goto done;
+     }
+-    req = OCSP_REQUEST_new();
+-    if (req == NULL)
+-        goto err;
+     id = OCSP_cert_to_id(NULL, x, X509_OBJECT_get0_X509(obj));
+     X509_OBJECT_free(obj);
+     if (!id)
+         goto err;
++    req = OCSP_REQUEST_new();
++    if (req == NULL)
++        goto err;
+     if (!OCSP_request_add0_id(req, id))
+         goto err;
+     id = NULL;
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak",
+    "author": "Kurt Roeckx",
+    "description": "Fix memory leak\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "edac5dc220d494dff7ee259dfd84335ffa50e938",
+    "date": "2015-02-22 13:18:24",
+    "parent_hash": "1549a265209d449b6aefd2b49d7d39f7fbe0689b"
+}

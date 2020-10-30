@@ -1,0 +1,15 @@
+src/backend/access/gin/ginget.c
+=======================================================
+lhs: 100644 | a6756d594d24509641312dbd5c289eb630e1d44f
+rhs: 100644 | 53290a4279b93803f5fbfd1ae4cca34b1b246c0c
+---@@ -302,6 +302,8 @@ restartScanEntry:
+ 	entry->buffer = InvalidBuffer;
+ 	ItemPointerSetMin(&entry->curItem);
+ 	entry->offset = InvalidOffsetNumber;
++	if (entry->list)
++		pfree(entry->list);
+ 	entry->list = NULL;
+ 	entry->nlist = 0;
+ 	entry->matchBitmap = NULL;
+
+---

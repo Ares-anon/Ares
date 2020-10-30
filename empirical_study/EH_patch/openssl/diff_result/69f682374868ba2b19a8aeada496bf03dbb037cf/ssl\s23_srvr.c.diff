@@ -1,0 +1,19 @@
+ssl/s23_srvr.c
+=======================================================
+lhs: 100644 | 6ac6e4edad26dc15fe29b3bb24e406731fbd86be
+rhs: 100644 | 255d27810f96b5d26115415c97535fe4be2813e0
+---@@ -156,8 +156,10 @@ int ssl23_accept(SSL *s)
+         cb = s->ctx->info_callback;
+ 
+     s->in_handshake++;
+-    if (!SSL_in_init(s) || SSL_in_before(s))
+-        SSL_clear(s);
++    if (!SSL_in_init(s) || SSL_in_before(s)) {
++        if(!SSL_clear(s))
++            return -1;
++    }
+ 
+     for (;;) {
+         state = s->state;
+
+---

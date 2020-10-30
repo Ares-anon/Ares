@@ -1,0 +1,8 @@
+{
+    "description": "Check return value of SSL_CTX_new()\n\nIssue #1003 identified that genhash used the return value of\nSSL_CTX_new() without checking whether it was NULL.\n\nThis commits now adds the necessary check, and also does the\nsame in keepalived build_ssl_ctx() in check_ssl.c.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "843ffc807aa30c0a7c3ff644a0189aa91f4588c7",
+    "summary": "Check return value of SSL_CTX_new()",
+    "date": "2018-09-19 11:04:59",
+    "hash": "a007e9391c5aad9176963fee237f673b21d5373e"
+}

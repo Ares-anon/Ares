@@ -1,0 +1,8 @@
+{
+    "summary": "Drop incorrect id == -1 case from X509_check_trust",
+    "author": "Viktor Dukhovni",
+    "description": "Drop incorrect id == -1 case from X509_check_trust\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "0e7abc903799a32d9d4eb34316cb72f1f4b28a52",
+    "date": "2016-01-03 17:21:40",
+    "parent_hash": "d9b8b89bec4480de3a10bdaf9425db371c19145b"
+}

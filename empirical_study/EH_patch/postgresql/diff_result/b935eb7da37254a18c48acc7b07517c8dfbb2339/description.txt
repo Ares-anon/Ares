@@ -1,0 +1,8 @@
+{
+    "author": "Magnus Hagander",
+    "description": "Fix reversed check of return value from sync\n\nWhile at it also update the comments in walmethods.h to make it less\nlikely for mistakes like this to appear in the future (thanks to Tom for\nimprovements to the comments).\n\nAnd finally, in passing change the return type of walmethod.getlasterror\nto being const, also per suggestion from Tom.\n",
+    "summary": "Fix reversed check of return value from sync",
+    "date": "2017-04-12 13:46:38",
+    "parent_hash": "587d62d8562d658a2a9be60bc4574b6f9e592cb1",
+    "hash": "b935eb7da37254a18c48acc7b07517c8dfbb2339"
+}

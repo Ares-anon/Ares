@@ -1,0 +1,8 @@
+{
+    "parent_hash": "333c36b2760eb51da5ff2f6dc9030c4bba71f506",
+    "date": "2015-08-08 21:01:29",
+    "author": "Steve Holme",
+    "description": "checksrc.bat: Fixed incorrect 'lib\\vtls' path check in commit 333c36b276\n",
+    "summary": "checksrc.bat: Fixed incorrect 'lib\\vtls' path check in commit 333c36b276",
+    "hash": "2b743dcf8e308678bf77ae63c1fc00fde33bb98c"
+}

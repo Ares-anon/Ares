@@ -1,0 +1,25 @@
+src/core/rawlog.c
+=======================================================
+lhs: 100644 | 20368aeb7871b393d4fc6bcf6386b3cf8e35db63
+rhs: 100644 | e66f20dd178afdf31c0c53de79b3ba756dd50348
+---@@ -102,10 +102,15 @@ void rawlog_redirect(RAWLOG_REC *rawlog, const char *str)
+ static void rawlog_dump(RAWLOG_REC *rawlog, int f)
+ {
+ 	GSList *tmp;
++	ssize_t ret = 1;
+ 
+-	for (tmp = rawlog->lines; tmp != NULL; tmp = tmp->next) {
+-		write(f, tmp->data, strlen((char *) tmp->data));
+-		write(f, "\n", 1);
++	for (tmp = rawlog->lines; ret && tmp != NULL; tmp = tmp->next) {
++		ret = write(f, tmp->data, strlen((char *) tmp->data));
++		ret &= write(f, "\n", 1);
++	}
++
++	if (ret <= 0) {
++		g_warning("rawlog write() failed: %s", strerror(errno));
+ 	}
+ }
+ 
+
+---

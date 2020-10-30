@@ -1,0 +1,24 @@
+keepalived/vrrp/vrrp_iptables_calls.c
+=======================================================
+lhs: 100644 | ff6b7e6e7a5b1d01edfdbfb9e070773f6dc7c90c
+rhs: 100644 | aa5a93d6d37645c3a68ae9f0152505fb7cff1502
+---@@ -263,6 +263,8 @@ int ip4tables_process_entry( struct iptc_handle* handle, const char* chain_name,
+ 
+ 	sav_errno = errno ;
+ 
++	FREE(fw);
++
+ 	if (res !=  1 && (!force || sav_errno != ENOENT))
+ 	{
+ 		log_message(LOG_INFO, "ip4tables_process_entry for chain %s returned %d: %s", chain, res, iptc_strerror (sav_errno) ) ;
+@@ -391,6 +393,8 @@ int ip6tables_process_entry( struct ip6tc_handle* handle, const char* chain_name
+ 
+ 	sav_errno = errno ;
+ 
++	FREE(fw);
++
+ 	if (res !=  1 && (!force || sav_errno != ENOENT))
+ 	{
+ 		log_message(LOG_INFO, "ip6tables_process_entry for chain %s returned %d: %s", chain, res, ip6tc_strerror (sav_errno) ) ;
+
+---

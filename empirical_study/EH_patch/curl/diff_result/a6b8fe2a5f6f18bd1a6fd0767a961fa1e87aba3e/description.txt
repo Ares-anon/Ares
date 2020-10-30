@@ -1,0 +1,8 @@
+{
+    "parent_hash": "3dbe12a1e9eb7fc4b4a4172c244c460d3e021143",
+    "date": "2015-03-17 13:05:01",
+    "author": "Daniel Stenberg",
+    "description": "checksrc: use space before paren in \"return (expr);\"\n",
+    "summary": "checksrc: use space before paren in \"return (expr);\"",
+    "hash": "a6b8fe2a5f6f18bd1a6fd0767a961fa1e87aba3e"
+}

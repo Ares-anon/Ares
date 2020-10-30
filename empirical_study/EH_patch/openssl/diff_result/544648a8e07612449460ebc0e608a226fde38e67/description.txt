@@ -1,0 +1,8 @@
+{
+    "summary": "Harmonize the error handling codepath",
+    "author": "Nicola Tuveri",
+    "description": "Harmonize the error handling codepath\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>\nReviewed-by: Paul Dale <paul.dale@oracle.com>\n(Merged from https://github.com/openssl/openssl/pull/7121)\n",
+    "hash": "544648a8e07612449460ebc0e608a226fde38e67",
+    "date": "2018-09-05 15:22:35",
+    "parent_hash": "0c5d725ebf31ce7b6db9d638aab508da3263444d"
+}

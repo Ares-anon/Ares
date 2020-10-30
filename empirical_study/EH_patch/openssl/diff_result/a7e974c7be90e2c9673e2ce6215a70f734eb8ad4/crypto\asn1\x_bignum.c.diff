@@ -1,0 +1,17 @@
+crypto/asn1/x_bignum.c
+=======================================================
+lhs: 100644 | 66ce000827cbe6e2d7306e08ffb8dcb89c01ad0a
+rhs: 100644 | d2666e15daa8fb9220f8b0961a6eec39b229962a
+---@@ -163,8 +163,8 @@ static int bn_c2i(ASN1_VALUE **pval, const unsigned char *cont, int len,
+ {
+     BIGNUM *bn;
+ 
+-    if (!*pval)
+-        bn_new(pval, it);
++    if (*pval == NULL && !bn_new(pval, it))
++        return 0;
+     bn = (BIGNUM *)*pval;
+     if (!BN_bin2bn(cont, len, bn)) {
+         bn_free(pval, it);
+
+---

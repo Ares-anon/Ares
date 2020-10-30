@@ -1,0 +1,8 @@
+{
+    "summary": "apps/speed.c: fix memory leak",
+    "author": "Emilia Kasper",
+    "description": "apps/speed.c: fix memory leak\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "08a721ac613d69217b474a61882971ae9d4586d1",
+    "date": "2015-09-01 20:01:55",
+    "parent_hash": "394f7b6fcc38132b8ccff0a3253b9dd15640cfc0"
+}

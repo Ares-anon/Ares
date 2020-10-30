@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak.\n(cherry picked from commit 124d218889dfca33d277404612f1319afe04107e)\n",
+    "hash": "01757858feb3590b175b40d7e0e73da8255d6c50",
+    "date": "2014-03-01 23:15:53",
+    "parent_hash": "db7b5e0d768485d9c7f8d3eaa8f28d2f254e20d6"
+}

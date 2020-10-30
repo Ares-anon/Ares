@@ -1,0 +1,15 @@
+keepalived/vrrp/vrrp_snmp.c
+=======================================================
+lhs: 100644 | 076eb272301eb611cf7372b235c326e974f3148d
+rhs: 100644 | 43f9509d2c2a3d32b50014c40c2a4eb123178d1a
+---@@ -679,6 +679,8 @@ vrrp_snmp_route(struct variable *vp, oid *name, size_t *length,
+ 		else long_ret = 1;
+ 		return (u_char *)&long_ret;
+ 	case VRRP_SNMP_ROUTE_IFINDEX:
++		if (!route->oif)
++			break;
+ 		long_ret = route->index;
+ 		return (u_char *)&long_ret;
+ 	case VRRP_SNMP_ROUTE_IFNAME:
+
+---

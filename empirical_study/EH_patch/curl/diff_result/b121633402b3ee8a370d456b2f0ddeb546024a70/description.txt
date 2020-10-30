@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c84f0250e32823b3065a661ea4159380241ed011",
+    "date": "2015-04-01 08:10:58",
+    "author": "Jay Satiro",
+    "description": "cyassl: Fix library initialization return value\n\n(Curl_cyassl_init)\n- Return 1 on success, 0 in failure.\n\nPrior to this change the fail path returned an incorrect value and the\nevaluation to determine whether CyaSSL_Init had succeeded was incorrect.\nIronically that combined with the way curl_global_init tests SSL library\ninitialization (!Curl_ssl_init()) meant that CyaSSL having been\nsuccessfully initialized would be seen as that even though the code path\nand return value in Curl_cyassl_init were wrong.\n",
+    "summary": "cyassl: Fix library initialization return value",
+    "hash": "b121633402b3ee8a370d456b2f0ddeb546024a70"
+}

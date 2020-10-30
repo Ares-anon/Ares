@@ -1,0 +1,8 @@
+{
+    "summary": "Trust RSA_check_key() to return correct values",
+    "author": "Richard Levitte",
+    "description": "Trust RSA_check_key() to return correct values\n\nIn apps/rsa.c, we were second guessing RSA_check_key() to leave error\ncodes lying around without returning -1 properly.  However, this also\ncatches other errors that are lying around and that we should not care\nabout.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "63db6b772fa264a62927f6a3584733192dc5a352",
+    "date": "2016-08-24 14:31:05",
+    "parent_hash": "55d83bf7c10c7b205fffa23fa7c3977491e56c07"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "apps return value checks",
+    "author": "Matt Caswell",
+    "description": "apps return value checks\n\nEnsure that all libssl functions called from within the apps have their\nreturn values checked where appropriate.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "ac59d70553723cd8c7c1558071a2e1672d80daef",
+    "date": "2015-03-23 15:23:18",
+    "parent_hash": "69f682374868ba2b19a8aeada496bf03dbb037cf"
+}

@@ -1,0 +1,14 @@
+ssl/s23_srvr.c
+=======================================================
+lhs: 100644 | 08aa5b6cf0882366c014b47290177dcbf3393458
+rhs: 100644 | 6e44e0cd64ef4ff2fbb26558830e730fef2cbd6d
+---@@ -185,6 +185,7 @@ int ssl23_accept(SSL *s)
+ 					}
+ 				if (!BUF_MEM_grow(buf,SSL3_RT_MAX_PLAIN_LENGTH))
+ 					{
++					BUF_MEM_free(buf);
+ 					ret= -1;
+ 					goto end;
+ 					}
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Free memory on an error path",
+    "author": "Matt Caswell",
+    "description": "Free memory on an error path\n\nThe function a2i_ASN1_STRING can encounter an error after already\nallocating a buffer. It wasn't always freeing that buffer on error.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "036e61b1669fee477af2d5d1afd0b015517f7f9a",
+    "date": "2016-06-14 11:45:34",
+    "parent_hash": "d285b5418ee1ff361f06545e0489ece61bdd1a50"
+}

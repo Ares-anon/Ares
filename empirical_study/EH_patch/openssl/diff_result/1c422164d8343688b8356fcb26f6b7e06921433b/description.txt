@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in crl2pkcs7 app",
+    "author": "Matt Caswell",
+    "description": "Fix memory leak in crl2pkcs7 app\n\nThe crl2pkcs7 app leaks a stack of OPENSSL_STRINGs in error paths.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "1c422164d8343688b8356fcb26f6b7e06921433b",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "a855d1a155dd88aaf136bdc1deb88e68558b94fd"
+}

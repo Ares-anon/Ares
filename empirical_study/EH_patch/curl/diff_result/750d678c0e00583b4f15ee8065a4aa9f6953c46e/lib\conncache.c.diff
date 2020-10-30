@@ -1,0 +1,18 @@
+lib/conncache.c
+=======================================================
+lhs: 100644 | 68d9c44df38301909694342d8bc5ce7cac08ead1
+rhs: 100644 | 5496f097c4f69512c0c7658b15eec1118fcdb558
+---@@ -205,8 +205,10 @@ CURLcode Curl_conncache_add_conn(struct conncache *connc,
+       return result;
+ 
+     key = hashkey(conn);
+-    if(!key)
++    if(!key) {
++      bundle_destroy(new_bundle);
+       return CURLE_OUT_OF_MEMORY;
++    }
+ 
+     rc = conncache_add_bundle(data->state.conn_cache, key, new_bundle);
+     free(key);
+
+---

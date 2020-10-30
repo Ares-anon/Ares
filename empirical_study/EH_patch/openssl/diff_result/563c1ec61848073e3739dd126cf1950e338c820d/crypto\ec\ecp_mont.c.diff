@@ -1,0 +1,14 @@
+crypto/ec/ecp_mont.c
+=======================================================
+lhs: 100644 | a9c6040937c0a257e716ea080c87728fb9232e48
+rhs: 100644 | 994cc1d0fff5f79c59c771f6fd3b43132dca6952
+---@@ -178,6 +178,7 @@ int ec_GFp_mont_group_set_curve(EC_GROUP *group, const BIGNUM *p,
+     }
+ 
+  err:
++    BN_free(one);
+     BN_CTX_free(new_ctx);
+     BN_MONT_CTX_free(mont);
+     return ret;
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix memory leaks if random salt generation fails.\n\nIn the backend, this is just to silence coverity warnings, but in the\nfrontend, it's a genuine leak, even if extremely rare.\n\nSpotted by Coverity, patch by Michael Paquier.\n",
+    "summary": "Fix memory leaks if random salt generation fails.",
+    "date": "2017-05-07 19:58:21",
+    "parent_hash": "a54d5875fe0bc19d05236b85e1e1bf0af9fa2902",
+    "hash": "0186ded5460c4868db8c5f98ab17287c15fedd7e"
+}

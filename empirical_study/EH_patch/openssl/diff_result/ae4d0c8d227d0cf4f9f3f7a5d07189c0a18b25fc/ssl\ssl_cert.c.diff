@@ -1,0 +1,19 @@
+ssl/ssl_cert.c
+=======================================================
+lhs: 100644 | 9a373b19ab1bab2d2de1aa48ab43d84659b3dcfb
+rhs: 100644 | 6f9fcdb350ed66caef97f81fa7d4f1fbff995e7f
+---@@ -914,6 +914,12 @@ int ssl_add_cert_chain(SSL *s, CERT_PKEY *cpk, unsigned long *l)
+             SSLerr(SSL_F_SSL_ADD_CERT_CHAIN, ERR_R_X509_LIB);
+             return (0);
+         }
++        /*
++         * It is valid for the chain not to be complete (because normally we
++         * don't include the root cert in the chain). Therefore we deliberately
++         * ignore the error return from this call. We're not actually verifying
++         * the cert - we're just building as much of the chain as we can
++         */
+         X509_verify_cert(&xs_ctx);
+         /* Don't leave errors in the queue */
+         ERR_clear_error();
+
+---

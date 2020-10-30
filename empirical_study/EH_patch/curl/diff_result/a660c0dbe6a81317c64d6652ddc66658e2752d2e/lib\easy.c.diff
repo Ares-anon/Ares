@@ -1,0 +1,22 @@
+lib/easy.c
+=======================================================
+lhs: 100644 | 2ad42e957ae0824c9169192d42013acddf17c112
+rhs: 100644 | c124e25de8358a94709774baaebb9577476cc12c
+---@@ -715,6 +715,15 @@ static CURLcode easy_transfer(CURLM *multi)
+       }
+     }
+   }
++
++  /* Make sure to return some kind of error if there was a multi problem */
++  if(mcode) {
++    return (mcode == CURLM_OUT_OF_MEMORY) ? CURLE_OUT_OF_MEMORY :
++            /* The other multi errors should never happen, so return
++               something suitably generic */
++            CURLE_BAD_FUNCTION_ARGUMENT;
++  }
++
+   return code;
+ }
+ 
+
+---

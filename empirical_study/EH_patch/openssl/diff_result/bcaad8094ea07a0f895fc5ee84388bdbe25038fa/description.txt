@@ -1,0 +1,8 @@
+{
+    "summary": "fix memory leak",
+    "author": "Dr. Stephen Henson",
+    "description": "fix memory leak\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "bcaad8094ea07a0f895fc5ee84388bdbe25038fa",
+    "date": "2016-10-02 15:59:26",
+    "parent_hash": "c1eba83fa0069feeb3513e537837b1458dd2b359"
+}

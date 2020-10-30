@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak when using PSK session files",
+    "author": "Matt Caswell",
+    "description": "Fix memory leak when using PSK session files\n\nWe were not freeing the session created when loading a PSK session file.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\n(Merged from https://github.com/openssl/openssl/pull/3855)\n",
+    "hash": "9561e2a169f499f8346ffdd7541bc4e3d81d6711",
+    "date": "2017-07-07 10:44:11",
+    "parent_hash": "4549ed12ec3337313c14815438fa9aee88bf1359"
+}

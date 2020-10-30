@@ -1,0 +1,8 @@
+{
+    "parent_hash": "97857de80eea0b3028036c6796c2f485f4caf7d9",
+    "date": "2014-01-30 22:15:03",
+    "author": "Dan Fandrich",
+    "description": "netrc: Fixed a memory leak in an OOM condition\n",
+    "summary": "netrc: Fixed a memory leak in an OOM condition",
+    "hash": "768151449b386488ac8fe869f48bf2930123d601"
+}

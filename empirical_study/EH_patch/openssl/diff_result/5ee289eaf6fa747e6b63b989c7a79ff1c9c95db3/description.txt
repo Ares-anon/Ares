@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in the Certificate extensions code",
+    "author": "Matt Caswell",
+    "description": "Fix memory leaks in the Certificate extensions code\n\nAfter collecting extensions we must free them again.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2284)",
+    "hash": "5ee289eaf6fa747e6b63b989c7a79ff1c9c95db3",
+    "date": "2017-01-25 14:54:54",
+    "parent_hash": "0fe2a0af8976af505b35e4be100deb8d64451015"
+}

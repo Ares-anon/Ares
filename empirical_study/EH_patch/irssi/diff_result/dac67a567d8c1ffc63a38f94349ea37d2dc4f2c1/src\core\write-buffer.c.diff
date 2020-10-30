@@ -1,0 +1,17 @@
+src/core/write-buffer.c
+=======================================================
+lhs: 100644 | 6f6eef8abb471b690f5f17106d1021d70611952d
+rhs: 100644 | ffc3ae63c2a933402aa51d7747be2479a68cd7e5
+---@@ -107,7 +107,9 @@ static int write_buffer_flush_rec(void *handlep, BUFFER_REC *rec)
+ 	for (tmp = rec->blocks; tmp != NULL; tmp = tmp->next) {
+ 		size = tmp->data != rec->active_block ? BUFFER_BLOCK_SIZE :
+ 			rec->active_block_pos;
+-		write(handle, tmp->data, size);
++		if (write(handle, tmp->data, size) != size) {
++			g_warning("Failed to write(): %s", strerror(errno));
++		}
+ 	}
+ 
+         empty_blocks = g_slist_concat(empty_blocks, rec->blocks);
+
+---

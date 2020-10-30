@@ -1,0 +1,14 @@
+src/backend/regex/regexec.c
+=======================================================
+lhs: 100644 | 0edb83c1099f9fb99f38e8c1e7df6761a1d1b693
+rhs: 100644 | 2e976627f52c60ce7ade895192e3159519e445c7
+---@@ -259,6 +259,7 @@ pg_regexec(regex_t *re,
+ 	/* clean up */
+ 	if (v->pmatch != pmatch && v->pmatch != mat)
+ 		FREE(v->pmatch);
++	n = (size_t) v->g->ntree;
+ 	for (i = 0; i < n; i++)
+ 	{
+ 		if (v->subdfas[i] != NULL)
+
+---

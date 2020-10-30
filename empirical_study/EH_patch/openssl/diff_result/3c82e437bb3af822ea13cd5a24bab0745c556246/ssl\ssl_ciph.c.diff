@@ -1,0 +1,17 @@
+ssl/ssl_ciph.c
+=======================================================
+lhs: 100644 | 5dbe1d0154942a4677701c9696b1a6025e06b3f5
+rhs: 100644 | 2fc4309a911d4d733f32eba06f3d221ac2dcba5c
+---@@ -1855,8 +1855,8 @@ int SSL_COMP_add_compression_method(int id, COMP_METHOD *cm)
+                SSL_R_DUPLICATE_COMPRESSION_ID);
+         return (1);
+     }
+-    if ((ssl_comp_methods == NULL)
+-               || !sk_SSL_COMP_push(ssl_comp_methods, comp)) {
++    if (ssl_comp_methods == NULL
++        || !sk_SSL_COMP_push(ssl_comp_methods, comp)) {
+         OPENSSL_free(comp);
+         CRYPTO_mem_ctrl(CRYPTO_MEM_CHECK_ENABLE);
+         SSLerr(SSL_F_SSL_COMP_ADD_COMPRESSION_METHOD, ERR_R_MALLOC_FAILURE);
+
+---

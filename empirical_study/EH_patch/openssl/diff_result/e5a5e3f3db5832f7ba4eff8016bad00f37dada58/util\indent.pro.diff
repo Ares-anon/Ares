@@ -1,0 +1,18 @@
+util/indent.pro
+=======================================================
+lhs: 100644 | b7958e31aac73f513e4a5f5823ecc8fdb80f5ee7
+rhs: 100644 | 71997cb41bf2db259cad97e48600e08eba30a82f
+---@@ -187,11 +187,8 @@
+ -T CRYPTO_EX_DATA_FUNCS
+ -T CRYPTO_EX_DATA_IMPL
+ -T CRYPTO_EX_dup
+--T CRYPTO_EX_dup
+--T CRYPTO_EX_free
+ -T CRYPTO_EX_free
+ -T CRYPTO_EX_new
+--T CRYPTO_EX_new
+ -T CRYPTO_MEM_LEAK_CB
+ -T CRYPTO_THREADID
+ -T CRYPTO_dynlock_value
+
+---

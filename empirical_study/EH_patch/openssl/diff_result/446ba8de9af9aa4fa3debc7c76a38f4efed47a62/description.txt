@@ -1,0 +1,8 @@
+{
+    "summary": "Ensure we check i2d_X509 return val",
+    "author": "Matt Caswell",
+    "description": "Ensure we check i2d_X509 return val\n\nThe i2d_X509() function can return a negative value on error. Therefore\nwe should make sure we check it.\n\nIssue reported by Yuan Jochen Kang.\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "446ba8de9af9aa4fa3debc7c76a38f4efed47a62",
+    "date": "2016-04-26 14:29:54",
+    "parent_hash": "baf1a3041501c1d4a484deb095bf82a4864c703a"
+}

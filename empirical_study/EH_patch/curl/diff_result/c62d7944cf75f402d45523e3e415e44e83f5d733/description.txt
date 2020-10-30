@@ -1,0 +1,8 @@
+{
+    "parent_hash": "716302c2cd59f96ecd96f949db92576d204cabae",
+    "date": "2016-02-09 23:42:57",
+    "author": "Rafael Antonio",
+    "description": "mbedtls: fix memory leak when destroying SSL connection data\n\nCloses #626\n",
+    "summary": "mbedtls: fix memory leak when destroying SSL connection data",
+    "hash": "c62d7944cf75f402d45523e3e415e44e83f5d733"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix error checking and memory leaks in NISTZ256 precomputation.",
+    "author": "Emilia Kasper",
+    "description": "Fix error checking and memory leaks in NISTZ256 precomputation.\n\nThanks to Brian Smith for reporting these issues.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "53dd4ddf71ad79a64be934ca19445b1cf560adab",
+    "date": "2015-04-24 17:45:13",
+    "parent_hash": "c028254b12a8ea0d0f8a677172eda2e2d78073f3"
+}

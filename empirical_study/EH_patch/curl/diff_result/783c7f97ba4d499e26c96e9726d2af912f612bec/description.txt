@@ -1,0 +1,8 @@
+{
+    "parent_hash": "f4af38120ac2b641ac84b5c801d61486313e3f2d",
+    "date": "2014-11-05 21:45:10",
+    "author": "Steve Holme",
+    "description": "http_digest: Fixed memory leaks from commit 6f8d8131b1\n",
+    "summary": "http_digest: Fixed memory leaks from commit 6f8d8131b1",
+    "hash": "783c7f97ba4d499e26c96e9726d2af912f612bec"
+}

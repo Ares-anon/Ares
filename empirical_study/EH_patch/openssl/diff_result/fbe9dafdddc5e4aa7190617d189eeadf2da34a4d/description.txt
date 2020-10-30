@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in the ticket test",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in the ticket test\n\nAlso fixes a function name typo.\n\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\n(Merged from https://github.com/openssl/openssl/pull/6729)\n",
+    "hash": "fbe9dafdddc5e4aa7190617d189eeadf2da34a4d",
+    "date": "2018-07-17 11:19:10",
+    "parent_hash": "d162340d367d7a74916106d8706c6b22adb727c2"
+}

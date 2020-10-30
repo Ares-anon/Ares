@@ -1,0 +1,8 @@
+{
+    "parent_hash": "6231a89aa3961e357d7eb717548463985de2d08d",
+    "date": "2018-03-22 16:34:49",
+    "author": "Sergei Nikulov",
+    "description": "cmake: avoid warn-as-error during config checks (#2411)\n\n- Move the CURL_WERROR option processing after the configuration checks\r\n  to avoid failures in case of warnings during the configuration checks.\r\n\r\nThis is a partial fix for #2358",
+    "summary": "cmake: avoid warn-as-error during config checks (#2411)",
+    "hash": "66e93802e6885f4f9e64ca7a3a2d7ff96338ef8c"
+}

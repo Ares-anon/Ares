@@ -1,0 +1,8 @@
+{
+    "summary": "mime_hdr_addparam: free tmpname, tmpval and mparam on error path, and check whether sk_MIME_PARAM_push succeeds",
+    "author": "Jonas Maebe",
+    "description": "mime_hdr_addparam: free tmpname, tmpval and mparam on error path, and check whether sk_MIME_PARAM_push succeeds\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "89572788695c67e966f78ea481000bd32fe29fbf",
+    "date": "2014-08-15 22:37:14",
+    "parent_hash": "15297d962ca3ed40af689cd4c53fbf76cda2f12f"
+}

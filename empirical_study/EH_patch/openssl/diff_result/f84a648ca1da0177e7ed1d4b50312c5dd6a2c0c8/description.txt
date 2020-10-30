@@ -1,0 +1,8 @@
+{
+    "summary": "apps/s_client.c: add missing null check",
+    "author": "KaoruToda",
+    "description": "apps/s_client.c: add missing null check\napps/s_server.c: remove unnecessary null check\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Andy Polyakov <appro@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4558)\n",
+    "hash": "f84a648ca1da0177e7ed1d4b50312c5dd6a2c0c8",
+    "date": "2017-10-22 21:31:20",
+    "parent_hash": "0c1aaa24cc30de8d793f965f4a01863a25773a50"
+}

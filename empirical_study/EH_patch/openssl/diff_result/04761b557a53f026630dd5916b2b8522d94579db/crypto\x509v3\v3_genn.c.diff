@@ -1,0 +1,14 @@
+crypto/x509v3/v3_genn.c
+=======================================================
+lhs: 100644 | 8d1199748c8653841799dc6e844e5deeac4d3d2a
+rhs: 100644 | 85fc3fc24672a3c00e6a252aab1e404f4ea506ff
+---@@ -181,6 +181,7 @@ int GENERAL_NAME_set0_othername(GENERAL_NAME *gen,
+     oth = OTHERNAME_new();
+     if (oth == NULL)
+         return 0;
++    ASN1_TYPE_free(oth->value);
+     oth->type_id = oid;
+     oth->value = value;
+     GENERAL_NAME_set0_value(gen, GEN_OTHERNAME, oth);
+
+---

@@ -1,0 +1,16 @@
+apps/openssl.c
+=======================================================
+lhs: 100644 | 37f71a94d6a2e7207e69ce4be836804871867fac
+rhs: 100644 | b8da88a224f9a21b7096b9363232a9f59704b2e1
+---@@ -429,7 +429,8 @@ int main(int argc, char *argv[])
+     BIO_free_all(bio_out);
+     apps_shutdown();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks(bio_err);
++    if (CRYPTO_mem_leaks(bio_err) <= 0)
++        ret = 1;
+ #endif
+     BIO_free(bio_err);
+     EXIT(ret);
+
+---

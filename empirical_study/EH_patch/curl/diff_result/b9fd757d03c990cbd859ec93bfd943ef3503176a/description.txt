@@ -1,0 +1,8 @@
+{
+    "parent_hash": "3a9419f65a2f7981110487d806c9eb5086f4ab37",
+    "date": "2015-01-18 15:40:07",
+    "author": "Steve Holme",
+    "description": "sasl_gssapi: Fixed memory leak with local SPN variable\n",
+    "summary": "sasl_gssapi: Fixed memory leak with local SPN variable",
+    "hash": "b9fd757d03c990cbd859ec93bfd943ef3503176a"
+}

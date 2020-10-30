@@ -1,0 +1,16 @@
+ssl/s3_enc.c
+=======================================================
+lhs: 100644 | 6b7132380da50a72e96104a93af39e4838bc22dc
+rhs: 100644 | 63774bcc8746d078e2b6c25b7cfe21b4a2bb33a7
+---@@ -556,7 +556,8 @@ int ssl3_enc(SSL *s, int send)
+ 			/* otherwise, rec->length >= bs */
+ 			}
+ 		
+-		EVP_Cipher(ds,rec->data,rec->input,l);
++		if(EVP_Cipher(ds,rec->data,rec->input,l) < 1)
++			return -1;
+ 
+ 		if (EVP_MD_CTX_md(s->read_hash) != NULL)
+ 			mac_size = EVP_MD_CTX_size(s->read_hash);
+
+---

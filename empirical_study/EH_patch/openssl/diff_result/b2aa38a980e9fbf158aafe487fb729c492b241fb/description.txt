@@ -1,0 +1,8 @@
+{
+    "summary": "RT2560: missing NULL check in ocsp_req_find_signer",
+    "author": "Rich Salz",
+    "description": "RT2560: missing NULL check in ocsp_req_find_signer\n\nIf we don't find a signer in the internal list, then fall\nthrough and look at the internal list; don't just return NULL.\n\nReviewed-by: Dr. Stephen Henson <steve@openssl.org>\n",
+    "hash": "b2aa38a980e9fbf158aafe487fb729c492b241fb",
+    "date": "2014-09-10 12:18:50",
+    "parent_hash": "468ab1c20d1f3a43a63d0516fed6c9fefb3ccf71"
+}

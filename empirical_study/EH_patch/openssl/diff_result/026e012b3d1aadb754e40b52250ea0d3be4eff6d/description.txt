@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in dtlsv1listentest",
+    "author": "Kurt Roeckx",
+    "description": "Fix memory leak in dtlsv1listentest\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n\nMR: #1879\n",
+    "hash": "026e012b3d1aadb754e40b52250ea0d3be4eff6d",
+    "date": "2016-02-06 21:45:24",
+    "parent_hash": "d1b105827aef49ae16fd2d321bafa92b1a6489c9"
+}

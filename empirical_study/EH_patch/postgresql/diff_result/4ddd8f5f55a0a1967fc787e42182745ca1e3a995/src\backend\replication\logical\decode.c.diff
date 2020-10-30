@@ -1,0 +1,16 @@
+src/backend/replication/logical/decode.c
+=======================================================
+lhs: 100644 | 59c003de9ceeca0ecb6bfb66df82f2e2ed6a40ea
+rhs: 100644 | afb497227e378c0cefc645c9026a36d8ea52714a
+---@@ -859,7 +859,8 @@ DecodeTruncate(LogicalDecodingContext *ctx, XLogRecordBuffer *buf)
+ 	if (xlrec->flags & XLH_TRUNCATE_RESTART_SEQS)
+ 		change->data.truncate.restart_seqs = true;
+ 	change->data.truncate.nrelids = xlrec->nrelids;
+-	change->data.truncate.relids = palloc(xlrec->nrelids * sizeof(Oid));
++	change->data.truncate.relids = ReorderBufferGetRelids(ctx->reorder,
++														  xlrec->nrelids);
+ 	memcpy(change->data.truncate.relids, xlrec->relids,
+ 		   xlrec->nrelids * sizeof(Oid));
+ 	ReorderBufferQueueChange(ctx->reorder, XLogRecGetXid(r),
+
+---

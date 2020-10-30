@@ -1,0 +1,8 @@
+{
+    "summary": "Fixed missing return value checks.",
+    "author": "Matt Caswell",
+    "description": "Fixed missing return value checks.\n\nAdded various missing return value checks in tls1_change_cipher_state.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "eadf70d2c885e3e4e943091eabfec1e73d4f3883",
+    "date": "2015-02-27 15:09:28",
+    "parent_hash": "687eaf27a7e4bdfc58dd455e2566b915a7a25c20"
+}

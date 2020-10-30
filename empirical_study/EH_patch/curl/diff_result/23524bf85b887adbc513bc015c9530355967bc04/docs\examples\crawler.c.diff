@@ -1,0 +1,21 @@
+docs/examples/crawler.c
+=======================================================
+lhs: 100644 | 0aeb86545c305b60f81e9de0c94197e6cc523890
+rhs: 100644 | d8fa5a459be2539aea036d489e1ea56b5846a84e
+---@@ -52,7 +52,13 @@ size_t grow_buffer(void *contents, size_t sz, size_t nmemb, void *ctx)
+ {
+   size_t realsize = sz * nmemb;
+   memory *mem = (memory*) ctx;
+-  mem->buf = realloc(mem->buf, mem->size + realsize);
++  char *ptr = realloc(mem->buf, mem->size + realsize);
++  if(!ptr) {
++    /* out of memory */
++    printf("not enough memory (realloc returned NULL)\n");
++    return 0;
++  }
++  mem->buf = ptr;
+   memcpy(&(mem->buf[mem->size]), contents, realsize);
+   mem->size += realsize;
+   return realsize;
+
+---

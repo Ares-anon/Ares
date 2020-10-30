@@ -1,0 +1,14 @@
+crypto/dsa/dsa_lib.c
+=======================================================
+lhs: 100644 | 0fe455703f9f85404ba6efeb83cb2965501f45ad
+rhs: 100644 | facb97fb5ebb64571ba8dd7e20f209b5cea66f8c
+---@@ -271,6 +271,7 @@ DH *DSA_dup_DH(const DSA *r)
+         q = BN_dup(r->q);
+         if (p == NULL || g == NULL || q == NULL || !DH_set0_pqg(ret, p, q, g))
+             goto err;
++        p = g = q = NULL;
+     }
+ 
+     if (r->pub_key != NULL) {
+
+---

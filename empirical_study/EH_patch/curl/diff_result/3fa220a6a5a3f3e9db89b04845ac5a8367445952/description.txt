@@ -1,0 +1,8 @@
+{
+    "parent_hash": "fe37695aa9a1fe06b9cd119ea6f48f4fb324c4b0",
+    "date": "2016-02-19 21:52:05",
+    "author": "Emil Lerner",
+    "description": "curl_sasl: Fix memory leak in digest parser\n\nIf any parameter in a HTTP DIGEST challenge message is present multiple\ntimes, memory allocated for all but the last entry should be freed.\n\nBug: https://github.com/curl/curl/pull/667\n",
+    "summary": "curl_sasl: Fix memory leak in digest parser",
+    "hash": "3fa220a6a5a3f3e9db89b04845ac5a8367445952"
+}

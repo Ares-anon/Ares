@@ -1,0 +1,17 @@
+src/core/commands.c
+=======================================================
+lhs: 100644 | 547f7b16d51eff4bcdd8cd491688263c4525281e
+rhs: 100644 | ed82f44e24cd9787b4135c98a18b81a17e3a1a40
+---@@ -968,7 +968,9 @@ static void cmd_cd(const char *data)
+ 	if (*data == '\0') return;
+ 
+ 	str = convert_home(data);
+-	chdir(str);
++	if (chdir(str) != 0) {
++		g_warning("Failed to chdir(): %s", strerror(errno));
++	}
+ 	g_free(str);
+ }
+ 
+
+---

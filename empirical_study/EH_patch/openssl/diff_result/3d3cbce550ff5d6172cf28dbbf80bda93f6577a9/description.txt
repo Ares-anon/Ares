@@ -1,0 +1,8 @@
+{
+    "summary": "Check return from BN_sub",
+    "author": "Pauli",
+    "description": "Check return from BN_sub\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6823)\n",
+    "hash": "3d3cbce550ff5d6172cf28dbbf80bda93f6577a9",
+    "date": "2018-07-31 13:30:29",
+    "parent_hash": "35c9408108f3608eb572acd7f64a93cf4f43f4f6"
+}

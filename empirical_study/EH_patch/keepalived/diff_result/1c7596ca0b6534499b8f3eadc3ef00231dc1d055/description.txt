@@ -1,0 +1,8 @@
+{
+    "description": "Add more error checking to read_timer() and its uses\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "5e525f2fe828fe44f061113bf822fb4a70d46658",
+    "summary": "Add more error checking to read_timer() and its uses",
+    "date": "2018-07-28 19:54:59",
+    "hash": "1c7596ca0b6534499b8f3eadc3ef00231dc1d055"
+}

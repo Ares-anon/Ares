@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix memory leaks on OOM in ecpg.\n\nThese are fairly obscure cases, but let's keep Coverity happy.\n\nMichael Paquier with some further fixes by me.\n",
+    "summary": "Fix memory leaks on OOM in ecpg.",
+    "date": "2015-02-04 14:55:30",
+    "parent_hash": "ff8ca3b04c15eace1de1a7a66e3a05426b07b773",
+    "hash": "c31b5d9ddf25d26dac5f5c215b8a5e8b3dfa37e6"
+}

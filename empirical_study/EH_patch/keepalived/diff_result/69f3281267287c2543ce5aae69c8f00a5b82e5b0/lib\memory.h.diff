@@ -1,0 +1,15 @@
+lib/memory.h
+=======================================================
+lhs: 100644 | 94fe0b259ce465103cabe0672a081aa832efffce
+rhs: 100644 | eeb41f645115f3ede296928d229c53a2176da92a
+---@@ -43,7 +43,7 @@ extern void *zalloc(unsigned long size);
+ #define REALLOC(b,n) ( keepalived_realloc((b), (n), \
+ 		      (__FILE__), (char *)(__FUNCTION__), (__LINE__)) )
+ 
+-extern unsigned long mem_allocated;
++extern size_t mem_allocated;
+ 
+ /* Memory debug prototypes defs */
+ extern void *keepalived_malloc(unsigned long, char *, char *, int);
+
+---

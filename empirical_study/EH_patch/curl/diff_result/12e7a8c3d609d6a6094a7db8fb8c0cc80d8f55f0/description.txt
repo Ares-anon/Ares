@@ -1,0 +1,8 @@
+{
+    "parent_hash": "584142892f7d5fb3100f3c0ef8e479d472b8c3c7",
+    "date": "2017-04-29 18:52:51",
+    "author": "Dan Fandrich",
+    "description": "url: fixed a memory leak on OOM while setting CURLOPT_BUFFERSIZE\n",
+    "summary": "url: fixed a memory leak on OOM while setting CURLOPT_BUFFERSIZE",
+    "hash": "12e7a8c3d609d6a6094a7db8fb8c0cc80d8f55f0"
+}

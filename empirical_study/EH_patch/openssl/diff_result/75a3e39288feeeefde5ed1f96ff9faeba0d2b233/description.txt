@@ -1,0 +1,8 @@
+{
+    "summary": "Fix some error path logic in i2v_AUTHORITY_INFO_ACCESS and i2v_GENERAL_NAME",
+    "author": "Matt Caswell",
+    "description": "Fix some error path logic in i2v_AUTHORITY_INFO_ACCESS and i2v_GENERAL_NAME\n\nFixes #1653 reported by Guido Vranken\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3362)",
+    "hash": "75a3e39288feeeefde5ed1f96ff9faeba0d2b233",
+    "date": "2017-05-02 17:12:33",
+    "parent_hash": "33564cb7494b0d12384d8ad83207306ebd056e36"
+}

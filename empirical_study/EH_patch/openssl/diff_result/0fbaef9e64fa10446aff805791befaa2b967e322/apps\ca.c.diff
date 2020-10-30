@@ -1,0 +1,47 @@
+apps/ca.c
+=======================================================
+lhs: 100644 | e53695453a3570e1d829cb843b7787ff9aba62e7
+rhs: 100644 | 00fb6f5aba6999044b81bc8887c3e754767b2655
+---@@ -2062,19 +2062,26 @@ static int do_revoke(X509 *x509, CA_DB *db, REVINFO_TYPE rev_type,
+         row[DB_rev_date] = NULL;
+         row[DB_file] = OPENSSL_strdup("unknown");
+ 
++        if (row[DB_type] == NULL || row[DB_file] == NULL) {
++            BIO_printf(bio_err, "Memory allocation failure\n");
++            goto end;
++        }
++
+         irow = app_malloc(sizeof(*irow) * (DB_NUMBER + 1), "row ptr");
+-        for (i = 0; i < DB_NUMBER; i++) {
++        for (i = 0; i < DB_NUMBER; i++)
+             irow[i] = row[i];
+-            row[i] = NULL;
+-        }
+         irow[DB_NUMBER] = NULL;
+ 
+         if (!TXT_DB_insert(db->db, irow)) {
+             BIO_printf(bio_err, "failed to update database\n");
+             BIO_printf(bio_err, "TXT_DB error number %ld\n", db->db->error);
++            OPENSSL_free(irow);
+             goto end;
+         }
+ 
++        for (i = 0; i < DB_NUMBER; i++)
++            row[i] = NULL;
++
+         /* Revoke Certificate */
+         if (rev_type == REV_VALID)
+             ok = 1;
+@@ -2108,9 +2115,8 @@ static int do_revoke(X509 *x509, CA_DB *db, REVINFO_TYPE rev_type,
+     }
+     ok = 1;
+  end:
+-    for (i = 0; i < DB_NUMBER; i++) {
++    for (i = 0; i < DB_NUMBER; i++)
+         OPENSSL_free(row[i]);
+-    }
+     return (ok);
+ }
+ 
+
+---

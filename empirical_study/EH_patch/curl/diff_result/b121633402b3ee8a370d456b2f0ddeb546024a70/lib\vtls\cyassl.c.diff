@@ -1,0 +1,18 @@
+lib/vtls/cyassl.c
+=======================================================
+lhs: 100644 | a8c1ba5f3e4a6f88f70a6929a49f8cb3bea19a7e
+rhs: 100644 | 583930cf46d185cd0f96847bcda9becd066a55dc
+---@@ -496,10 +496,7 @@ size_t Curl_cyassl_version(char *buffer, size_t size)
+ 
+ int Curl_cyassl_init(void)
+ {
+-  if(CyaSSL_Init() == 0)
+-    return 1;
+-
+-  return -1;
++  return (CyaSSL_Init() == SSL_SUCCESS);
+ }
+ 
+ 
+
+---

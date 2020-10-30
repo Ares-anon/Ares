@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in n_ssl3_mac",
+    "author": "Bernd Edlinger",
+    "description": "Fix a memory leak in n_ssl3_mac\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5648)\n",
+    "hash": "302d1697fe09a9f4e89980f4ea84f86e63fc5e8d",
+    "date": "2018-03-17 08:23:43",
+    "parent_hash": "f96ff4e908aec7403451d3fa7fc37239b351085a"
+}

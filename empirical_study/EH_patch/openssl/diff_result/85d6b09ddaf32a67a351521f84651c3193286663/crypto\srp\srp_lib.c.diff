@@ -1,0 +1,25 @@
+crypto/srp/srp_lib.c
+=======================================================
+lhs: 100644 | 9efad9352fb2168c59c13d0eacd2c970f6d8b302
+rhs: 100644 | f146f820e7fa7edd179ec2663a6b2d5e11c2fd03
+---@@ -84,7 +84,7 @@ BIGNUM *SRP_Calc_u(const BIGNUM *A, const BIGNUM *B, const BIGNUM *N)
+         || !EVP_DigestUpdate(ctxt, cAB + BN_bn2bin(A, cAB + longN), longN)
+         || !EVP_DigestUpdate(ctxt, cAB + BN_bn2bin(B, cAB + longN), longN))
+         goto err;
+-    OPENSSL_free(cAB);
++
+     if (!EVP_DigestFinal_ex(ctxt, cu, NULL))
+         goto err;
+ 
+@@ -94,7 +94,9 @@ BIGNUM *SRP_Calc_u(const BIGNUM *A, const BIGNUM *B, const BIGNUM *N)
+         BN_free(u);
+         u = NULL;
+     }
++
+  err:
++    OPENSSL_free(cAB);
+     EVP_MD_CTX_free(ctxt);
+ 
+     return u;
+
+---

@@ -1,0 +1,67 @@
+src/backend/utils/misc/guc.c
+=======================================================
+lhs: 100644 | da061023f52f5807924a75cf57df1f65d1ae9a14
+rhs: 100644 | c4c1afa084ba2b99c345434c37ad2f8041d665b2
+---@@ -43,7 +43,6 @@
+ #include "commands/trigger.h"
+ #include "funcapi.h"
+ #include "libpq/auth.h"
+-#include "libpq/be-fsstubs.h"
+ #include "libpq/libpq.h"
+ #include "libpq/pqformat.h"
+ #include "miscadmin.h"
+@@ -71,6 +70,7 @@
+ #include "storage/dsm_impl.h"
+ #include "storage/standby.h"
+ #include "storage/fd.h"
++#include "storage/large_object.h"
+ #include "storage/pg_shmem.h"
+ #include "storage/proc.h"
+ #include "storage/predicate.h"
+@@ -4900,7 +4900,7 @@ ResetAllOptions(void)
+ 
+ 					if (conf->assign_hook)
+ 						conf->assign_hook(conf->reset_val,
+-											  conf->reset_extra);
++										  conf->reset_extra);
+ 					*conf->variable = conf->reset_val;
+ 					set_extra_field(&conf->gen, &conf->gen.extra,
+ 									conf->reset_extra);
+@@ -4912,7 +4912,7 @@ ResetAllOptions(void)
+ 
+ 					if (conf->assign_hook)
+ 						conf->assign_hook(conf->reset_val,
+-											  conf->reset_extra);
++										  conf->reset_extra);
+ 					*conf->variable = conf->reset_val;
+ 					set_extra_field(&conf->gen, &conf->gen.extra,
+ 									conf->reset_extra);
+@@ -4924,7 +4924,7 @@ ResetAllOptions(void)
+ 
+ 					if (conf->assign_hook)
+ 						conf->assign_hook(conf->reset_val,
+-											  conf->reset_extra);
++										  conf->reset_extra);
+ 					*conf->variable = conf->reset_val;
+ 					set_extra_field(&conf->gen, &conf->gen.extra,
+ 									conf->reset_extra);
+@@ -4936,7 +4936,7 @@ ResetAllOptions(void)
+ 
+ 					if (conf->assign_hook)
+ 						conf->assign_hook(conf->reset_val,
+-											  conf->reset_extra);
++										  conf->reset_extra);
+ 					set_string_field(conf, conf->variable, conf->reset_val);
+ 					set_extra_field(&conf->gen, &conf->gen.extra,
+ 									conf->reset_extra);
+@@ -4948,7 +4948,7 @@ ResetAllOptions(void)
+ 
+ 					if (conf->assign_hook)
+ 						conf->assign_hook(conf->reset_val,
+-											  conf->reset_extra);
++										  conf->reset_extra);
+ 					*conf->variable = conf->reset_val;
+ 					set_extra_field(&conf->gen, &conf->gen.extra,
+ 									conf->reset_extra);
+
+---

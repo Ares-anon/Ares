@@ -1,0 +1,8 @@
+{
+    "summary": "Ensure BIGNUM is freed in an error path",
+    "author": "Matt Caswell",
+    "description": "Ensure BIGNUM is freed in an error path\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "5bf7c7725b9cb44813dc78cf143c5c1d5aada02c",
+    "date": "2016-06-01 14:51:36",
+    "parent_hash": "fe2b7dfdf446088d5c1cc9dc9d49d131cc4ef7f9"
+}

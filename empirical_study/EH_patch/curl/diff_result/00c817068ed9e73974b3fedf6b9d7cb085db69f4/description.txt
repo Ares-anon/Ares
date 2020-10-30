@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c7834ecd45194dbca9762ad8fc06072b77481a29",
+    "date": "2016-12-23 15:29:01",
+    "author": "Daniel Stenberg",
+    "description": "openssl-random: check return code when asking for random\n\nand fail appropriately if it returns error\n",
+    "summary": "openssl-random: check return code when asking for random",
+    "hash": "00c817068ed9e73974b3fedf6b9d7cb085db69f4"
+}

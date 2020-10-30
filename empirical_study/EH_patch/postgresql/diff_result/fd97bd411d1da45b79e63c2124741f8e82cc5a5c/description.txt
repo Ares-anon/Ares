@@ -1,0 +1,8 @@
+{
+    "author": "Noah Misch",
+    "description": "Check return values of sensitive system library calls.\n\nPostgreSQL already checked the vast majority of these, missing this\nhandful that nearly cannot fail.  If putenv() failed with ENOMEM in\npg_GSS_recvauth(), authentication would proceed with the wrong keytab\nfile.  If strftime() returned zero in cache_locale_time(), using the\nunspecified buffer contents could lead to information exposure or a\ncrash.  Back-patch to 9.0 (all supported versions).\n\nOther unchecked calls to these functions, especially those in frontend\ncode, pose negligible security concern.  This patch does not address\nthem.  Nonetheless, it is always better to check return values whose\nspecification provides for indicating an error.\n\nIn passing, fix an off-by-one error in strftime_win32()'s invocation of\nWideCharToMultiByte().  Upon retrieving a value of exactly MAX_L10N_DATA\nbytes, strftime_win32() would overrun the caller's buffer by one byte.\nMAX_L10N_DATA is chosen to exceed the length of every possible value, so\nthe vulnerable scenario probably does not arise.\n\nSecurity: CVE-2015-3166\n",
+    "summary": "Check return values of sensitive system library calls.",
+    "date": "2015-05-18 10:02:31",
+    "parent_hash": "16304a013432931e61e623c8d85e9fe24709d9ba",
+    "hash": "fd97bd411d1da45b79e63c2124741f8e82cc5a5c"
+}

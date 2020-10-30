@@ -1,0 +1,25 @@
+ssl/s3_lib.c
+=======================================================
+lhs: 100644 | 44dac24c8caff4c4e84c57ec8d2148e99e3a332a
+rhs: 100644 | bd831bc48d114810cd4a6c92f0c27d8a356603d5
+---@@ -3410,10 +3410,15 @@ long ssl3_ctx_ctrl(SSL_CTX *ctx, int cmd, long larg, void *parg)
+         /* A Thawte special :-) */
+     case SSL_CTRL_EXTRA_CHAIN_CERT:
+         if (ctx->extra_certs == NULL) {
+-            if ((ctx->extra_certs = sk_X509_new_null()) == NULL)
+-                return (0);
++            if ((ctx->extra_certs = sk_X509_new_null()) == NULL) {
++                SSLerr(SSL_F_SSL3_CTX_CTRL, ERR_R_MALLOC_FAILURE);
++                return 0;
++            }
++        }
++        if (!sk_X509_push(ctx->extra_certs, (X509 *)parg)) {
++            SSLerr(SSL_F_SSL3_CTX_CTRL, ERR_R_MALLOC_FAILURE);
++            return 0;
+         }
+-        sk_X509_push(ctx->extra_certs, (X509 *)parg);
+         break;
+ 
+     case SSL_CTRL_GET_EXTRA_CHAIN_CERTS:
+
+---

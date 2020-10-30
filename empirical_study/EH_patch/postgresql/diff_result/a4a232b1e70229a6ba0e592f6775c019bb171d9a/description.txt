@@ -1,0 +1,8 @@
+{
+    "author": "Peter Eisentraut",
+    "description": "Error position support for defaults and check constraints\n\nAdd support for error position reporting for the expressions contained\nin defaults and check constraint definitions.  This currently works only\nfor CREATE TABLE, not ALTER TABLE, because the latter is not set up to\npass around the original query string.\n\nReviewed-by: Fabien COELHO <coelho@cri.ensmp.fr>\n",
+    "summary": "Error position support for defaults and check constraints",
+    "date": "2018-08-30 08:20:23",
+    "parent_hash": "4b035841a1bcaadbe4f9e0e174aef773a4fa41f6",
+    "hash": "a4a232b1e70229a6ba0e592f6775c019bb171d9a"
+}

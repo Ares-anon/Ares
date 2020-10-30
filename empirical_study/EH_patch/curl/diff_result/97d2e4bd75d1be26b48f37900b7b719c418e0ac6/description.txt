@@ -1,0 +1,8 @@
+{
+    "parent_hash": "33a95659e200f443cfe1ef6f057f71e5afe16f9d",
+    "date": "2014-08-11 15:10:13",
+    "author": "Peter Wang",
+    "description": "Curl_poll + Curl_wait_ms: fix timeout return value\n\nCurl_poll and Curl_wait_ms require the fix applied to Curl_socket_check\nin commits b61e8b8 and c771968:\n\nWhen poll or select are interrupted and coincides with the timeout\nelapsing, the functions return -1 indicating an error instead of 0 for\nthe timeout.\n",
+    "summary": "Curl_poll + Curl_wait_ms: fix timeout return value",
+    "hash": "97d2e4bd75d1be26b48f37900b7b719c418e0ac6"
+}

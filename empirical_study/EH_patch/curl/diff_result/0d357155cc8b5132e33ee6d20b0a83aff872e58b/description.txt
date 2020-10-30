@@ -1,0 +1,8 @@
+{
+    "parent_hash": "ea6c5f03a50433be3c2acaabec1790c317448a2e",
+    "date": "2014-10-02 23:22:01",
+    "author": "Daniel Stenberg",
+    "description": "multi_runsingle: fix memory leak\n\nCoverity CID 1202837. There's a potential risk that 'newurl' gets\noverwritten when it was already pointing to allocated memory.\n",
+    "summary": "multi_runsingle: fix memory leak",
+    "hash": "0d357155cc8b5132e33ee6d20b0a83aff872e58b"
+}

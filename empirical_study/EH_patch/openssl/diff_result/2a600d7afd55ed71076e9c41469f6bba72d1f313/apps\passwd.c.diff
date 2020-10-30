@@ -1,0 +1,19 @@
+apps/passwd.c
+=======================================================
+lhs: 100644 | 31c4eef55a18ec91da4c92f978993d8c37c376af
+rhs: 100644 | e2c90960e5409d0e6280fa0b6a2bf06afce7eaf6
+---@@ -496,10 +496,10 @@ static int do_passwd(int passed_salt, char **salt_p, char **salt_malloc_p,
+         BIO_printf(out, "%s\t%s\n", hash, passwd);
+     else
+         BIO_printf(out, "%s\n", hash);
+-    return 0;
++    return 1;
+ 
+  end:
+-    return 1;
++    return 0;
+ }
+ #else
+ 
+
+---

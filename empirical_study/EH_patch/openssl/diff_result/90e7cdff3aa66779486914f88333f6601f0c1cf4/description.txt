@@ -1,0 +1,8 @@
+{
+    "summary": "Fix error check in GOST engine",
+    "author": "Matt Caswell",
+    "description": "Fix error check in GOST engine\n\nThe return value of i2d functions can be negative if an error occurs.\nTherefore don't assign the return value to an unsigned type and *then*\ncheck if it is negative.\n\nRT#3862\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "90e7cdff3aa66779486914f88333f6601f0c1cf4",
+    "date": "2015-05-26 10:35:22",
+    "parent_hash": "fc52ac9028b9492fb086ba35a3352ea46e03ecfc"
+}

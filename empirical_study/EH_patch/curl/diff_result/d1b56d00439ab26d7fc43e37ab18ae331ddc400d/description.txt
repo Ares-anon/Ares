@@ -1,0 +1,8 @@
+{
+    "parent_hash": "6352df87b16655638f2a9b47622f7683da671f26",
+    "date": "2014-10-07 13:57:13",
+    "author": "Daniel Stenberg",
+    "description": "multi_runsingle: fix possible memory leak\n\nCoverity CID 1202837. 'newurl' can in fact be allocated even when\nCurl_retry_request() returns failure so free it if need be.\n",
+    "summary": "multi_runsingle: fix possible memory leak",
+    "hash": "d1b56d00439ab26d7fc43e37ab18ae331ddc400d"
+}

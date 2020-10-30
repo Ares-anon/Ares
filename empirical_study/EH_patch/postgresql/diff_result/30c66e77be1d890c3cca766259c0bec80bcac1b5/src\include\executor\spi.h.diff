@@ -1,0 +1,14 @@
+src/include/executor/spi.h
+=======================================================
+lhs: 100644 | e5bdaecc4e3bcca99cabd96a881a93314d12d1d4
+rhs: 100644 | 143a89a16c45ece119c8a0d8c2b7b2259554e55c
+---@@ -163,6 +163,7 @@ extern void SPI_start_transaction(void);
+ extern void SPI_commit(void);
+ extern void SPI_rollback(void);
+ 
++extern void SPICleanup(void);
+ extern void AtEOXact_SPI(bool isCommit);
+ extern void AtEOSubXact_SPI(bool isCommit, SubTransactionId mySubid);
+ 
+
+---

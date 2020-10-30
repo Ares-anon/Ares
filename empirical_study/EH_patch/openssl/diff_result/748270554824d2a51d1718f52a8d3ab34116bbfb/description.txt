@@ -1,0 +1,8 @@
+{
+    "summary": "Fix for session tickets memory leak.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix for session tickets memory leak.\n\nCVE-2014-3567\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "748270554824d2a51d1718f52a8d3ab34116bbfb",
+    "date": "2014-10-15 08:56:16",
+    "parent_hash": "3dd814ac4d0581af363068e83b5fa8d5271063d5"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c1c16bea94d605664fd7fe8e332236f614c8a454",
+    "date": "2014-10-26 16:28:02",
+    "author": "Steve Holme",
+    "description": "http_negotiate: Fixed missing check for USE_SPNEGO\n",
+    "summary": "http_negotiate: Fixed missing check for USE_SPNEGO",
+    "hash": "64814739d5b0f1391c02972c98aa7fceb2132500"
+}

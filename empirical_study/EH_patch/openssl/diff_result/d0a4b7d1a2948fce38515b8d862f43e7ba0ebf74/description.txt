@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak from zero-length DTLS fragments.",
+    "author": "Adam Langley",
+    "description": "Fix memory leak from zero-length DTLS fragments.\n\nThe |pqueue_insert| function can fail if one attempts to insert a\nduplicate sequence number. When handling a fragment of an out of\nsequence message, |dtls1_process_out_of_seq_message| would not call\n|dtls1_reassemble_fragment| if the fragment's length was zero. It would\nthen allocate a fresh fragment and attempt to insert it, but ignore the\nreturn value, leaking the fragment.\n\nThis allows an attacker to exhaust the memory of a DTLS peer.\n\nFixes CVE-2014-3507\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "d0a4b7d1a2948fce38515b8d862f43e7ba0ebf74",
+    "date": "2014-08-06 20:36:40",
+    "parent_hash": "1250f12613b61758675848f6600ebd914ccd7636"
+}

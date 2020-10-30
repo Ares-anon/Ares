@@ -1,0 +1,15 @@
+ssl/ssl_err.c
+=======================================================
+lhs: 100644 | ec550be4ba777a42e52c8a19d9c2025927a9965e
+rhs: 100644 | e6c73208a4baf7065b0a9d86131dd07e37324f5f
+---@@ -259,6 +259,8 @@ static ERR_STRING_DATA SSL_str_functs[] = {
+     {ERR_FUNC(SSL_F_TLS_CONSTRUCT_FINISHED), "tls_construct_finished"},
+     {ERR_FUNC(SSL_F_TLS_CONSTRUCT_HELLO_REQUEST),
+      "tls_construct_hello_request"},
++    {ERR_FUNC(SSL_F_TLS_CONSTRUCT_NEW_SESSION_TICKET),
++     "tls_construct_new_session_ticket"},
+     {ERR_FUNC(SSL_F_TLS_CONSTRUCT_NEXT_PROTO), "tls_construct_next_proto"},
+     {ERR_FUNC(SSL_F_TLS_CONSTRUCT_SERVER_CERTIFICATE),
+      "tls_construct_server_certificate"},
+
+---

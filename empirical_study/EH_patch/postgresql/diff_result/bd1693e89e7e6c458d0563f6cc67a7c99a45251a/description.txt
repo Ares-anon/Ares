@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix small memory leak in partial-aggregate deserialization functions.\n\nA deserialize function's result is short-lived data during partial\naggregation, since we're just going to pass it to the combine function\nand then it's of no use anymore.  However, the built-in deserialize\nfunctions allocated their results in the aggregate state context,\nresulting in a query-lifespan memory leak.  It's probably not possible for\nthis to amount to anything much at present, since the number of leaked\nresults would only be the number of worker processes.  But it might become\na problem in future.  To fix, don't use the same convenience subroutine for\nsetting up results that the aggregate transition functions use.\n\nDavid Rowley\n\nReport: <10050.1466637736@sss.pgh.pa.us>\n",
+    "summary": "Fix small memory leak in partial-aggregate deserialization functions.",
+    "date": "2016-06-23 10:55:59",
+    "parent_hash": "2d673424faf3e33c5fcca926fbe3f21e16dd0fef",
+    "hash": "bd1693e89e7e6c458d0563f6cc67a7c99a45251a"
+}

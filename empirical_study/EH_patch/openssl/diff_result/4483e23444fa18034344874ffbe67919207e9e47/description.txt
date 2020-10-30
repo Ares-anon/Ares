@@ -1,0 +1,8 @@
+{
+    "summary": "Fix potential memory leak in ASN1_TIME_to_generalizedtime()",
+    "author": "Todd Short",
+    "description": "Fix potential memory leak in ASN1_TIME_to_generalizedtime()\n\nIf ret is allocated, it may be leaked on error.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2666)",
+    "hash": "4483e23444fa18034344874ffbe67919207e9e47",
+    "date": "2017-02-23 17:14:48",
+    "parent_hash": "7e999d5101d7f59ecdb4ddd12ff910ff92c6ac3a"
+}

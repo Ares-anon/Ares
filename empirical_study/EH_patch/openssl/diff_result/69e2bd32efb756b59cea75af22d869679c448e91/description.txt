@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory on ASN1_item_pack() error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory on ASN1_item_pack() error path\n\nThe ASN1_item_pack() function was leaking an ASN1_STRING object on error\npaths.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "69e2bd32efb756b59cea75af22d869679c448e91",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "fe71bb3ad97ed01ccf92812891cc2bc3ef3dce76"
+}

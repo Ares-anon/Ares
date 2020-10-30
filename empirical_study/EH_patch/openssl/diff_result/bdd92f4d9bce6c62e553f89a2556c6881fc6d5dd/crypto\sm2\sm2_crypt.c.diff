@@ -1,0 +1,16 @@
+crypto/sm2/sm2_crypt.c
+=======================================================
+lhs: 100644 | f2470609f9f14ea6b8b70271b66f8e58fc01a03b
+rhs: 100644 | aedf9054c1cf08a4b739011d38e40ae568d39977
+---@@ -48,7 +48,8 @@ static size_t ec_field_size(const EC_GROUP *group)
+     if (p == NULL || a == NULL || b == NULL)
+        goto done;
+ 
+-    EC_GROUP_get_curve_GFp(group, p, a, b, NULL);
++    if (!EC_GROUP_get_curve_GFp(group, p, a, b, NULL))
++        goto done;
+     field_size = (BN_num_bits(p) + 7) / 8;
+ 
+  done:
+
+---

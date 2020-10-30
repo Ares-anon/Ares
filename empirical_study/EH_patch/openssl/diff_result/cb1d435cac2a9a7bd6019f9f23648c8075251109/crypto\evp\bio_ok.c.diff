@@ -1,0 +1,17 @@
+crypto/evp/bio_ok.c
+=======================================================
+lhs: 100644 | 0ac1a31a63f479d79f8e9f73c606ef93c0da9cb3
+rhs: 100644 | 65577c0f6cb372d2dd86ce3f44038b07406ffdeb
+---@@ -183,6 +183,10 @@ static int ok_new(BIO *bi)
+     ctx->cont = 1;
+     ctx->sigio = 1;
+     ctx->md = EVP_MD_CTX_new();
++    if (ctx->md == NULL) {
++        OPENSSL_free(ctx);
++        return 0;
++    }
+     BIO_set_init(bi, 0);
+     BIO_set_data(bi, ctx);
+ 
+
+---

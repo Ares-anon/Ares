@@ -1,0 +1,18 @@
+crypto/engine/eng_lib.c
+=======================================================
+lhs: 100644 | d0bc716bb3cd67f12b4f5a6439d57e6814f3beff
+rhs: 100644 | 5bcd24bcf8860fd95c84e1f87ce7382eaa58a54f
+---@@ -83,7 +83,10 @@ ENGINE *ENGINE_new(void)
+     }
+     ret->struct_ref = 1;
+     engine_ref_debug(ret, 0, 1);
+-    CRYPTO_new_ex_data(CRYPTO_EX_INDEX_ENGINE, ret, &ret->ex_data);
++    if (!CRYPTO_new_ex_data(CRYPTO_EX_INDEX_ENGINE, ret, &ret->ex_data)) {
++        OPENSSL_free(ret);
++        return NULL;
++    }
+     return ret;
+ }
+ 
+
+---

@@ -1,0 +1,23 @@
+apps/ts.c
+=======================================================
+lhs: 100644 | 6c0adb1423430e2c11eb2e51496b010055f440ea
+rhs: 100644 | 0db6b509f8dd0b31d15760cf4b5e0dab97912ff5
+---@@ -887,9 +887,15 @@ static TS_VERIFY_CTX *create_verify_ctx(const char *data, const char *digest,
+             goto err;
+         f = TS_VFY_VERSION | TS_VFY_SIGNER;
+         if (data != NULL) {
++            BIO *out = NULL;
++
+             f |= TS_VFY_DATA;
+-            if (TS_VERIFY_CTX_set_data(ctx, BIO_new_file(data, "rb")) == NULL)
++            if ((out = BIO_new_file(data, "rb")) == NULL)
++                goto err;
++            if (TS_VERIFY_CTX_set_data(ctx, out) == NULL) {
++                BIO_free_all(out);
+                 goto err;
++            }
+         } else if (digest != NULL) {
+             long imprint_len;
+             unsigned char *hexstr = OPENSSL_hexstr2buf(digest, &imprint_len);
+
+---

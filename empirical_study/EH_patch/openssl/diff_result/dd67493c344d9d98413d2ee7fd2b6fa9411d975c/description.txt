@@ -1,0 +1,8 @@
+{
+    "summary": "RT3863 ECC: Add missing NULL check. Set a flag",
+    "author": "Billy Brumley",
+    "description": "RT3863 ECC: Add missing NULL check. Set a flag\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "dd67493c344d9d98413d2ee7fd2b6fa9411d975c",
+    "date": "2016-01-21 14:06:57",
+    "parent_hash": "7fccf05d26ff3831a6d936fe09e733fcffc6901b"
+}

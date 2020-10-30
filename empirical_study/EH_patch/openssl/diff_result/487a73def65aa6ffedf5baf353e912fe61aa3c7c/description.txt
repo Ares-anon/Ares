@@ -1,0 +1,8 @@
+{
+    "summary": "Added error checking for OBJ_create",
+    "author": "Frank Morgner",
+    "description": "Added error checking for OBJ_create\n\nfixes segmentation fault in case of not enough memory for object creation\n\nCLA: trivial\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3157)",
+    "hash": "487a73def65aa6ffedf5baf353e912fe61aa3c7c",
+    "date": "2017-04-11 19:16:01",
+    "parent_hash": "a105d5603bcb93597866ab20a0ef2acaf6e7b3f6"
+}

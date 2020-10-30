@@ -1,0 +1,8 @@
+{
+    "parent_hash": "825b0c79689c8c3857bb3e26b48bfd706fe8c1c2",
+    "date": "2015-01-04 14:21:29",
+    "author": "Steve Holme",
+    "description": "ldap: Fixed memory leak from commit efb64fdf80\n\nThe unescapped DN was not freed after a successful character conversion.\n",
+    "summary": "ldap: Fixed memory leak from commit efb64fdf80",
+    "hash": "724152795672089837ddda2ebde15d1113da6b1b"
+}

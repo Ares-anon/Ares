@@ -1,0 +1,8 @@
+{
+    "parent_hash": "0d717a3106e352a5339508bf6b24b87984bd8a82",
+    "date": "2018-09-16 23:22:15",
+    "author": "Daniel Stenberg",
+    "description": "http2: fix memory leaks on error-path\n",
+    "summary": "http2: fix memory leaks on error-path",
+    "hash": "130c53b632ca63f48b01bc048eda20c7512efd5c"
+}

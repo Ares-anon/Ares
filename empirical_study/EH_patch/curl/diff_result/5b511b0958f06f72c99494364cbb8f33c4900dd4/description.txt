@@ -1,0 +1,8 @@
+{
+    "parent_hash": "2c33105dbf146c78a9a9db6867d0644838e92856",
+    "date": "2018-07-12 14:47:11",
+    "author": "Daniel Stenberg",
+    "description": "smb: fix memory-leak in URL parse error path\n\nDetected by OSS-Fuzz\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9369\nCloses #2740\n",
+    "summary": "smb: fix memory-leak in URL parse error path",
+    "hash": "5b511b0958f06f72c99494364cbb8f33c4900dd4"
+}

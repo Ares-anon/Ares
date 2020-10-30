@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix low-probability memory leak in regex execution.\n\nAfter an internal failure in shortest() or longest() while pinning down the\nexact location of a match, find() forgot to free the DFA structure before\nreturning.  This is pretty unlikely to occur, since we just successfully\nran the \"search\" variant of the DFA; but it could happen, and it would\nresult in a session-lifespan memory leak since this code uses malloc()\ndirectly.  Problem seems to have been aboriginal in Spencer's library,\nso back-patch all the way.\n\nIn passing, correct a thinko in a comment I added awhile back about the\nmeaning of the \"ntree\" field.\n\nI happened across these issues while comparing our code to Tcl's version\nof the library.\n",
+    "summary": "Fix low-probability memory leak in regex execution.",
+    "date": "2015-09-18 13:55:17",
+    "parent_hash": "d63a1720fa0b2ca8452c3a2aa2f6ddbb4f05b640",
+    "hash": "d9c0c728afe734b7087dbb9a4bc16d5b682d139d"
+}

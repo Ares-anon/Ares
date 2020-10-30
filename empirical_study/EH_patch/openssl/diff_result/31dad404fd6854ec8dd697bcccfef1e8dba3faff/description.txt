@@ -1,0 +1,8 @@
+{
+    "summary": "Add error checking, small nit on ouput",
+    "author": "FdaSilvaYY",
+    "description": "Add error checking, small nit on ouput\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1632)",
+    "hash": "31dad404fd6854ec8dd697bcccfef1e8dba3faff",
+    "date": "2016-10-19 06:37:42",
+    "parent_hash": "12d2ee211b2a4f489787aaf9aa758fe3db128304"
+}

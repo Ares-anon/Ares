@@ -1,0 +1,22 @@
+ssl/ssl_rsa.c
+=======================================================
+lhs: 100644 | aad65ead89200e045e9265f02cb36a7d42bd954a
+rhs: 100644 | bb4e872ab47795f422fe151ad02b4cd9a9065747
+---@@ -110,6 +110,7 @@ int SSL_use_RSAPrivateKey(SSL *ssl, RSA *rsa)
+     RSA_up_ref(rsa);
+     if (EVP_PKEY_assign_RSA(pkey, rsa) <= 0) {
+         RSA_free(rsa);
++        EVP_PKEY_free(pkey);
+         return 0;
+     }
+ 
+@@ -452,6 +453,7 @@ int SSL_CTX_use_RSAPrivateKey(SSL_CTX *ctx, RSA *rsa)
+     RSA_up_ref(rsa);
+     if (EVP_PKEY_assign_RSA(pkey, rsa) <= 0) {
+         RSA_free(rsa);
++        EVP_PKEY_free(pkey);
+         return 0;
+     }
+ 
+
+---

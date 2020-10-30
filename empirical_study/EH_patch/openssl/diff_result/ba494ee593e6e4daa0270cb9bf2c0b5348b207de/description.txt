@@ -1,0 +1,8 @@
+{
+    "summary": "hashbn: check for NULL result when allocating bin and return an error if it fails all (in)direct callers of hashbn: propagate potential error in hashbn",
+    "author": "Jonas Maebe",
+    "description": "hashbn: check for NULL result when allocating bin and return an error if it fails all (in)direct callers of hashbn: propagate potential error in hashbn\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Dr. Stephen Henson <steve@openssl.org>\n",
+    "hash": "ba494ee593e6e4daa0270cb9bf2c0b5348b207de",
+    "date": "2014-08-17 18:54:39",
+    "parent_hash": "462319c3e9e3d205fba795dbd63936a8547a6100"
+}

@@ -1,0 +1,19 @@
+lib/socks_gssapi.c
+=======================================================
+lhs: 100644 | 188c87096315e728af15f9c2e4f3dde262481076
+rhs: 100644 | d117d6d7d98e1631e68cf2f932bacb926de9e4ae
+---@@ -92,10 +92,10 @@ static int check_gss_err(struct SessionHandle *data,
+       gss_release_buffer(&min_stat, &status_string);
+     }
+     failf(data, "GSS-API error: %s failed:\n%s", function, buf);
+-    return(1);
++    return 1;
+   }
+ 
+-  return(0);
++  return 0;
+ }
+ 
+ CURLcode Curl_SOCKS5_gssapi_negotiate(int sockindex,
+
+---

@@ -1,0 +1,17 @@
+crypto/sm2/sm2_sign.c
+=======================================================
+lhs: 100644 | 12ccd28bcfa7ea72d4a1e0aa0cb80ff7630d0321
+rhs: 100644 | e12eca12fb432944540b80297c5569e910e18917
+---@@ -279,9 +279,7 @@ int SM2_sign(int type, const unsigned char *dgst, int dgstlen,
+ 
+     *siglen = i2d_ECDSA_SIG(s, &sig);
+ 
+-    ECDSA_SIG_free(s);
+-
+-    ret = 0;
++    ret = 1;
+ 
+  done:
+     ECDSA_SIG_free(s);
+
+---

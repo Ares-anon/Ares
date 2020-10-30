@@ -1,0 +1,16 @@
+crypto/dsa/dsa_gen.c
+=======================================================
+lhs: 100644 | 3dac5500312afe1e321247685630a3533b58c66e
+rhs: 100644 | 11f422e4b4bccbc2c9e90f74148d9f3dfae76e15
+---@@ -100,6 +100,9 @@ int dsa_builtin_paramgen(DSA *ret, size_t bits, size_t qbits,
+     p = BN_CTX_get(ctx);
+     test = BN_CTX_get(ctx);
+ 
++    if (test == NULL)
++        goto err;
++
+     if (!BN_lshift(test, BN_value_one(), bits - 1))
+         goto err;
+ 
+
+---

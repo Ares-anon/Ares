@@ -1,0 +1,8 @@
+{
+    "summary": "Fixed memory leak due to incorrect freeing of DTLS reassembly bit mask",
+    "author": "Matt Caswell",
+    "description": "Fixed memory leak due to incorrect freeing of DTLS reassembly bit mask\n\nPR#3608\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "8a35dbb6d89a16d792b79b157b3e89443639ec94",
+    "date": "2014-11-26 10:10:21",
+    "parent_hash": "3a0765882c4b3b67960b7efb203570764dd4ed29"
+}

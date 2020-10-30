@@ -1,0 +1,18 @@
+crypto/engine/eng_table.c
+=======================================================
+lhs: 100644 | 219253a38acde15d900681534994bd574a2ce54a
+rhs: 100644 | ffdecb9991a568e627e39625f43bf231d5116e03
+---@@ -109,6 +109,11 @@ int engine_table_register(ENGINE_TABLE **table, ENGINE_CLEANUP_CB *cleanup,
+             }
+             fnd->funct = NULL;
+             (void)lh_ENGINE_PILE_insert(&(*table)->piles, fnd);
++            if (lh_ENGINE_PILE_retrieve(&(*table)->piles, &tmplate) != fnd) {
++                sk_ENGINE_free(fnd->sk);
++                OPENSSL_free(fnd);
++                goto end;
++            }
+         }
+         /* A registration shouldn't add duplicate entries */
+         (void)sk_ENGINE_delete_ptr(fnd->sk, e);
+
+---

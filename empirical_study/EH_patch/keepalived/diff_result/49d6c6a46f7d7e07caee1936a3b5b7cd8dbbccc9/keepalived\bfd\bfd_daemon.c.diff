@@ -1,0 +1,15 @@
+keepalived/bfd/bfd_daemon.c
+=======================================================
+lhs: 100644 | 72b25124bd44d6be86df9600b6c6900a93bc7389
+rhs: 100644 | dd784bc27f2aaa7446e98c7119fa2b3b6d7d2940
+---@@ -72,6 +72,8 @@ stop_bfd(int status)
+ 	free_bfd_data(bfd_data);
+ 	free_bfd_buffer();
+ 	thread_destroy_master(master);
++	free_parent_mallocs_exit();
++
+ 
+ 	/*
+ 	 * Reached when terminate signal catched.
+
+---

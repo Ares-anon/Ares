@@ -1,0 +1,8 @@
+{
+    "summary": "Fix an uninitialised read on an error path",
+    "author": "Matt Caswell",
+    "description": "Fix an uninitialised read on an error path\n\nFound by Coverity.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "cc069067075d77c7a61e44a253aec917d0b6a2f5",
+    "date": "2016-08-25 10:11:35",
+    "parent_hash": "5105ba5bec773883e86d8c026d1eac1f1c970669"
+}

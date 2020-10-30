@@ -1,0 +1,18 @@
+ssl/t1_lib.c
+=======================================================
+lhs: 100644 | cf007f9cce62e4e33460e55c77756d4a41be71b7
+rhs: 100644 | 657ab1d1dd682f5bca11b84184caf865efe8b0e5
+---@@ -3455,7 +3455,11 @@ static int tls_decrypt_ticket(SSL *s, const unsigned char *etick, int eticklen,
+ 		}
+ 	EVP_DecryptUpdate(&ctx, sdec, &slen, p, eticklen);
+ 	if (EVP_DecryptFinal(&ctx, sdec + slen, &mlen) <= 0)
++		{
++		EVP_CIPHER_CTX_cleanup(&ctx);
++		OPENSSL_free(sdec);
+ 		return 2;
++		}
+ 	slen += mlen;
+ 	EVP_CIPHER_CTX_cleanup(&ctx);
+ 	p = sdec;
+
+---

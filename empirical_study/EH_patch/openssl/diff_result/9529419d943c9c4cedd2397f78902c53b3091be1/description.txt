@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in the ClientHello extension parsing",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in the ClientHello extension parsing\n\nWe should be freeing up the raw extension data after we've finished with it.\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "9529419d943c9c4cedd2397f78902c53b3091be1",
+    "date": "2016-11-09 09:10:29",
+    "parent_hash": "4bfe1432c8d82ffaa99c01085da0520b6090567d"
+}

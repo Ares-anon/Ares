@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks and other mistakes on errors",
+    "author": "Alessandro Ghedini",
+    "description": "Fix memory leaks and other mistakes on errors\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "3f6c7691870d1cd2ad0e0c83638cef3f35a0b548",
+    "date": "2015-10-23 19:52:08",
+    "parent_hash": "8acaabec429b39f9436f6a88006384d72d292539"
+}

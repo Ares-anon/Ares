@@ -1,0 +1,8 @@
+{
+    "author": "Simon Riggs",
+    "description": "Fix minor memory leak in Standby startup\n\nStandbyRecoverPreparedTransactions() leaked the buffer\nused for two phase state file. This was leaked once\nat startup and at every shutdown checkpoint seen.\n\nBackpatch to 9.6\n\nStas Kelvich\n",
+    "summary": "Fix minor memory leak in Standby startup",
+    "date": "2016-09-08 10:32:58",
+    "parent_hash": "d299eb41dfc7b73dec80f22554b952f01c9d54a4",
+    "hash": "67c6bd1ca3ce75778138bf4713444a5a6b46032e"
+}

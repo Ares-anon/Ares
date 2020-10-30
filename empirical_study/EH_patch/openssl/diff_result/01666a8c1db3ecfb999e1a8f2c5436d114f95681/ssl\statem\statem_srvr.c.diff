@@ -1,0 +1,18 @@
+ssl/statem/statem_srvr.c
+=======================================================
+lhs: 100644 | ac5fd09134ffe96657ace45414ef66c81ab87008
+rhs: 100644 | 7d0e9d0ba8756466a562a2c14489adfc442ee9f3
+---@@ -1519,8 +1519,10 @@ MSG_PROCESS_RETURN tls_process_client_hello(SSL *s, PACKET *pkt)
+              * So check cookie length...
+              */
+             if (SSL_get_options(s) & SSL_OP_COOKIE_EXCHANGE) {
+-                if (clienthello->dtls_cookie_len == 0)
++                if (clienthello->dtls_cookie_len == 0) {
++                    OPENSSL_free(clienthello);
+                     return MSG_PROCESS_FINISHED_READING;
++                }
+             }
+         }
+ 
+
+---

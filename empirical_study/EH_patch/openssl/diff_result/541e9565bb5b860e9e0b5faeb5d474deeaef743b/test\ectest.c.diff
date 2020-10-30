@@ -1,0 +1,16 @@
+test/ectest.c
+=======================================================
+lhs: 100644 | 674e593f4430cf6b8ac2be03ba4080839143bc27
+rhs: 100644 | 03dfed96c90f302e9c4afe7bc315def6a6f89b74
+---@@ -1687,7 +1687,8 @@ int main(int argc, char *argv[])
+     ERR_free_strings();
+     ERR_remove_thread_state(NULL);
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks_fp(stderr);
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        return 1;
+ #endif
+ 
+     return 0;
+
+---

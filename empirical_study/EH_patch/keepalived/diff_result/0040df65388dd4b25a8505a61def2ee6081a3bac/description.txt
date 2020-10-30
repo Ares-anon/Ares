@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak re some uses of ipaddresstos()\n\nMany of the calls to ipaddresstos() weren't freeing the malloc'd\nmemory afterwards. This commit changes ipaddresstos() to use a\nstatic buffer, or a buffer passed to ipaddresstos(), thereby avoiding\nthe use of malloc altogether.\n\nThe commit also simplifies dump_iprule() and dump_iproute() by avoiding\nthe use of intermediate buffers, and reducing the number of malloc's/free's.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "a91d4cc82c82af8bfd017540aff74a6f410e94c0",
+    "summary": "Fix memory leak re some uses of ipaddresstos()",
+    "date": "2016-03-06 10:26:51",
+    "hash": "0040df65388dd4b25a8505a61def2ee6081a3bac"
+}

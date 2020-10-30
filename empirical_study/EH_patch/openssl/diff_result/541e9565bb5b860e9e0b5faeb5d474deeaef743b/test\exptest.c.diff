@@ -1,0 +1,16 @@
+test/exptest.c
+=======================================================
+lhs: 100644 | 0acdacced73caab727f8a8580360f21aacf0f6a2
+rhs: 100644 | 5cd79e2970b9518daa60fb92b2e960213088d811
+---@@ -300,7 +300,8 @@ int main(int argc, char *argv[])
+     BN_CTX_free(ctx);
+     ERR_remove_thread_state(NULL);
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks(out);
++    if (CRYPTO_mem_leaks(out) <= 0)
++        goto err;
+ #endif
+     BIO_free(out);
+     printf("\n");
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c6ddb606d8a3fdbe89763f7299e7f43cf6581567",
+    "date": "2017-02-25 21:36:39",
+    "author": "Dan Fandrich",
+    "description": "proxy: fixed a memory leak on OOM\n",
+    "summary": "proxy: fixed a memory leak on OOM",
+    "hash": "ce9ba3ba1057725fe5f485de01294182841c2132"
+}

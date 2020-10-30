@@ -1,0 +1,19 @@
+crypto/engine/eng_lib.c
+=======================================================
+lhs: 100644 | 95736eda6a0de25f0d1822813db84a29b99bd957
+rhs: 100644 | 9028319788fb014c3c998a7ec9a2508a07e69498
+---@@ -154,8 +154,10 @@ void engine_cleanup_add_last(ENGINE_CLEANUP_CB *cb)
+     if (!int_cleanup_check(1))
+         return;
+     item = int_cleanup_item(cb);
+-    if (item)
+-        sk_ENGINE_CLEANUP_ITEM_push(cleanup_stack, item);
++    if (item != NULL) {
++        if (sk_ENGINE_CLEANUP_ITEM_push(cleanup_stack, item) <= 0)
++            OPENSSL_free(item);
++    }
+ }
+ 
+ /* The API function that performs all cleanup */
+
+---

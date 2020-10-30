@@ -1,0 +1,20 @@
+crypto/ocsp/ocsp_vfy.c
+=======================================================
+lhs: 100644 | 276718304dd211d4be989fb750d8c95ff792feff
+rhs: 100644 | fc0d4cc0f5f785f688a1242ab12c9202532d298b
+---@@ -436,8 +436,11 @@ static int ocsp_req_find_signer(X509 **psigner, OCSP_REQUEST *req, X509_NAME *nm
+ 	if(!(flags & OCSP_NOINTERN))
+ 		{
+ 		signer = X509_find_by_subject(req->optionalSignature->certs, nm);
+-		*psigner = signer;
+-		return 1;
++		if (signer)
++			{
++			*psigner = signer;
++			return 1;
++			}
+ 		}
+ 
+ 	signer = X509_find_by_subject(certs, nm);
+
+---

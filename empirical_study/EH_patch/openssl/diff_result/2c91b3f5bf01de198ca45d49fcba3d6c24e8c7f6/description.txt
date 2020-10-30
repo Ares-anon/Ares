@@ -1,0 +1,8 @@
+{
+    "summary": "Check method before access and release ctx in error paths",
+    "author": "J Mohan Rao Arisankala",
+    "description": "Check method before access and release ctx in error paths\n\n- In error paths, EVP_MD_CTX allocated by the callee is not released.\n- Checking method before accessing\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "2c91b3f5bf01de198ca45d49fcba3d6c24e8c7f6",
+    "date": "2016-02-26 11:16:33",
+    "parent_hash": "2d51c28ff749f8b5f133bea0f7ba2160ecc0598b"
+}

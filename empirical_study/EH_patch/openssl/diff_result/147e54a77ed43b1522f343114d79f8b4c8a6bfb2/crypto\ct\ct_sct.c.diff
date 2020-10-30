@@ -1,0 +1,15 @@
+crypto/ct/ct_sct.c
+=======================================================
+lhs: 100644 | 35f815235f15d32223970c5051cd6be078ba7d65
+rhs: 100644 | 2b7211d7ea42f42cb34e00c649bddc7753839fe6
+---@@ -402,7 +402,7 @@ int SCT_validate(SCT *sct, const CT_POLICY_EVAL_CTX *ctx)
+             goto end;
+         }
+ 
+-        issuer_pkey = X509_get_pubkey(ctx->issuer);
++        issuer_pkey = X509_get0_pubkey(ctx->issuer);
+ 
+         if (X509_PUBKEY_set(&pub, issuer_pkey) != 1)
+             goto err;
+
+---

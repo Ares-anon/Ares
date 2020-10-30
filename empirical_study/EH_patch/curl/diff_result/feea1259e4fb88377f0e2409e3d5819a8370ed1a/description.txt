@@ -1,0 +1,8 @@
+{
+    "parent_hash": "be208141915f18d4ffae66078303fe15d717c8b5",
+    "date": "2018-10-27 15:59:43",
+    "author": "Daniel Stenberg",
+    "description": "x509asn1: always check return code from getASN1Element()\n",
+    "summary": "x509asn1: always check return code from getASN1Element()",
+    "hash": "feea1259e4fb88377f0e2409e3d5819a8370ed1a"
+}

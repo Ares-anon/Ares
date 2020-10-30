@@ -1,0 +1,8 @@
+{
+    "parent_hash": "a9882b90f82b4bac7b8eff617782a1b59c035a8a",
+    "date": "2018-09-13 10:10:55",
+    "author": "Daniel Gustafsson",
+    "description": "krb5: fix memory leak in krb_auth\n\nThe FTP command allocated by aprintf() must be freed after usage.\n\nReviewed-by: Daniel Stenberg <daniel@haxx.se>\n",
+    "summary": "krb5: fix memory leak in krb_auth",
+    "hash": "3c5ee47fc206036283bdbcbe4588464bc9a7a5ae"
+}

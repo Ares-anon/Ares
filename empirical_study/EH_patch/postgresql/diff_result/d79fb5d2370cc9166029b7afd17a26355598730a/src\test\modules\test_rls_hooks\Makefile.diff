@@ -1,0 +1,16 @@
+src/test/modules/test_rls_hooks/Makefile
+=======================================================
+lhs: 100644 | 6b772c4db121f49be99a4f53b29481217c113674
+rhs: 100644 | 284fdaf0958229d033b59fd3e0dff5bc98b0fd7d
+---@@ -9,6 +9,9 @@ EXTENSION = test_rls_hooks
+ 
+ REGRESS = test_rls_hooks
+ REGRESS_OPTS = --temp-config=$(top_srcdir)/src/test/modules/test_rls_hooks/rls_hooks.conf
++# Disabled because these tests require "shared_preload_libraries=test_rls_hooks",
++# which typical installcheck users do not have (e.g. buildfarm clients).
++NO_INSTALLCHECK = 1
+ 
+ ifdef USE_PGXS
+ PG_CONFIG = pg_config
+
+---

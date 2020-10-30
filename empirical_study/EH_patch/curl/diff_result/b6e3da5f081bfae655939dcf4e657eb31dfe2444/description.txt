@@ -1,0 +1,8 @@
+{
+    "parent_hash": "28cdc0d82c6159addc6d2a66449bc6bd2ef0bb71",
+    "date": "2015-05-24 11:19:07",
+    "author": "Dan Fandrich",
+    "description": "conncache: fixed memory leak on OOM (torture tests)\n",
+    "summary": "conncache: fixed memory leak on OOM (torture tests)",
+    "hash": "b6e3da5f081bfae655939dcf4e657eb31dfe2444"
+}

@@ -1,0 +1,8 @@
+{
+    "description": "Use of LIST_ISEMPTY to check list exists causes memory leak\n\nIf a list exists, but has 0 entries, the code fragment\nif (LIST_ISEMPTY(list_p))\n\tlist_p = list_alloc(..., ...)\ncauses the original list pointer to be overwritten, thereby causing a memory\nleak.\n\nIntroducing LIST_EXISTS, and replacing the code fragment above with\nif (!LIST_EXISTS(list_p))\n\tlist_p = list_alloc(..., ...);\navoids the memory leak.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "e4aa2c74414ab7ce7f7da1f3bd047a77669685ae",
+    "summary": "Use of LIST_ISEMPTY to check list exists causes memory leak",
+    "date": "2016-01-26 12:05:31",
+    "hash": "fc8a7f9896c439acc9b0c5fff63ceae17ce6cfef"
+}

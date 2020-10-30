@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Add missing installcheck target to pg_rewind's Makefile\n\nMichael Paquier\n",
+    "summary": "Add missing installcheck target to pg_rewind's Makefile",
+    "date": "2015-04-21 14:09:25",
+    "parent_hash": "d811c037cea2e929ee5823aab6e1bca0df8be245",
+    "hash": "060a1224af3f66c172cfb14e5ca9d0ffa575201a"
+}

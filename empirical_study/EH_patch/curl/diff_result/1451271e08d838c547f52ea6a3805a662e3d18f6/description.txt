@@ -1,0 +1,8 @@
+{
+    "parent_hash": "fc347820a27c5e5ed1ccfe1c81c4c4eb2a59f9fe",
+    "date": "2017-04-15 23:37:30",
+    "author": "Larry Stefani",
+    "description": "http2: fix handle leak in error path\n\nAdd missing newhandle free call in push_promise().\n\nCloses #1416\n",
+    "summary": "http2: fix handle leak in error path",
+    "hash": "1451271e08d838c547f52ea6a3805a662e3d18f6"
+}

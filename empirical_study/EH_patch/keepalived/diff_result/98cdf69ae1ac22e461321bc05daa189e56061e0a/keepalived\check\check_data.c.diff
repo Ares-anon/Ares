@@ -1,0 +1,17 @@
+keepalived/check/check_data.c
+=======================================================
+lhs: 100644 | 98f361cf37e01731c7a22031c6c2a022b8cda076
+rhs: 100644 | 8df55b6ee24f1846c782391176c15bc28ffa82fd
+---@@ -456,8 +456,10 @@ static void
+ free_rs(void *data)
+ {
+ 	real_server_t *rs = data;
++
+ 	free_notify_script(&rs->notify_up);
+ 	free_notify_script(&rs->notify_down);
++	free_list(&rs->tracked_bfds);
+ 	FREE_PTR(rs->virtualhost);
+ 	FREE(rs);
+ }
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Check sk_SSL_CIPHER_new_null return value",
+    "author": "Matt Caswell",
+    "description": "Check sk_SSL_CIPHER_new_null return value\n\nIf sk_SSL_CIPHER_new_null() returns NULL then ssl_bytes_to_cipher_list()\nshould also return NULL.\n\nBased on an original patch by mrpre <mrpre@163.com>.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "14def5f5375594830597cc153e11c6017f6adddf",
+    "date": "2015-05-11 11:47:19",
+    "parent_hash": "fae4772c24b89526f70c74fa14a85c5c16bced9a"
+}

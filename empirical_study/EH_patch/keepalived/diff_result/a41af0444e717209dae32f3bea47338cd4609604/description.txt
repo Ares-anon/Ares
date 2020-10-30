@@ -1,0 +1,8 @@
+{
+    "description": "Add file missing from add-dns-checker commit\n\nCommit bc21563 omitted to include the update to keepalived/check/Makefile.in.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "92f08a3c56d1dd21040aa8fe73ccb414c703c3ae",
+    "summary": "Add file missing from add-dns-checker commit",
+    "date": "2016-09-26 15:36:26",
+    "hash": "a41af0444e717209dae32f3bea47338cd4609604"
+}

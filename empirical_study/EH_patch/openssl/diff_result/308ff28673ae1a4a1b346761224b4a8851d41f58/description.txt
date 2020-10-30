@@ -1,0 +1,8 @@
+{
+    "summary": "Fix error return value in SRP functions",
+    "author": "Matt Caswell",
+    "description": "Fix error return value in SRP functions\n\nThe functions SRP_Calc_client_key() and SRP_Calc_server_key() were\nincorrectly returning a valid pointer in the event of error.\n\nIssue reported by Yuan Jochen Kang\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "308ff28673ae1a4a1b346761224b4a8851d41f58",
+    "date": "2016-05-23 23:55:11",
+    "parent_hash": "dae00d631fdaed48d88c454864abbd6ce99c63d6"
+}

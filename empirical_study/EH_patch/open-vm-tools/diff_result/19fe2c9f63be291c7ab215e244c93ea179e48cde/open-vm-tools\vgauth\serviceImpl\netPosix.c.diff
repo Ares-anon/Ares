@@ -1,0 +1,15 @@
+open-vm-tools/vgauth/serviceImpl/netPosix.c
+=======================================================
+lhs: 100644 | a149c4aa4a344fea0f1d12ea7623704c6543205d
+rhs: 100644 | 5efcf21aa9024d815763827909e2d85bbe6c7927
+---@@ -113,6 +113,8 @@ ServiceNetworkListen(ServiceConnection *conn,            // IN/OUT
+       }
+       Log("%s: Created socket directory '%s'\n", __FUNCTION__, socketDir);
+    }
++   g_free(socketDir);
++   socketDir = NULL;
+ 
+    sock = socket(PF_UNIX, SOCK_STREAM, 0);
+    if (sock < 0) {
+
+---

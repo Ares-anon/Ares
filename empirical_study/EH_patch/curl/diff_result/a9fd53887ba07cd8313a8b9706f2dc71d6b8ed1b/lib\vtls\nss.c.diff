@@ -1,0 +1,22 @@
+lib/vtls/nss.c
+=======================================================
+lhs: 100644 | c66c60b5617b4bfd720de2de1ef36380de3b4cc4
+rhs: 100644 | 048273cf2c41b6960a24a11fae8e092d58b144f6
+---@@ -1798,9 +1798,13 @@ static CURLcode nss_setup_connect(struct connectdata *conn, int sockindex)
+ 
+ 
+   /* Force handshake on next I/O */
+-  SSL_ResetHandshake(connssl->handle, /* asServer */ PR_FALSE);
++  if(SSL_ResetHandshake(connssl->handle, /* asServer */ PR_FALSE)
++      != SECSuccess)
++    goto error;
+ 
+-  SSL_SetURL(connssl->handle, conn->host.name);
++  /* propagate hostname to the TLS layer */
++  if(SSL_SetURL(connssl->handle, conn->host.name) != SECSuccess)
++    goto error;
+ 
+   return CURLE_OK;
+ 
+
+---

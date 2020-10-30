@@ -1,0 +1,17 @@
+ssl/statem/statem_lib.c
+=======================================================
+lhs: 100644 | 6c51699d3300de1af062316f9ba1b16a9abaa433
+rhs: 100644 | 15dc6fd35b73f20a216b65277c49f3c69b0600be
+---@@ -1118,6 +1118,10 @@ int ssl_choose_client_version(SSL *s, int version)
+     const version_info *vent;
+     const version_info *table;
+ 
++    /* TODO(TLS1.3): Remove this before release */
++    if (version == TLS1_3_VERSION_DRAFT)
++        version = TLS1_3_VERSION;
++
+     switch (s->method->version) {
+     default:
+         if (version != s->version)
+
+---

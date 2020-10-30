@@ -1,0 +1,8 @@
+{
+    "description": "Patches for heap corruption and missing bounds check\n\nBy Gabriel Campana and Adrien Guinet from Quarkslab.\n",
+    "parent_hash": "20b5d4d9826add4f1fc6949a0b1406953fa7bacb",
+    "author": "ailin-nemui",
+    "date": "2016-09-20 19:56:06",
+    "hash": "295a4b77f07f14602eeaa371f00ddbf09910c82b",
+    "summary": "Patches for heap corruption and missing bounds check"
+}

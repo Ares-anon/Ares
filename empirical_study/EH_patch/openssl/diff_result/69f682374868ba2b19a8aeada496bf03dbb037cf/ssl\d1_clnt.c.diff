@@ -1,0 +1,19 @@
+ssl/d1_clnt.c
+=======================================================
+lhs: 100644 | 151dd4728541d3310a53ed8c63f2ab2c0b0c0c2c
+rhs: 100644 | c5831cd2eb33535f376e0b673fac40b60a3a3493
+---@@ -181,8 +181,10 @@ int dtls1_connect(SSL *s)
+         cb = s->ctx->info_callback;
+ 
+     s->in_handshake++;
+-    if (!SSL_in_init(s) || SSL_in_before(s))
+-        SSL_clear(s);
++    if (!SSL_in_init(s) || SSL_in_before(s)) {
++        if(!SSL_clear(s))
++            return -1;
++    }
+ 
+ #ifndef OPENSSL_NO_SCTP
+     /*
+
+---

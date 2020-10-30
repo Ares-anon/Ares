@@ -1,0 +1,8 @@
+{
+    "summary": "Fix CRYPTO_THREAD_run_once return value checks",
+    "author": "Emilia Kasper",
+    "description": "Fix CRYPTO_THREAD_run_once return value checks\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "3ddd1d0458b4e90d34379a3019f092d6010e9710",
+    "date": "2016-03-15 17:59:09",
+    "parent_hash": "e58d91027ad0132289cae5c9960a68f5750ba0ee"
+}

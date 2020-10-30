@@ -1,0 +1,30 @@
+src/backend/access/nbtree/nbtinsert.c
+=======================================================
+lhs: 100644 | 7db8a9613d12f78d3d9cada780936da37ac0849a
+rhs: 100644 | 932c6f78e3ff945d6f4256df66aadd7aeac9d138
+---@@ -389,16 +389,20 @@ _bt_check_unique(Relation rel, IndexTuple itup, Relation heapRel,
+ 					{
+ 						Datum		values[INDEX_MAX_KEYS];
+ 						bool		isnull[INDEX_MAX_KEYS];
++						char	   *key_desc;
+ 
+ 						index_deform_tuple(itup, RelationGetDescr(rel),
+ 										   values, isnull);
++
++						key_desc = BuildIndexValueDescription(rel, values,
++															  isnull);
++
+ 						ereport(ERROR,
+ 								(errcode(ERRCODE_UNIQUE_VIOLATION),
+ 								 errmsg("duplicate key value violates unique constraint \"%s\"",
+ 										RelationGetRelationName(rel)),
+-								 errdetail("Key %s already exists.",
+-										   BuildIndexValueDescription(rel,
+-															values, isnull)),
++								 key_desc ? errdetail("Key %s already exists.",
++													  key_desc) : 0,
+ 								 errtableconstraint(heapRel,
+ 											 RelationGetRelationName(rel))));
+ 					}
+
+---

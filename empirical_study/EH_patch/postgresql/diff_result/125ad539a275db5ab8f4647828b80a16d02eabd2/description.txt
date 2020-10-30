@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Improve TranslateSocketError() to handle more Windows error codes.\n\nThe coverage was rather lean for cases that bind() or listen() might\nreturn.  Add entries for everything that there's a direct equivalent\nfor in the set of Unix errnos that elog.c has heard of.\n",
+    "summary": "Improve TranslateSocketError() to handle more Windows error codes.",
+    "date": "2016-04-21 16:58:47",
+    "parent_hash": "e54528155a3c4159b01327534691c3342a371cab",
+    "hash": "125ad539a275db5ab8f4647828b80a16d02eabd2"
+}

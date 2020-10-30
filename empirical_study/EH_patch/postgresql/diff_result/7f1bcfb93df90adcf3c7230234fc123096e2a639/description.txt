@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Sync pltcl_build_tuple_result's error handling with pltcl_trigger_handler.\n\nMeant to do this in 26abb50c4, but forgot.\n",
+    "summary": "Sync pltcl_build_tuple_result's error handling with pltcl_trigger_handler.",
+    "date": "2016-11-06 19:22:12",
+    "parent_hash": "26abb50c490dee191df21282bc940b94118550aa",
+    "hash": "7f1bcfb93df90adcf3c7230234fc123096e2a639"
+}

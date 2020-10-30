@@ -1,0 +1,15 @@
+test/testutil/basic_output.c
+=======================================================
+lhs: 100644 | b69c59f7759fa69d50bbd2f3cb33a26f82586d7d
+rhs: 100644 | 6a06b367280ae66fb6307f66f5c741a23bae5417
+---@@ -30,7 +30,7 @@ void test_open_streams(void)
+ void test_close_streams(void)
+ {
+     BIO_free(bio_out);
+-    BIO_free(bio_err);
++    BIO_free_all(bio_err);
+ }
+ 
+ int test_vprintf_stdout(const char *fmt, va_list ap)
+
+---

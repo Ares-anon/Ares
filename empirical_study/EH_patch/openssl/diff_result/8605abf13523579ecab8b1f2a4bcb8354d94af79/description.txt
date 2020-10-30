@@ -1,0 +1,8 @@
+{
+    "summary": "Fix an error path leak in do_ext_nconf()",
+    "author": "Matt Caswell",
+    "description": "Fix an error path leak in do_ext_nconf()\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "8605abf13523579ecab8b1f2a4bcb8354d94af79",
+    "date": "2016-06-10 16:42:05",
+    "parent_hash": "e68a780ed698cd7839d38bf3851974fc1d23e00d"
+}

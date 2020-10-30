@@ -1,0 +1,18 @@
+src/backend/access/transam/xlog.c
+=======================================================
+lhs: 100644 | 150d56afb8fc341b585ef6947bebc02b132aa2ae
+rhs: 100644 | 4e37ad3e21aa4c9dc2fd41f2c0b72a1d636e7ecf
+---@@ -1983,9 +1983,9 @@ AdvanceXLInsertBuffer(XLogRecPtr upto, bool opportunistic)
+ 	LWLockRelease(WALBufMappingLock);
+ 
+ #ifdef WAL_DEBUG
+-	if (npages > 0)
++	if (XLOG_DEBUG && npages > 0)
+ 	{
+-		elog(DEBUG1, "initialized %d pages, upto %X/%X",
++		elog(DEBUG1, "initialized %d pages, up to %X/%X",
+ 			 npages, (uint32) (NewPageEndPtr >> 32), (uint32) NewPageEndPtr);
+ 	}
+ #endif
+
+---

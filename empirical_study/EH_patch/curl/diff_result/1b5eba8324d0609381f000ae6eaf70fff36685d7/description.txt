@@ -1,0 +1,8 @@
+{
+    "parent_hash": "ddb106d7f62cd6151461f95bf489342822f0dbf5",
+    "date": "2015-06-24 23:44:42",
+    "author": "Tatsuhiro Tsujikawa",
+    "description": "http2: Use nghttp2 library error code for error return value\n",
+    "summary": "http2: Use nghttp2 library error code for error return value",
+    "hash": "1b5eba8324d0609381f000ae6eaf70fff36685d7"
+}

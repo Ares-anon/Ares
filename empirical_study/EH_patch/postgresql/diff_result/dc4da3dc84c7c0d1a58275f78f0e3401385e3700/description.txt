@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix very minor memory leaks in psql's command.c.\n\n\\drds leaked its second pattern argument if any, and \\connect leaked\nany empty-string or \"-\" arguments.  These are old bugs, but it's hard\nto imagine any real use-case where the leaks could amount to anything\nmeaningful, so not bothering with a back-patch.\n\nDaniel Gustafsson and Tom Lane\n\nDiscussion: https://postgr.es/m/3641F19B-336A-431A-86CE-A80562505C5E@yesql.se\n",
+    "summary": "Fix very minor memory leaks in psql's command.c.",
+    "date": "2017-07-27 11:10:38",
+    "parent_hash": "efd7f8e36553cd32e445061cbbc80d32028f4248",
+    "hash": "dc4da3dc84c7c0d1a58275f78f0e3401385e3700"
+}

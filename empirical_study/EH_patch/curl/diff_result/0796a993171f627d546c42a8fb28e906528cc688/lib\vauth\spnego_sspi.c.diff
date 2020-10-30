@@ -1,0 +1,18 @@
+lib/vauth/spnego_sspi.c
+=======================================================
+lhs: 100644 | 1222a654df8e15a0d5ac41107fba313497b913d9
+rhs: 100644 | f83c44632e2267d8a82ff81c34af5d46feec3e56
+---@@ -265,8 +265,10 @@ CURLcode Curl_auth_create_spnego_message(struct Curl_easy *data,
+   if(result)
+     return result;
+ 
+-  if(!*outptr || !*outlen)
++  if(!*outptr || !*outlen) {
++    free(*outptr);
+     return CURLE_REMOTE_ACCESS_DENIED;
++  }
+ 
+   return CURLE_OK;
+ }
+
+---

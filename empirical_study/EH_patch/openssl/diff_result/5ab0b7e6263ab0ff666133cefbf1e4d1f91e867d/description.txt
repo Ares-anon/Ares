@@ -1,0 +1,8 @@
+{
+    "summary": "Missing NULL check on OBJ_dup result in x509_name_canon",
+    "author": "FdaSilvaYY",
+    "description": "Missing NULL check on OBJ_dup result in x509_name_canon\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1168)",
+    "hash": "5ab0b7e6263ab0ff666133cefbf1e4d1f91e867d",
+    "date": "2016-06-18 16:30:24",
+    "parent_hash": "b1b1cba4e2ae76bc3b8390842c8482dc0b3358ca"
+}

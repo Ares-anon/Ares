@@ -1,0 +1,8 @@
+{
+    "parent_hash": "e2dd435d473cdc97785df95d032276fafb4b7746",
+    "date": "2018-09-24 16:38:11",
+    "author": "Daniel Stenberg",
+    "description": "Curl_retry_request: fix memory leak\n\nDetected by OSS-Fuzz\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=10648\nCloses #3042\n",
+    "summary": "Curl_retry_request: fix memory leak",
+    "hash": "ef695fc30144c8b92700c0161cdafd141c70ae60"
+}

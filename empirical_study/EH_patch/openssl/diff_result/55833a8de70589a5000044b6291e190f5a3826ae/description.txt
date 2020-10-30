@@ -1,0 +1,8 @@
+{
+    "summary": "add missing check for BN_mod_inverse",
+    "author": "Mansour Ahmadi",
+    "description": "add missing check for BN_mod_inverse\n\nFixes #7650\n\nReviewed-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7876)\n",
+    "hash": "55833a8de70589a5000044b6291e190f5a3826ae",
+    "date": "2018-12-13 09:54:54",
+    "parent_hash": "4fea7005c3d08ed0d575bdea5082b7b0ce355237"
+}

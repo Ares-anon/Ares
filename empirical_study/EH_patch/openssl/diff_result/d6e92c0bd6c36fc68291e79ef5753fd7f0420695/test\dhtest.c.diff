@@ -1,0 +1,18 @@
+test/dhtest.c
+=======================================================
+lhs: 100644 | 9ce92ee392832b8f9b09c908fe69c4b5dbc66c49
+rhs: 100644 | 896af851ce234cfae6bbd118573c1bc3b22af12a
+---@@ -515,9 +515,9 @@ static int run_rfc5114_tests(void)
+          * Work out shared secrets using both sides and compare with expected
+          * values.
+          */
+-        if (!DH_compute_key(Z1, dhB->pub_key, dhA))
++        if (DH_compute_key(Z1, dhB->pub_key, dhA) == -1)
+             goto bad_err;
+-        if (!DH_compute_key(Z2, dhA->pub_key, dhB))
++        if (DH_compute_key(Z2, dhA->pub_key, dhB) == -1)
+             goto bad_err;
+ 
+         if (memcmp(Z1, td->Z, td->Z_len))
+
+---

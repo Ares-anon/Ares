@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks on CRYPTO_set_ex_data return value",
+    "author": "FdaSilvaYY",
+    "description": "Add checks on CRYPTO_set_ex_data return value\nFix possible leak in danetest.c\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "e5a5e3f3db5832f7ba4eff8016bad00f37dada58",
+    "date": "2016-05-23 13:43:31",
+    "parent_hash": "a98810bfac37a77750592611bb9f5a22e4634692"
+}

@@ -1,0 +1,19 @@
+ssl/statem/statem_srvr.c
+=======================================================
+lhs: 100644 | 95f83c8462968bb0b41aa5cd79096373259a8bc6
+rhs: 100644 | ac5fd09134ffe96657ace45414ef66c81ab87008
+---@@ -3224,6 +3224,12 @@ static int tls_process_cke_ecdhe(SSL *s, PACKET *pkt)
+                      SSL_R_LENGTH_MISMATCH);
+             goto err;
+         }
++        if (skey == NULL) {
++            SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PROCESS_CKE_ECDHE,
++                     SSL_R_MISSING_TMP_ECDH_KEY);
++            goto err;
++        }
++
+         ckey = EVP_PKEY_new();
+         if (ckey == NULL || EVP_PKEY_copy_parameters(ckey, skey) <= 0) {
+             SSLfatal(s, SSL_AD_INTERNAL_ERROR, SSL_F_TLS_PROCESS_CKE_ECDHE,
+
+---

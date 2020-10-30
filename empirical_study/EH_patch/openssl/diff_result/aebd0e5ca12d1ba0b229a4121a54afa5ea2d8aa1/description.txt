@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in CA related functions.",
+    "author": "Pavel Kopyl",
+    "description": "Fix memory leaks in CA related functions.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4700)\n",
+    "hash": "aebd0e5ca12d1ba0b229a4121a54afa5ea2d8aa1",
+    "date": "2018-05-02 08:35:32",
+    "parent_hash": "c4fa1f7fc016919a5b3d4ea2aa66c77e0cc40c9d"
+}

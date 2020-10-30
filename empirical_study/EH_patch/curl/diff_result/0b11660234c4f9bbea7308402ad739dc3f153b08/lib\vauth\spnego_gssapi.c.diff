@@ -1,0 +1,17 @@
+lib/vauth/spnego_gssapi.c
+=======================================================
+lhs: 100644 | 8840db8fda26139fd9ae721a19a3a7e023012c02
+rhs: 100644 | 5196c27049ca73040ede8812df0684fb78ec4710
+---@@ -180,6 +180,10 @@ CURLcode Curl_auth_decode_spnego_message(struct Curl_easy *data,
+     return CURLE_OUT_OF_MEMORY;
+   }
+ 
++  /* Free previous token */
++  if(nego->output_token.length && nego->output_token.value)
++    gss_release_buffer(&unused_status, &nego->output_token);
++
+   nego->output_token = output_token;
+ 
+   return CURLE_OK;
+
+---

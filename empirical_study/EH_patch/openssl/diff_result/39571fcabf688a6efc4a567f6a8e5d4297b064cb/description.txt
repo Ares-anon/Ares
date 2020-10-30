@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in do_rand_drbg_init()",
+    "author": "Dr. Matthias St. Pierre",
+    "description": "Fix memory leak in do_rand_drbg_init()\n\nFixes #5076\n\nSince do_rand_drbg_init() allocates three locks, it needs to ensure\nthat OPENSSL_init_crypto() is called, otherwise these resources are\nnot cleaned up properly.\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Ben Kaduk <kaduk@mit.edu>\n(Merged from https://github.com/openssl/openssl/pull/5083)\n",
+    "hash": "39571fcabf688a6efc4a567f6a8e5d4297b064cb",
+    "date": "2018-01-16 08:38:13",
+    "parent_hash": "d17bdfc26d87097c2c80854fd521b6ecebdf5ebb"
+}

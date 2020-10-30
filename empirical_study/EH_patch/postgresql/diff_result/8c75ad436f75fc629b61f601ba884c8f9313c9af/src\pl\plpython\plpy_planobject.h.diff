@@ -1,0 +1,14 @@
+src/pl/plpython/plpy_planobject.h
+=======================================================
+lhs: 100644 | 7a89ffc2c18090355b500434545b7555c92ccec2
+rhs: 100644 | c67559266ec5a71b99532197399b27205591a61b
+---@@ -17,6 +17,7 @@ typedef struct PLyPlanObject
+ 	Oid		   *types;
+ 	Datum	   *values;
+ 	PLyTypeInfo *args;
++	MemoryContext mcxt;
+ } PLyPlanObject;
+ 
+ extern void PLy_plan_init_type(void);
+
+---

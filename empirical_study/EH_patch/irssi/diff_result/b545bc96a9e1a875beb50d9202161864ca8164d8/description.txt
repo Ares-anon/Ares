@@ -1,0 +1,8 @@
+{
+    "description": "Fix a memory leak.\n\ng_get_current_dir() returns a heap-allocated string.\n",
+    "parent_hash": "acbe2ecac299d4f6770c60747776cbea290bee3f",
+    "author": "LemonBoy",
+    "date": "2015-10-02 12:39:08",
+    "hash": "b545bc96a9e1a875beb50d9202161864ca8164d8",
+    "summary": "Fix a memory leak."
+}

@@ -1,0 +1,32 @@
+src/backend/executor/execUtils.c
+=======================================================
+lhs: 100644 | 32697ddaac1b75a855001b9ec0f98bf301f4bae7
+rhs: 100644 | 4b921fa5965f56cb3bd0bdea36fe931eb435426c
+---@@ -1323,8 +1323,10 @@ retry:
+ 					(errcode(ERRCODE_EXCLUSION_VIOLATION),
+ 					 errmsg("could not create exclusion constraint \"%s\"",
+ 							RelationGetRelationName(index)),
+-					 errdetail("Key %s conflicts with key %s.",
+-							   error_new, error_existing),
++					 error_new && error_existing ?
++						errdetail("Key %s conflicts with key %s.",
++								  error_new, error_existing) :
++						errdetail("Key conflicts exist."),
+ 					 errtableconstraint(heap,
+ 										RelationGetRelationName(index))));
+ 		else
+@@ -1332,8 +1334,10 @@ retry:
+ 					(errcode(ERRCODE_EXCLUSION_VIOLATION),
+ 					 errmsg("conflicting key value violates exclusion constraint \"%s\"",
+ 							RelationGetRelationName(index)),
+-					 errdetail("Key %s conflicts with existing key %s.",
+-							   error_new, error_existing),
++					 error_new && error_existing ?
++						errdetail("Key %s conflicts with existing key %s.",
++								  error_new, error_existing) :
++						errdetail("Key conflicts with existing key."),
+ 					 errtableconstraint(heap,
+ 										RelationGetRelationName(index))));
+ 	}
+
+---

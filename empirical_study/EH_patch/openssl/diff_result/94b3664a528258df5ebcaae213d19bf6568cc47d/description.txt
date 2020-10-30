@@ -1,0 +1,8 @@
+{
+    "summary": "BN_GF2m_mod_inv(): check bn_wexpand return value",
+    "author": "Pascal Cuoq",
+    "description": "BN_GF2m_mod_inv(): check bn_wexpand return value\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Rich Salz <rsalz@akamai.com>\n\nMR #1276, RT #4107\n",
+    "hash": "94b3664a528258df5ebcaae213d19bf6568cc47d",
+    "date": "2015-10-29 20:34:24",
+    "parent_hash": "a528d4f0a9a71405f3ca06e20cbd27aa1b8c0df9"
+}

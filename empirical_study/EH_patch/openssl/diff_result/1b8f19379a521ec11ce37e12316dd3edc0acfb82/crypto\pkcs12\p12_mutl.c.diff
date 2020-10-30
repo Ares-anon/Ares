@@ -1,0 +1,16 @@
+crypto/pkcs12/p12_mutl.c
+=======================================================
+lhs: 100644 | d6b891920ce507d7156590ea8b0f1d5f273db72e
+rhs: 100644 | 899a12e1345d156d08c14e3c0883613e717cbfd7
+---@@ -204,6 +204,9 @@ int PKCS12_setup_mac(PKCS12 *p12, int iter, unsigned char *salt, int saltlen,
+ {
+     X509_ALGOR *macalg;
+ 
++    PKCS12_MAC_DATA_free(p12->mac);
++    p12->mac = NULL;
++
+     if ((p12->mac = PKCS12_MAC_DATA_new()) == NULL)
+         return PKCS12_ERROR;
+     if (iter > 1) {
+
+---

@@ -1,0 +1,17 @@
+projects/checksrc.bat
+=======================================================
+lhs: 100644 | 43fea12587f7523b0b95f2f1cf022cb97f356761
+rhs: 100644 | 6ec87349c4d816e7821895d45de8156666a421eb
+---@@ -73,8 +73,8 @@ rem ***************************************************************************
+     for /f "delims=" %%i in ('dir "%SRC_DIR%\lib\*.h.*" /b') do @perl "%SRC_DIR%\lib\checksrc.pl" "-D%SRC_DIR%\lib" -Wcurl_config.h.cmake "%%i"
+   )
+ 
+-  rem Check the vtls directory
+-  if exist %SRC_DIR%\vtls (
++  rem Check the lib\vtls directory
++  if exist %SRC_DIR%\lib\vtls (
+     for /f "delims=" %%i in ('dir "%SRC_DIR%\lib\vtls\*.c.*" /b') do @perl "%SRC_DIR%\lib\checksrc.pl" "-D%SRC_DIR%\lib\vtls" "%%i"
+     for /f "delims=" %%i in ('dir "%SRC_DIR%\lib\vtls\*.h.*" /b') do @perl "%SRC_DIR%\lib\checksrc.pl" "-D%SRC_DIR%\lib\vtls" "%%i"
+   )
+
+---

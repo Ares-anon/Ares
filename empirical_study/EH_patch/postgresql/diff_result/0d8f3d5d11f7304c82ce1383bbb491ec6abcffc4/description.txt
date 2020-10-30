@@ -1,0 +1,8 @@
+{
+    "author": "Alvaro Herrera",
+    "description": "Add missing CHECK_FOR_INTERRUPTS in lseg_inside_poly\n\nApparently, there are bugs in this code that cause it to loop endlessly.\nThat bug still needs more research, but in the meantime it's clear that\nthe loop is missing a check for interrupts so that it can be cancelled\ntimely.\n\nBackpatch to 9.1 -- this has been missing since 49475aab8d0d.\n",
+    "summary": "Add missing CHECK_FOR_INTERRUPTS in lseg_inside_poly",
+    "date": "2015-12-14 16:44:40",
+    "parent_hash": "e2f1765ce0770e813971336bb4603099d24cbe57",
+    "hash": "0d8f3d5d11f7304c82ce1383bbb491ec6abcffc4"
+}

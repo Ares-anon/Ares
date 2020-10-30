@@ -1,0 +1,8 @@
+{
+    "summary": "p5_scrypt.c: fix error check of RAND_bytes() call",
+    "author": "Dr. Matthias St. Pierre",
+    "description": "p5_scrypt.c: fix error check of RAND_bytes() call\n\nReviewed-by: Kurt Roeckx <kurt@roeckx.be>\n(Merged from https://github.com/openssl/openssl/pull/5977)\n",
+    "hash": "e62fb0d31bdf25854aa2c7cda8e1d03768984ab4",
+    "date": "2018-04-17 17:26:25",
+    "parent_hash": "43687d685ffd71fc1cf0ea1079f6d4958dff5026"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Add missing NULL check in X509V3_parse_list()",
+    "author": "Kurt Cancemi",
+    "description": "Add missing NULL check in X509V3_parse_list()\n\nMatt's note: I added a call to X509V3err to Kurt's original patch.\n\nRT#3840\n\nSigned-off-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "344c271eb339fc2982e9a3584a94e51112d84584",
+    "date": "2015-05-11 12:15:28",
+    "parent_hash": "7786005d0d30816fd3cd3ee4bad11bf520b1327a"
+}

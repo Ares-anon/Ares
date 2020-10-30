@@ -1,0 +1,8 @@
+{
+    "parent_hash": "cf1f8d4528b0c1215a3717262f795205d3d1bc87",
+    "date": "2014-06-24 00:00:34",
+    "author": "Dan Fandrich",
+    "description": "opts: added some DEFAULT and RETURN VALUE sections\n",
+    "summary": "opts: added some DEFAULT and RETURN VALUE sections",
+    "hash": "d8287ca8bc446ccab89064874d1738715cb02ffa"
+}

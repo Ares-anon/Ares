@@ -1,0 +1,15 @@
+contrib/jsonb_plpython/jsonb_plpython.c
+=======================================================
+lhs: 100644 | f752d6c3cd8e6c088418b71e0e5a9e96dbf99e57
+rhs: 100644 | d6d6eeb9c153cc5b5fb556ad21df39e5e2d38823
+---@@ -308,6 +308,8 @@ PLySequence_ToJsonbValue(PyObject *obj, JsonbParseState **jsonb_state)
+ 		PyObject   *value = PySequence_GetItem(obj, i);
+ 
+ 		(void) PLyObject_ToJsonbValue(value, jsonb_state, true);
++
++		Py_XDECREF(value);
+ 	}
+ 
+ 	return pushJsonbValue(jsonb_state, WJB_END_ARRAY, NULL);
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Alvaro Herrera",
+    "description": "Add missing checks to some of pageinspect's BRIN functions\n\nbrin_page_type() and brin_metapage_info() did not enforce being called\nby superuser, like other pageinspect functions that take bytea do.\nSince they don't verify the passed page thoroughly, it is possible to\nuse them to read the server memory with a carefully crafted bytea value,\nup to a file kilobytes from where the input bytea is located.\n\nHave them throw errors if called by a non-superuser.\n\nReport and initial patch: Andreas Seltenreich\n\nSecurity: CVE-2016-3065\n",
+    "summary": "Add missing checks to some of pageinspect's BRIN functions",
+    "date": "2016-03-28 10:57:42",
+    "parent_hash": "86ebf30fd6d8964bbd5d48db053b0a7ff709a0d7",
+    "hash": "3e1338475ffc2eac25de60a9de9ce689b763aced"
+}

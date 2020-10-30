@@ -1,0 +1,8 @@
+{
+    "summary": "ssl_cert_dup: Fix memory leak",
+    "author": "Jonas Maebe",
+    "description": "ssl_cert_dup: Fix memory leak\n\nAlways use goto err on failure and call ssl_cert_free() on the error path so all\nfields and \"ret\" itself are freed\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "b3b966fb878766c67060d384fb4f917ea16269a7",
+    "date": "2014-12-04 23:48:44",
+    "parent_hash": "6c42b39c95b26f8a48f19aabb78546d7814de978"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Add missing return value checks",
+    "author": "Matt Caswell",
+    "description": "Add missing return value checks\n\nThe function DH_check_pub_key() was missing some return value checks in\nsome calls to BN functions.\n\nRT#4278\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\n",
+    "hash": "f5a12207eccfd814bde68b880a96910dfa25f164",
+    "date": "2016-01-29 11:53:32",
+    "parent_hash": "cb389fe80462e20daba30835a9e86354451bd14f"
+}

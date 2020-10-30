@@ -1,0 +1,8 @@
+{
+    "summary": "Fix leak in HMAC error path",
+    "author": "Matt Caswell",
+    "description": "Fix leak in HMAC error path\n\nIn the event of an error in the HMAC function, leaks can occur because the\nHMAC_CTX does not get cleaned up.\n\nThanks to the BoringSSL project for reporting this issue.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "e43a13c807e42688c72c4f3d001112bf0a110464",
+    "date": "2015-06-10 11:03:20",
+    "parent_hash": "68886be7e2cd395a759fcd41d2cede461b68843d"
+}

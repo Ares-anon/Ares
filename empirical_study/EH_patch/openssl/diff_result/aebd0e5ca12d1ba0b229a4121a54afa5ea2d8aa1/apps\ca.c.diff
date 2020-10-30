@@ -1,0 +1,21 @@
+apps/ca.c
+=======================================================
+lhs: 100644 | ea774ad557ebfef4db0e0de221d695b8e429ebc0
+rhs: 100644 | afc5e349b4b9ed8fe3a217065f27b3bca27fba3f
+---@@ -934,10 +934,13 @@ end_of_options:
+             if (j > 0) {
+                 total_done++;
+                 BIO_printf(bio_err, "\n");
+-                if (!BN_add_word(serial, 1))
++                if (!BN_add_word(serial, 1)) {
++                    X509_free(x);
+                     goto end;
++                }
+                 if (!sk_X509_push(cert_sk, x)) {
+                     BIO_printf(bio_err, "Memory allocation failure\n");
++                    X509_free(x);
+                     goto end;
+                 }
+             }
+
+---

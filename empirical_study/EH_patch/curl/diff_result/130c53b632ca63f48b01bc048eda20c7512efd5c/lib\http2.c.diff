@@ -1,0 +1,32 @@
+lib/http2.c
+=======================================================
+lhs: 100644 | f6d2672c89f7c858f9f85793512c6b89b7aa3bef
+rhs: 100644 | 7706e94591c2a16463e49d027a8e0890becd0072
+---@@ -2091,8 +2091,11 @@ CURLcode Curl_http2_setup(struct connectdata *conn)
+ 
+   stream->stream_id = -1;
+ 
+-  if(!stream->header_recvbuf)
++  if(!stream->header_recvbuf) {
+     stream->header_recvbuf = Curl_add_buffer_init();
++    if(!stream->header_recvbuf)
++      return CURLE_OUT_OF_MEMORY;
++  }
+ 
+   if((conn->handler == &Curl_handler_http2_ssl) ||
+      (conn->handler == &Curl_handler_http2))
+@@ -2104,8 +2107,11 @@ CURLcode Curl_http2_setup(struct connectdata *conn)
+     conn->handler = &Curl_handler_http2;
+ 
+   result = Curl_http2_init(conn);
+-  if(result)
++  if(result) {
++    Curl_add_buffer_free(stream->header_recvbuf);
++    stream->header_recvbuf = NULL;
+     return result;
++  }
+ 
+   infof(conn->data, "Using HTTP2, server supports multi-use\n");
+   stream->upload_left = 0;
+
+---

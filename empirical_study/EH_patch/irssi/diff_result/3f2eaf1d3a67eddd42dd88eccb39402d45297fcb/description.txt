@@ -1,0 +1,8 @@
+{
+    "description": "Fix return value from nick_match_msg_everywhere, remove #include 'settings.h'\n",
+    "parent_hash": "b5c3e90802e926e35ad9a4f1f02403578a3ff392",
+    "author": "Jari Matilainen",
+    "date": "2015-09-22 23:16:41",
+    "hash": "3f2eaf1d3a67eddd42dd88eccb39402d45297fcb",
+    "summary": "Fix return value from nick_match_msg_everywhere, remove #include 'settings.h'"
+}

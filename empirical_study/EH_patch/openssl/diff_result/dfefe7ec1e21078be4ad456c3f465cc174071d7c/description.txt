@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a missing return value check in v3_addr",
+    "author": "Matt Caswell",
+    "description": "Fix a missing return value check in v3_addr\n\nAll other instances of extract_min_max are checked for an error return,\nexcept this one.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "dfefe7ec1e21078be4ad456c3f465cc174071d7c",
+    "date": "2016-04-21 10:51:57",
+    "parent_hash": "bcc31778e3695e23d7c4cd6274126a8e3d58db72"
+}

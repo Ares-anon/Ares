@@ -1,0 +1,8 @@
+{
+    "summary": "Free an X509_CRL in an error path",
+    "author": "Matt Caswell",
+    "description": "Free an X509_CRL in an error path\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "fe2b7dfdf446088d5c1cc9dc9d49d131cc4ef7f9",
+    "date": "2016-06-01 14:51:36",
+    "parent_hash": "0461b7ea7bd1112c4fa357545fc8a456138ed3af"
+}

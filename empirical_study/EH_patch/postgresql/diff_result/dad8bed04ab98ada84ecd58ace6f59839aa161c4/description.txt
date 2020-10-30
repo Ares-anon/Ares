@@ -1,0 +1,8 @@
+{
+    "author": "Alexander Korotkov",
+    "description": "Fix memory leak in PLySequence_ToJsonbValue()\n\nPyObject returned from PySequence_GetItem() is not released.  Similar code in PLyMapping_ToJsonbValue() is correct, because according to Python documentation\nPyList_GetItem() and PyTuple_GetItem() return a borrowed reference while\nPySequence_GetItem() returns new reference.  contrib/jsonb_plpython is new\nin PostgreSQL 11, no backpatch is needed.\n\nAuthor: Nikita Glukhov\nDiscussion: https://postgr.es/m/6001af16-b242-2527-bc7e-84b8a959163b%40postgrespro.ru\n",
+    "summary": "Fix memory leak in PLySequence_ToJsonbValue()",
+    "date": "2018-06-15 15:01:46",
+    "parent_hash": "969274d813018b08389956e493f691671f0d84f1",
+    "hash": "dad8bed04ab98ada84ecd58ace6f59839aa161c4"
+}

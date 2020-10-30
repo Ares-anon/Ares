@@ -1,0 +1,8 @@
+{
+    "parent_hash": "964e43c5e21482f9a0ff8f0be135c4ab8afa9330",
+    "date": "2014-06-14 00:11:01",
+    "author": "Daniel Stenberg",
+    "description": "http2: better return code error checking\n",
+    "summary": "http2: better return code error checking",
+    "hash": "c06e76f6fe0da2c9d06f15b6a57af78155c43149"
+}

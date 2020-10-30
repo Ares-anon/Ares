@@ -1,0 +1,8 @@
+{
+    "parent_hash": "e6130c03109219625b4c6917852f39237ca8482d",
+    "date": "2014-01-24 21:52:48",
+    "author": "Dan Fandrich",
+    "description": "netrc: Fixed a memory and file descriptor leak on OOM\n",
+    "summary": "netrc: Fixed a memory and file descriptor leak on OOM",
+    "hash": "b4b28c7001f04ccd06363915734933bbc90c5466"
+}

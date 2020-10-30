@@ -1,0 +1,15 @@
+src/pl/plpgsql/src/Makefile
+=======================================================
+lhs: 100644 | 3ac64e2d4478f89ea7c21a82194b243550698040
+rhs: 100644 | fc6061861850c434c74086ee460e9ffd7d83ff9f
+---@@ -26,7 +26,7 @@ DATA = plpgsql.control plpgsql--1.0.sql plpgsql--unpackaged--1.0.sql
+ 
+ REGRESS_OPTS = --dbname=$(PL_TESTDB)
+ 
+-REGRESS = plpgsql_call plpgsql_control plpgsql_record \
++REGRESS = plpgsql_call plpgsql_control plpgsql_domain plpgsql_record \
+ 	plpgsql_transaction plpgsql_varprops
+ 
+ all: all-lib
+
+---

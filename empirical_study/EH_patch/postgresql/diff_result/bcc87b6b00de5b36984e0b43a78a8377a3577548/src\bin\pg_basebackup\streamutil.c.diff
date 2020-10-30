@@ -1,0 +1,14 @@
+src/bin/pg_basebackup/streamutil.c
+=======================================================
+lhs: 100644 | a5cad350f8a498aed377da579851489de40732e8
+rhs: 100644 | 91f919c34cd6f248cbaadb74eabdb8a413941b2c
+---@@ -414,6 +414,7 @@ DropReplicationSlot(PGconn *conn, const char *slot_name)
+ 		return false;
+ 	}
+ 
++	destroyPQExpBuffer(query);
+ 	PQclear(res);
+ 	return true;
+ }
+
+---

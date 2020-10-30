@@ -1,0 +1,8 @@
+{
+    "parent_hash": "d3d871cb4fe1512b689bb29cb49473cfcf91c684",
+    "date": "2014-02-14 08:21:41",
+    "author": "Arvid Norberg",
+    "description": "dict: fix memory leak in OOM exit path\n\nBug: https://github.com/bagder/curl/pull/90\n",
+    "summary": "dict: fix memory leak in OOM exit path",
+    "hash": "1813a77b024d03b59fe5b591a5c5ecced02a9e66"
+}

@@ -1,0 +1,15 @@
+engines/e_dasync_err.c
+=======================================================
+lhs: 100644 | ed5e98ee3f2c1fad72efb2909069fc5bd92631ef
+rhs: 100644 | 3b462ba851296e3e9ef4d8d35552518b310a29ae
+---@@ -75,6 +75,8 @@ static ERR_STRING_DATA DASYNC_str_functs[] = {
+      "dasync_aes128_cbc_hmac_sha1_init_key"},
+     {ERR_FUNC(DASYNC_F_DASYNC_AES128_INIT_KEY), "dasync_aes128_init_key"},
+     {ERR_FUNC(DASYNC_F_DASYNC_BN_MOD_EXP), "DASYNC_BN_MOD_EXP"},
++    {ERR_FUNC(DASYNC_F_DASYNC_CIPHER_INIT_KEY_HELPER),
++     "dasync_cipher_init_key_helper"},
+     {ERR_FUNC(DASYNC_F_DASYNC_MOD_EXP), "DASYNC_MOD_EXP"},
+     {ERR_FUNC(DASYNC_F_DASYNC_PRIVATE_DECRYPT), "DASYNC_PRIVATE_DECRYPT"},
+     {ERR_FUNC(DASYNC_F_DASYNC_PRIVATE_ENCRYPT), "DASYNC_PRIVATE_ENCRYPT"},
+
+---

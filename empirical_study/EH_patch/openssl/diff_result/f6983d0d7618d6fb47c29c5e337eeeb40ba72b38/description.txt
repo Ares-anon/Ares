@@ -1,0 +1,8 @@
+{
+    "summary": "NETSCAPE_SPKI_b64_encode: free der_spki and b64_str on error path",
+    "author": "Jonas Maebe",
+    "description": "NETSCAPE_SPKI_b64_encode: free der_spki and b64_str on error path\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Dr. Stephen Henson <steve@openssl.org>\n",
+    "hash": "f6983d0d7618d6fb47c29c5e337eeeb40ba72b38",
+    "date": "2014-08-17 18:55:12",
+    "parent_hash": "254f1c8019f4c2aa853208604f703deb8adfe131"
+}

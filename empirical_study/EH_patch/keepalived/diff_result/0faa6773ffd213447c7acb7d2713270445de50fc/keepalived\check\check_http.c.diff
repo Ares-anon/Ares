@@ -1,0 +1,34 @@
+keepalived/check/check_http.c
+=======================================================
+lhs: 100644 | 41a5fb928aadbc77925b8f9fb9fa2b1f92581e74
+rhs: 100644 | d36bf7949a01561766aa41736ce96d4aa8f3c33a
+---@@ -432,11 +432,13 @@ digest_handler(vector_t *strvec)
+ 
+ 	if (url->digest) {
+ 		report_config_error(CONFIG_GENERAL_ERROR, "Digest '%s' is a duplicate", digest);
++		FREE(digest);
+ 		return;
+ 	}
+ 
+ 	if (strlen(digest) != 2 * MD5_DIGEST_LENGTH) {
+ 		report_config_error(CONFIG_GENERAL_ERROR, "digest '%s' character length should be %d rather than %zd", digest, 2 * MD5_DIGEST_LENGTH, strlen(digest));
++		FREE(digest);
+ 		return;
+ 	}
+ 
+@@ -448,11 +450,13 @@ digest_handler(vector_t *strvec)
+ 		if (endptr != digest + 2 * i + 2) {
+ 			report_config_error(CONFIG_GENERAL_ERROR, "Unable to interpret hex digit in '%s' at offset %d/%d", digest, 2 * i, 2 * i + 1);
+ 			FREE(url->digest);
++			FREE(digest);
+ 			url->digest = NULL;
+ 			return;
+ 		}
+ 	}
+ 
++	FREE(digest);
+ }
+ 
+ static void
+
+---

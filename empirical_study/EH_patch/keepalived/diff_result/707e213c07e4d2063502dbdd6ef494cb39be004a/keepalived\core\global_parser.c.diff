@@ -1,0 +1,18 @@
+keepalived/core/global_parser.c
+=======================================================
+lhs: 100644 | a5e9e4e1d5aa110c2ee448e97bb10b9a75199dfe
+rhs: 100644 | de3959ac622cb18ced5f8838c81e9ede0b3771c1
+---@@ -117,6 +117,11 @@ email_handler(vector_t *strvec)
+ 	unsigned int i;
+ 	char *str;
+ 
++	if (!email_vec) {
++		log_message(LOG_INFO, "Warning - empty notification_email block");
++		return;
++	}
++
+ 	for (i = 0; i < vector_size(email_vec); i++) {
+ 		str = vector_slot(email_vec, i);
+ 		alloc_email(str);
+
+---

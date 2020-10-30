@@ -1,0 +1,16 @@
+doc/src/sgml/indexam.sgml
+=======================================================
+lhs: 100644 | beb99d1831ab58ea1e1b03f669363ae97f3f17bd
+rhs: 100644 | d758a4987dc66af647b04a4837d17d2f48b1884b
+---@@ -614,7 +614,8 @@ amendscan (IndexScanDesc scan);
+ </programlisting>
+    End a scan and release resources.  The <literal>scan</literal> struct itself
+    should not be freed, but any locks or pins taken internally by the
+-   access method must be released.
++   access method must be released, as well as any other memory allocated
++   by <function>ambeginscan</function> and other scan-related functions.
+   </para>
+ 
+   <para>
+
+---

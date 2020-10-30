@@ -1,0 +1,8 @@
+{
+    "summary": "sha/asm/keccak1600-armv8.pl: fix return value buglet and ...",
+    "author": "Andy Polyakov",
+    "description": "sha/asm/keccak1600-armv8.pl: fix return value buglet and ...\n\n... script data load.\n\nOn related note an attempt was made to merge rotations with logical\noperations. I mean as we know, ARM ISA has merged rotate-n-logical\ninstructions which can be used here. And they were used to improve\nkeccak1600-armv4 performance. But not here. Even though this approach\nresulted in improvement on Cortex-A53 proportional to reduction of\namount of instructions, ~8%, it didn't exactly worked out on\nnon-Cortex cores. Presumably because they break merged instructions\nto separate \u03bc-ops, which results in higher *operations* count. X-Gene\nand Denver went ~20% slower and Apple A7 - 40%. The optimization was\ntherefore dismissed.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "236dd4633942d62777c44be630a06bc50603f659",
+    "date": "2017-09-09 19:09:36",
+    "parent_hash": "f1b97da1fd90cf3935eafedc8df0d0165cb75f2f"
+}

@@ -1,0 +1,17 @@
+crypto/asn1/bio_asn1.c
+=======================================================
+lhs: 100644 | dc7efd551c05c99e7a9d1925ef23476544e0fa56
+rhs: 100644 | bca4eebf6d3fb62ab8abdfa15398764f983e1321
+---@@ -154,7 +154,10 @@ static int asn1_bio_new(BIO *b)
+ 	if (!ctx)
+ 		return 0;
+ 	if (!asn1_bio_init(ctx, DEFAULT_ASN1_BUF_SIZE))
++		{
++		OPENSSL_free(ctx);
+ 		return 0;
++		}
+ 	b->init = 1;
+ 	b->ptr = (char *)ctx;
+ 	b->flags = 0;
+
+---

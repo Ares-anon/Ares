@@ -1,0 +1,18 @@
+lib/formdata.c
+=======================================================
+lhs: 100644 | bdca3e770368f2a3c86cca9aa52626cdc0d2fd60
+rhs: 100644 | e307a28a5bb6bf8392a7c859243495738a661f0e
+---@@ -1110,8 +1110,10 @@ static CURLcode formdata_add_filename(const struct curl_httppost *file,
+ 
+     /* filename need be escaped */
+     filename_escaped = malloc(strlen(filename)*2+1);
+-    if(!filename_escaped)
++    if(!filename_escaped) {
++      free(filebasename);
+       return CURLE_OUT_OF_MEMORY;
++    }
+     p0 = filename_escaped;
+     p1 = filename;
+     while(*p1) {
+
+---

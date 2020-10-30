@@ -1,0 +1,22 @@
+crypto/asn1/tasn_enc.c
+=======================================================
+lhs: 100644 | 936ad1f767c686ce612378b342ac9cff00f008aa
+rhs: 100644 | 1390e5e6aef7d12144cd63b1f4d79d4559e09d90
+---@@ -453,9 +453,14 @@ static int asn1_set_seq_out(STACK_OF(ASN1_VALUE) *sk, unsigned char **out,
+ 			{
+ 			derlst = OPENSSL_malloc(sk_ASN1_VALUE_num(sk)
+ 						* sizeof(*derlst));
++			if (!derlst)
++				return 0;
+ 			tmpdat = OPENSSL_malloc(skcontlen);
+-			if (!derlst || !tmpdat)
++			if (!tmpdat)
++				{
++				OPENSSL_free(derlst);
+ 				return 0;
++				}
+ 			}
+ 		}
+ 	/* If not sorting just output each item */
+
+---

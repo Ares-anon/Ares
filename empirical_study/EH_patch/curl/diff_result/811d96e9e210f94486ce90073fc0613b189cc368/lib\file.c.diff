@@ -1,0 +1,17 @@
+lib/file.c
+=======================================================
+lhs: 100644 | ac611e6a1e300e1983e4705e1fd054e9f71a8c73
+rhs: 100644 | 528f34afba5154c69880eec013e1ef06a24a525a
+---@@ -456,7 +456,9 @@ static CURLcode file_do(struct connectdata *conn, bool *done)
+   }
+ 
+   /* Check whether file range has been specified */
+-  Curl_range(conn);
++  result = Curl_range(conn);
++  if(result)
++    return result;
+ 
+   /* Adjust the start offset in case we want to get the N last bytes
+    * of the stream iff the filesize could be determined */
+
+---

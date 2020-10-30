@@ -1,0 +1,8 @@
+{
+    "summary": "Fixed memory leak in the event of a failure of BUF_MEM_grow",
+    "author": "Matt Caswell",
+    "description": "Fixed memory leak in the event of a failure of BUF_MEM_grow\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "41bf25013032da0eeb111ce3c8fc0946c0e61c41",
+    "date": "2014-12-08 16:43:25",
+    "parent_hash": "76e6509085ea96df0ca542568ee2596343711307"
+}

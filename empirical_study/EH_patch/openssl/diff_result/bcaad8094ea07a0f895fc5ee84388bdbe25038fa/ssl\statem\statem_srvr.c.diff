@@ -1,0 +1,15 @@
+ssl/statem/statem_srvr.c
+=======================================================
+lhs: 100644 | c7d77ae5eca79f9c57920cee91dc1de25d54b7fb
+rhs: 100644 | 008ebda13285d728b60b8ea4f38dc84eea4812c3
+---@@ -3103,6 +3103,8 @@ int tls_construct_new_session_ticket(SSL *s)
+         SSLerr(SSL_F_TLS_CONSTRUCT_NEW_SESSION_TICKET, ERR_R_INTERNAL_ERROR);
+         goto err;
+     }
++    EVP_CIPHER_CTX_free(ctx);
++    HMAC_CTX_free(hctx);
+     OPENSSL_free(senc);
+ 
+     return 1;
+
+---

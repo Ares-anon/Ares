@@ -1,0 +1,8 @@
+{
+    "parent_hash": "8128db9ec19d6c15b5f1e239550a1c24a2f68022",
+    "date": "2014-10-04 18:24:23",
+    "author": "Marc Hoersken",
+    "description": "curl_schannel.c: Fixed possible memory or handle leak\n\nFirst try to fix possible memory leaks, in this case:\nOnly connssl->ctxt xor onnssl->cred being initialized.\n",
+    "summary": "curl_schannel.c: Fixed possible memory or handle leak",
+    "hash": "330346d51c1a11a7607349e364c417fccfc42ef5"
+}

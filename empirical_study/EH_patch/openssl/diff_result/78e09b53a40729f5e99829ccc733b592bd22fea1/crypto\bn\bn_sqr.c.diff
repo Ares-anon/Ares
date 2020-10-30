@@ -1,0 +1,18 @@
+crypto/bn/bn_sqr.c
+=======================================================
+lhs: 100644 | a62bb1a584805d25e72a4fcb3dc2feb3157e6712
+rhs: 100644 | 44e7332acf1a9bcbabd057faf3d2892ca10c1a96
+---@@ -90,8 +90,9 @@ int BN_sqr(BIGNUM *r, const BIGNUM *a, BN_CTX *ctx)
+         rr->top = max - 1;
+     else
+         rr->top = max;
+-    if (rr != r)
+-        BN_copy(r, rr);
++    if (r != rr && BN_copy(r, rr) == NULL)
++        goto err;
++
+     ret = 1;
+  err:
+     bn_check_top(rr);
+
+---

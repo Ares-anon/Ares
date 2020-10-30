@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Code review for tqueue.c: fix memory leaks, speed it up, other fixes.\n\nWhen doing record typmod remapping, tqueue.c did fresh catalog lookups\nfor each tuple it processed, which was pretty horrible performance-wise\n(it seemed to about halve the already none-too-quick speed of bulk reads\nin parallel mode).  Worse, it insisted on putting bits of that data into\nTopMemoryContext, from where it never freed them, causing a\nsession-lifespan memory leak.  (I suppose this was coded with the idea\nthat the sender process would quit after finishing the query ---\nbut the receiver uses the same code.)\n\nRestructure to avoid repetitive catalog lookups and to keep that data\nin a query-lifespan context, in or below the context where the\nTQueueDestReceiver or TupleQueueReader itself lives.\n\nFix some other bugs such as continuing to use a tupledesc after\nreleasing our refcount on it.  Clean up cavalier datatype choices\n(typmods are int32, please, not int, and certainly not Oid).  Improve\ncomments and error message wording.\n",
+    "summary": "Code review for tqueue.c: fix memory leaks, speed it up, other fixes.",
+    "date": "2016-07-31 16:05:12",
+    "parent_hash": "f9e439b1ca81e3305b677d93c67299549625370c",
+    "hash": "a9ed875fdc2c44b5793a07727274786b417fc924"
+}

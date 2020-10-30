@@ -1,0 +1,15 @@
+crypto/x509/x509_att.c
+=======================================================
+lhs: 100644 | fb04cdcf68d0d4fa7b4958d68fde172689ac4e4f
+rhs: 100644 | 8e2abdf52ab17e2f084ef3f2572a41f4e34bdb23
+---@@ -288,7 +288,7 @@ int X509_ATTRIBUTE_set1_object(X509_ATTRIBUTE *attr, const ASN1_OBJECT *obj)
+         return (0);
+     ASN1_OBJECT_free(attr->object);
+     attr->object = OBJ_dup(obj);
+-    return (1);
++    return attr->object != NULL;
+ }
+ 
+ int X509_ATTRIBUTE_set1_data(X509_ATTRIBUTE *attr, int attrtype,
+
+---

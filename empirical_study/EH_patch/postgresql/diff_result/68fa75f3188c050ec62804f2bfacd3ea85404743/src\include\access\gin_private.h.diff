@@ -1,0 +1,14 @@
+src/include/access/gin_private.h
+=======================================================
+lhs: 100644 | cf2ef805e37b705a9de04db69e4109c4633b95cc
+rhs: 100644 | c949c97edec779bfa7220cc81886e5092f110538
+---@@ -899,6 +899,7 @@ extern Datum ginrescan(PG_FUNCTION_ARGS);
+ extern Datum ginmarkpos(PG_FUNCTION_ARGS);
+ extern Datum ginrestrpos(PG_FUNCTION_ARGS);
+ extern void ginNewScanKey(IndexScanDesc scan);
++extern void ginFreeScanKeys(GinScanOpaque so);
+ 
+ /* ginget.c */
+ extern Datum gingetbitmap(PG_FUNCTION_ARGS);
+
+---

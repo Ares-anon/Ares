@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak with client auth.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak with client auth.\n(cherry picked from commit bc5ec653ba65fedb1619c8182088497de8a97a70)\n",
+    "hash": "4563da1d7c53e969e8d092d018795179bb648a7c",
+    "date": "2014-03-27 16:12:59",
+    "parent_hash": "f0ef019da28a7b8ad81f65c2fbd2fcc9c88e5c52"
+}

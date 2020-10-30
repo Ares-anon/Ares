@@ -1,0 +1,8 @@
+{
+    "parent_hash": "de74e856e63b0c6fd1e36d96d6310672abf12c29",
+    "date": "2015-07-16 14:22:45",
+    "author": "David Woodhouse",
+    "description": "ntlm_wb: Fix theoretical memory leak\n\nStatic analysis indicated that my commit 9008f3d564 (\"ntlm_wb: Fix\nhard-coded limit on NTLM auth packet size\") introduced a potential\nmemory leak on an error path, because we forget to free the buffer\nbefore returning an error.\n\nFix this.\n\nAlthough actually, it never happens in practice because we never *get*\nhere with state == NTLMSTATE_TYPE1. The state is always zero. That\nmight want cleaning up in a separate patch.\n\nReported-by: Terri Oda\n",
+    "summary": "ntlm_wb: Fix theoretical memory leak",
+    "hash": "60b19630b032d99270282e021216605718acc14d"
+}

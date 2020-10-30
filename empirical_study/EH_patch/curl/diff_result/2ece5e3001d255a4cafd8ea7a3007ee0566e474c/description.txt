@@ -1,0 +1,8 @@
+{
+    "parent_hash": "af500e9378edfb5501bd0fa4bb7c581c3207af7a",
+    "date": "2018-10-08 12:06:33",
+    "author": "Daniel Stenberg",
+    "description": "curl_ntlm_wb: check aprintf() return codes\n\n... when they return NULL we're out of memory and MUST return failure.\n\ncloses #3111\n",
+    "summary": "curl_ntlm_wb: check aprintf() return codes",
+    "hash": "2ece5e3001d255a4cafd8ea7a3007ee0566e474c"
+}

@@ -1,0 +1,8 @@
+{
+    "author": "Bruce Momjian",
+    "description": "pg_dump:  fix subtle memory leak in func and arg signature processing\n",
+    "summary": "pg_dump:  fix subtle memory leak in func and arg signature processing",
+    "date": "2014-02-24 12:32:41",
+    "parent_hash": "3f05bedaf23a50979125159ac881094175edf9eb",
+    "hash": "d613861b9523c143db427d1bf26b9769319ca102"
+}

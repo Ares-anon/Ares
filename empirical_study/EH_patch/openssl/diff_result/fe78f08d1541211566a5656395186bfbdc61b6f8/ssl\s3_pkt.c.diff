@@ -1,0 +1,16 @@
+ssl/s3_pkt.c
+=======================================================
+lhs: 100644 | ea45b8650f2e9423d2f598f7ff775dede105251b
+rhs: 100644 | 8fedf5a80d7c64e4815dd1706f9cf7c039abaedb
+---@@ -1118,8 +1118,7 @@ static int do_ssl3_write(SSL *s, int type, const unsigned char *buf,
+ 		wr->length += eivlen;
+ 		}
+ 
+-	/* ssl3_enc can only have an error on read */
+-	s->method->ssl3_enc->enc(s,1);
++	if(s->method->ssl3_enc->enc(s,1)<1) goto err;
+ 
+ 	if (SSL_USE_ETM(s) && mac_size != 0)
+ 		{
+
+---

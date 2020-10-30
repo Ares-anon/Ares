@@ -1,0 +1,8 @@
+{
+    "summary": "few missing allocation failure checks and releases on error paths",
+    "author": "J Mohan Rao Arisankala",
+    "description": "few missing allocation failure checks and releases on error paths\n\n- Missing checks for allocation failure.\n- releasing memory in few missing error paths\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "cb1d435cac2a9a7bd6019f9f23648c8075251109",
+    "date": "2016-05-09 09:06:06",
+    "parent_hash": "5cf14ce074dfd1780ae4c68b2e7f083bfaf47530"
+}

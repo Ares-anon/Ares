@@ -1,0 +1,8 @@
+{
+    "parent_hash": "66b3c186fa9a06d313501c80f02e7125acb78c3d",
+    "date": "2018-09-13 10:06:05",
+    "author": "Daniel Gustafsson",
+    "description": "ntlm_wb: Fix memory leaks in ntlm_wb_response\n\nWhen erroring out on a request being too large, the existing buffer was\nleaked. Fix by explicitly freeing on the way out.\n\nCloses #2966\nReviewed-by: Daniel Stenberg <daniel@haxx.se>\n",
+    "summary": "ntlm_wb: Fix memory leaks in ntlm_wb_response",
+    "hash": "60ed8d72760b911ff8f56e02acc083f79b567af6"
+}

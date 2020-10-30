@@ -1,0 +1,15 @@
+crypto/x509/x_name.c
+=======================================================
+lhs: 100644 | 5c624cbd1745c086525088f672b79107b5e1338d
+rhs: 100644 | d5b12f1421df955d16236a7e9726ab1ec9519c3c
+---@@ -322,6 +322,8 @@ static int x509_name_canon(X509_NAME *a)
+         if (tmpentry == NULL)
+             goto err;
+         tmpentry->object = OBJ_dup(entry->object);
++        if (tmpentry->object == NULL)
++            goto err;
+         if (!asn1_string_canon(tmpentry->value, entry->value))
+             goto err;
+         if (!sk_X509_NAME_ENTRY_push(entries, tmpentry))
+
+---

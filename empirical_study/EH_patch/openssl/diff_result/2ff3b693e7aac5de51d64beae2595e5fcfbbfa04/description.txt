@@ -1,0 +1,8 @@
+{
+    "summary": "fix return value in docs",
+    "author": "Joey Yandle",
+    "description": "fix return value in docs\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1079)",
+    "hash": "2ff3b693e7aac5de51d64beae2595e5fcfbbfa04",
+    "date": "2016-05-29 13:36:59",
+    "parent_hash": "73241290bc15d708bb9ec8bb48891df1e5485e3e"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "219d19a401302fc3f97853d8f7d13b24bf61f5c0",
+    "date": "2014-02-28 21:58:12",
+    "author": "Dan Fandrich",
+    "description": "tool_main: Fixed a memory leak on main_init error\n",
+    "summary": "tool_main: Fixed a memory leak on main_init error",
+    "hash": "bd248a0b8020dde767dca1a46a727c89ae14ee5e"
+}

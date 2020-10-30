@@ -1,0 +1,22 @@
+open-vm-tools/libvmtools/vmtoolsConfig.c
+=======================================================
+lhs: 100644 | 8f422f938c8a6cfdacecc17421585f9507a8b326
+rhs: 100644 | 3f3e9ca1d30c529fcc88d32ce5d3112c29b35026
+---@@ -547,9 +547,12 @@ VMTools_ConfigGetBoolean(GKeyFile *config,
+    GError *err = NULL;
+    gboolean value;
+ 
+-   ASSERT(config);
+-   ASSERT(key);
+-   ASSERT(section);
++   if (config == NULL || section == NULL || key == NULL) {
++      g_debug("%s: Returning default value for '[%s] %s'=%s.\n",
++              __FUNCTION__, section ? section : "(null)",
++              key ? key : "(null)", defValue ? "TRUE" : "FALSE");
++      return defValue;
++   }
+ 
+    value = g_key_file_get_boolean(config, section, key, &err);
+    if (err != NULL) {
+
+---

@@ -1,0 +1,18 @@
+crypto/bn/bn_print.c
+=======================================================
+lhs: 100644 | 78589dba5bdb3549f92290ee3004774e6dc3fba2
+rhs: 100644 | 8672c7e3b32036f9b9b0b4eaac3aa16c295c7427
+---@@ -241,8 +241,9 @@ int BN_dec2bn(BIGNUM **bn, const char *a)
+         l += *a - '0';
+         a++;
+         if (++j == BN_DEC_NUM) {
+-            BN_mul_word(ret, BN_DEC_CONV);
+-            BN_add_word(ret, l);
++            if (!BN_mul_word(ret, BN_DEC_CONV)
++                || !BN_add_word(ret, l))
++                goto err;
+             l = 0;
+             j = 0;
+         }
+
+---

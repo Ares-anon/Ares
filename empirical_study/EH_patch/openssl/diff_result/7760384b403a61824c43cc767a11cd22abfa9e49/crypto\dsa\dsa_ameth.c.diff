@@ -1,0 +1,28 @@
+crypto/dsa/dsa_ameth.c
+=======================================================
+lhs: 100644 | 8da047d68a392033cc59b9cfaff18c857ec296ea
+rhs: 100644 | 9c5b8aa02e9dbd90cb3542836a258094b872e680
+---@@ -82,6 +82,7 @@ static int dsa_pub_encode(X509_PUBKEY *pk, const EVP_PKEY *pkey)
+     int penclen;
+     ASN1_STRING *str = NULL;
+     ASN1_INTEGER *pubint = NULL;
++    ASN1_OBJECT *aobj;
+ 
+     dsa = pkey->pkey.dsa;
+     if (pkey->save_parameters && dsa->p && dsa->q && dsa->g) {
+@@ -114,8 +115,11 @@ static int dsa_pub_encode(X509_PUBKEY *pk, const EVP_PKEY *pkey)
+         goto err;
+     }
+ 
+-    if (X509_PUBKEY_set0_param(pk, OBJ_nid2obj(EVP_PKEY_DSA),
+-                               ptype, str, penc, penclen))
++    aobj = OBJ_nid2obj(EVP_PKEY_DSA);
++    if (aobj == NULL)
++        goto err;
++
++    if (X509_PUBKEY_set0_param(pk, aobj, ptype, str, penc, penclen))
+         return 1;
+ 
+  err:
+
+---

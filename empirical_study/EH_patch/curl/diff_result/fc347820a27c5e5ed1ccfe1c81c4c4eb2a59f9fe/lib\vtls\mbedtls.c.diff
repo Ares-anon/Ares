@@ -1,0 +1,14 @@
+lib/vtls/mbedtls.c
+=======================================================
+lhs: 100644 | 7cd2d6d0f98da54d58231a3c0076dc9568a866bf
+rhs: 100644 | edf30dbd96583023791b3f23006076624c10c860
+---@@ -697,6 +697,7 @@ mbed_connect_step3(struct connectdata *conn,
+ 
+     ret = mbedtls_ssl_get_session(&connssl->ssl, our_ssl_sessionid);
+     if(ret) {
++      free(our_ssl_sessionid);
+       failf(data, "mbedtls_ssl_get_session returned -0x%x", -ret);
+       return CURLE_SSL_CONNECT_ERROR;
+     }
+
+---

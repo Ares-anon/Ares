@@ -1,0 +1,14 @@
+lib/urldata.h
+=======================================================
+lhs: 100644 | ebdad803d106222189a462afebd4157ae185fc26
+rhs: 100644 | 5883dedbbd1d1cf8845e862e49b930136462f914
+---@@ -324,6 +324,7 @@ struct ssl_connect_data {
+   PRFileDesc *handle;
+   char *client_nickname;
+   struct SessionHandle *data;
++  struct curl_llist *crl_list;
+   struct curl_llist *obj_list;
+   PK11GenericObject *obj_clicert;
+   ssl_connect_state connecting_state;
+
+---

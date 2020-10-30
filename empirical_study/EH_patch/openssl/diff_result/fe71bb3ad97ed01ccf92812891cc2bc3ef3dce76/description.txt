@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory on ASN1_GENERALIZEDTIME_adj() error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory on ASN1_GENERALIZEDTIME_adj() error path\n\nThe ASN1_GENERALIZEDTIME_adj() function leaks an ASN1_GENERALIZEDTIME\nobject on an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "fe71bb3ad97ed01ccf92812891cc2bc3ef3dce76",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "379a8ed1ffdbb0c8dbf89b2777b1b710f968db6e"
+}

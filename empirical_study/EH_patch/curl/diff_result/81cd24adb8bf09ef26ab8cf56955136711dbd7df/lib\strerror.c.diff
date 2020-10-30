@@ -1,0 +1,24 @@
+lib/strerror.c
+=======================================================
+lhs: 100644 | aec6d38f33663cfc64263a99c38d9c1a1322f476
+rhs: 100644 | 66033f219817a05ab44f07b39787d5f01f40ebd4
+---@@ -105,6 +105,9 @@ curl_easy_strerror(CURLcode error)
+   case CURLE_FTP_CANT_GET_HOST:
+     return "FTP: can't figure out the host in the PASV response";
+ 
++  case CURLE_HTTP2:
++    return "Error in the HTTP2 framing layer";
++
+   case CURLE_FTP_COULDNT_SET_TYPE:
+     return "FTP: couldn't set file type";
+ 
+@@ -296,7 +299,6 @@ curl_easy_strerror(CURLcode error)
+     return "The max connection limit is reached";
+ 
+     /* error codes not used by current libcurl */
+-  case CURLE_OBSOLETE16:
+   case CURLE_OBSOLETE20:
+   case CURLE_OBSOLETE24:
+   case CURLE_OBSOLETE29:
+
+---

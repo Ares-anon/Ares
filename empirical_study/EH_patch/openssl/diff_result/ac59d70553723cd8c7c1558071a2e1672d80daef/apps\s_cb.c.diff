@@ -1,0 +1,19 @@
+apps/s_cb.c
+=======================================================
+lhs: 100644 | 8a66c9a7dc8fabb040205cafb7e0e6d758684c82
+rhs: 100644 | 8bc4b817103ab4fd28738983e15450856daffb1f
+---@@ -1181,8 +1181,10 @@ static int set_cert_cb(SSL *ssl, void *arg)
+ 
+         print_chain_flags(bio_err, ssl, rv);
+         if (rv & CERT_PKEY_VALID) {
+-            SSL_use_certificate(ssl, exc->cert);
+-            SSL_use_PrivateKey(ssl, exc->key);
++            if(!SSL_use_certificate(ssl, exc->cert)
++               || !SSL_use_PrivateKey(ssl, exc->key)) {
++                return 0;
++            }
+             /*
+              * NB: we wouldn't normally do this as it is not efficient
+              * building chains on each connection better to cache the chain
+
+---

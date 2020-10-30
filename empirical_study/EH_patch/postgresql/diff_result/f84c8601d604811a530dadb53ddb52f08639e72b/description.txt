@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Add error check for lossy distance functions in index-only scans.\n\nMaybe we should actually support this, but for the moment let's just\nthrow an error if the opclass tries it.\n",
+    "summary": "Add error check for lossy distance functions in index-only scans.",
+    "date": "2015-05-23 16:24:31",
+    "parent_hash": "72809480d658fbc0654239b2f089991c077c676a",
+    "hash": "f84c8601d604811a530dadb53ddb52f08639e72b"
+}

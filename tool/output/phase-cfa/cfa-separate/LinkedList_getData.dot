@@ -1,0 +1,16 @@
+digraph LinkedList_getData {
+label="LinkedList_getData"
+164 [label="N164\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+165 [label="N165\n(rp:6, ep:6)\nentry", shape="doublecircle"]
+165 -> 167 [label="%2 = alloca %struct.sLinkedList*, align 8"]
+167 [label="N167\n(rp:5, ep:5)", shape="circle"]
+167 -> 169 [label="store %struct.sLinkedList* %0, %struct.sLinkedList** %2, align 8"]
+169 [label="N169\n(rp:4, ep:4)", shape="circle"]
+169 -> 170 [label="%3 = load %struct.sLinkedList*, %struct.sLinkedList** %2, align 8"]
+170 [label="N170\n(rp:3, ep:3)", shape="circle"]
+170 -> 171 [label="%4 = getelementptr inbounds %struct.sLinkedList, %struct.sLinkedList* %3, i32 0, i32 0"]
+171 [label="N171\n(rp:2, ep:2)", shape="circle"]
+171 -> 172 [label="%5 = load i8*, i8** %4, align 8"]
+172 [label="N172\n(rp:1, ep:1)", shape="circle"]
+172 -> 164 [label="ret i8* %5"]
+}

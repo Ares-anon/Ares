@@ -1,0 +1,8 @@
+{
+    "summary": "GH634: fix potential memory leak",
+    "author": "Insu Yun",
+    "description": "GH634: fix potential memory leak\n\nSigned-off-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\n",
+    "hash": "69ac182d15e964801a237f826d71fd4d77b4710f",
+    "date": "2016-02-06 09:25:54",
+    "parent_hash": "0d1e003f8493504945dabff4384cfafba49f5369"
+}

@@ -1,0 +1,30 @@
+lib/http_negotiate.c
+=======================================================
+lhs: 100644 | eb17ed4f2efd0d371a21bd70bd4368fe328168cc
+rhs: 100644 | 5ea9f3401d2ab60189731cc92e45476879601c49
+---@@ -37,6 +37,7 @@
+ CURLcode Curl_input_negotiate(struct connectdata *conn, bool proxy,
+                               const char *header)
+ {
++  CURLcode result;
+   struct Curl_easy *data = conn->data;
+   size_t len;
+ 
+@@ -89,8 +90,13 @@ CURLcode Curl_input_negotiate(struct connectdata *conn, bool proxy,
+   }
+ 
+   /* Initilise the security context and decode our challenge */
+-  return Curl_auth_decode_spnego_message(data, userp, passwdp, service, host,
+-                                         header, neg_ctx);
++  result = Curl_auth_decode_spnego_message(data, userp, passwdp, service,
++                                           host, header, neg_ctx);
++
++  if(result)
++    Curl_auth_spnego_cleanup(neg_ctx);
++
++  return result;
+ }
+ 
+ CURLcode Curl_output_negotiate(struct connectdata *conn, bool proxy)
+
+---

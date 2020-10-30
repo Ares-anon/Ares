@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a mem leak on an error path in OBJ_NAME_add()",
+    "author": "Matt Caswell",
+    "description": "Fix a mem leak on an error path in OBJ_NAME_add()\n\nIf lh_OBJ_NAME_insert() fails then the allocated |onp| value is leaked.\n\nRT#2238\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "0a618df059d93bf7fe9e3ec92e04db8bc1eeff07",
+    "date": "2016-05-24 00:09:56",
+    "parent_hash": "308ff28673ae1a4a1b346761224b4a8851d41f58"
+}

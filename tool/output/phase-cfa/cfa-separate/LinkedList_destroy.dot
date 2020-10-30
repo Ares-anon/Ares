@@ -1,0 +1,14 @@
+digraph LinkedList_destroy {
+label="LinkedList_destroy"
+41 [label="N41\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+42 [label="N42\n(rp:5, ep:5)\nentry", shape="doublecircle"]
+42 -> 44 [label="%2 = alloca %struct.sLinkedList*, align 8"]
+44 [label="N44\n(rp:4, ep:4)", shape="circle"]
+44 -> 46 [label="store %struct.sLinkedList* %0, %struct.sLinkedList** %2, align 8"]
+46 [label="N46\n(rp:3, ep:3)", shape="circle"]
+46 -> 47 [label="%3 = load %struct.sLinkedList*, %struct.sLinkedList** %2, align 8"]
+47 [label="N47\n(rp:2, ep:2)", shape="circle"]
+47 -> 48 [label="LinkedList_destroyDeep --@-- call void @LinkedList_destroyDeep(%struct.sLinkedList* %3, void (i8*)* @Memory_free)", style="dashed", color="blue"]
+48 [label="N48\n(rp:1, ep:1)", shape="circle"]
+48 -> 41 [label="ret void"]
+}

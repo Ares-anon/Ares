@@ -1,0 +1,8 @@
+{
+    "summary": "Fix return-value checks in OCSP_resp_get1_id()",
+    "author": "Benjamin Kaduk",
+    "description": "Fix return-value checks in OCSP_resp_get1_id()\n\nCommit db17e43d882ecde217e1dce4a2b8c76c3ed134bf added the function\nbut would improperly report success if the underlying dup operation\nfailed.\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3775)\n",
+    "hash": "c91ec013654e97ca1754db26bd2da62c8bbf7b47",
+    "date": "2017-06-27 10:49:53",
+    "parent_hash": "0ffdaebf9a327f3b356df1cf72d74dd15ead7d13"
+}

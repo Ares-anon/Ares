@@ -1,0 +1,8 @@
+{
+    "summary": "Fix return values when adding serverinfo fails.",
+    "author": "Kurt Roeckx",
+    "description": "Fix return values when adding serverinfo fails.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nMR #1128\n",
+    "hash": "fae11ec714ac8e71d95e824d7102ab5b2ec2e256",
+    "date": "2015-09-16 20:54:51",
+    "parent_hash": "8011f64efbad435efb1c77e9ac38b4d216091c96"
+}

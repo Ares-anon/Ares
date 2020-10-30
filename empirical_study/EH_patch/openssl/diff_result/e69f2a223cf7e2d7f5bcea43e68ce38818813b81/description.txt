@@ -1,0 +1,8 @@
+{
+    "summary": "Add missing return value checks",
+    "author": "Matt Caswell",
+    "description": "Add missing return value checks\n\nAlso correct the return value from the the \"prime\" application\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "e69f2a223cf7e2d7f5bcea43e68ce38818813b81",
+    "date": "2016-04-21 10:51:57",
+    "parent_hash": "46da5f9ca98822197f09b74248f1b9cc60ad3307"
+}

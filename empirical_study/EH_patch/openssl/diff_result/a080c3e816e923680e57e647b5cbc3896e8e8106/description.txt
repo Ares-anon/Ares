@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in tls1_mac",
+    "author": "Bernd Edlinger",
+    "description": "Fix a memory leak in tls1_mac\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5650)\n",
+    "hash": "a080c3e816e923680e57e647b5cbc3896e8e8106",
+    "date": "2018-03-17 08:25:25",
+    "parent_hash": "302d1697fe09a9f4e89980f4ea84f86e63fc5e8d"
+}

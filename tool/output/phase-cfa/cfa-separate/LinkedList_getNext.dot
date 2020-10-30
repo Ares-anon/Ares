@@ -1,0 +1,16 @@
+digraph LinkedList_getNext {
+label="LinkedList_getNext"
+193 [label="N193\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+194 [label="N194\n(rp:6, ep:6)\nentry", shape="doublecircle"]
+194 -> 196 [label="%2 = alloca %struct.sLinkedList*, align 8"]
+196 [label="N196\n(rp:5, ep:5)", shape="circle"]
+196 -> 198 [label="store %struct.sLinkedList* %0, %struct.sLinkedList** %2, align 8"]
+198 [label="N198\n(rp:4, ep:4)", shape="circle"]
+198 -> 199 [label="%3 = load %struct.sLinkedList*, %struct.sLinkedList** %2, align 8"]
+199 [label="N199\n(rp:3, ep:3)", shape="circle"]
+199 -> 200 [label="%4 = getelementptr inbounds %struct.sLinkedList, %struct.sLinkedList* %3, i32 0, i32 1"]
+200 [label="N200\n(rp:2, ep:2)", shape="circle"]
+200 -> 201 [label="%5 = load %struct.sLinkedList*, %struct.sLinkedList** %4, align 8"]
+201 [label="N201\n(rp:1, ep:1)", shape="circle"]
+201 -> 193 [label="ret %struct.sLinkedList* %5"]
+}

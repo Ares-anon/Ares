@@ -1,0 +1,8 @@
+{
+    "summary": "The x509_name_canon function doesn't check for an error return",
+    "author": "Matt Caswell",
+    "description": "The x509_name_canon function doesn't check for an error return\n\ni2d_name_canon can return a negative number on error. We should check it\nbefore continuing.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "ed3eb5e0cca0ac88908e5d718ac0137d0150ddb3",
+    "date": "2016-04-29 16:47:41",
+    "parent_hash": "3b7a71b2f026702877d8cf4240996f71ae2ff55a"
+}

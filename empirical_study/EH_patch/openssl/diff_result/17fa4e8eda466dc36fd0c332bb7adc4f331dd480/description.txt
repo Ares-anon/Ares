@@ -1,0 +1,8 @@
+{
+    "summary": "GH715: Missed some null-check-removals. follow commits 412bafdcf5, and 7c96dbcdab",
+    "author": "FdaSilvaYY",
+    "description": "GH715: Missed some null-check-removals. follow commits 412bafdcf5, and 7c96dbcdab\n\nSigned-off-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "17fa4e8eda466dc36fd0c332bb7adc4f331dd480",
+    "date": "2016-02-28 17:40:08",
+    "parent_hash": "31ba0e17585bd16e089afa3a44979ccd9561182a"
+}

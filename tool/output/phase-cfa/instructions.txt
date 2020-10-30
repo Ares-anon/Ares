@@ -1,6 +1,9 @@
 AllocaInst
+BinaryOperator
 BitCastInst
 CallInst
+GetElementPtrInst
+ICmpInst
 LoadInst
 ReturnInst
 StoreInst

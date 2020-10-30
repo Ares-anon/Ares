@@ -1,0 +1,8 @@
+{
+    "summary": "Fix an error path leak in int X509_ATTRIBUTE_set1_data()",
+    "author": "Matt Caswell",
+    "description": "Fix an error path leak in int X509_ATTRIBUTE_set1_data()\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "5000a6d1215ea7d6ed6179d0bcd44263f6e3c26b",
+    "date": "2016-06-10 16:42:05",
+    "parent_hash": "8605abf13523579ecab8b1f2a4bcb8354d94af79"
+}

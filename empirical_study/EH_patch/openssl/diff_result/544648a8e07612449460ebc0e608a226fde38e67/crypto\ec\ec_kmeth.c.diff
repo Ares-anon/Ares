@@ -1,0 +1,15 @@
+crypto/ec/ec_kmeth.c
+=======================================================
+lhs: 100644 | 5e5d1ae1cf41f7b8a4e9a538a1c0307ea9f4933a
+rhs: 100644 | decad65a18a632f320d9c713678bd2df92bf4162
+---@@ -119,7 +119,7 @@ EC_KEY *EC_KEY_new_method(ENGINE *engine)
+     }
+     return ret;
+ 
+-err:
++ err:
+     EC_KEY_free(ret);
+     return NULL;
+ }
+
+---

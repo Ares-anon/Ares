@@ -1,0 +1,24 @@
+crypto/bn/bn_print.c
+=======================================================
+lhs: 100644 | 8d06405ab687caa71f3b537f1ff9e7f58cef9a13
+rhs: 100644 | 78589dba5bdb3549f92290ee3004774e6dc3fba2
+---@@ -139,7 +139,7 @@ int BN_hex2bn(BIGNUM **bn, const char *a)
+     for (i = 0; i <= (INT_MAX/4) && isxdigit((unsigned char)a[i]); i++)
+         continue;
+ 
+-    if (i > INT_MAX/4)
++    if (i == 0 || i > INT_MAX/4)
+         goto err;
+ 
+     num = i + neg;
+@@ -209,7 +209,7 @@ int BN_dec2bn(BIGNUM **bn, const char *a)
+     for (i = 0; i <= (INT_MAX/4) && isdigit((unsigned char)a[i]); i++)
+         continue;
+ 
+-    if (i > INT_MAX/4)
++    if (i == 0 || i > INT_MAX/4)
+         goto err;
+ 
+     num = i + neg;
+
+---

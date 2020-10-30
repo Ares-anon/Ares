@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix incorrect checking of deferred exclusion constraint after a HOT update.\n\nIf a row that potentially violates a deferred exclusion constraint is\nHOT-updated later in the same transaction, the exclusion constraint would\nbe reported as violated when the check finally occurs, even if the row(s)\nthe new row originally conflicted with have since been removed.  This\nhappened because the wrong TID was passed to check_exclusion_constraint(),\ncausing the live HOT-updated row to be seen as a conflicting row rather\nthan recognized as the row-under-test.\n\nPer bug #13148 from Evan Martin.  It's been broken since exclusion\nconstraints were invented, so back-patch to all supported branches.\n",
+    "summary": "Fix incorrect checking of deferred exclusion constraint after a HOT update.",
+    "date": "2015-05-11 12:25:43",
+    "parent_hash": "b4d4ce1d50bbdf82cd2e2c1c7172b936df01c01d",
+    "hash": "20781765f77c1fb6465aba97d211636ce92e7a0e"
+}

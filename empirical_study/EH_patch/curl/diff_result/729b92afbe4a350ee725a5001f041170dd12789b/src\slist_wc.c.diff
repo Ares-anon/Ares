@@ -1,0 +1,15 @@
+src/slist_wc.c
+=======================================================
+lhs: 100644 | f4767ad849ef65c3fc1c3fe91597296512b4c9ba
+rhs: 100644 | d715bb21fa349cc3905593fc4c95748a3b352c3d
+---@@ -45,7 +45,7 @@ struct slist_wc *slist_wc_append(struct slist_wc *list,
+     list = malloc(sizeof(struct slist_wc));
+ 
+     if(!list) {
+-      free(new_item);
++      curl_slist_free_all(new_item);
+       return NULL;
+     }
+ 
+
+---

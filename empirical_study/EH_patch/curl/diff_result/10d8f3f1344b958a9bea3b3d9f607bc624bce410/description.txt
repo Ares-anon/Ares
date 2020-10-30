@@ -1,0 +1,8 @@
+{
+    "parent_hash": "a7091ba75d820612ec260da805e9148397eddfcd",
+    "date": "2018-07-26 16:21:59",
+    "author": "Carie Pointer",
+    "description": "wolfSSL/CyaSSL: Fix memory leak in Curl_cyassl_random\n\nRNG structure must be freed by call to FreeRng after its use in\nCurl_cyassl_random. This call fixes Valgrind failures when running the\ntest suite with wolfSSL.\n\nCloses #2784\n",
+    "summary": "wolfSSL/CyaSSL: Fix memory leak in Curl_cyassl_random",
+    "hash": "10d8f3f1344b958a9bea3b3d9f607bc624bce410"
+}

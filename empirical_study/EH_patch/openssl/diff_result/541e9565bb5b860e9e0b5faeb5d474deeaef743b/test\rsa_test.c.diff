@@ -1,0 +1,16 @@
+test/rsa_test.c
+=======================================================
+lhs: 100644 | 0b707bf715ec7981ce5b43a3680d4896ea29e19a
+rhs: 100644 | 9f1f3d69d9c87f7e8a4b76f539ba05690105d6f3
+---@@ -328,7 +328,8 @@ int main(int argc, char *argv[])
+     ERR_remove_thread_state(NULL);
+ 
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks_fp(stderr);
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        err = 1;
+ #endif
+ 
+ # ifdef OPENSSL_SYS_NETWARE
+
+---

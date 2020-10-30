@@ -1,0 +1,8 @@
+{
+    "description": "Check MALLOC returned non NULL before copying to the location\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "ca37e727b4cfdffb08d99cd6829ca667a98b4e05",
+    "summary": "Check MALLOC returned non NULL before copying to the location",
+    "date": "2016-03-15 23:49:53",
+    "hash": "2dc8004980bb3f62b2816126d9c78c906c1a3a6e"
+}

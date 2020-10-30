@@ -1,0 +1,18 @@
+src/backend/executor/execPartition.c
+=======================================================
+lhs: 100644 | 115be026353762baf7d611a8792b2f870b9da37f
+rhs: 100644 | 8c0d2df63c7a8635bf500de4781e342acfac4020
+---@@ -167,8 +167,9 @@ ExecFindPartition(ResultRelInfo *resultRelInfo, PartitionDispatch *pd,
+ 	 * First check the root table's partition constraint, if any.  No point in
+ 	 * routing the tuple if it doesn't belong in the root table itself.
+ 	 */
+-	if (resultRelInfo->ri_PartitionCheck)
+-		ExecPartitionCheck(resultRelInfo, slot, estate);
++	if (resultRelInfo->ri_PartitionCheck &&
++		!ExecPartitionCheck(resultRelInfo, slot, estate))
++		ExecPartitionCheckEmitError(resultRelInfo, slot, estate);
+ 
+ 	/* start with the root partitioned table */
+ 	parent = pd[0];
+
+---

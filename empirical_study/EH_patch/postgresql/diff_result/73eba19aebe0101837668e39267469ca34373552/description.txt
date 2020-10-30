@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix another ancient memory-leak bug in relcache.c.\n\nCheckConstraintFetch() leaked a cstring in the caller's context for each\nCHECK constraint expression it copied into the relcache.  Ordinarily that\nisn't problematic, but it can be during CLOBBER_CACHE testing because so\nmany reloads can happen during a single query; so complicate the code\nslightly to allow freeing the cstring after use.  Per testing on buildfarm\nmember barnacle.\n\nThis is exactly like the leak fixed in AttrDefaultFetch() by commit\n078b2ed291c758e7125d72c3a235f128d40a232b.  (Yes, this time I did look for\nother instances of the same coding pattern :-(.)  Like that patch, no\nback-patch, since it seems unlikely that there's any problem except under\nvery artificial test conditions.\n\nBTW, it strikes me that both of these places would require further work\ncomparable to commit ab8c84db2f7af008151b848cf1d6a4672a39eecd, if we ever\nsupported defaults or check constraints on system catalogs: they both\nassume they are copying into an empty relcache data structure, and that\nconceivably wouldn't be the case during recursive reloading of a system\ncatalog.  This does not seem worth worrying about for the moment, since\nthere is no near-term prospect of supporting any such thing.  So I'll\njust note the possibility for the archives' sake.\n",
+    "summary": "Fix another ancient memory-leak bug in relcache.c.",
+    "date": "2014-08-24 11:56:52",
+    "parent_hash": "256bfb2c9ab89eefb963db025dfcc91893f0b8b3",
+    "hash": "73eba19aebe0101837668e39267469ca34373552"
+}

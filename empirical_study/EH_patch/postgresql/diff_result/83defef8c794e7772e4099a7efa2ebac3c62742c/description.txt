@@ -1,0 +1,8 @@
+{
+    "author": "Bruce Momjian",
+    "description": "report stat() error in trigger file check\n\nPermissions might prevent the existence of the trigger file from being\nchecked.\n\nPer report from Andres Freund\n",
+    "summary": "report stat() error in trigger file check",
+    "date": "2014-04-17 11:55:57",
+    "parent_hash": "c1275cf74172cd0ed478dbc31e34e2ffffc6e789",
+    "hash": "83defef8c794e7772e4099a7efa2ebac3c62742c"
+}

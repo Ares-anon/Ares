@@ -1,0 +1,8 @@
+{
+    "parent_hash": "0d357155cc8b5132e33ee6d20b0a83aff872e58b",
+    "date": "2014-10-02 23:31:01",
+    "author": "Daniel Stenberg",
+    "description": "detect_proxy: fix possible single-byte memory leak\n\nCoverity CID 1202836. If the proxy environment variable returned an empty\nstring, it would be leaked. While an empty string is not really a proxy, other\nlogic in this function already allows a blank string to be returned so allow\nthat here to avoid the leak.\n",
+    "summary": "detect_proxy: fix possible single-byte memory leak",
+    "hash": "b85c625d831de821d0e4ead3d01be2ffe955aa28"
+}

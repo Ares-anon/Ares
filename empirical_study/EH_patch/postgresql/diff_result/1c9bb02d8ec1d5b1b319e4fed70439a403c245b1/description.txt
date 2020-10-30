@@ -1,0 +1,8 @@
+{
+    "author": "Alvaro Herrera",
+    "description": "Fix per-tuple memory leak in partition tuple routing\n\nSome operations were being done in a longer-lived memory context,\ncausing intra-query leaks.  It's not noticeable unless you're doing a\nlarge COPY, but if you are, it eats enough memory to cause a problem.\n\nCo-authored-by: Kohei KaiGai <kaigai@heterodb.com>\nCo-authored-by: Amit Langote <Langote_Amit_f8@lab.ntt.co.jp>\nCo-authored-by: \u00c1lvaro Herrera <alvherre@alvh.no-ip.org>\nDiscussion: https://postgr.es/m/CAOP8fzYtVFWZADq4c=KoTAqgDrHWfng+AnEPEZccyxqxPVbbWQ@mail.gmail.com\n",
+    "summary": "Fix per-tuple memory leak in partition tuple routing",
+    "date": "2018-08-01 16:29:15",
+    "parent_hash": "e3f99e03e2ec65e7ddb1f3056b545f2afa57b2d0",
+    "hash": "1c9bb02d8ec1d5b1b319e4fed70439a403c245b1"
+}

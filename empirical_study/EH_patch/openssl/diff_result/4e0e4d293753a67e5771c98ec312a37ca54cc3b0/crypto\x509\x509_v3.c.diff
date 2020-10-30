@@ -1,0 +1,15 @@
+crypto/x509/x509_v3.c
+=======================================================
+lhs: 100644 | f3fe3057573358ea2429ae6fe5641907c7516094
+rhs: 100644 | e835db79067606ea86b6f5bb27548242a7df482e
+---@@ -235,7 +235,7 @@ int X509_EXTENSION_set_object(X509_EXTENSION *ex, ASN1_OBJECT *obj)
+         return (0);
+     ASN1_OBJECT_free(ex->object);
+     ex->object = OBJ_dup(obj);
+-    return (1);
++    return ex->object != NULL;
+ }
+ 
+ int X509_EXTENSION_set_critical(X509_EXTENSION *ex, int crit)
+
+---

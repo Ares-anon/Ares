@@ -1,0 +1,8 @@
+{
+    "parent_hash": "a9beeeeeeac018157412e4510342554a48df54f4",
+    "date": "2014-10-02 23:07:06",
+    "author": "Daniel Stenberg",
+    "description": "pop3_perform_authentication: fix memory leak\n\nCoverity CID 1215287. There's a potential risk for a memory leak in\nhere, and moving the free call to be unconditional seems like a cheap\nprice to remove the risk.\n",
+    "summary": "pop3_perform_authentication: fix memory leak",
+    "hash": "ea6c5f03a50433be3c2acaabec1790c317448a2e"
+}

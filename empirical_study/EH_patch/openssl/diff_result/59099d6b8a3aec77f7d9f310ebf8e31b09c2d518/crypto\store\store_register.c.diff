@@ -1,0 +1,32 @@
+crypto/store/store_register.c
+=======================================================
+lhs: 100644 | 7af1925f23ec700f2157d4f8e8a422c8abc8b623
+rhs: 100644 | b366b19958a81166df671d6f00c56b17d9daa524
+---@@ -30,12 +30,7 @@ DEFINE_RUN_ONCE_STATIC(do_registry_init)
+ 
+ OSSL_STORE_LOADER *OSSL_STORE_LOADER_new(ENGINE *e, const char *scheme)
+ {
+-    OSSL_STORE_LOADER *res = OPENSSL_zalloc(sizeof(*res));
+-
+-    if (res == NULL) {
+-        OSSL_STOREerr(OSSL_STORE_F_OSSL_STORE_LOADER_NEW, ERR_R_MALLOC_FAILURE);
+-        return NULL;
+-    }
++    OSSL_STORE_LOADER *res = NULL;
+ 
+     /*
+      * We usually don't check NULL arguments.  For loaders, though, the
+@@ -49,6 +44,11 @@ OSSL_STORE_LOADER *OSSL_STORE_LOADER_new(ENGINE *e, const char *scheme)
+         return NULL;
+     }
+ 
++    if ((res = OPENSSL_zalloc(sizeof(*res))) == NULL) {
++        OSSL_STOREerr(OSSL_STORE_F_OSSL_STORE_LOADER_NEW, ERR_R_MALLOC_FAILURE);
++        return NULL;
++    }
++
+     res->engine = e;
+     res->scheme = scheme;
+     return res;
+
+---

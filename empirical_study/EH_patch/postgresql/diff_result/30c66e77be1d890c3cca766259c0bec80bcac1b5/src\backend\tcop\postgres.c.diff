@@ -1,0 +1,22 @@
+src/backend/tcop/postgres.c
+=======================================================
+lhs: 100644 | 3828cae921dc29d8a281a4dd44556936c517635f
+rhs: 100644 | f4133953beb0062312b1554a82b53659ac9e58a0
+---@@ -42,6 +42,7 @@
+ #include "catalog/pg_type.h"
+ #include "commands/async.h"
+ #include "commands/prepare.h"
++#include "executor/spi.h"
+ #include "jit/jit.h"
+ #include "libpq/libpq.h"
+ #include "libpq/pqformat.h"
+@@ -3941,6 +3942,7 @@ PostgresMain(int argc, char *argv[],
+ 			WalSndErrorCleanup();
+ 
+ 		PortalErrorCleanup();
++		SPICleanup();
+ 
+ 		/*
+ 		 * We can't release replication slots inside AbortTransaction() as we
+
+---

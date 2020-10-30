@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks on return code when applying some settings.",
+    "author": "FdaSilvaYY",
+    "description": "Add checks on return code when applying some settings.\nRemove hardcoded bound checkings.\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3141)",
+    "hash": "36b2cfb191f4a3f3a49b7c4d865308b7021daa42",
+    "date": "2017-04-28 15:49:36",
+    "parent_hash": "67887855af3bfbf3f44b246aa83db6faeddae886"
+}

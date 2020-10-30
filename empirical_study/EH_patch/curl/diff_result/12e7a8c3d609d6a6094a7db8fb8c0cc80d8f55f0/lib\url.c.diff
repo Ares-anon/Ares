@@ -1,0 +1,23 @@
+lib/url.c
+=======================================================
+lhs: 100644 | f5998d6b113b451a072ef354b398e92939cc8cef
+rhs: 100644 | 4fc2f4cad5602264b309fdefa0d370a4824dfd86
+---@@ -2293,12 +2293,13 @@ CURLcode Curl_setopt(struct Curl_easy *data, CURLoption option,
+ 
+     /* Resize only if larger than default buffer size. */
+     if(data->set.buffer_size > BUFSIZE) {
+-      data->state.buffer = realloc(data->state.buffer,
+-                                   data->set.buffer_size + 1);
+-      if(!data->state.buffer) {
++      char *newbuff = realloc(data->state.buffer, data->set.buffer_size + 1);
++      if(!newbuff) {
+         DEBUGF(fprintf(stderr, "Error: realloc of buffer failed\n"));
+         result = CURLE_OUT_OF_MEMORY;
+       }
++      else
++        data->state.buffer = newbuff;
+     }
+ 
+     break;
+
+---

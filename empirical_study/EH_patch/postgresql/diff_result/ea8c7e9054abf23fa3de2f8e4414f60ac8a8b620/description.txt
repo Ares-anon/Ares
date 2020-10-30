@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix memory leak during regular expression execution.\n\nFor a regex containing backrefs, pg_regexec() might fail to free all the\nsub-DFAs that were created during execution, resulting in a permanent\n(session lifespan) memory leak.  Problem was introduced by me in commit\n587359479acbbdc95c8e37da40707e37097423f5.  Per report from Sandro Santilli;\ndiagnosis by Greg Stark.\n",
+    "summary": "Fix memory leak during regular expression execution.",
+    "date": "2014-03-19 11:09:24",
+    "parent_hash": "fb1d92a9fa0226c435daf16d08e5d05d6986fc54",
+    "hash": "ea8c7e9054abf23fa3de2f8e4414f60ac8a8b620"
+}

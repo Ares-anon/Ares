@@ -1,0 +1,23 @@
+crypto/evp/bio_b64.c
+=======================================================
+lhs: 100644 | cdb50b4584522091e803897fe25bd1391d6faa56
+rhs: 100644 | 6a95cf6dd67bb84262c0d37f46df436f9ac532d5
+---@@ -118,10 +118,15 @@ static int b64_new(BIO *bi)
+ 
+     ctx = OPENSSL_zalloc(sizeof(*ctx));
+     if (ctx == NULL)
+-        return (0);
++        return 0;
+ 
+     ctx->cont = 1;
+     ctx->start = 1;
++    if (ctx->base64 == NULL) {
++        OPENSSL_free(ctx);
++        return 0;
++    }
++
+     ctx->base64 = EVP_ENCODE_CTX_new();
+     BIO_set_data(bi, ctx);
+     BIO_set_init(bi, 1);
+
+---

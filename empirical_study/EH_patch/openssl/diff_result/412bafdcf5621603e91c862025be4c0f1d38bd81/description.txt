@@ -1,0 +1,8 @@
+{
+    "summary": "GH715: Missed some null-check-removals.",
+    "author": "Rich Salz",
+    "description": "GH715: Missed some null-check-removals.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "412bafdcf5621603e91c862025be4c0f1d38bd81",
+    "date": "2016-02-28 09:41:23",
+    "parent_hash": "91a61513a80a7710db5f61a61a815c945443b65a"
+}

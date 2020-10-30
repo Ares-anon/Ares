@@ -1,0 +1,26 @@
+src/backend/libpq/auth.c
+=======================================================
+lhs: 100644 | 28b050af0e2edb527897651c700014362b4b0dc2
+rhs: 100644 | 40f30229c054705ff2092ec82c256a43cf96ed7c
+---@@ -811,15 +811,16 @@ pg_GSS_recvauth(Port *port)
+ 			size_t		kt_len = strlen(pg_krb_server_keyfile) + 14;
+ 			char	   *kt_path = malloc(kt_len);
+ 
+-			if (!kt_path)
++			if (!kt_path ||
++				snprintf(kt_path, kt_len, "KRB5_KTNAME=%s",
++						 pg_krb_server_keyfile) != kt_len - 2 ||
++				putenv(kt_path) != 0)
+ 			{
+ 				ereport(LOG,
+ 						(errcode(ERRCODE_OUT_OF_MEMORY),
+ 						 errmsg("out of memory")));
+ 				return STATUS_ERROR;
+ 			}
+-			snprintf(kt_path, kt_len, "KRB5_KTNAME=%s", pg_krb_server_keyfile);
+-			putenv(kt_path);
+ 		}
+ 	}
+ 
+
+---

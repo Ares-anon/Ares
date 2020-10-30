@@ -1,0 +1,15 @@
+src/fe-common/irc/fe-irc-channels.c
+=======================================================
+lhs: 100644 | d5f17bd022a939330f11b16e29a5cd6c44fe66d5
+rhs: 100644 | a2737fc34f712ba07d321b3aef75f82347b6667a
+---@@ -56,7 +56,7 @@ const char *fe_channel_skip_prefix(IRC_SERVER_REC *server, const char *target)
+ 
+ 	/* Exit early if target doesn't name a channel */
+ 	if (server_ischannel(SERVER(server), target) == FALSE)
+-		return FALSE;
++		return target;
+ 
+ 	statusmsg = g_hash_table_lookup(server->isupport, "statusmsg");
+ 
+
+---

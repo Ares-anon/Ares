@@ -1,0 +1,27 @@
+ssl/statem/statem_clnt.c
+=======================================================
+lhs: 100644 | ba873ee0a67602bdbaf1588c7540f48443787b3f
+rhs: 100644 | 287d8ab8a6fccb676c2c6e9a1d8e3807fbaf2979
+---@@ -2459,6 +2459,9 @@ static int tls_construct_cke_dhe(SSL *s, WPACKET *pkt, int *al)
+         goto err;
+ 
+     ckey = ssl_generate_pkey(skey);
++    if (ckey == NULL)
++        goto err;
++
+     dh_clnt = EVP_PKEY_get0_DH(ckey);
+ 
+     if (dh_clnt == NULL || ssl_derive(s, ckey, skey, 0) == 0)
+@@ -2496,6 +2499,10 @@ static int tls_construct_cke_ecdhe(SSL *s, WPACKET *pkt, int *al)
+     }
+ 
+     ckey = ssl_generate_pkey(skey);
++    if (ckey == NULL) {
++        SSLerr(SSL_F_TLS_CONSTRUCT_CKE_ECDHE, ERR_R_MALLOC_FAILURE);
++        goto err;
++    }
+ 
+     if (ssl_derive(s, ckey, skey, 0) == 0) {
+         SSLerr(SSL_F_TLS_CONSTRUCT_CKE_ECDHE, ERR_R_EVP_LIB);
+
+---

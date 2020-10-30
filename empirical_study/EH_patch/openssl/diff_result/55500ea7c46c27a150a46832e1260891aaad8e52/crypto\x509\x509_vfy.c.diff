@@ -1,0 +1,24 @@
+crypto/x509/x509_vfy.c
+=======================================================
+lhs: 100644 | 6b1f7febff56421821f5c720293768975ec7970c
+rhs: 100644 | a3077b5cbc7cd955fcb835262f2ccc35b95c55d9
+---@@ -243,7 +243,7 @@ int X509_verify_cert(X509_STORE_CTX *ctx)
+         if (ctx->param->flags & X509_V_FLAG_TRUSTED_FIRST) {
+             ok = ctx->get_issuer(&xtmp, ctx, x);
+             if (ok < 0)
+-                return ok;
++                goto end;
+             /*
+              * If successful for now free up cert so it will be picked up
+              * again later.
+@@ -341,7 +341,7 @@ int X509_verify_cert(X509_STORE_CTX *ctx)
+             ok = ctx->get_issuer(&xtmp, ctx, x);
+ 
+             if (ok < 0)
+-                return ok;
++                goto end;
+             if (ok == 0)
+                 break;
+             x = xtmp;
+
+---

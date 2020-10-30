@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "psql: Fix incorrect version check for table partitining.\n\nTable partitioning was added in 10, not 9.6.\n\nFabr\u00edzio de Royes Mello, per report from Jeff Janes\n",
+    "summary": "psql: Fix incorrect version check for table partitining.",
+    "date": "2016-12-12 11:57:58",
+    "parent_hash": "563d575fd73361f6118c13f2816988eba8e1f657",
+    "hash": "06e184876bc07c2b1d7144957dcf02c5b4f709c2"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "4058cf2a7f7e2590c26588c4eb476ac5c029cb5a",
+    "date": "2018-09-25 17:03:45",
+    "author": "Daniel Stenberg",
+    "description": "Curl_http2_done: fix memleak in error path\n\nFree 'header_recvbuf' unconditionally even if 'h2' isn't (yet) set, for\nearly failures.\n\nDetected by OSS-Fuzz\n\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=10669\nCloses #3046\n",
+    "summary": "Curl_http2_done: fix memleak in error path",
+    "hash": "304bb2f7c1b463373aa31c1530144c67f6afddb2"
+}

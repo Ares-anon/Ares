@@ -1,0 +1,8 @@
+{
+    "author": "Teodor Sigaev",
+    "description": "Fix lossy KNN GiST when ordering operator returns non-float8 value.\n\nKNN GiST with recheck flag should return to executor the same type as ordering\noperator, GiST detects this type by looking to return type of function which\nimplements ordering operator. But occasionally detecting code works after\nreplacing ordering operator function to distance support function.\nDistance support function always returns float8, so, detecting code get float8\ninstead of actual return type of ordering operator.\n\nBuilt-in opclasses don't have ordering operator which doesn't return\nnon-float8 value, so, tests are impossible here, at least now.\n\nBackpatch to 9.5 where lozzy KNN was introduced.\n\nAuthor: Alexander Korotkov\nReport by: Artur Zakirov\n",
+    "summary": "Fix lossy KNN GiST when ordering operator returns non-float8 value.",
+    "date": "2016-02-02 15:20:33",
+    "parent_hash": "7191ce8bea0cb110a28faef178efa92bf456e030",
+    "hash": "f25d07d99f4acf136baed4ef29ea97faad7337db"
+}

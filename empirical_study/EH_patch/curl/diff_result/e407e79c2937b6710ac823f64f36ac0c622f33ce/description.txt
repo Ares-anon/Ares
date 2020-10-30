@@ -1,0 +1,8 @@
+{
+    "parent_hash": "30b2d07b033496931687023a559601486a8113f5",
+    "date": "2018-09-23 23:08:39",
+    "author": "Daniel Stenberg",
+    "description": "http: add missing return code check\n\nDetected by Coverity. CID 1439610.\n\nFollow-up from 46e164069d1a523\n\nCloses #3034\n",
+    "summary": "http: add missing return code check",
+    "hash": "e407e79c2937b6710ac823f64f36ac0c622f33ce"
+}

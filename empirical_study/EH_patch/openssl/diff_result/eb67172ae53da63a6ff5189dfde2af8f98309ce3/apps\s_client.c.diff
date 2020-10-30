@@ -1,0 +1,14 @@
+apps/s_client.c
+=======================================================
+lhs: 100644 | 10ea1f1167e45774e9486d486af67b25ec00601e
+rhs: 100644 | 6ec792cee1752f7cec72c000f41fb3cf00ae0556
+---@@ -2474,6 +2474,7 @@ int s_client_main(int argc, char **argv)
+ #ifndef OPENSSL_NO_SRP
+     OPENSSL_free(srp_arg.srppassin);
+ #endif
++    OPENSSL_free(connectstr);
+     OPENSSL_free(host);
+     OPENSSL_free(port);
+     X509_VERIFY_PARAM_free(vpm);
+
+---

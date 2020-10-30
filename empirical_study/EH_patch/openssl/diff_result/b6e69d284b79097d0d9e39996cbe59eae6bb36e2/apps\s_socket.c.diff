@@ -1,0 +1,28 @@
+apps/s_socket.c
+=======================================================
+lhs: 100644 | 1841607ef5bbc54947fe7d0a4dd478922ec06ee3
+rhs: 100644 | 65003fb6f07dcb53c5df3896ac51cdcf8bd06ada
+---@@ -452,6 +452,7 @@ redoit:
+ 		if ((*host=(char *)OPENSSL_malloc(strlen(h1->h_name)+1)) == NULL)
+ 			{
+ 			perror("OPENSSL_malloc");
++			closesocket(ret);
+ 			return(0);
+ 			}
+ 		BUF_strlcpy(*host,h1->h_name,strlen(h1->h_name)+1);
+@@ -460,11 +461,13 @@ redoit:
+ 		if (h2 == NULL)
+ 			{
+ 			BIO_printf(bio_err,"gethostbyname failure\n");
++			closesocket(ret);
+ 			return(0);
+ 			}
+ 		if (h2->h_addrtype != AF_INET)
+ 			{
+ 			BIO_printf(bio_err,"gethostbyname addr is not AF_INET\n");
++			closesocket(ret);
+ 			return(0);
+ 			}
+ 		}
+
+---

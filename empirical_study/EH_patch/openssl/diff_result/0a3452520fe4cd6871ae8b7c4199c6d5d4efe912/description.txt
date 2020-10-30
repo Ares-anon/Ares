@@ -1,0 +1,8 @@
+{
+    "summary": "Fix potential use-after-free and memory leak",
+    "author": "Pauli",
+    "description": "Fix potential use-after-free and memory leak\n\nIn function wait_for_async(), allocated async fds is freed if\n`SSL_get_all_async_fds` fails, but later `fds` is used. Interestingly,\nit is not freed when everything succeeds.\n\nRewrite the FD set loop to make it more readable and to not modify the allocated\npointer so it can be freed.\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Paul Dale <paul.dale@oracle.com>\n(Merged from https://github.com/openssl/openssl/pull/3992)\n",
+    "hash": "0a3452520fe4cd6871ae8b7c4199c6d5d4efe912",
+    "date": "2017-07-26 10:04:05",
+    "parent_hash": "e4adad92b3bd161680da874c19342b292ebe4bea"
+}

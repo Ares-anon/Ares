@@ -1,0 +1,15 @@
+apps/apps.c
+=======================================================
+lhs: 100644 | 97f0c0e182b36959f1c0df8a56b1d8e8d42fd991
+rhs: 100644 | bf044d40f85ae2456f7d4ffe60217424eb637e54
+---@@ -2780,7 +2780,7 @@ void print_cert_checks(BIO *bio, X509 *x,
+         return;
+     if (checkhost) {
+         BIO_printf(bio, "Hostname %s does%s match certificate\n",
+-                   checkhost, X509_check_host(x, checkhost, 0, 0, NULL)
++                   checkhost, X509_check_host(x, checkhost, 0, 0, NULL) == 1
+                    ? "" : " NOT");
+     }
+ 
+
+---

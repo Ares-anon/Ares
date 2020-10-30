@@ -1,0 +1,14 @@
+lib/multi.c
+=======================================================
+lhs: 100644 | dc7776cde2efd33deccaca310a629026b7eb6fed
+rhs: 100644 | 398be37a9d8cb021b1b07e9b99d7a92b34bee0d5
+---@@ -329,6 +329,7 @@ struct Curl_multi *Curl_multi_handle(int hashsize, /* socket hash */
+   multi->conn_cache = NULL;
+   Curl_close(multi->closure_handle);
+   multi->closure_handle = NULL;
++  Curl_llist_destroy(multi->msglist, NULL);
+ 
+   free(multi);
+   return NULL;
+
+---

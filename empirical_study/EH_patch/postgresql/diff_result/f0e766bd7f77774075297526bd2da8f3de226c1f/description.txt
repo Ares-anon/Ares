@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix memory leak in GIN index scans.\n\nThe code had a query-lifespan memory leak when encountering GIN entries\nthat have posting lists (rather than posting trees, ie, there are a\nrelatively small number of heap tuples containing this index key value).\nWith a suitable data distribution this could add up to a lot of leakage.\nProblem seems to have been introduced by commit 36a35c550, so back-patch\nto 9.4.\n\nJulien Rouhaud\n",
+    "summary": "Fix memory leak in GIN index scans.",
+    "date": "2016-04-15 00:02:26",
+    "parent_hash": "6f0d6a507889d94a79c0d18577a0cb1ccc2b6815",
+    "hash": "f0e766bd7f77774075297526bd2da8f3de226c1f"
+}

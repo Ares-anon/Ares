@@ -1,0 +1,18 @@
+ssl/ssl_rsa.c
+=======================================================
+lhs: 100644 | 8799d3dd56c2a6803704923a85725b6b50d7a1ae
+rhs: 100644 | 60a68340d1ed94e81ddad9cc2fb3f12416e3043e
+---@@ -693,7 +693,10 @@ int SSL_CTX_use_certificate_chain_file(SSL_CTX *ctx, const char *file)
+         int r;
+         unsigned long err;
+ 
+-        SSL_CTX_clear_chain_certs(ctx);
++        if(!SSL_CTX_clear_chain_certs(ctx)) {
++            ret = 0;
++            goto end;
++        }
+ 
+         while ((ca = PEM_read_bio_X509(in, NULL,
+                                        ctx->default_passwd_callback,
+
+---

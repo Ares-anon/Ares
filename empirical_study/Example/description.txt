@@ -1,0 +1,8 @@
+{
+    "description": "Check the return value of open() in rawlog.c\n",
+    "parent_hash": "bb190be0bfac956ada4f74a514ff70f28b114efa",
+    "author": "LemonBoy",
+    "date": "2016-06-05 16:24:55",
+    "hash": "8289f360757870b56a15576a20e79e1f2ca30fef",
+    "summary": "Check the return value of open() in rawlog.c"
+}

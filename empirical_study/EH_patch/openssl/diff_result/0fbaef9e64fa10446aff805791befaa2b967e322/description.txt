@@ -1,0 +1,8 @@
+{
+    "summary": "Fix some more memory leaks with TXT_DB_insert.",
+    "author": "Bernd Edlinger",
+    "description": "Fix some more memory leaks with TXT_DB_insert.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2684)",
+    "hash": "0fbaef9e64fa10446aff805791befaa2b967e322",
+    "date": "2017-02-21 14:13:58",
+    "parent_hash": "9ad52c562a93c9a57ae3024e54c575430753244c"
+}

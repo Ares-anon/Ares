@@ -1,0 +1,17 @@
+ssl/t1_lib.c
+=======================================================
+lhs: 100644 | 879467cd7c957bfaa9ea5c18f967814f8fec5ede
+rhs: 100644 | 77fe2325264c0ee80838d9ddd566e1eb92573eef
+---@@ -3380,7 +3380,10 @@ static int tls_decrypt_ticket(SSL *s, const unsigned char *etick, int eticklen,
+ 	HMAC_Final(&hctx, tick_hmac, NULL);
+ 	HMAC_CTX_cleanup(&hctx);
+ 	if (CRYPTO_memcmp(tick_hmac, etick + eticklen, mlen))
++		{
++		EVP_CIPHER_CTX_cleanup(&ctx);
+ 		return 2;
++		}
+ 	/* Attempt to decrypt session data */
+ 	/* Move p after IV to start of encrypted ticket, update length */
+ 	p = etick + 16 + EVP_CIPHER_CTX_iv_length(&ctx);
+
+---

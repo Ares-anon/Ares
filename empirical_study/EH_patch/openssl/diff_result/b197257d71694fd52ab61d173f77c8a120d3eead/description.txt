@@ -1,0 +1,8 @@
+{
+    "summary": "Check for error return from ASN1_object_size",
+    "author": "Matt Caswell",
+    "description": "Check for error return from ASN1_object_size\n\nOtherwise we try to malloc a -1 size.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "b197257d71694fd52ab61d173f77c8a120d3eead",
+    "date": "2016-08-23 00:19:15",
+    "parent_hash": "4d94bd362dc297c8496a479d1059ec3192fd8bbe"
+}

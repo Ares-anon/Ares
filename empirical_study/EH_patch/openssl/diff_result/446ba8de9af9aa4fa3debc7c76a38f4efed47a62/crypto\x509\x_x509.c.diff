@@ -1,0 +1,29 @@
+crypto/x509/x_x509.c
+=======================================================
+lhs: 100644 | 34639555baae981ffc39ead5e9dd382670a39171
+rhs: 100644 | 22a7e5922d421e6125e1e3f45c0486c2701772b3
+---@@ -182,10 +182,19 @@ X509 *d2i_X509_AUX(X509 **a, const unsigned char **pp, long length)
+ 
+ int i2d_X509_AUX(X509 *a, unsigned char **pp)
+ {
+-    int length;
++    int length, tmplen;
++    unsigned char *start = *pp;
+     length = i2d_X509(a, pp);
+-    if (a)
+-        length += i2d_X509_CERT_AUX(a->aux, pp);
++    if (length < 0 || a == NULL)
++        return length;
++
++    tmplen = i2d_X509_CERT_AUX(a->aux, pp);
++    if (tmplen < 0) {
++        *pp = start;
++        return tmplen;
++    }
++    length += tmplen;
++
+     return length;
+ }
+ 
+
+---

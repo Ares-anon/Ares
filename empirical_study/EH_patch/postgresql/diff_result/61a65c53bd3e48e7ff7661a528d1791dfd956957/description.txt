@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix memory leak in xlogreader facility.\n\nXLogReaderFree failed to free the per-block data buffers, when they\nhappened to not be used by the latest read WAL record.\n\nMichael Paquier. Backpatch to 9.5, where the per-block buffers were added.\n",
+    "summary": "Fix memory leak in xlogreader facility.",
+    "date": "2015-07-27 18:29:31",
+    "parent_hash": "334445179c82ba304480ecbd00ae4237587e4baf",
+    "hash": "61a65c53bd3e48e7ff7661a528d1791dfd956957"
+}

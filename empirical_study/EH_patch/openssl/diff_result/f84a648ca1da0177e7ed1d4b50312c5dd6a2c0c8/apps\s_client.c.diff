@@ -1,0 +1,16 @@
+apps/s_client.c
+=======================================================
+lhs: 100644 | 96bfc159d7ae34c8278924f76c92ff54dba943c8
+rhs: 100644 | 019e73535a84261c63aed551eac40a066a791686
+---@@ -1866,6 +1866,9 @@ int s_client_main(int argc, char **argv)
+         goto end;
+ 
+     con = SSL_new(ctx);
++    if (con == NULL)
++        goto end;
++
+     if (sess_in != NULL) {
+         SSL_SESSION *sess;
+         BIO *stmp = BIO_new_file(sess_in, "r");
+
+---

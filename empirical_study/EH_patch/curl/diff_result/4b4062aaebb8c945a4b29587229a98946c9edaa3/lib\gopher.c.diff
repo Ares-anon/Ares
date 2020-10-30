@@ -1,0 +1,14 @@
+lib/gopher.c
+=======================================================
+lhs: 100644 | 151bac1adb8297700e31535ce4419b3a79f00a5d
+rhs: 100644 | 485b4b79a0983652d46d0405d10fa1ac75b5663e
+---@@ -102,6 +102,7 @@ static CURLcode gopher_do(struct connectdata *conn, bool *done)
+   if(strlen(gopherpath) <= 2) {
+     sel = (char *)"";
+     len = strlen(sel);
++    free(gopherpath);
+   }
+   else {
+     char *newp;
+
+---

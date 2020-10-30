@@ -1,0 +1,23 @@
+crypto/rand/rand_lib.c
+=======================================================
+lhs: 100644 | 3589e75853e91b8d8bb9a72e75607f13ec3da31f
+rhs: 100644 | 6e98e4ddf80080478eb03ddf0e6c6f6f035b540a
+---@@ -229,7 +229,7 @@ size_t rand_drbg_get_entropy(RAND_DRBG *drbg,
+              */
+             RANDerr(RAND_F_RAND_DRBG_GET_ENTROPY,
+                     RAND_R_PREDICTION_RESISTANCE_NOT_SUPPORTED);
+-            return 0;
++            goto err;
+         }
+ 
+         /* Get entropy by polling system entropy sources. */
+@@ -241,6 +241,7 @@ size_t rand_drbg_get_entropy(RAND_DRBG *drbg,
+         *pout = rand_pool_detach(pool);
+     }
+ 
++ err:
+     rand_pool_free(pool);
+     return ret;
+ }
+
+---

@@ -1,0 +1,15 @@
+Configurations/unix-Makefile.tmpl
+=======================================================
+lhs: 100644 | e381237bb944d79cdd2e394c206267496c8ab4d1
+rhs: 100644 | 5b9a23fd6da401ce65ed62f9c3576c4220c92615
+---@@ -261,7 +261,7 @@ clean: libclean
+ # concatenate only if that is true.
+ depend:
+ 	@: {- output_off() if $disabled{makedepend}; "" -}
+-	@if [ -z "`find $(DEPS) -newer Makefile 2>/dev/null; exit 0`" ]; then \
++	@if [ -n "`find $(DEPS) -newer Makefile 2>/dev/null; exit 0`" ]; then \
+ 	  ( sed -e '/^# DO NOT DELETE THIS LINE.*/,$$d' < Makefile; \
+ 	    echo '# DO NOT DELETE THIS LINE -- make depend depends on it.'; \
+ 	    echo; \
+
+---

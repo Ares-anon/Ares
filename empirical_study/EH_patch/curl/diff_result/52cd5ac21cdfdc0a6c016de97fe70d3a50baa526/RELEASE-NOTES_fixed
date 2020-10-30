@@ -1,0 +1,65 @@
+Curl and libcurl 7.38.0
+
+ Public curl releases:         140
+ Command line options:         162
+ curl_easy_setopt() options:   208
+ Public functions in libcurl:  58
+ Contributors:                 1155
+
+This release includes the following changes:
+
+ o bits.close: introduce connection close tracking
+ o darwinssl: Add support for --cacert
+ o polarssl: add ALPN support
+ o 
+
+This release includes the following bugfixes:
+
+ o build: Fixed incorrect reference to curl_setup.h in Visual Studio files
+ o build: Use $(TargetDir) and $(TargetName) macros for .pdb and .lib output
+ o curl.1: clarify that -u can't specify a user with colon [1]
+ o openssl: Fix uninitialized variable use in NPN callback
+ o curl_easy_reset: reset the URL [2]
+ o curl_version_info.3: returns a pointer to a static struct
+ o url-parser: only use if_nametoindex if detected by configure [3]
+ o select: with winsock, avoid passing unsupported arguments to select() [4]
+ o gnutls: don't use deprecated type names anymore
+ o gnutls: allow building with nghttp2 but without ALPN support
+ o tests: Fix portability issue with the tftpd server
+ o curl_sasl_sspi: Fixed corrupt hostname in DIGEST-MD5 SPN
+ o curl_sasl: extended native DIGEST-MD5 cnonce to be a 32-byte hex string
+ o random: use Curl_rand() for proper random data [5]
+ o Curl_ossl_init: call OPENSSL_config for initing engines [6]
+ o config-win32.h: Updated for VC12 [7]
+ o winbuild: Don't USE_WINSSL when WITH_SSL is being used
+ o getinfo: HTTP CONNECT code not reset between transfers [8]
+ o Curl_rand: Use a fake entropy for debug builds when CURL_ENTROPY set
+ o nss: do not abort on connection failure (failing tests 305 and 404)
+ o nss: make the fallback to SSLv3 work again
+ o tool: prevent valgrind from reporting possibly lost memory (nss only)
+ o nss: fix a memory leak when CURLOPT_CRLFILE is used
+ o 
+
+This release includes the following known bugs:
+
+ o see docs/KNOWN_BUGS (http://curl.haxx.se/docs/knownbugs.html)
+
+This release would not have looked like this without help, code, reports and
+advice from friends like these:
+
+  Alessandro Ghedini, Brad Spencer, Chris Young, Dan Fandrich, Daniel Stenberg,
+  Dmitry Falko, Fabian Frank, Jonathan Cardoso Machado, Marcel Raad,
+  Nick Zitzmann, Steve Holme, Tatsuhiro Tsujikawa, Vilmos Nebehaj
+
+        Thanks! (and sorry if I forgot to mention someone)
+
+References to bug reports and discussions on issues:
+
+ [1] = http://curl.haxx.se/bug/view.cgi?id=1375
+ [2] = http://curl.haxx.se/mail/lib-2014-05/0235.html
+ [3] = http://curl.haxx.se/mail/lib-2014-05/0260.html
+ [4] = http://curl.haxx.se/mail/lib-2014-05/0278.html
+ [5] = http://curl.haxx.se/mail/lib-2014-06/0001.html
+ [6] = http://curl.haxx.se/mail/lib-2014-06/0003.html
+ [7] = http://curl.haxx.se/bug/view.cgi?id=1378
+ [8] = http://curl.haxx.se/bug/view.cgi?id=1380

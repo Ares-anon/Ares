@@ -1,0 +1,8 @@
+{
+    "summary": "Fix some missing checks for TLS1_3_VERSION_DRAFT",
+    "author": "Matt Caswell",
+    "description": "Fix some missing checks for TLS1_3_VERSION_DRAFT\n\nThere were a few places where we weren't checking to see if we were using\nthe draft TLS1.3 version or not.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "b97667ce679d439a5620c326e0e9fefea3186bdc",
+    "date": "2016-11-09 16:03:09",
+    "parent_hash": "54682aa3574b9830362a51c919b6aa1d5429074b"
+}

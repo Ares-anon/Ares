@@ -1,0 +1,14 @@
+src/backend/utils/misc/guc-file.l
+=======================================================
+lhs: 100644 | a5b9d6ac77cc2c947e64f9c826400d70bb32989d
+rhs: 100644 | e815a9bef9af1fe902f450a874a2d65633e16876
+---@@ -476,7 +476,6 @@ ParseConfigFile(const char *config_file, const char *calling_file, bool strict,
+ 		ereport(LOG,
+ 				(errmsg("skipping missing configuration file \"%s\"",
+ 						abs_path)));
+-		OK = true;
+ 		goto cleanup;
+ 	}
+ 
+
+---

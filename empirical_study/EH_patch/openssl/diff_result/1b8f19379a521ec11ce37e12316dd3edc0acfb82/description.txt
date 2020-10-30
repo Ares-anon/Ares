@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in pkcs12 -export",
+    "author": "Dmitry Belyavskiy",
+    "description": "Fix memory leak in pkcs12 -export\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2676)",
+    "hash": "1b8f19379a521ec11ce37e12316dd3edc0acfb82",
+    "date": "2017-02-21 14:47:18",
+    "parent_hash": "0fbaef9e64fa10446aff805791befaa2b967e322"
+}

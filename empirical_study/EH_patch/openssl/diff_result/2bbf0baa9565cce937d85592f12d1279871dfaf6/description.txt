@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks on CRYPTO_new_ex_data return value...",
+    "author": "FdaSilvaYY",
+    "description": "Add checks on CRYPTO_new_ex_data return value...\nwith some adaptation to new multi-threading API.\n\nOnce reference, lock, meth and flag fields are setup,\nDSA_free/DH_free can be called directly.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/996)",
+    "hash": "2bbf0baa9565cce937d85592f12d1279871dfaf6",
+    "date": "2016-04-28 14:37:41",
+    "parent_hash": "25a807bcb9509c6fccfbbd9d02119772ccb0f23e"
+}

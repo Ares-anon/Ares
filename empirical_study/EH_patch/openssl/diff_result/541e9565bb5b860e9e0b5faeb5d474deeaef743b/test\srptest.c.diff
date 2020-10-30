@@ -1,0 +1,16 @@
+test/srptest.c
+=======================================================
+lhs: 100644 | f6555a60e128861ea5ed2509bd5e3c1537557398
+rhs: 100644 | 442a6101d42a79198dd05001f9c3590bc6f0fd2e
+---@@ -147,7 +147,8 @@ int main(int argc, char **argv)
+     ERR_remove_thread_state(NULL);
+     ERR_free_strings();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks(bio_err);
++    if (CRYPTO_mem_leaks(bio_err) <= 0)
++        return 1;
+ #endif
+     BIO_free(bio_err);
+ 
+
+---

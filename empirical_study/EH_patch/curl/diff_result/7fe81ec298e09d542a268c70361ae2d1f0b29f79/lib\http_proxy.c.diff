@@ -1,0 +1,15 @@
+lib/http_proxy.c
+=======================================================
+lhs: 100644 | e0213f34d0c4c869e8b0280d0d3a1bb3a856544d
+rhs: 100644 | ac1b3bf93ecf9488f5e46a100498afed0ec183d1
+---@@ -248,7 +248,7 @@ CURLcode Curl_proxyCONNECT(struct connectdata *conn,
+                            useragent,
+                            proxyconn);
+ 
+-        if(host && *host)
++        if(host)
+           free(host);
+         free(hostheader);
+ 
+
+---

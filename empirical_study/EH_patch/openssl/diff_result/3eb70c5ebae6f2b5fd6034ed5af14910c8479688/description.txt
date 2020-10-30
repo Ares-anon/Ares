@@ -1,0 +1,8 @@
+{
+    "summary": "Fix possible memory leak on BUF_MEM_grow_clean failure",
+    "author": "FdaSilvaYY",
+    "description": "Fix possible memory leak on BUF_MEM_grow_clean failure\n\nSimplify BUF_MEM init. code\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n\nGH: #580\n",
+    "hash": "3eb70c5ebae6f2b5fd6034ed5af14910c8479688",
+    "date": "2016-01-24 00:47:13",
+    "parent_hash": "642a613809ef68432eefbbd957ec542c70a8d7b4"
+}

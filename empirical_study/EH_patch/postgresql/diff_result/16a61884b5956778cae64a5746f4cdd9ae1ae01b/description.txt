@@ -1,0 +1,8 @@
+{
+    "author": "Peter Eisentraut",
+    "description": "Fix memory leaks in libpqwalreceiver\n\nThe results of the libpq functions PQescapeIdentifier() and\nPQescapeLiteral() must be freed explicitly.  Also handle errors in these\nfunctions better.\n",
+    "summary": "Fix memory leaks in libpqwalreceiver",
+    "date": "2017-01-23 11:06:30",
+    "parent_hash": "7e26e02eec90370dd222f35f00042f8188488ac4",
+    "hash": "16a61884b5956778cae64a5746f4cdd9ae1ae01b"
+}

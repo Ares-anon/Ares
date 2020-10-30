@@ -1,0 +1,8 @@
+{
+    "summary": "Do not treat 0 return value from BIO_get_fd() as error",
+    "author": "Alessandro Ghedini",
+    "description": "Do not treat 0 return value from BIO_get_fd() as error\n\n0 is a valid file descriptor.\n\nRT#4068\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "4428c7dba8f6f407d915c1226f4e0f673e8be241",
+    "date": "2015-10-23 19:52:08",
+    "parent_hash": "dad0b512e649336440e2b3cc9d667c56d9a91eff"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "6fac5a3e65217f1686927ecc8eda567888b29d4f",
+    "date": "2018-08-10 16:16:06",
+    "author": "Daniel Stenberg",
+    "description": "lib1502: fix memory leak in torture test\n\nReported-by: Marcel Raad\nFixes #2861\nCloses #2863\n",
+    "summary": "lib1502: fix memory leak in torture test",
+    "hash": "531cb203c14498561ea12992cf2b2184c34222d6"
+}

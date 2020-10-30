@@ -1,0 +1,15 @@
+apps/ca.c
+=======================================================
+lhs: 100644 | cc74c5bd25581e94c82cda115fd22848ed4931d2
+rhs: 100644 | d2990a5673ffb012bb0ef4903fed1172386da254
+---@@ -1788,7 +1788,7 @@ static int do_body(X509 **xret, EVP_PKEY *pkey, X509 *x509,
+     if (!X509_set_subject_name(ret, subject))
+         goto end;
+ 
+-    pktmp = X509_REQ_get_pubkey(req);
++    pktmp = X509_REQ_get0_pubkey(req);
+     i = X509_set_pubkey(ret, pktmp);
+     if (!i)
+         goto end;
+
+---

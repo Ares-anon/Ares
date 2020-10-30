@@ -1,0 +1,21 @@
+src/backend/catalog/objectaddress.c
+=======================================================
+lhs: 100644 | c2ad7c675e531e6d13fbaf9282cec7771d8bf70e
+rhs: 100644 | 8d55c76fc4afe4373c4b39ace537895501243137
+---@@ -69,13 +69,13 @@
+ #include "commands/trigger.h"
+ #include "foreign/foreign.h"
+ #include "funcapi.h"
+-#include "libpq/be-fsstubs.h"
+ #include "miscadmin.h"
+ #include "nodes/makefuncs.h"
+ #include "parser/parse_func.h"
+ #include "parser/parse_oper.h"
+ #include "parser/parse_type.h"
+ #include "rewrite/rewriteSupport.h"
++#include "storage/large_object.h"
+ #include "storage/lmgr.h"
+ #include "storage/sinval.h"
+ #include "utils/builtins.h"
+
+---

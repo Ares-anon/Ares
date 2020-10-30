@@ -1,0 +1,19 @@
+src/bin/pg_basebackup/receivelog.c
+=======================================================
+lhs: 100644 | f41513517274363397689ce1a17845d8a060b77d
+rhs: 100644 | 8511e57cf7df2390fc63dbcef286bab40e2d91db
+---@@ -132,8 +132,11 @@ open_walfile(StreamCtl *stream, XLogRecPtr startpoint)
+ 			}
+ 
+ 			/* fsync file in case of a previous crash */
+-			if (!stream->walmethod->sync(f))
++			if (stream->walmethod->sync(f) != 0)
+ 			{
++				fprintf(stderr,
++						_("%s: could not sync existing transaction log file \"%s\": %s\n"),
++						progname, fn, stream->walmethod->getlasterror());
+ 				stream->walmethod->close(f, CLOSE_UNLINK);
+ 				return false;
+ 			}
+
+---

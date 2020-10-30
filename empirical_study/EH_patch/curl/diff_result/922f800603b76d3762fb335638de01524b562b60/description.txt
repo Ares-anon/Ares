@@ -1,0 +1,8 @@
+{
+    "parent_hash": "bec809cb2ee0136a911c1229d9a6f03c4904ed86",
+    "date": "2017-06-26 01:05:02",
+    "author": "Jay Satiro",
+    "description": "tool_getparam: fix memory leak on test 1147 OOM (torture tests)\n\nBug: https://github.com/curl/curl/pull/1486#issuecomment-310926872\nReported-by: Dan Fandrich\n",
+    "summary": "tool_getparam: fix memory leak on test 1147 OOM (torture tests)",
+    "hash": "922f800603b76d3762fb335638de01524b562b60"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "4113ad50e437d78e9818aa17f816c06c38f0a458",
+    "date": "2015-01-04 20:33:58",
+    "author": "Steve Holme",
+    "description": "ldap: Fixed memory leak from commit efb64fdf80\n",
+    "summary": "ldap: Fixed memory leak from commit efb64fdf80",
+    "hash": "f6b168de4cb28337e63d68aaea255416d10f46b0"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Make sure we check the return value of extract_min_max()",
+    "author": "Matt Caswell",
+    "description": "Make sure we check the return value of extract_min_max()\n\nCommit 42d7d7dd6 turned this function from returning void to\nreturning an int error code. This instance of calling it was\nmissed.\n\nFound by Coverity.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5338)\n",
+    "hash": "cb1c3d1a2714eb69012b079053f7fbcca1acc544",
+    "date": "2018-02-14 15:32:06",
+    "parent_hash": "62542d046483687330c55b36fa27d82dc03958c2"
+}

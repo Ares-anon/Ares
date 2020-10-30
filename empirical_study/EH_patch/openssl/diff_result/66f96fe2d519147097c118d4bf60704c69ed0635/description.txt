@@ -1,0 +1,8 @@
+{
+    "summary": "Check return value of ssl3_output_cert_chain",
+    "author": "Dr. Stephen Henson",
+    "description": "Check return value of ssl3_output_cert_chain\n",
+    "hash": "66f96fe2d519147097c118d4bf60704c69ed0635",
+    "date": "2014-03-28 14:49:04",
+    "parent_hash": "8b8e5bed233a2d8106296c8e460be252719e0fdd"
+}

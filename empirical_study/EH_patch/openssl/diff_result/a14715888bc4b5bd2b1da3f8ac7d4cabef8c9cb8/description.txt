@@ -1,0 +1,8 @@
+{
+    "summary": "Add missing range checks on number of multi primes in rsa_ossl_mod_exp",
+    "author": "Bernd Edlinger",
+    "description": "Add missing range checks on number of multi primes in rsa_ossl_mod_exp\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4862)\n",
+    "hash": "a14715888bc4b5bd2b1da3f8ac7d4cabef8c9cb8",
+    "date": "2017-12-08 15:38:59",
+    "parent_hash": "8a8bc665626113005f39121d582fd96104fb84cf"
+}

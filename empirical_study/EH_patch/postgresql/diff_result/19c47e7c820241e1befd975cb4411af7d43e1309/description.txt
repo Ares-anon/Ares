@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "Factor error generation out of ExecPartitionCheck.\n\nAt present, we always raise an ERROR if the partition constraint\nis violated, but a pending patch for UPDATE tuple routing will\nconsider instead moving the tuple to the correct partition.\nRefactor to make that simpler.\n\nAmit Khandekar, reviewed by Amit Langote, David Rowley, and me.\n\nDiscussion: http://postgr.es/m/CAJ3gD9cue54GbEzfV-61nyGpijvjZgCcghvLsB0_nL8Nm8HzCA@mail.gmail.com\n",
+    "summary": "Factor error generation out of ExecPartitionCheck.",
+    "date": "2018-01-05 15:22:33",
+    "parent_hash": "84a6f63e32dbefe3dc76cbe628fab6cbfc26141e",
+    "hash": "19c47e7c820241e1befd975cb4411af7d43e1309"
+}

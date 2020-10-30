@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a missing NULL check in dsa_builtin_paramgen",
+    "author": "Matt Caswell",
+    "description": "Fix a missing NULL check in dsa_builtin_paramgen\n\nWe should check the last BN_CTX_get() call to ensure that it isn't NULL\nbefore we try and use any of the allocated BIGNUMs.\n\nIssue reported by Shi Lei.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "1ff7425d6130380bb00d3e64739633a4b21b11a3",
+    "date": "2016-09-21 13:32:30",
+    "parent_hash": "f3ff481f318b10a223d6157bde9645e1797487c5"
+}

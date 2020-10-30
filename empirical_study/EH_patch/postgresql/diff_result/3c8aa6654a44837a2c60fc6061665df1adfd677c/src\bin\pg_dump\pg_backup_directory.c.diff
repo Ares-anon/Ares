@@ -1,0 +1,29 @@
+src/bin/pg_dump/pg_backup_directory.c
+=======================================================
+lhs: 100644 | 1d7b0cc66adad816b51142072c3dd115c8d2aa92
+rhs: 100644 | 27c619054618445cbece42dc5acfd12d969a2db3
+---@@ -406,7 +406,12 @@ _PrintFileData(ArchiveHandle *AH, char *filename)
+ 	buflen = ZLIB_OUT_SIZE;
+ 
+ 	while ((cnt = cfread(buf, buflen, cfp)))
++	{
++		/* Are we aborting? */
++		checkAborting(AH);
++
+ 		ahwrite(buf, 1, cnt, AH);
++	}
+ 
+ 	free(buf);
+ 	if (cfclose(cfp) !=0)
+@@ -543,6 +548,9 @@ _ReadBuf(ArchiveHandle *AH, void *buf, size_t len)
+ {
+ 	lclContext *ctx = (lclContext *) AH->formatData;
+ 
++	/* Are we aborting? */
++	checkAborting(AH);
++
+ 	/*
+ 	 * If there was an I/O error, we already exited in cfread(), so here we
+ 	 * exit on short reads.
+
+---

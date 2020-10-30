@@ -1,0 +1,49 @@
+src/bin/pg_rewind/libpq_fetch.c
+=======================================================
+lhs: 100644 | 05aa133cf36eaa527f0a331ba9e2ec0d145530c8
+rhs: 100644 | 1979fbcb8a5f3d5b2fb6e275250aa0638a8883eb
+---@@ -69,7 +69,7 @@ libpqConnect(const char *connstr)
+ 	pg_free(str);
+ 
+ 	/*
+-	 * Also check that full_page_writes is enabled. We can get torn pages if
++	 * Also check that full_page_writes is enabled.  We can get torn pages if
+ 	 * a page is modified while we read it with pg_read_binary_file(), and we
+ 	 * rely on full page images to fix them.
+ 	 */
+@@ -81,6 +81,7 @@ libpqConnect(const char *connstr)
+ 
+ /*
+  * Runs a query that returns a single value.
++ * The result should be pg_free'd after use.
+  */
+ static char *
+ run_simple_query(const char *sql)
+@@ -123,6 +124,8 @@ libpqGetCurrentXlogInsertLocation(void)
+ 
+ 	result = ((uint64) hi) << 32 | lo;
+ 
++	pg_free(val);
++
+ 	return result;
+ }
+ 
+@@ -201,6 +204,7 @@ libpqProcessFileList(void)
+ 
+ 		process_source_file(path, type, filesize, link_target);
+ 	}
++	PQclear(res);
+ }
+ 
+ /*----
+@@ -296,7 +300,7 @@ receiveFileChunks(const char *sql)
+ 		if (PQgetisnull(res, 0, 2))
+ 		{
+ 			pg_log(PG_DEBUG,
+-				   "received NULL chunk for file \"%s\", file has been deleted\n",
++			  "received NULL chunk for file \"%s\", file has been deleted\n",
+ 				   filename);
+ 			pg_free(filename);
+ 			PQclear(res);
+
+---

@@ -1,0 +1,8 @@
+{
+    "description": "Fix return value from nick_match_msg_everywhere\n",
+    "parent_hash": "5a4be0f4f5f36787e98215d87b88a50a5f7e7e01",
+    "author": "Jari Matilainen",
+    "date": "2015-09-22 23:09:55",
+    "hash": "b5c3e90802e926e35ad9a4f1f02403578a3ff392",
+    "summary": "Fix return value from nick_match_msg_everywhere"
+}

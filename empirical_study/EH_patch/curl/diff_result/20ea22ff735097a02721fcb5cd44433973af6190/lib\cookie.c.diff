@@ -1,0 +1,15 @@
+lib/cookie.c
+=======================================================
+lhs: 100644 | 0374f94c16fd7a0e67ec6372c6c5892ee08bc4e8
+rhs: 100644 | 1d7defd848683dfe05b62a38ccedbd9598de66de
+---@@ -438,7 +438,7 @@ Curl_cookie_add(struct Curl_easy *data,
+           /* too long individual name or contents, or too long combination of
+              name + contents. Chrome and Firefox support 4095 or 4096 bytes
+              combo. */
+-          free(co);
++          freecookie(co);
+           infof(data, "oversized cookie dropped, name/val %d + %d bytes\n",
+                 nlen, len);
+           return NULL;
+
+---

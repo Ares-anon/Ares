@@ -1,0 +1,8 @@
+{
+    "summary": "Fix error-path memory leak in asn_mime.c",
+    "author": "Todd Short",
+    "description": "Fix error-path memory leak in asn_mime.c\n\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5142)\n",
+    "hash": "a26dd465b21d8def440c16b6bd90227b03e12e02",
+    "date": "2018-01-24 18:12:21",
+    "parent_hash": "97ea1e7f42eea97b117af08b3c1d29f6443850ab"
+}

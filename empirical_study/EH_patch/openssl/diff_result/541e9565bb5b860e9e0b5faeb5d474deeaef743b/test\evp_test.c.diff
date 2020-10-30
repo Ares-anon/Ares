@@ -1,0 +1,16 @@
+test/evp_test.c
+=======================================================
+lhs: 100644 | 6c9f4b8ece52b431d884a987c5ae26d1f019a47f
+rhs: 100644 | ff2ee10c287e1c98222c50f30760a44ec49e1cf4
+---@@ -617,7 +617,8 @@ int main(int argc, char **argv)
+     ERR_remove_thread_state(NULL);
+     ERR_free_strings();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks_fp(stderr);
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        return 1;
+ #endif
+     if (t.errors)
+         return 1;
+
+---

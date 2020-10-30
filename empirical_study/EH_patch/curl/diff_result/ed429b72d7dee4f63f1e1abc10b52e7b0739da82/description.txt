@@ -1,0 +1,8 @@
+{
+    "parent_hash": "fea13a17d849e6db94c553811423aa98017a2c77",
+    "date": "2015-03-21 16:53:43",
+    "author": "Daniel Stenberg",
+    "description": "gtls: add check of return code\n\nCoverity CID 1291167 pointed out that 'rc' was received but never used when\ngnutls_credentials_set() was used. Added return code check now.\n",
+    "summary": "gtls: add check of return code",
+    "hash": "ed429b72d7dee4f63f1e1abc10b52e7b0739da82"
+}

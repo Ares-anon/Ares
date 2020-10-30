@@ -1,0 +1,19 @@
+src/backend/storage/file/buffile.c
+=======================================================
+lhs: 100644 | d8a18dd3dcb3f2127c55654265c7082403eae9c5
+rhs: 100644 | 00f61748b347bae9578ee77bd62deaa88e23ddc6
+---@@ -277,10 +277,10 @@ BufFileCreateShared(SharedFileSet *fileset, const char *name)
+ BufFile *
+ BufFileOpenShared(SharedFileSet *fileset, const char *name)
+ {
+-	BufFile    *file = (BufFile *) palloc(sizeof(BufFile));
++	BufFile    *file;
+ 	char		segment_name[MAXPGPATH];
+ 	Size		capacity = 16;
+-	File	   *files = palloc(sizeof(File) * capacity);
++	File	   *files;
+ 	int			nfiles = 0;
+ 
+ 	file = (BufFile *) palloc(sizeof(BufFile));
+
+---

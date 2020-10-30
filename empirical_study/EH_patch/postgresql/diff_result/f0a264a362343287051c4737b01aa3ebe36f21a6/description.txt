@@ -1,0 +1,8 @@
+{
+    "author": "Noah Misch",
+    "description": "Fix failure to copy setlocale() return value.\n\nPOSIX permits setlocale() calls to invalidate any previous setlocale()\nreturn values, but commit 5f538ad004aa00cf0881f179f0cde789aad4f47e\nneglected to account for setlocale(LC_CTYPE, NULL) doing so.  The effect\nwas to set the LC_CTYPE environment variable to an unintended value.\npg_perm_setlocale() sets this variable to assist PL/Perl; without it,\nPerl would undo PostgreSQL's locale settings.  The known-affected\nconfigurations are 32-bit, release builds using Visual Studio 2012 or\nVisual Studio 2013.  Visual Studio 2010 is unaffected, as were all\nbuildfarm-attested configurations.  In principle, this bug could leave\nthe wrong LC_CTYPE in effect after PL/Perl use, which could in turn\nfacilitate problems like corrupt tsvector datums.  No known platform\nexperiences that consequence, because PL/Perl on Windows does not use\nthis environment variable.\n\nThe bug has been user-visible, as early postmaster failure, on systems\nwith Windows ANSI code page set to CP936 for \"Chinese (Simplified, PRC)\"\nand probably on systems using other multibyte code pages.\n(SetEnvironmentVariable() rejects values containing character data not\nvalid under the Windows ANSI code page.)  Back-patch to 9.4, where the\nfaulty commit first appeared.\n\nReported by Didi Hu and \u6797\u9e4f\u7a0b.  Reviewed by Tom Lane, though this fix\nstrategy was not his first choice.\n",
+    "summary": "Fix failure to copy setlocale() return value.",
+    "date": "2015-06-20 12:09:29",
+    "parent_hash": "1f2a378de41bf3e516b8d2c4d65790aeefbfb89d",
+    "hash": "f0a264a362343287051c4737b01aa3ebe36f21a6"
+}

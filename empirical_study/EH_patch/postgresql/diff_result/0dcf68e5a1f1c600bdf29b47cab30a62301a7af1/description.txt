@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix some minor error-checking oversights in ParseFuncOrColumn().\n\nRecent additions to ParseFuncOrColumn to make it reject non-procedure\nfunctions in CALL were neither adequate nor documented.  Reorganize\nthe code to ensure uniform results for all the cases that should be\nrejected.  Also, use ERRCODE_WRONG_OBJECT_TYPE for this case as well\nas the converse case of a procedure in a non-CALL context.  The\noriginal coding used ERRCODE_UNDEFINED_FUNCTION which seems wrong,\nand is certainly inconsistent with the adjacent wrong-kind-of-routine\nerrors.\n\nThis reorganization also causes the checks for aggregate decoration with\na non-aggregate function to be made in the FUNCDETAIL_COERCION case;\nthat they were not is a long-standing oversight.\n\nDiscussion: https://postgr.es/m/14497.1529089235@sss.pgh.pa.us\n",
+    "summary": "Fix some minor error-checking oversights in ParseFuncOrColumn().",
+    "date": "2018-06-16 14:11:14",
+    "parent_hash": "15378c1a15390a2b4c315f19f1644af46c7e3a15",
+    "hash": "0dcf68e5a1f1c600bdf29b47cab30a62301a7af1"
+}

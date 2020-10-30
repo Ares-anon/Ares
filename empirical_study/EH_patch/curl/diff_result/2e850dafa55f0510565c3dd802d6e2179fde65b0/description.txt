@@ -1,0 +1,8 @@
+{
+    "parent_hash": "3619ee5febb220de917db642352f9ea4fc3e7843",
+    "date": "2017-11-10 15:38:23",
+    "author": "John Starks",
+    "description": "cmake: Add missing setmode check\n\nEnsure HAVE_SETMODE is set to 1 on OSes that have setmode. Without this,\ncurl will corrupt binary files when writing them to stdout on Windows.\n\nCloses https://github.com/curl/curl/pull/2067\n",
+    "summary": "cmake: Add missing setmode check",
+    "hash": "2e850dafa55f0510565c3dd802d6e2179fde65b0"
+}

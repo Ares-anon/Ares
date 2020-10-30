@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a DTLS memory leak",
+    "author": "Matt Caswell",
+    "description": "Fix a DTLS memory leak\n\nFixes #7428\n\nReviewed-by: Paul Dale <paul.dale@oracle.com>\n(Merged from https://github.com/openssl/openssl/pull/7431)\n",
+    "hash": "01666a8c1db3ecfb999e1a8f2c5436d114f95681",
+    "date": "2018-10-19 14:12:51",
+    "parent_hash": "9986bfefa420f0db920768453bef0b40507db595"
+}

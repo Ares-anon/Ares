@@ -1,0 +1,28 @@
+keepalived/vrrp/vrrp_if.c
+=======================================================
+lhs: 100644 | 6ffd64661c0d376e3c21a3e239df33944f542af6
+rhs: 100644 | 52631500331a8427744f586832198b855a258e46
+---@@ -355,6 +355,12 @@ free_if(void *data)
+ 
+ /* garp_delay facility function */
+ static void
++free_garp_delay(void *data)
++{
++	FREE(data);
++}
++
++static void
+ dump_garp_delay(FILE *fp, void *data)
+ {
+ 	garp_delay_t *gd = data;
+@@ -383,7 +389,7 @@ void
+ alloc_garp_delay(void)
+ {
+ 	if (!LIST_EXISTS(garp_delay))
+-		garp_delay = alloc_list(NULL, dump_garp_delay);
++		garp_delay = alloc_list(free_garp_delay, dump_garp_delay);
+ 
+ 	list_add(garp_delay, MALLOC(sizeof(garp_delay_t)));
+ }
+
+---

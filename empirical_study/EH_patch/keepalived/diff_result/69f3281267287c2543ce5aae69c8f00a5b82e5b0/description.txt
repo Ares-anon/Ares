@@ -1,0 +1,8 @@
+{
+    "description": "Fix compilation error on 32-bit systems with mem-check enabled\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "fa0a7725cb77506cef78fa17bc9cae47d48519a0",
+    "summary": "Fix compilation error on 32-bit systems with mem-check enabled",
+    "date": "2016-06-27 02:58:48",
+    "hash": "69f3281267287c2543ce5aae69c8f00a5b82e5b0"
+}

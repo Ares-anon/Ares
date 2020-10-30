@@ -1,0 +1,14 @@
+apps/s_client.c
+=======================================================
+lhs: 100644 | 9122d489364c4ed012749e297534b83d2cea881f
+rhs: 100644 | 09f534033f0507551d431e30b8a65b6beb4a93ea
+---@@ -201,6 +201,7 @@ static int psk_use_session_cb(SSL *s, const EVP_MD *md,
+         cipher = SSL_CIPHER_find(s, tls13_aes128gcmsha256_id);
+         if (cipher == NULL) {
+             BIO_printf(bio_err, "Error finding suitable ciphersuite\n");
++            OPENSSL_free(key);
+             return 0;
+         }
+ 
+
+---

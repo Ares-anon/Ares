@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing return checks in v3_cpols.c",
+    "author": "Matt Caswell",
+    "description": "Fix missing return checks in v3_cpols.c\n\nFixed assorted missing return value checks in c3_cpols.c\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "c5f2b5336ab72e40ab91e2ca85639f51fa3178c6",
+    "date": "2015-03-12 09:24:25",
+    "parent_hash": "0c7ca4033dcf5398334d4b78a7dfb941c8167a40"
+}

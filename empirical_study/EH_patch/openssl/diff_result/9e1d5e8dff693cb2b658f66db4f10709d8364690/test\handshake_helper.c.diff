@@ -1,0 +1,15 @@
+test/handshake_helper.c
+=======================================================
+lhs: 100644 | 509a8f6ede357e64683b8f382a609f79cd91c389
+rhs: 100644 | 1192227a42a33d62a8f5e818a521ce238880d59d
+---@@ -1135,7 +1135,7 @@ static int create_sctp_socks(int *ssock, int *csock)
+     int ret = 0;
+     int family = 0;
+ 
+-    if (!BIO_sock_init())
++    if (BIO_sock_init() != 1)
+         return 0;
+ 
+     /*
+
+---

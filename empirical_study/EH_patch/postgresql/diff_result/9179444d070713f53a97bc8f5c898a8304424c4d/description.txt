@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix more memory leaks in failure path in buildACLCommands.\n\nWe already had one go at this issue in commit d73b7f973db5ec7e, but we\nfailed to notice that buildACLCommands also leaked several PQExpBuffers\nalong with a simply malloc'd string.  This time let's try to make the\nfix a bit more future-proof by eliminating the separate exit path.\n\nIt's still not exactly critical because pg_dump will curl up and die on\nfailure; but since the amount of the potential leak is now several KB,\nit seems worth back-patching as far as 9.2 where the previous fix landed.\n\nPer Coverity, which evidently is smarter than clang's static analyzer.\n",
+    "summary": "Fix more memory leaks in failure path in buildACLCommands.",
+    "date": "2015-02-11 18:35:23",
+    "parent_hash": "9feefedf9e92066fa6609d1e1e17b4892d81716f",
+    "hash": "9179444d070713f53a97bc8f5c898a8304424c4d"
+}

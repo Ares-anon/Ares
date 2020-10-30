@@ -1,0 +1,8 @@
+{
+    "date": "2017-09-15 11:23:40",
+    "parent_hash": "7e50fb73f7920a305f7c29bf957eef3ef0b4cd72",
+    "description": "Hgfs Server: Fix a memory leak of the transport connection\n\nThis change fixes a memory leak of the transport connection object\nwhich was not being released on the final reference removal when\nthe HGFS server is being torn down.\n\nThis separates the initialization and destruction of the transport\nobject into their own transport init and exit functions.  Added the\nlock destruct and free call of the transport object to the exit\nfunction that were previously missing.  Corrected or added some\nmissing logging for debugging.\n\nAdditionally, fixed the VMCI interface to correct its tear down\norder of functions which relied on the transport not being deleted.\nThis involved moving the draining of out of band HGFS server requests\nor replies to the guest from being called after the HGFS server\ntransport has been destroyed.  Now it is moved to the correct place,\nwhere the sequence is now:\n- disconnect the HGFS server (i.e., stop generating any new request/replies out of band,\n- drain the existing out of band HGFS requests/replies\n- close the VMCI transport and shared memory callbacks\n- close and teardown the HGFS server session and transport\n- teardown the VMCI channel itself\n",
+    "author": "Oliver Kurth",
+    "hash": "e146ddb85e0f620faff25decc716ad406b4486e8",
+    "summary": "Hgfs Server: Fix a memory leak of the transport connection"
+}

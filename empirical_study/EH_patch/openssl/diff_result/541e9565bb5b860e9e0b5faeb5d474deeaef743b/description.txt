@@ -1,0 +1,8 @@
+{
+    "summary": "If memory debugging enabled return error on leaks.",
+    "author": "Dr. Stephen Henson",
+    "description": "If memory debugging enabled return error on leaks.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "541e9565bb5b860e9e0b5faeb5d474deeaef743b",
+    "date": "2016-02-05 16:02:21",
+    "parent_hash": "cc5a9ba485b988b036974cf682cda35180788446"
+}

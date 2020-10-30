@@ -1,0 +1,15 @@
+keepalived/vrrp/vrrp_iprule.c
+=======================================================
+lhs: 100644 | 6ba0094365ae74ccd6a74b17fb208190631fd71f
+rhs: 100644 | 5f1aa4eb36414a022313204eb4f5e71021b4eddc
+---@@ -650,6 +650,8 @@ fwmark_err:
+ 	return;
+ 
+ err:
++	FREE_PTR(new->to_addr);
++	FREE_PTR(new->from_addr);
+ 	FREE_PTR(new);
+ }
+ 
+
+---

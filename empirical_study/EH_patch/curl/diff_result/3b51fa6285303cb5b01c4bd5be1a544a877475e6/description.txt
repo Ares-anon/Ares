@@ -1,0 +1,8 @@
+{
+    "parent_hash": "57001ce3bb97455d799f0a2180b7bf1287ffd71a",
+    "date": "2017-09-02 12:40:19",
+    "author": "Patrick Monnerat",
+    "description": "http: fix a memory leakage in checkrtspprefix().\n",
+    "summary": "http: fix a memory leakage in checkrtspprefix().",
+    "hash": "3b51fa6285303cb5b01c4bd5be1a544a877475e6"
+}

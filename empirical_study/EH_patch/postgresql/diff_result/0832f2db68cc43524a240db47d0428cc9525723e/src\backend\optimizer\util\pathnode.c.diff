@@ -1,0 +1,15 @@
+src/backend/optimizer/util/pathnode.c
+=======================================================
+lhs: 100644 | abb7507d8e4b8f641740d2651457bf8a0f157190
+rhs: 100644 | 6d3ccfd20e4b6cfabd3fdaf3a16d58bf68b1413d
+---@@ -1333,7 +1333,7 @@ create_merge_append_path(PlannerInfo *root,
+ 	cost_merge_append(&pathnode->path, root,
+ 					  pathkeys, list_length(subpaths),
+ 					  input_startup_cost, input_total_cost,
+-					  rel->tuples);
++					  pathnode->path.rows);
+ 
+ 	return pathnode;
+ }
+
+---

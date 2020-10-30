@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix memory leak in repeated GIN index searches.\n\nCommit d88976cfa1302e8d removed this code from ginFreeScanKeys():\n-\t\tif (entry->list)\n-\t\t\tpfree(entry->list);\nevidently in the belief that that ItemPointer array is allocated in the\nkeyCtx and so would be reclaimed by the following MemoryContextReset.\nUnfortunately, it isn't and it won't.  It'd likely be a good idea for\nthat to become so, but as a simple and back-patchable fix in the\nmeantime, restore this code to ginFreeScanKeys().\n\nAlso, add a similar pfree to where startScanEntry() is about to zero out\nentry->list.  I am not sure if there are any code paths where this\nchange prevents a leak today, but it seems like cheap future-proofing.\n\nIn passing, make the initial allocation of so->entries[] use palloc\nnot palloc0.  The code doesn't depend on unused entries being zero;\nif it did, the array-enlargement code in ginFillScanEntry() would be\nwrong.  So using palloc0 initially can only serve to confuse readers\nabout what the invariant is.\n\nPer report from Felipe de Jes\u00fas Molina Bravo, via Jaime Casanova in\n<CAJGNTeMR1ndMU2Thpr8GPDUfiHTV7idELJRFusA5UXUGY1y-eA@mail.gmail.com>\n",
+    "summary": "Fix memory leak in repeated GIN index searches.",
+    "date": "2016-03-13 16:44:31",
+    "parent_hash": "96adb14d931e442e0a96f418d483fc896506146f",
+    "hash": "ab4ff2889d0bccc32467e681546aabdb87de4958"
+}

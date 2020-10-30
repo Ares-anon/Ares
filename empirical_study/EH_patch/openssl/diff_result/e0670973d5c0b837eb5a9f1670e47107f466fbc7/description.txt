@@ -1,0 +1,8 @@
+{
+    "summary": "mem leak on error path and error propagation fix",
+    "author": "Yuchi",
+    "description": "mem leak on error path and error propagation fix\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2559)",
+    "hash": "e0670973d5c0b837eb5a9f1670e47107f466fbc7",
+    "date": "2017-02-14 10:19:50",
+    "parent_hash": "b84460ad3a3e4fcb22efaa0a8365b826f4264ecf"
+}

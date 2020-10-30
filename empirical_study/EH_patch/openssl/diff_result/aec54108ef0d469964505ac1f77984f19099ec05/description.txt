@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in BIO_dup_chain()",
+    "author": "Matt Caswell",
+    "description": "Fix memory leaks in BIO_dup_chain()\n\nThis fixes a memory leak that can occur whilst duplicating a BIO chain if\nthe call to CRYPTO_dup_ex_data() fails. It also fixes a second memory leak\nwhere if a failure occurs after successfully creating the first BIO in the\nchain, then the beginning of the new chain was not freed.\n\nWith thanks to the Open Crypto Audit Project for reporting this issue.\n\nReviewed-by: Stephen Henson <steve@openssl.org>\n",
+    "hash": "aec54108ef0d469964505ac1f77984f19099ec05",
+    "date": "2015-06-10 10:09:57",
+    "parent_hash": "5d80fab086fe8849222613e20d7cf61839f94f5f"
+}

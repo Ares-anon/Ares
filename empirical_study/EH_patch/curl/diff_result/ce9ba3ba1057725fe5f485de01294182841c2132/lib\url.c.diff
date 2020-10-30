@@ -1,0 +1,27 @@
+lib/url.c
+=======================================================
+lhs: 100644 | 38b9552f7a9de03c06652f1188a9516c2412bda8
+rhs: 100644 | b2dac8bcbdbc24abb06b8e1ee76fdad265cbb5a9
+---@@ -5118,15 +5118,19 @@ static CURLcode parse_proxy(struct Curl_easy *data,
+          with reserved characters like ':' in them. */
+       Curl_safefree(proxyinfo->user);
+       proxyinfo->user = curl_easy_unescape(data, proxyuser, 0, NULL);
++      Curl_safefree(proxyuser);
+ 
+-      if(!proxyinfo->user)
++      if(!proxyinfo->user) {
++        Curl_safefree(proxypasswd);
+         return CURLE_OUT_OF_MEMORY;
++      }
+ 
+       Curl_safefree(proxyinfo->passwd);
+       if(proxypasswd && strlen(proxypasswd) < MAX_CURL_PASSWORD_LENGTH)
+         proxyinfo->passwd = curl_easy_unescape(data, proxypasswd, 0, NULL);
+       else
+         proxyinfo->passwd = strdup("");
++      Curl_safefree(proxypasswd);
+ 
+       if(!proxyinfo->passwd)
+         return CURLE_OUT_OF_MEMORY;
+
+---

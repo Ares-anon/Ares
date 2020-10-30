@@ -1,0 +1,8 @@
+{
+    "summary": "Fix minor type warnings and risk of memory leak in testutil/driver.c",
+    "author": "David von Oheimb",
+    "description": "Fix minor type warnings and risk of memory leak in testutil/driver.c\n\nDiscussion is in https://github.com/openssl/openssl/issues/4127\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4131)\n",
+    "hash": "180c3fc7754f098b385c9a978491a2d468092bca",
+    "date": "2017-08-10 11:05:28",
+    "parent_hash": "e3743355e840dadff0b09582942b7a90db607894"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix some missing OBJ_dup failure checks.",
+    "author": "FdaSilvaYY",
+    "description": "Fix some missing OBJ_dup failure checks.\n\nFix some missing OBJ_dup failure checks.\nMerged from\nhttps://boringssl.googlesource.com/boringssl/+/0ce78a757d815c0dde9ed5884229f3a5b2cb3e9c%5E!\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1057)",
+    "hash": "4e0e4d293753a67e5771c98ec312a37ca54cc3b0",
+    "date": "2016-05-16 10:28:25",
+    "parent_hash": "e073fd15b779aa9e3f8a6de167112d5a3ed3c82f"
+}

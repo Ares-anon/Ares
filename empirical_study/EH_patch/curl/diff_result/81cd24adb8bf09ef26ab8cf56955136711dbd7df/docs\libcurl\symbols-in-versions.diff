@@ -1,0 +1,14 @@
+docs/libcurl/symbols-in-versions
+=======================================================
+lhs: 100644 | 0c9b2b0393b13c8cdf38e942bcd238a4c8bb40d4
+rhs: 100644 | 6d7334867ea116546dfe7010cca1a9a3fb803a26
+---@@ -79,6 +79,7 @@ CURLE_HTTP_PORT_FAILED          7.3           7.12.0
+ CURLE_HTTP_POST_ERROR           7.1
+ CURLE_HTTP_RANGE_ERROR          7.1           7.17.0
+ CURLE_HTTP_RETURNED_ERROR       7.10.3
++CURLE_HTTP2                     7.38.0
+ CURLE_INTERFACE_FAILED          7.12.0
+ CURLE_LDAP_CANNOT_BIND          7.1
+ CURLE_LDAP_INVALID_URL          7.10.8
+
+---

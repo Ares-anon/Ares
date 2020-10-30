@@ -1,0 +1,8 @@
+{
+    "parent_hash": "a68aa81320aca4d376fe2a43ee8c76a6eb6b8f01",
+    "date": "2015-01-03 18:46:30",
+    "author": "Steve Holme",
+    "description": "ldap: Fixed attribute memory leaks on failed client write\n\nFixed memory leaks from commit 086ad79970 as was noted in the commit\ncomments.\n",
+    "summary": "ldap: Fixed attribute memory leaks on failed client write",
+    "hash": "4967109ffc7380278099d48c3bf78a2468978d98"
+}

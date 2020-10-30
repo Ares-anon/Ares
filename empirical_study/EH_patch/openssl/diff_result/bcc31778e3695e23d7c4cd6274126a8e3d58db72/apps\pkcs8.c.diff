@@ -1,0 +1,18 @@
+apps/pkcs8.c
+=======================================================
+lhs: 100644 | 15b8e6a08417f903138abfd3f9db92313de6c9c2
+rhs: 100644 | cd4e76b6d079af327139b36851fae96b2c2de012
+---@@ -341,7 +341,10 @@ int pkcs8_main(int argc, char **argv)
+         else if (1) {
+ #ifndef OPENSSL_NO_UI
+             p8pass = pass;
+-            EVP_read_pw_string(pass, sizeof pass, "Enter Password:", 0);
++            if (EVP_read_pw_string(pass, sizeof pass, "Enter Password:", 0)) {
++                BIO_printf(bio_err, "Can't read Password\n");
++                goto end;
++            }
+         } else {
+ #endif
+             BIO_printf(bio_err, "Password required\n");
+
+---

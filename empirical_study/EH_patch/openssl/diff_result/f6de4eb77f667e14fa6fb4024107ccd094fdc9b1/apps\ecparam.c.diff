@@ -1,0 +1,25 @@
+apps/ecparam.c
+=======================================================
+lhs: 100644 | 122125ee4e1f88da529d0f0d4b7c0ac16818c0ac
+rhs: 100644 | b90247cc80d3d8d905a2b4c50621aaf9fbc1034a
+---@@ -462,11 +462,17 @@ int ecparam_main(int argc, char **argv)
+ 
+         assert(need_rand);
+ 
+-        if (EC_KEY_set_group(eckey, group) == 0)
++        if (EC_KEY_set_group(eckey, group) == 0) {
++            BIO_printf(bio_err, "unable to set group when generating key\n");
++            EC_KEY_free(eckey);
++            ERR_print_errors(bio_err);
+             goto end;
++        }
+ 
+         if (!EC_KEY_generate_key(eckey)) {
++            BIO_printf(bio_err, "unable to generate key\n");
+             EC_KEY_free(eckey);
++            ERR_print_errors(bio_err);
+             goto end;
+         }
+         assert(private);
+
+---

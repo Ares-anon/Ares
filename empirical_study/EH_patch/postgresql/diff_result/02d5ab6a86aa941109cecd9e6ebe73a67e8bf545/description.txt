@@ -1,0 +1,8 @@
+{
+    "author": "Andrew Dunstan",
+    "description": "Fix memory leaks introduced by commit eca2b9b\n",
+    "summary": "Fix memory leaks introduced by commit eca2b9b",
+    "date": "2014-11-23 13:47:08",
+    "parent_hash": "b779168ffe330d137b8b4329a7710c8bf1f7e661",
+    "hash": "02d5ab6a86aa941109cecd9e6ebe73a67e8bf545"
+}

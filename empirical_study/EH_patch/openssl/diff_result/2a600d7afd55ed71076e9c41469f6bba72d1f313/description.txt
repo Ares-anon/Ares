@@ -1,0 +1,8 @@
+{
+    "summary": "Fix return values of do_passwd() in apps/passwd.c",
+    "author": "Richard Levitte",
+    "description": "Fix return values of do_passwd() in apps/passwd.c\n\ndo_passwd() was returning 0 on success and 1 on failure.  However,\nthose values were interpreted the other way around.  The fix that\nmakes the most sense is to change what do_passwd() returns.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "2a600d7afd55ed71076e9c41469f6bba72d1f313",
+    "date": "2016-08-01 15:16:27",
+    "parent_hash": "febb096c4c5d927c3f48f22adce64839721e79dc"
+}

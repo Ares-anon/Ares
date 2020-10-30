@@ -1,0 +1,8 @@
+{
+    "summary": "Check for failures, to avoid memory leak",
+    "author": "Rich Salz",
+    "description": "Check for failures, to avoid memory leak\n\nThanks to Jiecheng Wu, Zuxing Gu for the report.\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6791)\n",
+    "hash": "037241bf046be8cfc7e9216959393dd20b06fc21",
+    "date": "2018-07-25 15:57:18",
+    "parent_hash": "80ae7285e1994d35c84519bf9e038b11d9942875"
+}

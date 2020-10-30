@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in CTLOG_new_from_base64",
+    "author": "Benjamin Kaduk",
+    "description": "Fix memory leaks in CTLOG_new_from_base64\n\nMove the call to ct_base64_decode(), which allocates, until after\nthe check for NULL output parameter.\n\nAlso place a cap on the number of padding characters used to decrement\nthe output length -- any more than two '='s is not permitted in a\nwell-formed base64 text.  Prior to this change, ct_base64_decode() would\nreturn a length of -1 along with allocated storage for an input of\n\"====\".\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3379)\n",
+    "hash": "62b0a0dea612e3683c6bd4bef359fceda00238e8",
+    "date": "2017-06-09 13:32:29",
+    "parent_hash": "388d679a4fd8a408e7c7c1867cc974cdc977ae63"
+}

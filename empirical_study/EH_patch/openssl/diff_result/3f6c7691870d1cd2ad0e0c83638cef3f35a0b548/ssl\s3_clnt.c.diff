@@ -1,0 +1,14 @@
+ssl/s3_clnt.c
+=======================================================
+lhs: 100644 | 2df5afe14e726ebb2e128798645ec294fca8dbf8
+rhs: 100644 | c25f801cadddc4773e79e1854a08fd28c386d029
+---@@ -2411,6 +2411,7 @@ int ssl3_send_client_key_exchange(SSL *s)
+                     || (pkey->pkey.rsa == NULL)) {
+                     SSLerr(SSL_F_SSL3_SEND_CLIENT_KEY_EXCHANGE,
+                            ERR_R_INTERNAL_ERROR);
++                    EVP_PKEY_free(pkey);
+                     goto err;
+                 }
+                 rsa = pkey->pkey.rsa;
+
+---

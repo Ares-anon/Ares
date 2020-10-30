@@ -1,0 +1,18 @@
+src/pl/plpython/plpy_util.h
+=======================================================
+lhs: 100644 | 4c29f9aea3c176ea4701562adc5c2381945b5f74
+rhs: 100644 | 66c5ccf8ac3dcac7809d3db669ab7a871ea1c86b
+---@@ -6,11 +6,6 @@
+ #ifndef PLPY_UTIL_H
+ #define PLPY_UTIL_H
+ 
+-extern void *PLy_malloc(size_t bytes);
+-extern void *PLy_malloc0(size_t bytes);
+-extern char *PLy_strdup(const char *str);
+-extern void PLy_free(void *ptr);
+-
+ extern PyObject *PLyUnicode_Bytes(PyObject *unicode);
+ extern char *PLyUnicode_AsString(PyObject *unicode);
+ 
+
+---

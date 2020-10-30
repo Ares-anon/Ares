@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing NULL checks in NewSessionTicket construction",
+    "author": "Matt Caswell",
+    "description": "Fix missing NULL checks in NewSessionTicket construction\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "83ae4661315d3d0ad52ddaa8fa5c8f1055c6c6f6",
+    "date": "2016-09-29 16:15:16",
+    "parent_hash": "e4e1aa903e624044d3319622fc50222f1b2c7328"
+}

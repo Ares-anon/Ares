@@ -1,0 +1,8 @@
+{
+    "summary": "Check return value of EVP_PKEY_new",
+    "author": "Mansour Ahmadi",
+    "description": "Check return value of EVP_PKEY_new\n\nReviewed-by: Paul Yang <yang.yang@baishancloud.com>\nReviewed-by: Nicola Tuveri <nic.tuv@gmail.com>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7427)\n",
+    "hash": "d896b79b0994a35ecfd1c8e729d348d67236150e",
+    "date": "2018-11-10 04:30:45",
+    "parent_hash": "dd41956d80686638d74fd203bd67060f90966280"
+}

@@ -1,0 +1,19 @@
+src/backend/access/transam/xlog.c
+=======================================================
+lhs: 100644 | 0106cdf63804e9d231b14a3ca699b6311d8f507d
+rhs: 100644 | 88ad51f9e7d9252e78a8a73fd1cb2abf93a946da
+---@@ -11102,6 +11102,12 @@ CheckForStandbyTrigger(void)
+ 		fast_promote = true;
+ 		return true;
+ 	}
++	else if (errno != ENOENT)
++		ereport(ERROR,
++				(errcode_for_file_access(),
++				 errmsg("could not stat trigger file \"%s\": %m",
++						TriggerFile)));
++
+ 	return false;
+ }
+ 
+
+---

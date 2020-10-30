@@ -1,0 +1,15 @@
+lib/multi.c
+=======================================================
+lhs: 100644 | a1dc2c82c97d67594fd55bbab5bd488db4715e42
+rhs: 100644 | 7e7da682a9ce300572b3bce9676f1753c6f7626e
+---@@ -1590,6 +1590,8 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
+           if(!retry) {
+             /* if the URL is a follow-location and not just a retried request
+                then figure out the URL here */
++            if(newurl)
++              free(newurl);
+             newurl = data->req.newurl;
+             data->req.newurl = NULL;
+             follow = FOLLOW_REDIR;
+
+---

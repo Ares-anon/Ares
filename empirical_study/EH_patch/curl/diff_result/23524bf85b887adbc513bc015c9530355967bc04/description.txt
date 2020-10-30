@@ -1,0 +1,8 @@
+{
+    "parent_hash": "927cb3708e29fd88dcfadb9444d0dc93dc2aa4b2",
+    "date": "2018-09-17 14:07:47",
+    "author": "Kruzya",
+    "description": "examples: Fix memory leaks from realloc errors\n\nMake sure to not overwrite the reallocated pointer in realloc() calls\nto avoid a memleak on memory errors.\n",
+    "summary": "examples: Fix memory leaks from realloc errors",
+    "hash": "23524bf85b887adbc513bc015c9530355967bc04"
+}

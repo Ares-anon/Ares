@@ -1,0 +1,8 @@
+{
+    "summary": "SRP memory leak fix",
+    "author": "Dr. Stephen Henson",
+    "description": "SRP memory leak fix\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "d40a1f72b6a298ee34c9de2c96b222d70609ce4c",
+    "date": "2015-09-28 14:29:16",
+    "parent_hash": "3a79618474f28537564f172b7aa8533e352b5dc5"
+}

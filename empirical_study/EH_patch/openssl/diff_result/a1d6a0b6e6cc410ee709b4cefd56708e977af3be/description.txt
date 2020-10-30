@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in tls_parse_stoc_key_share",
+    "author": "Kurt Roeckx",
+    "description": "Fix memory leak in tls_parse_stoc_key_share\n\nFound by oss-fuzz\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nGH: #2102\n",
+    "hash": "a1d6a0b6e6cc410ee709b4cefd56708e977af3be",
+    "date": "2016-12-19 00:46:43",
+    "parent_hash": "0b742f93ea7882a447f6523ac56a6f847d9f8e92"
+}

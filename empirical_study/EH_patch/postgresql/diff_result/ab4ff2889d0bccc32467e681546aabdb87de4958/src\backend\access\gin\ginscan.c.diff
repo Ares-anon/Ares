@@ -1,0 +1,24 @@
+src/backend/access/gin/ginscan.c
+=======================================================
+lhs: 100644 | 3449a30e4196ebd8ec5ef7f91811ac5e5361c0de
+rhs: 100644 | c449c1cbc0ed7dbc7e17bf5dac83523ecef12e92
+---@@ -246,6 +246,8 @@ ginFreeScanKeys(GinScanOpaque so)
+ 
+ 		if (entry->buffer != InvalidBuffer)
+ 			ReleaseBuffer(entry->buffer);
++		if (entry->list)
++			pfree(entry->list);
+ 		if (entry->matchIterator)
+ 			tbm_end_iterate(entry->matchIterator);
+ 		if (entry->matchBitmap)
+@@ -285,7 +287,7 @@ ginNewScanKey(IndexScanDesc scan)
+ 	so->totalentries = 0;
+ 	so->allocentries = 32;
+ 	so->entries = (GinScanEntry *)
+-		palloc0(so->allocentries * sizeof(GinScanEntry));
++		palloc(so->allocentries * sizeof(GinScanEntry));
+ 
+ 	so->isVoidRes = false;
+ 
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "93ec89042eadd2a73c2ce815971c4dea10129cea",
+    "date": "2014-06-16 22:01:08",
+    "author": "Daniel Stenberg",
+    "description": "CURLOPT_WRITEFUNCTION: add RETURN VALUE and DEFAULT sections\n",
+    "summary": "CURLOPT_WRITEFUNCTION: add RETURN VALUE and DEFAULT sections",
+    "hash": "a5e498b543a898a5bd5ec38ba6d839666b6665b8"
+}

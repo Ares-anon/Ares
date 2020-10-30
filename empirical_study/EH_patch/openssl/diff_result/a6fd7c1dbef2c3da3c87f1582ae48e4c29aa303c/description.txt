@@ -1,0 +1,8 @@
+{
+    "summary": "fix a memory leak in ssl3_generate_key_block fix the error handling in ssl3_change_cipher_state",
+    "author": "Bernd Edlinger",
+    "description": "fix a memory leak in ssl3_generate_key_block fix the error handling in ssl3_change_cipher_state\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2164)",
+    "hash": "a6fd7c1dbef2c3da3c87f1582ae48e4c29aa303c",
+    "date": "2017-01-23 11:41:59",
+    "parent_hash": "57a19206b5aad7ca67f0d5ebae05af2799609819"
+}

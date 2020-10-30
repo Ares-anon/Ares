@@ -1,0 +1,28 @@
+apps/openssl.c
+=======================================================
+lhs: 100644 | 50c8275a4e58ac5aa1da9177351cdc4fc9f44cb0
+rhs: 100644 | e070a444a5b9472004ba610bf65e26bc0dbef13d
+---@@ -423,10 +423,6 @@ int main(int Argc, char *ARGV[])
+     if (arg.data != NULL)
+         OPENSSL_free(arg.data);
+ 
+-    if (bio_err != NULL) {
+-        BIO_free(bio_err);
+-        bio_err = NULL;
+-    }
+ #if defined( OPENSSL_SYS_VMS) && (__INITIAL_POINTER_SIZE == 64)
+     /* Free any duplicate Argv[] storage. */
+     if (free_Argv) {
+@@ -435,6 +431,10 @@ int main(int Argc, char *ARGV[])
+ #endif
+     apps_shutdown();
+     CRYPTO_mem_leaks(bio_err);
++    if (bio_err != NULL) {
++        BIO_free(bio_err);
++        bio_err = NULL;
++    }
+ 
+     OPENSSL_EXIT(ret);
+ }
+
+---

@@ -1,0 +1,33 @@
+lib/checksrc.pl
+=======================================================
+lhs: 100755 | f561492a7b967456f594a04d8c395861bcf1df9d
+rhs: 100755 | c4174709b02e4eeca85db5f6a3a48f7b1da4e37a
+---@@ -6,7 +6,7 @@
+ #                            | (__| |_| |  _ <| |___
+ #                             \___|\___/|_| \_\_____|
+ #
+-# Copyright (C) 2011 - 2013, Daniel Stenberg, <daniel@haxx.se>, et al.
++# Copyright (C) 2011 - 2015, Daniel Stenberg, <daniel@haxx.se>, et al.
+ #
+ # This software is licensed as described in the file COPYING, which
+ # you should have received as part of this distribution. The terms
+@@ -144,6 +144,17 @@ sub scanfile {
+             }
+         }
+ 
++        # check for "return(" without space
++        if($l =~ /^(.*)return\(/) {
++            if($1 =~ / *\#/) {
++                # this is a #if, treat it differently
++            }
++            else {
++                checkwarn($line, length($1)+6, $file, $l,
++                          "return without space before paren");
++            }
++        }
++        
+         # check for "} else"
+         if($l =~ /^(.*)\} *else/) {
+             checkwarn($line, length($1), $file, $l, "else after closing brace on same line");
+
+---

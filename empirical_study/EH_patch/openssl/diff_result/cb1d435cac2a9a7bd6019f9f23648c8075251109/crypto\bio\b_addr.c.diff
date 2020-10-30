@@ -1,0 +1,18 @@
+crypto/bio/b_addr.c
+=======================================================
+lhs: 100644 | 86c6c7eca883fb25a857aa089a6cfc938e05c699
+rhs: 100644 | 1813f5a9bb641c7a122aa54046b2a5d0aa5e7efc
+---@@ -83,8 +83,10 @@ BIO_ADDR *BIO_ADDR_new(void)
+ {
+     BIO_ADDR *ret = OPENSSL_zalloc(sizeof(*ret));
+ 
+-    if (ret == NULL)
++    if (ret == NULL) {
++        BIOerr(BIO_F_BIO_ADDR_NEW, ERR_R_MALLOC_FAILURE);
+         return NULL;
++    }
+ 
+     ret->sa.sa_family = AF_UNSPEC;
+     return ret;
+
+---

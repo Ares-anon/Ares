@@ -1,0 +1,8 @@
+{
+    "description": "fe_channel_skip_prefix: fix return value (FALSE/NULL isn't valid)\n\nThe return value is a char*, and here it was false which is 0 which is\nmore or less the same as null.\n\nThat could have been a crash somewhere, the functions that call this\ndon't expect null ever.\n",
+    "parent_hash": "bf36f71b99b18401dbc6105509b0285146b37286",
+    "author": "dequis",
+    "date": "2015-09-22 01:17:15",
+    "hash": "99f074b0db2d723c3a1ddbdc5226f54f24b01989",
+    "summary": "fe_channel_skip_prefix: fix return value (FALSE/NULL isn't valid)"
+}

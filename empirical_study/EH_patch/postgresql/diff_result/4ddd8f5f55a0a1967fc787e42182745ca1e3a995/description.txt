@@ -1,0 +1,8 @@
+{
+    "author": "Tomas Vondra",
+    "description": "Fix memory leak in TRUNCATE decoding\n\nWhen decoding a TRUNCATE record, the relids array was being allocated in\nthe main ReorderBuffer memory context, but not released with the change\nresulting in a memory leak.\n\nThe array was also ignored when serializing/deserializing the change,\nassuming all the information is stored in the change itself.  So when\nspilling the change to disk, we've only we have serialized only the\npointer to the relids array.  Thanks to never releasing the array,\nthe pointer however remained valid even after loading the change back\nto memory, preventing an actual crash.\n\nThis fixes both the memory leak and (de)serialization.  The relids array\nis still allocated in the main ReorderBuffer memory context (none of the\nexisting ones seems like a good match, and adding an extra context seems\nlike an overkill).  The allocation is wrapped in a new ReorderBuffer API\nfunctions, to keep the details within reorderbuffer.c, just like the\nother ReorderBufferGet methods do.\n\nAuthor: Tomas Vondra\nDiscussion: https://www.postgresql.org/message-id/flat/66175a41-9342-2845-652f-1bd4c3ee50aa%402ndquadrant.com\nBackpatch: 11, where decoding of TRUNCATE was introduced\n",
+    "summary": "Fix memory leak in TRUNCATE decoding",
+    "date": "2018-09-03 02:10:24",
+    "parent_hash": "caa0c6ceba1fd6ec7b027532d68cecf5dfbbb2db",
+    "hash": "4ddd8f5f55a0a1967fc787e42182745ca1e3a995"
+}

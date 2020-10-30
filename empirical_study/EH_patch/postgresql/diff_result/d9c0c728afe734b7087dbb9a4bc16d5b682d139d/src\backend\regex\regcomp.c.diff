@@ -1,0 +1,15 @@
+src/backend/regex/regcomp.c
+=======================================================
+lhs: 100644 | 6b95975f2be2ada43dbb7e079e2fa4dc9fca1aa3
+rhs: 100644 | d137ac0d3d16194a17b5358ec9cf3a6ee96e2e45
+---@@ -228,7 +228,7 @@ struct vars
+ 	struct subre *tree;			/* subexpression tree */
+ 	struct subre *treechain;	/* all tree nodes allocated */
+ 	struct subre *treefree;		/* any free tree nodes */
+-	int			ntree;			/* number of tree nodes */
++	int			ntree;			/* number of tree nodes, plus one */
+ 	struct cvec *cv;			/* interface cvec */
+ 	struct cvec *cv2;			/* utility cvec */
+ 	struct subre *lacons;		/* lookahead-constraint vector */
+
+---

@@ -1,0 +1,16 @@
+crypto/x509/x509_trs.c
+=======================================================
+lhs: 100644 | 27ee47590dab89d09091b65e7b82d22752f13b75
+rhs: 100644 | 8f2ff8321ed2c0e80c3fa2db7349030ae1a27fd6
+---@@ -116,8 +116,7 @@ int X509_check_trust(X509 *x, int id, int flags)
+ {
+     X509_TRUST *pt;
+     int idx;
+-    if (id == -1)
+-        return 1;
++
+     /* We get this as a default value */
+     if (id == 0) {
+         int rv;
+
+---

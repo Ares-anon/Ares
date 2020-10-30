@@ -1,0 +1,14 @@
+src/pl/plpython/plpy_cursorobject.h
+=======================================================
+lhs: 100644 | 3c28f4f8e716eb2f97704447ae62ff20ea789f69
+rhs: 100644 | c73033c486bbe60a314f7935ce6ddb234f830144
+---@@ -14,6 +14,7 @@ typedef struct PLyCursorObject
+ 	char	   *portalname;
+ 	PLyTypeInfo result;
+ 	bool		closed;
++	MemoryContext mcxt;
+ } PLyCursorObject;
+ 
+ extern void PLy_cursor_init_type(void);
+
+---

@@ -1,0 +1,15 @@
+lib/http2.h
+=======================================================
+lhs: 100644 | ee95ef656cd894ce12f0ae2032aeb62e7a98d641
+rhs: 100644 | 30a8b591b95958dff8df85306a8f55066dfbfdbc
+---@@ -36,7 +36,7 @@ CURLcode Curl_http2_init(struct connectdata *conn);
+ CURLcode Curl_http2_send_request(struct connectdata *conn);
+ CURLcode Curl_http2_request_upgrade(Curl_send_buffer *req,
+                                     struct connectdata *conn);
+-void Curl_http2_setup(struct connectdata *conn);
++CURLcode Curl_http2_setup(struct connectdata *conn);
+ int Curl_http2_switched(struct connectdata *conn);
+ #else /* USE_NGHTTP2 */
+ #define Curl_http2_init(x)
+
+---

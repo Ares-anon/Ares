@@ -1,0 +1,22 @@
+crypto/ec/ecp_smpl.c
+=======================================================
+lhs: 100644 | ee0c46841b259c378aa532a4f6b7820d3478eb45
+rhs: 100644 | 2d42d34f51cb8dd580fc937b1b36b8ec72d7b82d
+---@@ -133,12 +133,9 @@ int ec_GFp_simple_group_init(EC_GROUP *group)
+     group->a = BN_new();
+     group->b = BN_new();
+     if (!group->field || !group->a || !group->b) {
+-        if (!group->field)
+-            BN_free(group->field);
+-        if (!group->a)
+-            BN_free(group->a);
+-        if (!group->b)
+-            BN_free(group->b);
++        BN_free(group->field);
++        BN_free(group->a);
++        BN_free(group->b);
+         return 0;
+     }
+     group->a_is_minus3 = 0;
+
+---

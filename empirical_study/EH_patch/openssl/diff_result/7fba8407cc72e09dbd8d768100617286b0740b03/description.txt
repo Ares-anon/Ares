@@ -1,0 +1,8 @@
+{
+    "summary": "RT3917: add cleanup on an error path",
+    "author": "Rich Salz",
+    "description": "RT3917: add cleanup on an error path\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "7fba8407cc72e09dbd8d768100617286b0740b03",
+    "date": "2015-06-21 17:52:12",
+    "parent_hash": "8ca96efd24b73f917837fdd45b1c22d7b8ff8cbd"
+}

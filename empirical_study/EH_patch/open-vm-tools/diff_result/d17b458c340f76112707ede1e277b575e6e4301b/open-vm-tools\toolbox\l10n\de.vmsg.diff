@@ -1,0 +1,28 @@
+open-vm-tools/toolbox/l10n/de.vmsg
+=======================================================
+lhs: 100644 | a2f2f7bbf7d3d5e06136cb745473e91fd33639d4
+rhs: 100644 | f5e3b4e6fb5d8d69a021284c18c8dbc38beb9cbb
+---@@ -1,5 +1,5 @@
+ ##########################################################
+-# Copyright (C) 2010-2016 VMware, Inc. All rights reserved.
++# Copyright (C) 2010-2017 VMware, Inc. All rights reserved.
+ #
+ # This program is free software; you can redistribute it and/or modify it
+ # under the terms of the GNU Lesser General Public License as published
+@@ -76,12 +76,12 @@ disk.shrink.ignoreFreeSpaceWarnings = "Ignorieren Sie während des Verkleinerung
+ 
+ disk.wipe.ignoreFreeSpaceWarnings = "Ignorieren Sie während des Wiper-Vorgangs etwaige Warnungen bezüglich des Speicherplatzes.\n"
+ 
+-disk.wiper.error = "Fehler: %1$s"
+-
+ disk.wiper.file.error = "Fehler, Erstellen der Wiper-Datei nicht möglich.\n"
+ 
+ disk.wiper.progress = "\rProgress: %1$d"
+ 
++error.message = "Fehler: %1$s\n"
++
+ error.missing = "%1$s: %2$s fehlt\n"
+ 
+ error.noadmin.posix = "%1$s: Sie müssen root-Benutzer sein, um die %2$s-Vorgänge auszuführen.\n"
+
+---

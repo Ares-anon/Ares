@@ -1,0 +1,8 @@
+{
+    "summary": "Free SSL object on an error path",
+    "author": "Matt Caswell",
+    "description": "Free SSL object on an error path\n\nThanks to @fangang190 for reporting this\n\nFixes #7061\n\nReviewed-by: Paul Yang <yang.yang@baishancloud.com>\n(Merged from https://github.com/openssl/openssl/pull/7065)\n",
+    "hash": "67afcfd35b9b429493947594becf4e269bcd1a5b",
+    "date": "2018-08-30 09:50:29",
+    "parent_hash": "c2cb1a18e00fc0a9a44d9a83134e3d3b1bfb7454"
+}

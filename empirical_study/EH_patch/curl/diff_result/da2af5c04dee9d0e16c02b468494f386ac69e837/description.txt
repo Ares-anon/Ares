@@ -1,0 +1,8 @@
+{
+    "parent_hash": "7c145bb2a0a6c176ffdd65421a40026bcae07375",
+    "date": "2017-04-20 15:46:03",
+    "author": "Daniel Stenberg",
+    "description": "openssl: fix memory leak in servercert\n\n... when failing to get the server certificate.\n",
+    "summary": "openssl: fix memory leak in servercert",
+    "hash": "da2af5c04dee9d0e16c02b468494f386ac69e837"
+}

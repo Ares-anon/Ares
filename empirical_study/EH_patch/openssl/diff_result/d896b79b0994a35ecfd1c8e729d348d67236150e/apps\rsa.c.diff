@@ -1,0 +1,16 @@
+apps/rsa.c
+=======================================================
+lhs: 100644 | 5098a20dbc7216723b770759de4b499cde89904e
+rhs: 100644 | fdd02dce32419a764ac7e7b7fc9eaa4fd4b80409
+---@@ -269,6 +269,9 @@ int rsa_main(int argc, char **argv)
+     } else if (outformat == FORMAT_MSBLOB || outformat == FORMAT_PVK) {
+         EVP_PKEY *pk;
+         pk = EVP_PKEY_new();
++        if (pk == NULL)
++            goto end;
++
+         EVP_PKEY_set1_RSA(pk, rsa);
+         if (outformat == FORMAT_PVK) {
+             if (pubin) {
+
+---

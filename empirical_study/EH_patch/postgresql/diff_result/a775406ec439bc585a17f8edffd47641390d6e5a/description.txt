@@ -1,0 +1,8 @@
+{
+    "author": "Magnus Hagander",
+    "description": "Fix memory leak in tar file padding\n\nSpotted by Coverity, patch by Michael Paquier\n",
+    "summary": "Fix memory leak in tar file padding",
+    "date": "2016-10-30 14:10:39",
+    "parent_hash": "d4b5d4caddb73f954d9ef86641201dc99677719d",
+    "hash": "a775406ec439bc585a17f8edffd47641390d6e5a"
+}

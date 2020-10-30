@@ -1,0 +1,24 @@
+lib/pop3.c
+=======================================================
+lhs: 100644 | dc64f81065200836ad67776f59a455abff469e89
+rhs: 100644 | 13528e3d562cb3db81efa0699f8809b7a6111fc1
+---@@ -560,8 +560,6 @@ static CURLcode pop3_perform_authentication(struct connectdata *conn)
+     if(mech && (pop3c->preftype & POP3_TYPE_SASL)) {
+       /* Perform SASL based authentication */
+       result = pop3_perform_auth(conn, mech, initresp, len, state1, state2);
+-
+-      Curl_safefree(initresp);
+     }
+ #ifndef CURL_DISABLE_CRYPTO_AUTH
+     else if((pop3c->authtypes & POP3_TYPE_APOP) &&
+@@ -580,6 +578,8 @@ static CURLcode pop3_perform_authentication(struct connectdata *conn)
+     }
+   }
+ 
++  Curl_safefree(initresp);
++
+   return result;
+ }
+ 
+
+---

@@ -1,0 +1,14 @@
+lib/url.c
+=======================================================
+lhs: 100644 | 27b376f9c44c1f90039b2f7360705a38a2ec8730
+rhs: 100644 | 87ebe00864ad3ebf2ce9a1bf91d0da25b1e196f4
+---@@ -4149,6 +4149,7 @@ static CURLcode setup_connection_internals(struct connectdata *conn)
+ void Curl_free_request_state(struct SessionHandle *data)
+ {
+   Curl_safefree(data->req.protop);
++  Curl_safefree(data->req.newurl);
+ }
+ 
+ 
+
+---

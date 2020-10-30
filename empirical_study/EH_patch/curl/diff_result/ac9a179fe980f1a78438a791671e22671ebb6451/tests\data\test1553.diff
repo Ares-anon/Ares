@@ -1,0 +1,17 @@
+tests/data/test1553
+=======================================================
+lhs: 100644 | c2fb9cc3212ecb760c0cbe3ed800f18666470397
+rhs: 100644 | 5e793b391964258eba462a183b1957e3a949f117
+---@@ -38,7 +38,9 @@ IMAP cleanup before a connection was created
+ <tool>
+ lib1553
+ </tool>
+- <command>
++
++# this MUST use a host name that doesn't resolve
++<command>
+ imap://non-existing-host.haxx.se:%IMAPPORT/1553
+ </command>
+ </client>
+
+---

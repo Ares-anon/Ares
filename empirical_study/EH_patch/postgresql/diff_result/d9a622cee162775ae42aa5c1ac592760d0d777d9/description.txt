@@ -1,0 +1,8 @@
+{
+    "author": "Alvaro Herrera",
+    "description": "Fix error handling path in autovacuum launcher\n\nThe original code (since 00e6a16d01) was assuming aborting the\ntransaction in autovacuum launcher was sufficient to release all\nresources, but in reality the launcher runs quite a lot of code out of\nany transactions.  Re-introduce individual cleanup calls to make abort\nmore robust.\n\nReported-by: Robert Haas\nDiscussion: https://postgr.es/m/CA+TgmobQVbz4K_+RSmiM9HeRKpy3vS5xnbkL95gSEnWijzprKQ@mail.gmail.com\n",
+    "summary": "Fix error handling path in autovacuum launcher",
+    "date": "2017-08-15 13:35:12",
+    "parent_hash": "e139f1953f29db245f60a7acb72fccb1e05d2442",
+    "hash": "d9a622cee162775ae42aa5c1ac592760d0d777d9"
+}

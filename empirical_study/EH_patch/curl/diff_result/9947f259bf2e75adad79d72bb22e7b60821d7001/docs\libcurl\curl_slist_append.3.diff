@@ -1,0 +1,26 @@
+docs/libcurl/curl_slist_append.3
+=======================================================
+lhs: 100644 | 529560e8ae517cf74f1ff421087fb1b15be02c93
+rhs: 100644 | 1a0a65796e07af0e01808dbc2af5b0ca8e2f9f8f
+---@@ -5,7 +5,7 @@
+ .\" *                            | (__| |_| |  _ <| |___
+ .\" *                             \___|\___/|_| \_\_____|
+ .\" *
+-.\" * Copyright (C) 1998 - 2011, Daniel Stenberg, <daniel@haxx.se>, et al.
++.\" * Copyright (C) 1998 - 2015, Daniel Stenberg, <daniel@haxx.se>, et al.
+ .\" *
+ .\" * This software is licensed as described in the file COPYING, which
+ .\" * you should have received as part of this distribution. The terms
+@@ -46,6 +46,10 @@ pointer is returned.
+  struct curl_slist *slist=NULL;
+ 
+  slist = curl_slist_append(slist, "pragma:");
++
++ if (slist == NULL)
++   return -1;
++
+  curl_easy_setopt(handle, CURLOPT_HTTPHEADER, slist);
+ 
+  curl_easy_perform(handle);
+
+---

@@ -1,0 +1,28 @@
+crypto/bn/bn_prime.c
+=======================================================
+lhs: 100644 | bdfa558a7e6e34403915432b792558c07c300ec1
+rhs: 100644 | 81c2391ef898895d5da886bf6cc888b243670815
+---@@ -340,7 +340,8 @@ int bn_probable_prime_dh_coprime(BIGNUM *rnd, int bits, BN_CTX *ctx)
+     if ((offset_count = BN_CTX_get(ctx)) == NULL)
+         goto err;
+ 
+-    BN_add_word(offset_count, prime_offset_count);
++    if (!BN_add_word(offset_count, prime_offset_count))
++        goto err;
+ 
+  loop:
+     if (!BN_rand(rnd, bits - prime_multiplier_bits, 0, 1))
+@@ -350,8 +351,9 @@ int bn_probable_prime_dh_coprime(BIGNUM *rnd, int bits, BN_CTX *ctx)
+     if (!BN_rand_range(offset_index, offset_count))
+         goto err;
+ 
+-    BN_mul_word(rnd, prime_multiplier);
+-    BN_add_word(rnd, prime_offsets[BN_get_word(offset_index)]);
++    if (!BN_mul_word(rnd, prime_multiplier)
++        || !BN_add_word(rnd, prime_offsets[BN_get_word(offset_index)]))
++        goto err;
+ 
+     /* we now have a random number 'rand' to test. */
+ 
+
+---

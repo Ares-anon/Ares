@@ -1,0 +1,14 @@
+ssl/s3_srvr.c
+=======================================================
+lhs: 100644 | f95f9c77e8c8be364ff925428a034e175598db17
+rhs: 100644 | a2eebbb5961cc43c67ba09a9f5ed5cf24dae8f8b
+---@@ -294,6 +294,7 @@ int ssl3_accept(SSL *s)
+ 					}
+ 				if (!BUF_MEM_grow(buf,SSL3_RT_MAX_PLAIN_LENGTH))
+ 					{
++					BUF_MEM_free(buf);
+ 					ret= -1;
+ 					goto end;
+ 					}
+
+---

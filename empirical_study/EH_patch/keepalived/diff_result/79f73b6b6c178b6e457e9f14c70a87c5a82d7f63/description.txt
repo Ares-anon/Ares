@@ -1,0 +1,8 @@
+{
+    "description": "Fix checking return status of kill()\n\nA recent update of issue #946 reported an error message following\ncalling kill() for a vrrp track_script. It transpired that the\ncheck for the return status of kill() was inverted.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "6ce9ebe3b26f4203bae8f14e0128a353728a2a1d",
+    "summary": "Fix checking return status of kill()",
+    "date": "2018-09-20 09:26:50",
+    "hash": "79f73b6b6c178b6e457e9f14c70a87c5a82d7f63"
+}

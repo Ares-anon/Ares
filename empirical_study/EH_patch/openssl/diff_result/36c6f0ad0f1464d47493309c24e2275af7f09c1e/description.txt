@@ -1,0 +1,8 @@
+{
+    "summary": "Fix PKCS7 memory leak",
+    "author": "Matt Caswell",
+    "description": "Fix PKCS7 memory leak\n\nCommit f0e0fd51f was a bit over-zealous in removing a call to\nX509_STORE_CTX_cleanup(). The call in question was in a loop and was\nrequired to cleanup resources used on each iteration of the loop. Removing\nthis resulted in a memory leak.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "36c6f0ad0f1464d47493309c24e2275af7f09c1e",
+    "date": "2016-04-18 14:59:23",
+    "parent_hash": "14f051a0ae3d752c50f419d3583e85fdf4c5bfc9"
+}

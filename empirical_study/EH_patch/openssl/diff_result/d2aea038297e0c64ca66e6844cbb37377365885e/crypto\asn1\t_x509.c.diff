@@ -1,0 +1,15 @@
+crypto/asn1/t_x509.c
+=======================================================
+lhs: 100644 | 8eb0b79a9126a6f915d4c30f53a4b0a10dcabff7
+rhs: 100644 | 111ea5aaac72dd047023deb7ed4cb2aad6d76182
+---@@ -493,6 +493,8 @@ int X509_NAME_print(BIO *bp, X509_NAME *name, int obase)
+ 	l=80-2-obase;
+ 
+ 	b=X509_NAME_oneline(name,NULL,0);
++	if (!b)
++		return 0;
+ 	if (!*b)
+ 		{
+ 		OPENSSL_free(b);
+
+---

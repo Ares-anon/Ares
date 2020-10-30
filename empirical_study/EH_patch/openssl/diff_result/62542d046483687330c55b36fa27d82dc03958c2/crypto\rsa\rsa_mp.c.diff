@@ -1,0 +1,14 @@
+crypto/rsa/rsa_mp.c
+=======================================================
+lhs: 100644 | 97a09f1387774927d803c0526b116574a5a5078a
+rhs: 100644 | 7e38179b97d4d06224e4713f11310607d04ac13a
+---@@ -51,6 +51,7 @@ RSA_PRIME_INFO *rsa_multip_info_new(void)
+     BN_free(pinfo->d);
+     BN_free(pinfo->t);
+     BN_free(pinfo->pp);
++    OPENSSL_free(pinfo);
+     return NULL;
+ }
+ 
+
+---

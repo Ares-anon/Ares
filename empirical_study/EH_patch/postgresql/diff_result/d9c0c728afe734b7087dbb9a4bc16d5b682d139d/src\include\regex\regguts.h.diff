@@ -1,0 +1,15 @@
+src/include/regex/regguts.h
+=======================================================
+lhs: 100644 | 94e06f041b70a373b61b793d1d375c873a306740
+rhs: 100644 | fccaf298bf1328caea336caea4ac8ccaab6033f6
+---@@ -467,7 +467,7 @@ struct guts
+ 	size_t		nsub;			/* copy of re_nsub */
+ 	struct subre *tree;
+ 	struct cnfa search;			/* for fast preliminary search */
+-	int			ntree;			/* number of subre's, less one */
++	int			ntree;			/* number of subre's, plus one */
+ 	struct colormap cmap;
+ 	int			FUNCPTR(compare, (const chr *, const chr *, size_t));
+ 	struct subre *lacons;		/* lookahead-constraint vector */
+
+---

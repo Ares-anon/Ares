@@ -1,0 +1,8 @@
+{
+    "parent_hash": "9756d1da7637d1913b7ca2b589e4635f32ed3e00",
+    "date": "2015-08-23 20:57:17",
+    "author": "Dan Fandrich",
+    "description": "tool: fix memory leak with --proto-default option\n",
+    "summary": "tool: fix memory leak with --proto-default option",
+    "hash": "2acaf3c8046ae2c340f628d1af5ecc9be105f875"
+}

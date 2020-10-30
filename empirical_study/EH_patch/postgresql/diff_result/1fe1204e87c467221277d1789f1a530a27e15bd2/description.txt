@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Add missing check for malloc failure in plpgsql_extra_checks_check_hook().\n\nPer report from Andreas Seltenreich.  Back-patch to affected versions.\n\nReport: <874m8nn0hv.fsf@elite.ansel.ydns.eu>\n",
+    "summary": "Add missing check for malloc failure in plpgsql_extra_checks_check_hook().",
+    "date": "2016-06-20 15:36:54",
+    "parent_hash": "e611515dd6b8edad56baa0f3ae31ff637ca54d52",
+    "hash": "1fe1204e87c467221277d1789f1a530a27e15bd2"
+}

@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix minor memory leak in ident_inet().\n\nWe'd leak the ident_serv data structure if the second pg_getaddrinfo_all\n(the one for the local address) failed.  This is not of great consequence\nbecause a failure return here just leads directly to backend exit(), but\nif this function is going to try to clean up after itself at all, it should\nnot have such holes in the logic.  Try to fix it in a future-proof way by\nhaving all the failure exits go through the same cleanup path, rather than\n\"optimizing\" some of them.\n\nPer Coverity.  Back-patch to 9.2, which is as far back as this patch\napplies cleanly.\n",
+    "summary": "Fix minor memory leak in ident_inet().",
+    "date": "2015-02-11 19:09:54",
+    "parent_hash": "9179444d070713f53a97bc8f5c898a8304424c4d",
+    "hash": "58146d35deed3bd3e05ce4b5ba529e4e4a369ddb"
+}

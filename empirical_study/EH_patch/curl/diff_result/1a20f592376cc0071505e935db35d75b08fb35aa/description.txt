@@ -1,0 +1,8 @@
+{
+    "parent_hash": "f00899d73e3537982b16d994452a4bc21ff4ff3f",
+    "date": "2014-01-28 23:55:04",
+    "author": "Dan Fandrich",
+    "description": "oauth2: Fixed a memory leak in an OOM condition\n",
+    "summary": "oauth2: Fixed a memory leak in an OOM condition",
+    "hash": "1a20f592376cc0071505e935db35d75b08fb35aa"
+}

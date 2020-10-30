@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in RSA_padding_add_PKCS1_OAEP_mgf1",
+    "author": "Bernd Edlinger",
+    "description": "Fix a memory leak in RSA_padding_add_PKCS1_OAEP_mgf1\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Matt Caswell <matt@openssl.org>\nGH: #2140\n",
+    "hash": "c6d215e0d278fcd51ad474a3647b61e1b67290bb",
+    "date": "2017-01-09 22:23:31",
+    "parent_hash": "3adc41dd22080c4161d8a2af98d7b29fdbb11915"
+}

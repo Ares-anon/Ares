@@ -1,0 +1,14 @@
+apps/req.c
+=======================================================
+lhs: 100644 | eddbc77839d68088a2c61ddc2b44a31d621069ae
+rhs: 100644 | d6d46a95ff8b65648f3e1d79f1ae19e21846ed54
+---@@ -1451,6 +1451,7 @@ static EVP_PKEY_CTX *set_keygen_ctx(const char *gstr,
+     if (EVP_PKEY_keygen_init(gctx) <= 0) {
+         BIO_puts(bio_err, "Error initializing keygen context\n");
+         ERR_print_errors(bio_err);
++        EVP_PKEY_CTX_free(gctx);
+         return NULL;
+     }
+ #ifndef OPENSSL_NO_RSA
+
+---

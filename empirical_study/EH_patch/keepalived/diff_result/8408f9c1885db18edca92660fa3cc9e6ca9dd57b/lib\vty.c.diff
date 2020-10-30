@@ -1,0 +1,14 @@
+lib/vty.c
+=======================================================
+lhs: 100644 | b84b23225a83767e1028755fe3caca033dbcc808
+rhs: 100644 | 324128ed3ce98990d0d14b235f3fbdc3f01171df
+---@@ -1741,6 +1741,7 @@ vty_read_config(char *config_file, char *config_default_dir)
+ 			} else {
+ 				log_message(LOG_ERR, "can't open configuration file [%s]\n"
+ 						   , config_file);
++				FREE_PTR(tmp);
+ 				return -1;
+ 			}
+ 		}
+
+---

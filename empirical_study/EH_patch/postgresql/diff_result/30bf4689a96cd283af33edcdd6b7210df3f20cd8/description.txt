@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Check return value of strdup() in libpq connection option parsing.\n\nAn out-of-memory in most of these would lead to strange behavior, like\nconnecting to a different database than intended, but some would lead to\nan outright segfault.\n\nAlex Shulgin and me. Backpatch to all supported versions.\n",
+    "summary": "Check return value of strdup() in libpq connection option parsing.",
+    "date": "2014-11-25 14:10:16",
+    "parent_hash": "e453cc2741416dc784842b2bba68749556cf0f6f",
+    "hash": "30bf4689a96cd283af33edcdd6b7210df3f20cd8"
+}

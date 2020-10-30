@@ -1,0 +1,19 @@
+ssl/s3_srvr.c
+=======================================================
+lhs: 100644 | f048b76dcaee41a9c37e91519320bc62102cbb50
+rhs: 100644 | 411b6f6af8387946dd4ae2f32404a249ab8f968e
+---@@ -3476,7 +3476,11 @@ int ssl3_send_server_certificate(SSL *s)
+ 				}
+ 			}
+ 
+-		ssl3_output_cert_chain(s,cpk);
++		if (!ssl3_output_cert_chain(s,cpk))
++			{
++			SSLerr(SSL_F_SSL3_SEND_SERVER_CERTIFICATE,ERR_R_INTERNAL_ERROR);
++			return(0);
++			}
+ 		s->state=SSL3_ST_SW_CERT_B;
+ 		}
+ 
+
+---

@@ -1,0 +1,22 @@
+src/pl/plpgsql/src/plpgsql.h
+=======================================================
+lhs: 100644 | 140bf4baddbe73cf2c5fee3e8937a5312e0c0ce7
+rhs: 100644 | bfd52af3e79839cfce57bf8522330e9de8580ec0
+---@@ -814,10 +814,14 @@ typedef struct PLpgSQL_execstate
+ 	/* EState to use for "simple" expression evaluation */
+ 	EState	   *simple_eval_estate;
+ 
+-	/* Lookup table to use for executing type casts */
++	/* lookup table to use for executing type casts */
+ 	HTAB	   *cast_hash;
+ 	MemoryContext cast_hash_context;
+ 
++	/* memory context for statement-lifespan temporary values */
++	MemoryContext stmt_mcontext;	/* current stmt context, or NULL if none */
++	MemoryContext stmt_mcontext_parent; /* parent of current context */
++
+ 	/* temporary state for results from evaluation of query or expr */
+ 	SPITupleTable *eval_tuptable;
+ 	uint64		eval_processed;
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "ec9fa4f6b372e4e77fa741788e37a820bfa2ffc2",
+    "date": "2014-05-09 13:33:21",
+    "author": "Daniel Stenberg",
+    "description": "cacertinmem: fix memory leak\n\nWhile \"just\" an example it still isn't nice to leak memory.\n\nBug: http://curl.haxx.se/bug/view.cgi?id=1368\nFixed-by: Marko\n",
+    "summary": "cacertinmem: fix memory leak",
+    "hash": "1343756742463488c63453723b2bfe002e45c47f"
+}

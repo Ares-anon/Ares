@@ -1,0 +1,8 @@
+{
+    "summary": "Check the return code from ASN1_TIME_diff()",
+    "author": "Matt Caswell",
+    "description": "Check the return code from ASN1_TIME_diff()\n\nThe function can fail so we should check the return code.\n\nFound by Coverity\n\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\n(Merged from https://github.com/openssl/openssl/pull/5339)\n",
+    "hash": "0d502c3511ab3b1c8acb129fb3af836727b8092d",
+    "date": "2018-02-15 15:24:47",
+    "parent_hash": "bc2a0dd283c0f61df572b8c2aaf3bfc2dd4b7571"
+}

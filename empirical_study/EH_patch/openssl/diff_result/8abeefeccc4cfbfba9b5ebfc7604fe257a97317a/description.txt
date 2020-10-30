@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in DH_get_nid()",
+    "author": "Benjamin Kaduk",
+    "description": "Fix memory leak in DH_get_nid()\n\nIf q is non-NULL but p is indeed a safe prime, a modified copy\nof p could be leaked.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4525)\n",
+    "hash": "8abeefeccc4cfbfba9b5ebfc7604fe257a97317a",
+    "date": "2017-10-12 12:21:28",
+    "parent_hash": "141e470947327e0c4e8ef3c299b42d01064c484c"
+}

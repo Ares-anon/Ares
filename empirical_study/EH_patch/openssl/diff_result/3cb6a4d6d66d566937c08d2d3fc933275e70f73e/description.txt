@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in session cache test",
+    "author": "Benjamin Kaduk",
+    "description": "Fix memory leak in session cache test\n\nWhen we are using the internal cache we have to make a copy of the\nsession before removing it from the parent context's cache, since\nwe want our copy to still be resumable.  However, SSL_CTX_remove_session()\njust detaches the session from the SSL_CTX; it does not free the session.\nSo, we must call SSL_SESSION_free() ourselves before overwriting the\nvariable that we dup'd from.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4126)\n",
+    "hash": "3cb6a4d6d66d566937c08d2d3fc933275e70f73e",
+    "date": "2017-08-09 13:50:02",
+    "parent_hash": "8d50b9c15ae5d4eb4318ff6ea105526a691f162c"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "caa4db8a51e2b02e43ee85e63bc3fec232986699",
+    "date": "2014-07-04 08:25:05",
+    "author": "Kamil Dudka",
+    "description": "nss: fix a memory leak when CURLOPT_CRLFILE is used\n",
+    "summary": "nss: fix a memory leak when CURLOPT_CRLFILE is used",
+    "hash": "52cd5ac21cdfdc0a6c016de97fe70d3a50baa526"
+}

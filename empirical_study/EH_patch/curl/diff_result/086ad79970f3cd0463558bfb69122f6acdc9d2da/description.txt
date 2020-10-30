@@ -1,0 +1,8 @@
+{
+    "parent_hash": "0e8158eabc48f0bdb2bb7241e45407cec92b8ad4",
+    "date": "2014-12-10 00:41:32",
+    "author": "Daniel Stenberg",
+    "description": "ldap: check Curl_client_write() return codes\n\nThere might be one or two memory leaks left in the error paths.\n",
+    "summary": "ldap: check Curl_client_write() return codes",
+    "hash": "086ad79970f3cd0463558bfb69122f6acdc9d2da"
+}

@@ -1,0 +1,8 @@
+{
+    "author": "Bruce Momjian",
+    "description": "pg_upgrade:  fix one-byte per empty db memory leak\n\nReport by Tatsuo Ishii, Coverity\n",
+    "summary": "pg_upgrade:  fix one-byte per empty db memory leak",
+    "date": "2015-01-09 12:12:30",
+    "parent_hash": "c4fda14845c3215a15aa9aa0b844119d2c28c475",
+    "hash": "ac7009abd228362042edd10e6b12556ddef35171"
+}

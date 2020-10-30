@@ -1,0 +1,8 @@
+{
+    "date": "2017-09-15 11:23:43",
+    "parent_hash": "cec1221e1a48db9e127ad271d6e7ddfc7fe27dce",
+    "description": "Hgfs Server: Fix a memory leak on server exit not destroying the shares\n\nThis change fixes a memory leak on server exit not destroying the shares.\nThe list of shares is not destroyed and left.\n\nFix this at the Hgfs server tear down by calling the shares reset with an\nempty list which will cause all shares to be treated as stale and so deleted.\n",
+    "author": "Oliver Kurth",
+    "hash": "21dc0516201085e760d831d187b5232acf3a17d0",
+    "summary": "Hgfs Server: Fix a memory leak on server exit not destroying the shares"
+}

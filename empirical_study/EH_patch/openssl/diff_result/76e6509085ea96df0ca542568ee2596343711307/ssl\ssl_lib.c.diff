@@ -1,0 +1,21 @@
+ssl/ssl_lib.c
+=======================================================
+lhs: 100644 | 743204cd153b027a8b7979f25f30c8d0d1a53947
+rhs: 100644 | a4d565fb4ab41054741e79bf5bce671c5c6d7413
+---@@ -417,13 +417,7 @@ SSL *SSL_new(SSL_CTX *ctx)
+ 	return(s);
+ err:
+ 	if (s != NULL)
+-		{
+-		if (s->cert != NULL)
+-			ssl_cert_free(s->cert);
+-		if (s->ctx != NULL)
+-			SSL_CTX_free(s->ctx); /* decrement reference count */
+-		OPENSSL_free(s);
+-		}
++		SSL_free(s);
+ 	SSLerr(SSL_F_SSL_NEW,ERR_R_MALLOC_FAILURE);
+ 	return(NULL);
+ 	}
+
+---

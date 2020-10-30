@@ -1,0 +1,8 @@
+test/d2i-tests/bad_generalname.der
+=======================================================
+lhs: None
+rhs: 100644 | af45855c52422a1867deddbcda4f3054d7e35750
+file added in rhs
+---Binary files /dev/null and b/test/d2i-tests/bad_generalname.der differ
+
+---

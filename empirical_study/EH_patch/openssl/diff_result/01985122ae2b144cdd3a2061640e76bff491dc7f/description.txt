@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in the ca application",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in the ca application\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5444)\n",
+    "hash": "01985122ae2b144cdd3a2061640e76bff491dc7f",
+    "date": "2018-03-15 12:51:34",
+    "parent_hash": "5af88441f4fb1951a0672c0c0e1979cd44acdb69"
+}

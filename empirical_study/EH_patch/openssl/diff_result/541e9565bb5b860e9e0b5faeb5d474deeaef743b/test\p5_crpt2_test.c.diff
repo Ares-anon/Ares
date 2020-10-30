@@ -1,0 +1,16 @@
+test/p5_crpt2_test.c
+=======================================================
+lhs: 100644 | 303906fa9cd9dba9f1c662bfee2482ee875d0081
+rhs: 100644 | 2c998bada332365d3ef1eddc53b96ad20c17b544
+---@@ -206,7 +206,8 @@ int main(int argc, char **argv)
+     ERR_remove_thread_state(NULL);
+     ERR_free_strings();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks_fp(stderr);
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        return 1;
+ # endif
+     return 0;
+ }
+
+---

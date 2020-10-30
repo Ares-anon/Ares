@@ -1,0 +1,15 @@
+src/backend/access/transam/twophase.c
+=======================================================
+lhs: 100644 | 9f55adcaf5ef0e50fe1ea93e4e725c5c7b794215
+rhs: 100644 | 1323fb508dc9585e8366dcc8f24ed8fe88fcee46
+---@@ -1886,6 +1886,8 @@ StandbyRecoverPreparedTransactions(bool overwriteOK)
+ 				Assert(TransactionIdFollows(subxid, xid));
+ 				SubTransSetParent(xid, subxid, overwriteOK);
+ 			}
++
++			pfree(buf);
+ 		}
+ 	}
+ 	FreeDir(cldir);
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix memory leaks in PL/Python.\n\nPreviously, plpython was in the habit of allocating a lot of stuff in\nTopMemoryContext, and it was very slipshod about making sure that stuff\ngot cleaned up; in particular, use of TopMemoryContext as fn_mcxt for\nfunction calls represents an unfixable leak, since we generally don't\nknow what the called function might have allocated in fn_mcxt.  This\nresults in session-lifespan leakage in certain usage scenarios, as for\nexample in a case reported by Ed Behn back in July.\n\nTo fix, get rid of all the retail allocations in TopMemoryContext.\nAll long-lived allocations are now made in sub-contexts that are\nassociated with specific objects (either pl/python procedures, or\nPython-visible objects such as cursors and plans).  We can clean these\nup when the associated object is deleted.\n\nI went so far as to get rid of PLy_malloc completely.  There were a\ncouple of places where it could still have been used safely, but on\nthe whole it was just an invitation to bad coding.\n\nHaribabu Kommi, based on a draft patch by Heikki Linnakangas;\nsome further work by me\n",
+    "summary": "Fix memory leaks in PL/Python.",
+    "date": "2015-11-05 13:52:40",
+    "parent_hash": "64b2e7ad917a9a7814904d0f6dbde52cefbcfa00",
+    "hash": "8c75ad436f75fc629b61f601ba884c8f9313c9af"
+}

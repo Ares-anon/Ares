@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak EVP_MD_CTX on error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak EVP_MD_CTX on error path\n\nThe cms_SignerInfo_content_sign() function allocated an EVP_MD_CTX but\nthen failed to free it on an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "2280358146b620647c51a5b940dd9104c4ea3a3f",
+    "date": "2016-04-28 13:13:09",
+    "parent_hash": "29f4c357f045562d7eb7837ae890efc1bf4809a2"
+}

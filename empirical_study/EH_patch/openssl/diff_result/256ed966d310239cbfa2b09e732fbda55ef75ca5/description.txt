@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in the afalg engine",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in the afalg engine\n\nThe AFALG engine created a global EVP_CIPHER instance but was not freeing\nit up when the engine was destroyed.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "256ed966d310239cbfa2b09e732fbda55ef75ca5",
+    "date": "2016-03-10 15:17:20",
+    "parent_hash": "b33c5ffeea346fe671ff72b93ede3faa9ef6b865"
+}

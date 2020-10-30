@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak.",
+    "author": "Martin Brejcha",
+    "description": "Fix memory leak.\n\nFix memory leak by freeing up saved_message.data if it is not NULL.\n\nPR#3489\nReviewed-by: Stephen Henson <steve@openssl.org>\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "41cd41c4416f545a18ead37e09e437c75fa07c95",
+    "date": "2015-01-06 16:48:04",
+    "parent_hash": "3a83462dfea67566ba9bcedee266dc93d2e911e2"
+}

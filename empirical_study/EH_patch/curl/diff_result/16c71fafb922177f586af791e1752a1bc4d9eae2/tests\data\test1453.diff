@@ -1,0 +1,46 @@
+tests/data/test1453
+=======================================================
+lhs: None
+rhs: 100644 | da0897184de4c275920d56f6bc478159841bd261
+file added in rhs
+---@@ -0,0 +1,38 @@
++<testcase>
++<info>
++<keywords>
++Too long tftp filename
++FAILURE
++</keywords>
++</info>
++#
++# Server-side
++<reply>
++</reply>
++
++#
++# Client-side
++<client>
++<server>
++none
++</server>
++<features>
++http
++</features>
++ <name>
++Too long tftp filename
++ </name>
++ <command>
++tftp://%HOSTIP:%TFTPPORT/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaz
++</command>
++</client>
++
++#
++# Verify data after the test has been "shot"
++<verify>
++# TFTP file name too long
++<errorcode>
++71
++</errorcode>
++</verify>
++</testcase>
+
+---

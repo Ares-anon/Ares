@@ -1,0 +1,39 @@
+src/bin/pg_rewind/libpq_fetch.c
+=======================================================
+lhs: 100644 | 1979fbcb8a5f3d5b2fb6e275250aa0638a8883eb
+rhs: 100644 | 0e186f2c36f587f84f1385dca93a427510ccbea9
+---@@ -350,6 +350,8 @@ libpqGetFile(const char *filename, size_t *filesize)
+ 	memcpy(result, PQgetvalue(res, 0, 0), len);
+ 	result[len] = '\0';
+ 
++	PQclear(res);
++
+ 	pg_log(PG_DEBUG, "fetched file \"%s\", length %d\n", filename, len);
+ 
+ 	if (filesize)
+@@ -410,6 +412,7 @@ libpq_executeFileMap(filemap_t *map)
+ 	if (PQresultStatus(res) != PGRES_COMMAND_OK)
+ 		pg_fatal("could not create temporary table: %s",
+ 				 PQresultErrorMessage(res));
++	PQclear(res);
+ 
+ 	sql = "COPY fetchchunks FROM STDIN";
+ 	res = PQexec(conn, sql);
+@@ -417,6 +420,7 @@ libpq_executeFileMap(filemap_t *map)
+ 	if (PQresultStatus(res) != PGRES_COPY_IN)
+ 		pg_fatal("could not send file list: %s",
+ 				 PQresultErrorMessage(res));
++	PQclear(res);
+ 
+ 	for (i = 0; i < map->narray; i++)
+ 	{
+@@ -464,6 +468,7 @@ libpq_executeFileMap(filemap_t *map)
+ 		if (PQresultStatus(res) != PGRES_COMMAND_OK)
+ 			pg_fatal("unexpected result while sending file list: %s",
+ 					 PQresultErrorMessage(res));
++		PQclear(res);
+ 	}
+ 
+ 	/*
+
+---

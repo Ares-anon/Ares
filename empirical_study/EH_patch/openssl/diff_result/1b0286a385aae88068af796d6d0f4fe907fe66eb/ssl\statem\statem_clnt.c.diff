@@ -1,0 +1,33 @@
+ssl/statem/statem_clnt.c
+=======================================================
+lhs: 100644 | c47c9aa51896dd5fae6e28d95ef984b5aab27921
+rhs: 100644 | 38b8ecb290e7c427c39b7597245e7994dc5b32a4
+---@@ -1352,10 +1352,12 @@ MSG_PROCESS_RETURN tls_process_server_hello(SSL *s, PACKET *pkt)
+         goto f_err;
+     }
+ 
++    OPENSSL_free(extensions);
+     return MSG_PROCESS_CONTINUE_READING;
+  f_err:
+     ssl3_send_alert(s, SSL3_AL_FATAL, al);
+     ossl_statem_set_error(s);
++    OPENSSL_free(extensions);
+     return MSG_PROCESS_ERROR;
+ }
+ 
+@@ -3117,11 +3119,13 @@ static MSG_PROCESS_RETURN tls_process_encrypted_extensions(SSL *s, PACKET *pkt)
+                                          rawexts, &al))
+         goto err;
+ 
++    OPENSSL_free(rawexts);
+     return MSG_PROCESS_CONTINUE_READING;
+ 
+  err:
+     ssl3_send_alert(s, SSL3_AL_FATAL, al);
+     ossl_statem_set_error(s);
++    OPENSSL_free(rawexts);
+     return MSG_PROCESS_ERROR;
+ }
+ 
+
+---

@@ -1,0 +1,30 @@
+test/ct_test.c
+=======================================================
+lhs: 100644 | ce417ab9bd51a4bec7ec87720be4ecb8d9600a55
+rhs: 100644 | 5446f9d0da06d5d3e6915fb093ca551aecd57bb9
+---@@ -565,6 +565,11 @@ int main(int argc, char *argv[])
+     int result = 0;
+     char *tmp_env = NULL;
+ 
++    tmp_env = getenv("OPENSSL_DEBUG_MEMORY");
++    if (tmp_env != NULL && strcmp(tmp_env, "on") == 0)
++        CRYPTO_set_mem_debug(1);
++    CRYPTO_mem_ctrl(CRYPTO_MEM_CHECK_ON);
++
+     tmp_env = getenv("CT_DIR");
+     ct_dir = OPENSSL_strdup(tmp_env != NULL ? tmp_env : "ct");
+     tmp_env = getenv("CERTS_DIR");
+@@ -584,6 +589,11 @@ int main(int argc, char *argv[])
+     OPENSSL_free(ct_dir);
+     OPENSSL_free(certs_dir);
+ 
++#ifndef OPENSSL_NO_CRYPTO_MDEBUG
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        result = 1;
++#endif
++
+     return result;
+ }
+ 
+
+---

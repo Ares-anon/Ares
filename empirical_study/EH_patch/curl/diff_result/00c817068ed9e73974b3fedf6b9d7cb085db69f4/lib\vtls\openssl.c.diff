@@ -1,0 +1,26 @@
+lib/vtls/openssl.c
+=======================================================
+lhs: 100644 | d92e71365f1c8c424f88e5398b5e3d8aa0a9abb9
+rhs: 100644 | df8f11f34c2a2f02de3202ea02178b5411a15e3a
+---@@ -3275,6 +3275,7 @@ size_t Curl_ossl_version(char *buffer, size_t size)
+ int Curl_ossl_random(struct Curl_easy *data, unsigned char *entropy,
+                      size_t length)
+ {
++  int rc;
+   if(data) {
+     if(Curl_ossl_seed(data)) /* Initiate the seed if not already done */
+       return 1; /* couldn't seed for some reason */
+@@ -3283,8 +3284,9 @@ int Curl_ossl_random(struct Curl_easy *data, unsigned char *entropy,
+     if(!rand_enough())
+       return 1;
+   }
+-  RAND_bytes(entropy, curlx_uztosi(length));
+-  return 0; /* 0 as in no problem */
++  /* RAND_bytes() returns 1 on success, 0 otherwise.  */
++  rc = RAND_bytes(entropy, curlx_uztosi(length));
++  return rc^1;
+ }
+ 
+ void Curl_ossl_md5sum(unsigned char *tmp, /* input */
+
+---

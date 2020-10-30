@@ -1,0 +1,8 @@
+{
+    "date": "2015-11-23 22:38:44",
+    "parent_hash": "adab9c550cd86f759c85294aa53b1870ec58affa",
+    "description": "[Bug 1531545] Add an error handler to X11 resolutionSet\n",
+    "author": "Dyno Hongjun Fu",
+    "hash": "b510107055b144bc28c7e03a17176211860df6f8",
+    "summary": "[Bug 1531545] Add an error handler to X11 resolutionSet"
+}

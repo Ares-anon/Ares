@@ -1,0 +1,8 @@
+{
+    "author": "Tatsuo Ishii",
+    "description": "Fix memory leak.\n\nMemory is allocated twice for \"file\" and \"files\" variables in\nBufFileOpenShared().\n\nAuthor: Antonin Houska\nDiscussion: https://postgr.es/m/11329.1529045692%40localhost\n",
+    "summary": "Fix memory leak.",
+    "date": "2018-06-15 16:32:59",
+    "parent_hash": "74da7cda31c07122257c527d9fd068dc28493fc8",
+    "hash": "969274d813018b08389956e493f691671f0d84f1"
+}

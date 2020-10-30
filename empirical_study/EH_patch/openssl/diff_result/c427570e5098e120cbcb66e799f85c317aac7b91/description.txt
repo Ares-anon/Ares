@@ -1,0 +1,8 @@
+{
+    "summary": "Sanity check the return from final_finish_mac",
+    "author": "Matt Caswell",
+    "description": "Sanity check the return from final_finish_mac\n\nThe return value is checked for 0. This is currently safe but we should\nreally check for <= 0 since -1 is frequently used for error conditions.\nThanks to Kevin Wojtysiak (Int3 Solutions) and Paramjot Oberoi (Int3\nSolutions) for reporting this issue.\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\n",
+    "hash": "c427570e5098e120cbcb66e799f85c317aac7b91",
+    "date": "2015-04-30 23:12:39",
+    "parent_hash": "29b0a15a480626544dd0c803d5de671552544de6"
+}

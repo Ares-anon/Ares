@@ -1,0 +1,14 @@
+apps/verify.c
+=======================================================
+lhs: 100644 | 5ad6ef4151c5360383316fd993fc925bb624ba83
+rhs: 100644 | 38377a57e4a9f7ad5bfc2b968453e2554726d31f
+---@@ -225,6 +225,7 @@ static int check(X509_STORE *ctx, const char *file,
+ 
+     X509_STORE_set_flags(ctx, vflags);
+     if (!X509_STORE_CTX_init(csc, ctx, x, uchain)) {
++        X509_STORE_CTX_free(csc);
+         printf("error %s: X.509 store context initialization failed\n",
+                (file == NULL) ? "stdin" : file);
+         goto end;
+
+---

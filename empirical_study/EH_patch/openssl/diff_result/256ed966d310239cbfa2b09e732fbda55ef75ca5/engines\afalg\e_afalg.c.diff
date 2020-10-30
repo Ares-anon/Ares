@@ -1,0 +1,15 @@
+engines/afalg/e_afalg.c
+=======================================================
+lhs: 100644 | 51ae68ddc1c47264ca5d6b03670484cb9653a47f
+rhs: 100644 | 90d76020683d852c3db8a36d182532065d340d37
+---@@ -844,6 +844,8 @@ static int afalg_finish(ENGINE *e)
+ static int afalg_destroy(ENGINE *e)
+ {
+     ERR_unload_AFALG_strings();
++    EVP_CIPHER_meth_free(_hidden_aes_128_cbc);
++    _hidden_aes_128_cbc = NULL;
+     return 1;
+ }
+ 
+
+---

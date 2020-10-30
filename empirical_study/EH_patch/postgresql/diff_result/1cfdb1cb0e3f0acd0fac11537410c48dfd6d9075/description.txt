@@ -1,0 +1,8 @@
+{
+    "author": "Tatsuo Ishii",
+    "description": "Fix memory leak in BufFileCreateShared().\n\nAlso this commit unifies some duplicated code in makeBufFile() and\nBufFileOpenShared() into new function makeBufFileCommon().\n\nAuthor: Antonin Houska\nReviewed-By: Thomas Munro, Tatsuo Ishii\nDiscussion: https://postgr.es/m/16139.1529049566%40localhost\n",
+    "summary": "Fix memory leak in BufFileCreateShared().",
+    "date": "2018-06-16 14:21:08",
+    "parent_hash": "ff03112bdc70541382b39fa4e36b9a9ad93b4b73",
+    "hash": "1cfdb1cb0e3f0acd0fac11537410c48dfd6d9075"
+}

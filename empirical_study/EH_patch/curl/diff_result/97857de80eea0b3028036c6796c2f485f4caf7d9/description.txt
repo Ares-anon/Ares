@@ -1,0 +1,8 @@
+{
+    "parent_hash": "784f225266c9abac6557256df3217280662e345b",
+    "date": "2014-01-30 20:59:26",
+    "author": "Steve Holme",
+    "description": "ntlm: Fixed a memory leak when using NTLM with a proxy server\n",
+    "summary": "ntlm: Fixed a memory leak when using NTLM with a proxy server",
+    "hash": "97857de80eea0b3028036c6796c2f485f4caf7d9"
+}

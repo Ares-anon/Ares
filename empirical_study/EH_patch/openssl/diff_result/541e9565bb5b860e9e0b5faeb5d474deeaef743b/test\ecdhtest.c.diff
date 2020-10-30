@@ -1,0 +1,16 @@
+test/ecdhtest.c
+=======================================================
+lhs: 100644 | 636be3ee9d371e4637477b5967a42a0ca5d637f3
+rhs: 100644 | 16d8cedac1d6f0701be7a95a45eb89e00e4333fa
+---@@ -516,7 +516,8 @@ int main(int argc, char *argv[])
+     CRYPTO_cleanup_all_ex_data();
+     ERR_remove_thread_state(NULL);
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks_fp(stderr);
++    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
++        ret = 1;
+ #endif
+     EXIT(ret);
+ }
+
+---

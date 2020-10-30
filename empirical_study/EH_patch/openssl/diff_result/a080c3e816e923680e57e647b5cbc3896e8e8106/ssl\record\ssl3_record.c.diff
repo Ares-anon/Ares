@@ -1,0 +1,18 @@
+ssl/record/ssl3_record.c
+=======================================================
+lhs: 100644 | 4ffc84279d62b6e213d837aa7c14ad6aefe8bd88
+rhs: 100644 | fa902f30fbb4befcd00c0feec9d99f3ca356a275
+---@@ -1297,8 +1297,10 @@ int tls1_mac(SSL *ssl, SSL3_RECORD *rec, unsigned char *md, int sending)
+         mac_ctx = hash;
+     } else {
+         hmac = EVP_MD_CTX_new();
+-        if (hmac == NULL || !EVP_MD_CTX_copy(hmac, hash))
++        if (hmac == NULL || !EVP_MD_CTX_copy(hmac, hash)) {
++            EVP_MD_CTX_free(hmac);
+             return 0;
++        }
+         mac_ctx = hmac;
+     }
+ 
+
+---

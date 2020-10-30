@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak in vty_read_config\n\nIf vty_use_backup_config returns NULL, free any memory that has been\nallocated before returning.\n",
+    "author": "Ryan O'Hara",
+    "parent_hash": "1dbc4ea4d6753f58cc933a11f137ec1068644f91",
+    "summary": "Fix memory leak in vty_read_config",
+    "date": "2014-01-16 13:08:10",
+    "hash": "8408f9c1885db18edca92660fa3cc9e6ca9dd57b"
+}

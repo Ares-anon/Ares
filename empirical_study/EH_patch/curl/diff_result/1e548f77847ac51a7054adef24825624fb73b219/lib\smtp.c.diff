@@ -1,0 +1,19 @@
+lib/smtp.c
+=======================================================
+lhs: 100644 | 67dc04f28a133e9006036df6bb01f4951146c185
+rhs: 100644 | de2dd33563342b6ac86ed500d29f4fdf836ef2d5
+---@@ -550,8 +550,11 @@ static CURLcode smtp_perform_mail(struct connectdata *conn)
+     if(!result)
+       result = Curl_mime_rewind(&data->set.mimepost);
+ 
+-    if(result)
++    if(result) {
++      free(from);
++      free(auth);
+       return result;
++    }
+ 
+     data->state.infilesize = Curl_mime_size(&data->set.mimepost);
+ 
+
+---

@@ -1,0 +1,23 @@
+ssl/record/ssl3_record.c
+=======================================================
+lhs: 100644 | b0eb7cce92ca30299af6aebc630f13d142925907
+rhs: 100644 | 5070bc35c031620444b39ef4326299a4585157d7
+---@@ -132,9 +132,15 @@ static const unsigned char ssl3_pad_2[48] = {
+     0x5c, 0x5c, 0x5c, 0x5c, 0x5c, 0x5c, 0x5c, 0x5c
+ };
+ 
++/*
++ * Clear the contents of an SSL3_RECORD but retain any memory allocated
++ */
+ void SSL3_RECORD_clear(SSL3_RECORD *r)
+ {
+-    memset(r->seq_num, 0, sizeof(r->seq_num));
++    unsigned char *comp = r->comp;
++
++    memset(r, 0, sizeof(*r));
++    r->comp = comp;
+ }
+ 
+ void SSL3_RECORD_release(SSL3_RECORD *r)
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "768151449b386488ac8fe869f48bf2930123d601",
+    "date": "2014-01-30 22:15:03",
+    "author": "Dan Fandrich",
+    "description": "ftp: fixed a memory leak on wildcard error path\n",
+    "summary": "ftp: fixed a memory leak on wildcard error path",
+    "hash": "c631a54bb60b2bbaf5085a679ce140330158d513"
+}

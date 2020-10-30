@@ -1,0 +1,8 @@
+{
+    "description": "Fix a memory leak with garp_delay blocks\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "4fededee67a807c489980567edd17a23ebca9f36",
+    "summary": "Fix a memory leak with garp_delay blocks",
+    "date": "2018-03-18 18:55:05",
+    "hash": "dfae036cf556cf69041568bc38e925a286a15b41"
+}

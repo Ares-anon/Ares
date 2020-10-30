@@ -1,0 +1,8 @@
+{
+    "summary": "Fix mem leak on error path",
+    "author": "Matt Caswell",
+    "description": "Fix mem leak on error path\n\nThe mem pointed to by tmp can be leaked on an error path.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "c72b8e069de6a8863123d5be05e41b833abe09ee",
+    "date": "2016-08-23 00:19:15",
+    "parent_hash": "030648cea98faeba94a510ecc6e3d283040eec5c"
+}

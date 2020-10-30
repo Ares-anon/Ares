@@ -1,0 +1,39 @@
+ssl/d1_srvr.c
+=======================================================
+lhs: 100644 | 19562e15cdb96ca48462428883c253fed20338dd
+rhs: 100644 | 555bbdfc1105cfd9d884b54ec88054c503b6dd4d
+---@@ -417,9 +417,13 @@ int dtls1_accept(SSL *s)
+                 snprintf((char *)labelbuffer, sizeof(DTLS1_SCTP_AUTH_LABEL),
+                          DTLS1_SCTP_AUTH_LABEL);
+ 
+-                SSL_export_keying_material(s, sctpauthkey,
+-                                           sizeof(sctpauthkey), labelbuffer,
+-                                           sizeof(labelbuffer), NULL, 0, 0);
++                if (SSL_export_keying_material(s, sctpauthkey,
++                        sizeof(sctpauthkey), labelbuffer,
++                        sizeof(labelbuffer), NULL, 0, 0) <= 0) {
++                    ret = -1;
++                    s->state = SSL_ST_ERR;
++                    goto end;
++                }
+ 
+                 BIO_ctrl(SSL_get_wbio(s), BIO_CTRL_DGRAM_SCTP_ADD_AUTH_KEY,
+                          sizeof(sctpauthkey), sctpauthkey);
+@@ -606,9 +610,13 @@ int dtls1_accept(SSL *s)
+             snprintf((char *)labelbuffer, sizeof(DTLS1_SCTP_AUTH_LABEL),
+                      DTLS1_SCTP_AUTH_LABEL);
+ 
+-            SSL_export_keying_material(s, sctpauthkey,
++            if (SSL_export_keying_material(s, sctpauthkey,
+                                        sizeof(sctpauthkey), labelbuffer,
+-                                       sizeof(labelbuffer), NULL, 0, 0);
++                                       sizeof(labelbuffer), NULL, 0, 0) <= 0) {
++                ret = -1;
++                s->state = SSL_ST_ERR;
++                goto end;
++            }
+ 
+             BIO_ctrl(SSL_get_wbio(s), BIO_CTRL_DGRAM_SCTP_ADD_AUTH_KEY,
+                      sizeof(sctpauthkey), sctpauthkey);
+
+---

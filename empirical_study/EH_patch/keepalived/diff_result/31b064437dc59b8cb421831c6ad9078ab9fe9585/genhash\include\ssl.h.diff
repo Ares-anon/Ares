@@ -1,0 +1,21 @@
+genhash/include/ssl.h
+=======================================================
+lhs: 100644 | ded325f8d761ba5dd0a750839fd7e769200c5d11
+rhs: 100644 | 976456e6cc8f4f215af80e07e7a42faef9b0fae3
+---@@ -25,12 +25,13 @@
+ 
+ /* global includes */
+ #include <openssl/ssl.h>
++#include <stdbool.h>
+ 
+ #include "scheduler.h"
+ 
+ /* Prototypes */
+ extern void init_ssl(void);
+-extern int ssl_connect(thread_t *);
++extern bool ssl_connect(thread_t *);
+ extern int ssl_printerr(int);
+ extern int ssl_send_request(SSL *, char *, int);
+ extern int ssl_read_thread(thread_t *);
+
+---

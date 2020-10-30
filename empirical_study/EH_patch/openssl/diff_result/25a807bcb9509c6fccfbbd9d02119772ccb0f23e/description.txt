@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks on CRYPTO_new_ex_data return value",
+    "author": "FdaSilvaYY",
+    "description": "Add checks on CRYPTO_new_ex_data return value\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/996)",
+    "hash": "25a807bcb9509c6fccfbbd9d02119772ccb0f23e",
+    "date": "2016-04-28 14:37:41",
+    "parent_hash": "8fdc99cb5dbf1a79b106cc635c82f59956e39108"
+}

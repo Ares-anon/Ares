@@ -1,0 +1,14 @@
+test/dtlsv1listentest.c
+=======================================================
+lhs: 100644 | 5069dd505d38f01b62cd3eec0c64c80cfedc9ff5
+rhs: 100644 | 3e3939fb696167ffe7fd8c980d7917e5b7492334
+---@@ -460,6 +460,7 @@ int main(void)
+     SSL_free(ssl);
+     SSL_CTX_free(ctx);
+     BIO_free(inbio);
++    OPENSSL_free(peer);
+     /* Unitialise libssl */
+ #ifndef OPENSSL_NO_ENGINE
+     ENGINE_cleanup();
+
+---

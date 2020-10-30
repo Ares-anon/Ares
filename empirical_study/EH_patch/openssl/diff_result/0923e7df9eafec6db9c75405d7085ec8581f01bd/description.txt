@@ -1,0 +1,8 @@
+{
+    "summary": "Fix hostname validation in the command-line tool to honour negative return values.",
+    "author": "Emilia Kasper",
+    "description": "Fix hostname validation in the command-line tool to honour negative return values.\n\nSpecifically, an ASN.1 NumericString in the certificate CN will fail UTF-8 conversion\nand result in a negative return value, which the \"x509 -checkhost\" command-line option\nincorrectly interpreted as success.\n\nAlso update X509_check_host docs to reflect reality.\n\nThanks to Sean Burford (Google) for reporting this issue.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "0923e7df9eafec6db9c75405d7085ec8581f01bd",
+    "date": "2015-02-10 15:35:20",
+    "parent_hash": "efb4597345a0ae31ac81f9dfb783f3eef420122b"
+}

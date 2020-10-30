@@ -1,0 +1,8 @@
+{
+    "summary": "Add a return value check",
+    "author": "Matt Caswell",
+    "description": "Add a return value check\n\nIf the call to OBJ_find_sigid_by_algs fails to find the relevant NID then\nwe should set the NID to NID_undef.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "330dcb09b2df7e1e6d1d3d14a5df7269aebd9a68",
+    "date": "2015-12-10 11:50:20",
+    "parent_hash": "44bf7119d67272dbbe3a96c58b842aff8d93c1b4"
+}

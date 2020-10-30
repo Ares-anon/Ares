@@ -1,0 +1,16 @@
+lib/system_win32.c
+=======================================================
+lhs: 100644 | 2ba7d0bc1c2198e167943ebbe5e50d976ed709ee
+rhs: 100644 | d6a998b275c685df9b0b68eab47150347ffd190a
+---@@ -281,8 +281,8 @@ HMODULE Curl_load_library(LPCTSTR filename)
+           pLoadLibraryEx(path, NULL, LOAD_WITH_ALTERED_SEARCH_PATH) :
+           LoadLibrary(path);
+ 
+-        free(path);
+       }
++      free(path);
+     }
+   }
+ 
+
+---

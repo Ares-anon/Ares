@@ -1,0 +1,8 @@
+{
+    "parent_hash": "6d436642ddfc30264d9f466b185dfe0683d0d551",
+    "date": "2017-09-18 10:45:29",
+    "author": "Daniel Stenberg",
+    "description": "curl: make str2udouble not return values on error\n\n... previously it would store a return value even when it returned\nerror, which could make the value get used anyway!\n\nReported-by: Brian Carpenter\nCloses #1893\n",
+    "summary": "curl: make str2udouble not return values on error",
+    "hash": "697271fc980331ffb53f12850f82c80ed182a375"
+}

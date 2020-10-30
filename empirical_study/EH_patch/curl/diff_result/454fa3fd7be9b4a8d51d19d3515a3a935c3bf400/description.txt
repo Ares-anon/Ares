@@ -1,0 +1,8 @@
+{
+    "parent_hash": "f8215f80abe3b3b037d037f891f5f94aad68b440",
+    "date": "2018-09-28 17:10:14",
+    "author": "Daniel Stenberg",
+    "description": "multi: fix location URL memleak in error path\n\nFollow-up to #3044 - fix a leak OSS-Fuzz detected\nCloses #3057\n",
+    "summary": "multi: fix location URL memleak in error path",
+    "hash": "454fa3fd7be9b4a8d51d19d3515a3a935c3bf400"
+}

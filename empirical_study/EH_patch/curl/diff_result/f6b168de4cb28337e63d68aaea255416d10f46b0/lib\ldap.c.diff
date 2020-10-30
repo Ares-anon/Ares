@@ -1,0 +1,18 @@
+lib/ldap.c
+=======================================================
+lhs: 100644 | 96d8ac78fe327725d44e0df1e51f9acd9e38bc89
+rhs: 100644 | cba06e6b29f61377741f6150c8693bcf5eec4eee
+---@@ -914,10 +914,7 @@ static int _ldap_url_parse2 (const struct connectdata *conn, LDAPURLDesc *ludp)
+   }
+ 
+ quit:
+-#if defined(CURL_LDAP_WIN) && \
+-    (defined(USE_WIN32_IDN) || defined(USE_WINDOWS_SSPI))
+-  Curl_unicodefree(path);
+-#endif
++  Curl_safefree(path);
+ 
+   return rc;
+ }
+
+---

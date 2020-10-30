@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak if notify scripts specified multiple times\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "32e0ee39eea44553e18f023ee370c4b653b0030e",
+    "summary": "Fix memory leak if notify scripts specified multiple times",
+    "date": "2017-04-03 14:34:51",
+    "hash": "b338a8638917c1c6a9afbba2baf55de4e1fe8431"
+}

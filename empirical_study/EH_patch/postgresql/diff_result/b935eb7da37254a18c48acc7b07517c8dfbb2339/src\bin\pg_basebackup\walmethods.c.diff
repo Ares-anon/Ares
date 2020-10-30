@@ -1,0 +1,24 @@
+src/bin/pg_basebackup/walmethods.c
+=======================================================
+lhs: 100644 | d9ad596bf0603d887686e1413d95e627dab8718c
+rhs: 100644 | d4de8ddcf783db4999bca1337d5886b84bf6f559
+---@@ -61,7 +61,7 @@ typedef struct DirectoryMethodFile
+ #endif
+ }	DirectoryMethodFile;
+ 
+-static char *
++static const char *
+ dir_getlasterror(void)
+ {
+ 	/* Directory method always sets errno, so just use strerror */
+@@ -406,7 +406,7 @@ static TarMethodData *tar_data = NULL;
+ #define tar_clear_error() tar_data->lasterror[0] = '\0'
+ #define tar_set_error(msg) strlcpy(tar_data->lasterror, msg, sizeof(tar_data->lasterror))
+ 
+-static char *
++static const char *
+ tar_getlasterror(void)
+ {
+ 	/*
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in ASN.1",
+    "author": "Emilia Kasper",
+    "description": "Fix memory leaks in ASN.1\n\nThese leaks affect 1.1.0 dev branch only; introduced around commit\nf93ad22f6adb00e722c130e792799467f3927b56\n\nFound with LibFuzzer\n\nReviewed-by: Ben Laurie <ben@openssl.org>\n",
+    "hash": "1400f013e10c8ec624947d9187bebb20274385dc",
+    "date": "2016-04-04 13:26:06",
+    "parent_hash": "b5851bbc43dcf497189d16395dfa925d1562ee06"
+}

@@ -1,0 +1,16 @@
+crypto/rsa/rsa_ossl.c
+=======================================================
+lhs: 100644 | feb1ab4f0746dfa10f2f5f8c4389cc279d8dd6fb
+rhs: 100644 | c441905526c82b0e49c1945e9262498bbb0c6688
+---@@ -339,7 +339,8 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
+             goto err;
+ 
+     if (padding == RSA_X931_PADDING) {
+-        BN_sub(f, rsa->n, ret);
++        if (!BN_sub(f, rsa->n, ret))
++            goto err;
+         if (BN_cmp(ret, f) > 0)
+             res = f;
+         else
+
+---

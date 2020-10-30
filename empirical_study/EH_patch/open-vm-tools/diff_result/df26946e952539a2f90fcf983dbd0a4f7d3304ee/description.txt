@@ -1,0 +1,8 @@
+{
+    "date": "2017-09-15 11:23:05",
+    "parent_hash": "6daa2753d394391ce9c319581d200ce5f1cc4fea",
+    "description": "Return default value in case of NULL key instead of ASSERTing.\n\nThe configKey is NULL for NullProvider, so VMTools_ConfigGetBoolean\nshould return default value if any of the input args is NULL.\n",
+    "author": "Oliver Kurth",
+    "hash": "df26946e952539a2f90fcf983dbd0a4f7d3304ee",
+    "summary": "Return default value in case of NULL key instead of ASSERTing."
+}

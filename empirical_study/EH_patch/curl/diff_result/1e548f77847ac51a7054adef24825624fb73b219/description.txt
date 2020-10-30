@@ -1,0 +1,8 @@
+{
+    "parent_hash": "7f794a224e800b8b1bf3dfed353ceb825094b722",
+    "date": "2017-09-20 11:33:46",
+    "author": "Daniel Stenberg",
+    "description": "smtp: fix memory leak in OOM\n\nRegression since ce0881edee\n\nCoverity CID 1418139 and CID 1418136 found it, but it was also seen in\ntorture testing.\n",
+    "summary": "smtp: fix memory leak in OOM",
+    "hash": "1e548f77847ac51a7054adef24825624fb73b219"
+}

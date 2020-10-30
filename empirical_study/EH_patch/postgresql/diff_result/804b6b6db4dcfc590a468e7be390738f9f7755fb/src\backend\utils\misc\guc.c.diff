@@ -1,0 +1,22 @@
+src/backend/utils/misc/guc.c
+=======================================================
+lhs: 100644 | 931993c25b9d92d955d7468b2f8e2616a916785b
+rhs: 100644 | 95727776d3851a2d1a55ca3d3fa824a7cf492bbc
+---@@ -62,7 +62,6 @@
+ #include "replication/syncrep.h"
+ #include "replication/walreceiver.h"
+ #include "replication/walsender.h"
+-#include "rewrite/rowsecurity.h"
+ #include "storage/bufmgr.h"
+ #include "storage/dsm_impl.h"
+ #include "storage/standby.h"
+@@ -80,6 +79,7 @@
+ #include "utils/plancache.h"
+ #include "utils/portal.h"
+ #include "utils/ps_status.h"
++#include "utils/rls.h"
+ #include "utils/snapmgr.h"
+ #include "utils/tzparser.h"
+ #include "utils/xml.h"
+
+---

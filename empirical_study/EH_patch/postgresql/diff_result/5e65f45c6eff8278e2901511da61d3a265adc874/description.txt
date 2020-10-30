@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Another attempt at fixing memory leak in xlogreader.\n\nmax_block_id is also reset between reading records.\n\nMichael Paquier\n",
+    "summary": "Another attempt at fixing memory leak in xlogreader.",
+    "date": "2015-07-28 09:09:36",
+    "parent_hash": "e0d4a290f4a24b0a0a46af4d0f8551f8ee5e5513",
+    "hash": "5e65f45c6eff8278e2901511da61d3a265adc874"
+}

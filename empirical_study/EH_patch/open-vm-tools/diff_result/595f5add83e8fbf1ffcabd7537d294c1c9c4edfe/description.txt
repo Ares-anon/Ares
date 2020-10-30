@@ -1,0 +1,8 @@
+{
+    "date": "2017-11-30 15:38:03",
+    "parent_hash": "884aa32f9c9f773957275e09cd6620598185718a",
+    "description": "Fix memory leak in vmtoolsd.\n",
+    "author": "Oliver Kurth",
+    "hash": "595f5add83e8fbf1ffcabd7537d294c1c9c4edfe",
+    "summary": "Fix memory leak in vmtoolsd."
+}

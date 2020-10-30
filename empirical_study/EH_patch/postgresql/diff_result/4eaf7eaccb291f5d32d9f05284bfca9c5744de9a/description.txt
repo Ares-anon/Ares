@@ -1,0 +1,8 @@
+{
+    "author": "Teodor Sigaev",
+    "description": "Add missing and dangling downlink checks to amcheck\n\nWhen bt_index_parent_check() is called with the heapallindexed option,\nallocate a second Bloom filter to fingerprint block numbers that appear\nin the downlinks of internal pages.  Use Bloom filter probes when\nwalking the B-Tree to detect missing downlinks.  This can detect subtle\nproblems with page deletion/VACUUM, such as corruption caused by the bug\njust fixed in commit 6db4b499.\n\nThe downlink Bloom filter is bound in size by work_mem.  Its optimal\nsize is typically far smaller than that of the regular heapallindexed\nBloom filter, especially when the index has high fan-out.\n\nAuthor: Peter Geoghegan\nReviewer: Teodor Sigaev\nDiscussion: https://postgr.es/m/CAH2-WznUzY4fWTjm1tBB3JpVz8cCfz7k_qVp5BhuPyhivmWJFg@mail.gmail.com\n",
+    "summary": "Add missing and dangling downlink checks to amcheck",
+    "date": "2018-04-25 18:02:55",
+    "parent_hash": "7f58f666cdeee8016fd4ec7aa79629c983ecc3bd",
+    "hash": "4eaf7eaccb291f5d32d9f05284bfca9c5744de9a"
+}

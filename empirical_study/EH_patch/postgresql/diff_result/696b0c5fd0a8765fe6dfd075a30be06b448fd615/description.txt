@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix memory leak in repeated SPGIST index scans.\n\nspgendscan neglected to pfree all the memory allocated by spgbeginscan.\nIt's possible to get away with that in most normal queries, since the\nmemory is allocated in the executor's per-query context which is about\nto get deleted anyway; but it causes severe memory leakage during\ncreation or filling of large exclusion-constraint indexes.\n\nAlso, document that amendscan is supposed to free what ambeginscan\nallocates.  The docs' lack of clarity on that point probably caused this\nbug to begin with.  (There is discussion of changing that API spec going\nforward, but I don't think it'd be appropriate for the back branches.)\n\nPer report from Bruno Wolff.  It's been like this since the beginning,\nso back-patch to all active branches.\n\nIn HEAD, also fix an independent leak caused by commit 2a6368343\n(allocating memory during spgrescan instead of spgbeginscan, which\nmight be all right if it got cleaned up, but it didn't).  And do a bit\nof code beautification on that commit, too.\n\nDiscussion: https://postgr.es/m/20181024012314.GA27428@wolff.to\n",
+    "summary": "Fix memory leak in repeated SPGIST index scans.",
+    "date": "2018-10-31 17:05:03",
+    "parent_hash": "c4ab62f9acc0389697042cb642aa74beabdc8cc7",
+    "hash": "696b0c5fd0a8765fe6dfd075a30be06b448fd615"
+}

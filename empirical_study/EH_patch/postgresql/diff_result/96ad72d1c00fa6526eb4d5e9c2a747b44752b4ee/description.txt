@@ -1,0 +1,8 @@
+{
+    "author": "Michael Meskes",
+    "description": "Fixed some memory leaks in ECPG.\n\nPatch by Michael Paquier\n",
+    "summary": "Fixed some memory leaks in ECPG.",
+    "date": "2015-06-12 14:52:55",
+    "parent_hash": "82be1bf5099c0f6d1ef482ba3ca9cf1741db1eb3",
+    "hash": "96ad72d1c00fa6526eb4d5e9c2a747b44752b4ee"
+}

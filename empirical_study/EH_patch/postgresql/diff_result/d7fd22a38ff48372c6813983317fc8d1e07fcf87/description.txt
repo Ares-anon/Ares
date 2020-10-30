@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix memory leaks in pg_rewind. Several PQclear() calls were missing.\n\nOriginally reported by Vladimir Borodin in the pg_rewind github project,\npatch by Michael Paquier.\n",
+    "summary": "Fix memory leaks in pg_rewind. Several PQclear() calls were missing.",
+    "date": "2015-07-27 20:38:44",
+    "parent_hash": "820d1ced1b308702b3f811647810b4030f974d89",
+    "hash": "d7fd22a38ff48372c6813983317fc8d1e07fcf87"
+}

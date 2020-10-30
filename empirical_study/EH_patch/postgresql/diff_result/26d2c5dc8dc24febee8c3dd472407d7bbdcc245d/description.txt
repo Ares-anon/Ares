@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix memory leaks in GIN index vacuum.\n\nPer bug #12850 by Walter Nordmann. Backpatch to 9.4 where the leak was\nintroduced.\n",
+    "summary": "Fix memory leaks in GIN index vacuum.",
+    "date": "2015-03-12 15:34:32",
+    "parent_hash": "f4abd0241de20d5d6a79b84992b9e88603d44134",
+    "hash": "26d2c5dc8dc24febee8c3dd472407d7bbdcc245d"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Check return of PEM_write_* functions and report possible errors",
+    "author": "Richard Levitte",
+    "description": "Check return of PEM_write_* functions and report possible errors\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1025)",
+    "hash": "c73aa309049c4f04ec81f0f1cf552eab8456a16e",
+    "date": "2016-05-04 14:56:58",
+    "parent_hash": "e6c5dbc8e82214f659d5b905d7b4a04a8d1faa8d"
+}

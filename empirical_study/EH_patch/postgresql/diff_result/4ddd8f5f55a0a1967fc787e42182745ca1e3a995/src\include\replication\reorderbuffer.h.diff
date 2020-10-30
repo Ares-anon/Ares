@@ -1,0 +1,16 @@
+src/include/replication/reorderbuffer.h
+=======================================================
+lhs: 100644 | 1f52f6bde73430f29bc7c15aac17ef159ae2e87d
+rhs: 100644 | 7787edf7b67cde762bab7388ad938d9b95ebffab
+---@@ -402,6 +402,9 @@ void		ReorderBufferReturnTupleBuf(ReorderBuffer *, ReorderBufferTupleBuf *tuple)
+ ReorderBufferChange *ReorderBufferGetChange(ReorderBuffer *);
+ void		ReorderBufferReturnChange(ReorderBuffer *, ReorderBufferChange *);
+ 
++Oid * ReorderBufferGetRelids(ReorderBuffer *, int nrelids);
++void ReorderBufferReturnRelids(ReorderBuffer *, Oid *relids);
++
+ void		ReorderBufferQueueChange(ReorderBuffer *, TransactionId, XLogRecPtr lsn, ReorderBufferChange *);
+ void ReorderBufferQueueMessage(ReorderBuffer *, TransactionId, Snapshot snapshot, XLogRecPtr lsn,
+ 						  bool transactional, const char *prefix,
+
+---

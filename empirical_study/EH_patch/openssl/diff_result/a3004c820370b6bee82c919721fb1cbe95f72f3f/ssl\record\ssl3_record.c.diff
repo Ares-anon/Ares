@@ -1,0 +1,16 @@
+ssl/record/ssl3_record.c
+=======================================================
+lhs: 100644 | 84f54cbabd1ea2fea863f4c3c69ea75d6bf10efc
+rhs: 100644 | 3868bb5d82ed5e89fc58639ddc57bff72ce9bcae
+---@@ -740,6 +740,9 @@ int tls1_enc(SSL *s, SSL3_RECORD *recs, size_t n_recs, int send)
+     int imac_size;
+     const EVP_CIPHER *enc;
+ 
++    if (n_recs == 0)
++        return 0;
++
+     if (send) {
+         if (EVP_MD_CTX_md(s->write_hash)) {
+             int n = EVP_MD_CTX_size(s->write_hash);
+
+---

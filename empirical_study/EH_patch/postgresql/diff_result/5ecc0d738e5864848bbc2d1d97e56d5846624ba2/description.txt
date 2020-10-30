@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Restrict lo_import()/lo_export() via SQL permissions not hard-wired checks.\n\nWhile it's generally unwise to give permissions on these functions to\nanyone but a superuser, we've been moving away from hard-wired permission\nchecks inside functions in favor of using the SQL permission system to\ncontrol access.  Bring lo_import() and lo_export() into compliance with\nthat approach.\n\nIn particular, this removes the manual configuration option\nALLOW_DANGEROUS_LO_FUNCTIONS.  That dates back to 1999 (commit 4cd4a54c8);\nit's unlikely anyone has used it in many years.  Moreover, if you really\nwant such behavior, now you can get it with GRANT ... TO PUBLIC instead.\n\nMichael Paquier\n\nDiscussion: https://postgr.es/m/CAB7nPqRHmNOYbETnc_2EjsuzSM00Z+BWKv9sy6tnvSd5gWT_JA@mail.gmail.com\n",
+    "summary": "Restrict lo_import()/lo_export() via SQL permissions not hard-wired checks.",
+    "date": "2017-11-09 12:36:58",
+    "parent_hash": "6c3a7ba5bb0f960ed412b1c36e815f53347b3d79",
+    "hash": "5ecc0d738e5864848bbc2d1d97e56d5846624ba2"
+}

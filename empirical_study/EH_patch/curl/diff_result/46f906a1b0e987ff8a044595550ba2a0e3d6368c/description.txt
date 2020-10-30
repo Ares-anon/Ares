@@ -1,0 +1,8 @@
+{
+    "parent_hash": "1299df6868e48ffbec747670017f74d18b1bcc9a",
+    "date": "2016-11-09 15:02:02",
+    "author": "Isaac Boukris",
+    "description": "SPNEGO: Fix memory leak when authentication fails\n\nIf SPNEGO fails, cleanup the negotiate handle right away.\n\nFixes #1115\n\nSigned-off-by: Isaac Boukris <iboukris@gmail.com>\nReported-by: ashman-p\n",
+    "summary": "SPNEGO: Fix memory leak when authentication fails",
+    "hash": "46f906a1b0e987ff8a044595550ba2a0e3d6368c"
+}

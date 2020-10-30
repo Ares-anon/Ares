@@ -1,0 +1,8 @@
+{
+    "parent_hash": "44b9b4d4f56d6f6de92c89636994c03984e9cd01",
+    "date": "2016-12-23 15:01:53",
+    "author": "Daniel Stenberg",
+    "description": "gnutls-random: check return code for failed random\n",
+    "summary": "gnutls-random: check return code for failed random",
+    "hash": "c7834ecd45194dbca9762ad8fc06072b77481a29"
+}

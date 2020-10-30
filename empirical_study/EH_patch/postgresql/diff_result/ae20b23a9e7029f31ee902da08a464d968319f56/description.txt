@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Refactor permissions checks for large objects.\n\nUp to now, ACL checks for large objects happened at the level of\nthe SQL-callable functions, which led to CVE-2017-7548 because of a\nmissing check.  Push them down to be enforced in inv_api.c as much\nas possible, in hopes of preventing future bugs.  This does have the\neffect of moving read and write permission errors to happen at lo_open\ntime not loread or lowrite time, but that seems acceptable.\n\nMichael Paquier and Tom Lane\n\nDiscussion: https://postgr.es/m/CAB7nPqRHmNOYbETnc_2EjsuzSM00Z+BWKv9sy6tnvSd5gWT_JA@mail.gmail.com\n",
+    "summary": "Refactor permissions checks for large objects.",
+    "date": "2017-11-09 12:56:07",
+    "parent_hash": "5ecc0d738e5864848bbc2d1d97e56d5846624ba2",
+    "hash": "ae20b23a9e7029f31ee902da08a464d968319f56"
+}

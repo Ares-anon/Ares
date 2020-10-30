@@ -1,0 +1,24 @@
+src/backend/catalog/heap.c
+=======================================================
+lhs: 100644 | ac5a677c5f76c9e362696909de11f3b29f448164
+rhs: 100644 | 910d3db063fd2444d7c7465ea4392214c09626ec
+---@@ -2460,7 +2460,8 @@ AddRelationNewConstraints(Relation rel,
+ 						  List *newConstraints,
+ 						  bool allow_merge,
+ 						  bool is_local,
+-						  bool is_internal)
++						  bool is_internal,
++						  const char *queryString)
+ {
+ 	List	   *cookedConstraints = NIL;
+ 	TupleDesc	tupleDesc;
+@@ -2489,6 +2490,7 @@ AddRelationNewConstraints(Relation rel,
+ 	 * rangetable entry.  We need a ParseState for transformExpr.
+ 	 */
+ 	pstate = make_parsestate(NULL);
++	pstate->p_sourcetext = queryString;
+ 	rte = addRangeTableEntryForRelation(pstate,
+ 										rel,
+ 										NULL,
+
+---

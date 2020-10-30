@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak X509_OBJECT in an error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak X509_OBJECT in an error path\n\nSwap the ordering of some code to avoid a leak in an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "0461b7ea7bd1112c4fa357545fc8a456138ed3af",
+    "date": "2016-06-01 14:51:36",
+    "parent_hash": "6493e4801e9edbe1ad1e256d4ce9cd55c8aa2242"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Check return value of OBJ_nid2obj in dsa_pub_encode.",
+    "author": "Pavel Kopyl",
+    "description": "Check return value of OBJ_nid2obj in dsa_pub_encode.\n\nCLA: trivial\n\nReviewed-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\n(Merged from https://github.com/openssl/openssl/pull/4600)\n",
+    "hash": "7760384b403a61824c43cc767a11cd22abfa9e49",
+    "date": "2017-11-03 15:46:51",
+    "parent_hash": "a6f622bc99ffdc7b34199babb9d200b24a7a6431"
+}

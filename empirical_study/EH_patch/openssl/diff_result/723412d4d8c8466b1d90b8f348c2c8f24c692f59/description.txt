@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory on set_reasons() error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory on set_reasons() error path\n\nThe set_reasons() function in v3_crld.c leaks a STACK_OF(CONF_VALUE)\nobject on an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "723412d4d8c8466b1d90b8f348c2c8f24c692f59",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "137e5555bd3d1dc4486619bc524502c55682a6f4"
+}

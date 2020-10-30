@@ -1,0 +1,16 @@
+keepalived/vrrp/vrrp_data.c
+=======================================================
+lhs: 100644 | 178ab5326cd277d0c19fab2e95259eed81a3580e
+rhs: 100644 | 0d734f13a8b06ab191c792ff8b9a36780b046ab4
+---@@ -321,6 +321,9 @@ free_vrrp(void *data)
+ 	free_list(&vrrp->track_ifp);
+ 	free_list(&vrrp->track_script);
+ 	free_list(&vrrp->track_file);
++#ifdef _WITH_BFD_
++	free_list(&vrrp->track_bfd);
++#endif
+ 	free_list(&vrrp->unicast_peer);
+ 	free_list(&vrrp->vip);
+ 	free_list(&vrrp->evip);
+
+---

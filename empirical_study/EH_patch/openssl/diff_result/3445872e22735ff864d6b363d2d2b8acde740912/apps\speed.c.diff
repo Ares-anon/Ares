@@ -1,0 +1,26 @@
+apps/speed.c
+=======================================================
+lhs: 100644 | 768e3a1ad3f88e436f0023af2e5cedb29ecd1114
+rhs: 100644 | 181873cca37a05973f112ef8251ab38b3241da2b
+---@@ -2557,7 +2557,8 @@ int speed_main(int argc, char **argv)
+     }
+ 
+     for (i = 0; i < loopargs_len; i++)
+-        RAND_bytes(loopargs[i].buf, 36);
++        if (RAND_bytes(loopargs[i].buf, 36) <= 0)
++            goto end;
+ 
+ #ifndef OPENSSL_NO_RSA
+     for (testnum = 0; testnum < RSA_NUM; testnum++) {
+@@ -2653,7 +2654,8 @@ int speed_main(int argc, char **argv)
+ #endif                          /* OPENSSL_NO_RSA */
+ 
+     for (i = 0; i < loopargs_len; i++)
+-        RAND_bytes(loopargs[i].buf, 36);
++        if (RAND_bytes(loopargs[i].buf, 36) <= 0)
++            goto end;
+ 
+ #ifndef OPENSSL_NO_DSA
+     for (testnum = 0; testnum < DSA_NUM; testnum++) {
+
+---

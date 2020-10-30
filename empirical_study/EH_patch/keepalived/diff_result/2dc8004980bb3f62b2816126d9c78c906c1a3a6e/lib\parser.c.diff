@@ -1,0 +1,16 @@
+lib/parser.c
+=======================================================
+lhs: 100644 | 18ed74c6d09ea8794a2d74f3ddc8720707451ee0
+rhs: 100644 | 00131c732bdf6f3dfc05a91e896eb6cda0c42304
+---@@ -436,6 +436,9 @@ set_value(vector_t *strvec)
+ 	char *alloc;
+ 
+ 	alloc = (char *) MALLOC(size + 1);
++	if (!alloc)
++		return NULL;
++
+ 	memcpy(alloc, str, size);
+ 
+ 	return alloc;
+
+---

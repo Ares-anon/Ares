@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix missing abort checks in pg_backup_directory.c.\n\nParallel restore from directory format failed to respond to control-C\nin a timely manner, because there were no checkAborting() calls in the\ncode path that reads data from a file and sends it to the backend.\nIf any worker was in the midst of restoring data for a large table,\nyou'd just have to wait.\n\nThis fix doesn't do anything for the problem of aborting a long-running\nserver-side command, but at least it fixes things for data transfers.\n\nBack-patch to 9.3 where parallel restore was introduced.\n",
+    "summary": "Fix missing abort checks in pg_backup_directory.c.",
+    "date": "2016-05-29 13:18:48",
+    "parent_hash": "210981a4a9fdd19cb299f248a7ecc25db9bf7d9d",
+    "hash": "3c8aa6654a44837a2c60fc6061665df1adfd677c"
+}

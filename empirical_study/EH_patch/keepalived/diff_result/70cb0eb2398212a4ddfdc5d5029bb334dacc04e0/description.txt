@@ -1,0 +1,8 @@
+{
+    "description": "Fix two memory leaks in DNS_CHECK\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "0faa6773ffd213447c7acb7d2713270445de50fc",
+    "summary": "Fix two memory leaks in DNS_CHECK",
+    "date": "2018-08-26 15:04:02",
+    "hash": "70cb0eb2398212a4ddfdc5d5029bb334dacc04e0"
+}

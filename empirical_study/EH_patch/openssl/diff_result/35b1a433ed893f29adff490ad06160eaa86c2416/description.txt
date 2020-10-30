@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leaks in tls_decrypt_ticket",
+    "author": "Matt Caswell",
+    "description": "Fix memory leaks in tls_decrypt_ticket\n\nCertain code paths in tls_decrypt_ticket could return early without first\nfreeing the HMAC_CTX or the EVP_CIPHER_CTX.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "35b1a433ed893f29adff490ad06160eaa86c2416",
+    "date": "2016-02-18 15:21:47",
+    "parent_hash": "c4c32155f50ba3d7208676c142002fbaaa7d4b4c"
+}

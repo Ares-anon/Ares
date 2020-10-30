@@ -1,0 +1,22 @@
+lib/transfer.c
+=======================================================
+lhs: 100644 | 6a80bf31a311fb5b0671e0bc75cf96deb0df789a
+rhs: 100644 | efd929279c520b84cf8e4d45b94c4c8c53aeddbe
+---@@ -1705,8 +1705,13 @@ CURLcode Curl_retry_request(struct connectdata *conn,
+ 
+     if(conn->handler->protocol&PROTO_FAMILY_HTTP) {
+       struct HTTP *http = data->req.protop;
+-      if(http->writebytecount)
+-        return Curl_readrewind(conn);
++      if(http->writebytecount) {
++        CURLcode result = Curl_readrewind(conn);
++        if(result) {
++          Curl_safefree(*url);
++          return result;
++        }
++      }
+     }
+   }
+   return CURLE_OK;
+
+---

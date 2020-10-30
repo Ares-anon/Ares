@@ -1,0 +1,17 @@
+open-vm-tools/services/plugins/vix/vixTools.c
+=======================================================
+lhs: 100644 | 2c3e023de4099c8d0896f58f21cb32babdd61278
+rhs: 100644 | ada04183b28c71f56f344fbaa8f7099aa8f9589d
+---@@ -6480,6 +6480,10 @@ abort:
+    }
+    VixToolsLogoutUser(userToken);
+ 
++   if (NULL != regex) {
++      g_regex_unref(regex);
++   }
++
+    if (NULL == fileList) {
+       fileList = Util_SafeStrdup("");
+    }
+
+---

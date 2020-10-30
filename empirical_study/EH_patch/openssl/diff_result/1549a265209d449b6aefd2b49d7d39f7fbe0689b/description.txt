@@ -1,0 +1,8 @@
+{
+    "summary": "Avoid a double-free in an error path.",
+    "author": "Doug Hogan",
+    "description": "Avoid a double-free in an error path.\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "1549a265209d449b6aefd2b49d7d39f7fbe0689b",
+    "date": "2015-02-22 13:17:40",
+    "parent_hash": "ba4bdee7184a5cea5bef8739eb360e5c2bc3b52c"
+}

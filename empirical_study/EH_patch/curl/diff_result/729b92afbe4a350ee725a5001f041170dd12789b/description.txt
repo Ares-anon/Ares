@@ -1,0 +1,8 @@
+{
+    "parent_hash": "23b8fc15c8653133b2ea664b8f894c74d8862a3c",
+    "date": "2015-11-08 16:50:25",
+    "author": "Dan Fandrich",
+    "description": "tool: Fixed a memory leak on OOM introduced in 19cb0c4a\n",
+    "summary": "tool: Fixed a memory leak on OOM introduced in 19cb0c4a",
+    "hash": "729b92afbe4a350ee725a5001f041170dd12789b"
+}

@@ -1,0 +1,14 @@
+src/include/catalog/catversion.h
+=======================================================
+lhs: 100644 | 9a7f5b25a3a17d3647178b9ce277985a93fda611
+rhs: 100644 | 39c70b415aed51d148a7f7c2e63a664306957d64
+---@@ -53,6 +53,6 @@
+  */
+ 
+ /*							yyyymmddN */
+-#define CATALOG_VERSION_NO	201710161
++#define CATALOG_VERSION_NO	201711091
+ 
+ #endif
+
+---

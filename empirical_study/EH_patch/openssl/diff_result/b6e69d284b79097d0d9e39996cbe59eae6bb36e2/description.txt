@@ -1,0 +1,8 @@
+{
+    "summary": "coverity 966576 - close socket in error path",
+    "author": "Tim Hudson",
+    "description": "coverity 966576 - close socket in error path\n",
+    "hash": "b6e69d284b79097d0d9e39996cbe59eae6bb36e2",
+    "date": "2014-05-08 23:14:52",
+    "parent_hash": "8e94fadd0b79491714401d89b338db27211b9819"
+}

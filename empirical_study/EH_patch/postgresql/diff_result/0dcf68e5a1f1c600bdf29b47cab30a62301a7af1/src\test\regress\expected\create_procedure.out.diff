@@ -1,0 +1,14 @@
+src/test/regress/expected/create_procedure.out
+=======================================================
+lhs: 100644 | 67d671727c7708eb9551c50e1231f3b0eb2d26fa
+rhs: 100644 | 30495971bc8be540a45f1f781e893930efd75cd9
+---@@ -126,6 +126,7 @@ CALL sum(1);  -- error: not a procedure
+ ERROR:  sum(integer) is not a procedure
+ LINE 1: CALL sum(1);
+              ^
++HINT:  To call a function, use SELECT.
+ CREATE PROCEDURE ptestx() LANGUAGE SQL WINDOW AS $$ INSERT INTO cp_test VALUES (1, 'a') $$;
+ ERROR:  invalid attribute in procedure definition
+ LINE 1: CREATE PROCEDURE ptestx() LANGUAGE SQL WINDOW AS $$ INSERT I...
+
+---

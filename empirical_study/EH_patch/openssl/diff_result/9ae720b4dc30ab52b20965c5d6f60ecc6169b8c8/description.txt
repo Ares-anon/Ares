@@ -1,0 +1,8 @@
+{
+    "summary": "Check error return from sysconf in secure memory code",
+    "author": "Matt Caswell",
+    "description": "Check error return from sysconf in secure memory code\n\nWe use the sysconf function to provide details about the page size in the\nsecure memory code. This function can return -1 on error so we should check\nfor this before proceeding.\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\n",
+    "hash": "9ae720b4dc30ab52b20965c5d6f60ecc6169b8c8",
+    "date": "2015-11-17 11:23:51",
+    "parent_hash": "ae4d0c8d227d0cf4f9f3f7a5d07189c0a18b25fc"
+}

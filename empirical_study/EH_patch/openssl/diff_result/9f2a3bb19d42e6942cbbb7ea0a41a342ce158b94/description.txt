@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in an error path",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in an error path\n\nFound by Coverity.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5970)\n",
+    "hash": "9f2a3bb19d42e6942cbbb7ea0a41a342ce158b94",
+    "date": "2018-04-17 17:26:16",
+    "parent_hash": "a68236572850a1f50d5c40990b5a15a18ebea3bc"
+}

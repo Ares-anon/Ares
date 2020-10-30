@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak.",
+    "author": "Franti\u0161ek Bo\u0159\u00e1nek",
+    "description": "Fix memory leak.\n\nPR#3278\n",
+    "hash": "4da0ddc47ea0bed39327d59223f2b79364b313ef",
+    "date": "2014-05-29 14:33:32",
+    "parent_hash": "1c4575ebc31f5c92bb98162a1286fec186c2340f"
+}

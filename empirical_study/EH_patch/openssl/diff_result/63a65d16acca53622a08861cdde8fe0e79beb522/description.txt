@@ -1,0 +1,8 @@
+{
+    "summary": "DRBG: fix memory leak on error in rand_drbg_get_entropy()",
+    "author": "Dr. Matthias St. Pierre",
+    "description": "DRBG: fix memory leak on error in rand_drbg_get_entropy()\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5918)\n",
+    "hash": "63a65d16acca53622a08861cdde8fe0e79beb522",
+    "date": "2018-04-10 10:33:17",
+    "parent_hash": "55bd917bc4213bc668f48b87d8c6feb9918fef8f"
+}

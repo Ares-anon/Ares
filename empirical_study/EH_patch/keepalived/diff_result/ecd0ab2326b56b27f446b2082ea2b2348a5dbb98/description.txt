@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak if quorum up/down scripts specified multiple times\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "9a5e802b07897293b59a2748e1ac0fe1e400deb4",
+    "summary": "Fix memory leak if quorum up/down scripts specified multiple times",
+    "date": "2017-04-03 15:19:55",
+    "hash": "ecd0ab2326b56b27f446b2082ea2b2348a5dbb98"
+}

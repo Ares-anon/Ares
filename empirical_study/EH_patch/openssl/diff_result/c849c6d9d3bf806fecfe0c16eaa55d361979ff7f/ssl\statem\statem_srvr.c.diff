@@ -1,0 +1,16 @@
+ssl/statem/statem_srvr.c
+=======================================================
+lhs: 100644 | 0e6f0d03dda2ee9fe9de00959ab69cefc1b1876b
+rhs: 100644 | 79254b52485be65d72ceea119f95b09b31aaf596
+---@@ -2620,8 +2620,8 @@ MSG_PROCESS_RETURN tls_process_client_key_exchange(SSL *s, PACKET *pkt)
+ #endif
+ #ifndef OPENSSL_NO_EC
+     EVP_PKEY_free(ckey);
+-    OPENSSL_free(rsa_decrypt);
+ #endif
++    OPENSSL_free(rsa_decrypt);
+ #ifndef OPENSSL_NO_PSK
+     OPENSSL_clear_free(s->s3->tmp.psk, s->s3->tmp.psklen);
+     s->s3->tmp.psk = NULL;
+
+---

@@ -1,0 +1,8 @@
+{
+    "date": "2017-09-15 11:23:25",
+    "parent_hash": "58279b25999003b34eed8553732ea6239c1b819a",
+    "description": "Check the RPC return value in timesync enable/disable commands.\n\ntoolbox-cmd timesync enable/disable commands always return success\neven when the command failed. Added a check for the return value of\nthe RPC call and also print the error message using a generic\nmessage which required renaming existing \"disk.wiper.error\" key.\n",
+    "author": "Oliver Kurth",
+    "hash": "d17b458c340f76112707ede1e277b575e6e4301b",
+    "summary": "Check the RPC return value in timesync enable/disable commands."
+}

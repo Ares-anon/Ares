@@ -1,0 +1,8 @@
+{
+    "parent_hash": "00417fd66c2b4bcffb9f7be2cf17e2be9bafafe0",
+    "date": "2016-08-20 19:49:51",
+    "author": "Marc Hoersken",
+    "description": "configure.ac: add missing quotes to PKG_CHECK_MODULES\n",
+    "summary": "configure.ac: add missing quotes to PKG_CHECK_MODULES",
+    "hash": "8f7f5a8b0677f0260ed87b29fdf07dbe25151313"
+}

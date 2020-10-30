@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak on an error path",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak on an error path\n\nA leak of an SSL_SESSION object can occur when decoding a psk extension on\nan error path when using TLSv1.3\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2843)",
+    "hash": "312e9387fddacbcef4148bd3ace25c7db89e374e",
+    "date": "2017-03-04 16:20:13",
+    "parent_hash": "d08086645f72ab890c6ef996bb513076752431f0"
+}

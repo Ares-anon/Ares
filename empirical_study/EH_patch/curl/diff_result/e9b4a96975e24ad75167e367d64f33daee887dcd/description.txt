@@ -1,0 +1,8 @@
+{
+    "parent_hash": "37f0e8a32cf9ad0a87f8c60cfa12b65e61be15a9",
+    "date": "2014-08-09 12:34:22",
+    "author": "Steve Holme",
+    "description": "sasl_sspi: Fixed memory leak with not releasing Package Info struct\n\nCurl_sasl_create_digest_md5_message() wouldn't free the Package Info\nstructure after QuerySecurityPackageInfo() had allocated it.\n",
+    "summary": "sasl_sspi: Fixed memory leak with not releasing Package Info struct",
+    "hash": "e9b4a96975e24ad75167e367d64f33daee887dcd"
+}

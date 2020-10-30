@@ -1,0 +1,8 @@
+{
+    "summary": "GH364: Free memory on an error path",
+    "author": "Ismo Puustinen",
+    "description": "GH364: Free memory on an error path\n\nPart of RT 3997\nPer Ben, just jump to common exit code.\n\nSigned-off-by: Rich Salz <rsalz@akamai.com>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "cc2829e6641092abed8360433dbe67e883fd1cc6",
+    "date": "2015-08-13 12:13:49",
+    "parent_hash": "df758a8569efe9e124baaa16aba4ac3fc35bbd9d"
+}

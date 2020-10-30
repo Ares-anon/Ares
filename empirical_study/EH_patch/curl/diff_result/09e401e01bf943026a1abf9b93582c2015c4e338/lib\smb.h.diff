@@ -1,0 +1,14 @@
+lib/smb.h
+=======================================================
+lhs: 100644 | c3ee7ae039595baa98474d5ce74e2271c68c9aa1
+rhs: 100644 | 9ce6b56157d6d783f32c7552e0c7d93a23e01def
+---@@ -35,6 +35,7 @@ struct smb_conn {
+   enum smb_conn_state state;
+   char *user;
+   char *domain;
++  char *share;
+   unsigned char challenge[8];
+   unsigned int session_key;
+   unsigned short uid;
+
+---

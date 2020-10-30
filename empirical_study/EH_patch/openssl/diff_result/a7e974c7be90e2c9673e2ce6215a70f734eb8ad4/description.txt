@@ -1,0 +1,8 @@
+{
+    "summary": "check bn_new return value",
+    "author": "mrpre",
+    "description": "check bn_new return value\n\nSlightly modified from the original PR.\nSigned-off-by: Rich Salz <rsalz@akamai.com>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "a7e974c7be90e2c9673e2ce6215a70f734eb8ad4",
+    "date": "2015-08-31 16:03:31",
+    "parent_hash": "124055a96e8533735b32e6af0fa7913c100ffad2"
+}

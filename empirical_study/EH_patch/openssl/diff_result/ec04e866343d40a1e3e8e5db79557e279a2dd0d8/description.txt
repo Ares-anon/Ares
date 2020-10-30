@@ -1,0 +1,8 @@
+{
+    "summary": "Update leak test to check return values.",
+    "author": "Dr. Stephen Henson",
+    "description": "Update leak test to check return values.\n\nReviewed-by: Viktor Dukhovni <viktor@openssl.org>\n",
+    "hash": "ec04e866343d40a1e3e8e5db79557e279a2dd0d8",
+    "date": "2016-01-11 02:41:16",
+    "parent_hash": "4e482ae6ff62dd992354cad61dd3d81d55b6e204"
+}

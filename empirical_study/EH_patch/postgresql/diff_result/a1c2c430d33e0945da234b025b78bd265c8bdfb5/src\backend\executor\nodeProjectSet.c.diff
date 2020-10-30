@@ -1,0 +1,32 @@
+src/backend/executor/nodeProjectSet.c
+=======================================================
+lhs: 100644 | d93462c5421cbfc79ba001486738498e11078372
+rhs: 100644 | 68981296f90a07f9ea2e02b23306a898ba107e6c
+---@@ -124,12 +124,16 @@ ExecProjectSRF(ProjectSetState *node, bool continuing)
+ {
+ 	TupleTableSlot *resultSlot = node->ps.ps_ResultTupleSlot;
+ 	ExprContext *econtext = node->ps.ps_ExprContext;
++	MemoryContext oldcontext;
+ 	bool		hassrf PG_USED_FOR_ASSERTS_ONLY;
+ 	bool		hasresult;
+ 	int			argno;
+ 
+ 	ExecClearTuple(resultSlot);
+ 
++	/* Call SRFs, as well as plain expressions, in per-tuple context */
++	oldcontext = MemoryContextSwitchTo(econtext->ecxt_per_tuple_memory);
++
+ 	/*
+ 	 * Assume no further tuples are produced unless an ExprMultipleResult is
+ 	 * encountered from a set returning function.
+@@ -176,6 +180,8 @@ ExecProjectSRF(ProjectSetState *node, bool continuing)
+ 		}
+ 	}
+ 
++	MemoryContextSwitchTo(oldcontext);
++
+ 	/* ProjectSet should not be used if there's no SRFs */
+ 	Assert(hassrf);
+ 
+
+---

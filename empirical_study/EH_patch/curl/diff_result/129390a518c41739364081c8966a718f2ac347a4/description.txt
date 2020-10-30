@@ -1,0 +1,8 @@
+{
+    "parent_hash": "272613df020c29a445738856dda29a9803b9bedb",
+    "date": "2018-01-03 15:22:41",
+    "author": "Jay Satiro",
+    "description": "openssl: fix memory leak of SSLKEYLOGFILE filename\n\n- Free the copy of SSLKEYLOGFILE env returned by curl_getenv during ossl\n  initialization.\n\nCaught by ASAN.\n",
+    "summary": "openssl: fix memory leak of SSLKEYLOGFILE filename",
+    "hash": "129390a518c41739364081c8966a718f2ac347a4"
+}

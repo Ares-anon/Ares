@@ -1,0 +1,17 @@
+crypto/rand/rand_lib.c
+=======================================================
+lhs: 100644 | f40c513ce87683a13341cd2c5d3311982a9664fc
+rhs: 100644 | e6fcbce7fd8a60742334c13d952452e54fb54e15
+---@@ -200,6 +200,10 @@ size_t rand_drbg_get_entropy(RAND_DRBG *drbg,
+     }
+ 
+  err:
++    /* we need to reset drbg->pool in the error case */
++    if (ret == 0 && drbg->pool != NULL)
++        drbg->pool = NULL;
++
+     rand_pool_free(pool);
+     return ret;
+ }
+
+---

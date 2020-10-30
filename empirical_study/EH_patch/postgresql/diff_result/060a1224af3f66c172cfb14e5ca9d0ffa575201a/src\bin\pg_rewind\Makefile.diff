@@ -1,0 +1,13 @@
+src/bin/pg_rewind/Makefile
+=======================================================
+lhs: 100644 | e3400f5e81203c155cf3a7101ff8a7607373c5ba
+rhs: 100644 | 98213c4ad1f20d956487cbc8ab24078864dbcee8
+---@@ -49,3 +49,6 @@ clean distclean maintainer-clean:
+ 
+ check:
+ 	$(prove_check)
++
++installcheck:
++	$(prove_installcheck)
+
+---

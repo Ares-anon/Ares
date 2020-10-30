@@ -1,0 +1,8 @@
+{
+    "summary": "mime_hdr_new: free mhdr, tmpname, tmpval on error path",
+    "author": "Jonas Maebe",
+    "description": "mime_hdr_new: free mhdr, tmpname, tmpval on error path\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "15297d962ca3ed40af689cd4c53fbf76cda2f12f",
+    "date": "2014-08-15 22:36:54",
+    "parent_hash": "c9c63b0180f658561f16afeb64e88d125d0ab4ca"
+}

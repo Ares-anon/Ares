@@ -1,0 +1,32 @@
+lib/http_negotiate.c
+=======================================================
+lhs: 100644 | c8bfa29bf12a54bd930f8e4e587e4c70b639dc88
+rhs: 100644 | 0d0cc550f4359e48bf23914cb3012eb3719248a0
+---@@ -23,13 +23,14 @@
+ #include "curl_setup.h"
+ 
+ #ifdef HAVE_GSSAPI
++
++#if !defined(CURL_DISABLE_HTTP) && defined(USE_SPNEGO)
++
+ #ifdef HAVE_OLD_GSSMIT
+ #define GSS_C_NT_HOSTBASED_SERVICE gss_nt_service_name
+ #define NCOMPAT 1
+ #endif
+ 
+-#ifndef CURL_DISABLE_HTTP
+-
+ #include "urldata.h"
+ #include "sendf.h"
+ #include "curl_gssapi.h"
+@@ -238,6 +239,6 @@ void Curl_cleanup_negotiate(struct SessionHandle *data)
+   cleanup(&data->state.proxyneg);
+ }
+ 
++#endif /* !CURL_DISABLE_HTTP && USE_SPNEGO */
+ 
+-#endif
+-#endif
++#endif /* HAVE_GSSAPI */
+
+---

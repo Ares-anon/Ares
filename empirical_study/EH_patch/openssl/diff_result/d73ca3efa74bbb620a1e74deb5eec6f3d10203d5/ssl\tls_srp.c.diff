@@ -1,0 +1,16 @@
+ssl/tls_srp.c
+=======================================================
+lhs: 100644 | 91b88cd11f6ee3d413de743df8d423dd54a5e82c
+rhs: 100644 | 64a3f23df74b029940e026106111b4ffb8299bfc
+---@@ -393,7 +393,8 @@ int srp_generate_client_master_secret(SSL *s)
+  err:
+     BN_clear_free(K);
+     BN_clear_free(x);
+-    OPENSSL_clear_free(passwd, strlen(passwd));
++    if (passwd != NULL)
++        OPENSSL_clear_free(passwd, strlen(passwd));
+     BN_clear_free(u);
+     return ret;
+ }
+
+---

@@ -1,0 +1,16 @@
+lib/url.c
+=======================================================
+lhs: 100644 | 665133fa01e45c183b4101b253955b868f68985c
+rhs: 100644 | a870cc5d35e0b954484dde312e9fbe263087f1ab
+---@@ -5176,7 +5176,8 @@ static CURLcode create_conn(struct SessionHandle *data,
+   if(data->set.str[STRING_BEARER]) {
+     conn->xoauth2_bearer = strdup(data->set.str[STRING_BEARER]);
+     if(!conn->xoauth2_bearer) {
+-      return CURLE_OUT_OF_MEMORY;
++      result = CURLE_OUT_OF_MEMORY;
++      goto out;
+     }
+   }
+ 
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix intra-query memory leakage in nodeProjectSet.c.\n\nBoth ExecMakeFunctionResultSet() and evaluation of simple expressions\nneed to be done in the per-tuple memory context, not per-query, else\nwe leak data until end of query.  This is a consideration that was\nmissed while refactoring code in the ProjectSet patch (note that in\npre-v10, ExecMakeFunctionResult is called in the per-tuple context).\n\nPer bug #14843 from Ben M.  Diagnosed independently by Andres and myself.\n\nDiscussion: https://postgr.es/m/20171005230321.28561.15927@wrigleys.postgresql.org\n",
+    "summary": "Fix intra-query memory leakage in nodeProjectSet.c.",
+    "date": "2017-10-06 14:28:42",
+    "parent_hash": "6b87416c9a4dd305b76e619ecac36e2b968462f8",
+    "hash": "a1c2c430d33e0945da234b025b78bd265c8bdfb5"
+}

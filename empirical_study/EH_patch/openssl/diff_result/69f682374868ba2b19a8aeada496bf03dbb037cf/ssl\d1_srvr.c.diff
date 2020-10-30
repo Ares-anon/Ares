@@ -1,0 +1,19 @@
+ssl/d1_srvr.c
+=======================================================
+lhs: 100644 | bcf63e016bc2f04d0bd7700e694fb245b8bebc80
+rhs: 100644 | 24361ae5df45184a910fe7af82c57e779043f406
+---@@ -184,8 +184,10 @@ int dtls1_accept(SSL *s)
+ 
+     /* init things to blank */
+     s->in_handshake++;
+-    if (!SSL_in_init(s) || SSL_in_before(s))
+-        SSL_clear(s);
++    if (!SSL_in_init(s) || SSL_in_before(s)) {
++        if(!SSL_clear(s))
++            return -1;
++    }
+ 
+     s->d1->listen = listen;
+ #ifndef OPENSSL_NO_SCTP
+
+---

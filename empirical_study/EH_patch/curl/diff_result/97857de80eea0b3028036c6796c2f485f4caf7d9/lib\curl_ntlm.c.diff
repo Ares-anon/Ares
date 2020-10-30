@@ -1,0 +1,18 @@
+lib/curl_ntlm.c
+=======================================================
+lhs: 100644 | 0995eab270297ec648bd98ca6b50163987683739
+rhs: 100644 | 8c02aba5dab56c76f71a61459727df061d149c06
+---@@ -239,8 +239,10 @@ void Curl_http_ntlm_cleanup(struct connectdata *conn)
+ #ifndef USE_WINDOWS_SSPI
+   Curl_safefree(conn->ntlm.target_info);
+   conn->ntlm.target_info_len = 0;
+-#endif
+ 
++  Curl_safefree(conn->proxyntlm.target_info);
++  conn->proxyntlm.target_info_len = 0;
++#endif
+ }
+ 
+ #endif /* USE_NTLM */
+
+---

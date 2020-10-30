@@ -1,0 +1,8 @@
+{
+    "parent_hash": "027d66e5f1b6946257ecf3bca2d4983579e461cf",
+    "date": "2018-12-06 09:52:38",
+    "author": "Daniel Stenberg",
+    "description": "doh: fix memory leak in OOM situation\n\nReviewed-by: Daniel Gustafsson\nCloses #3342\n",
+    "summary": "doh: fix memory leak in OOM situation",
+    "hash": "d506df860fb239bfa2f0d5f3e407eff1fef87f94"
+}

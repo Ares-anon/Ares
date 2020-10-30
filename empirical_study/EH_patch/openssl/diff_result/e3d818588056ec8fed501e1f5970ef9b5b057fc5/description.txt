@@ -1,0 +1,8 @@
+{
+    "summary": "make depend: Check that find returned a non-empty string rather than an empty",
+    "author": "Richard Levitte",
+    "description": "make depend: Check that find returned a non-empty string rather than an empty\n\nThe logic to find out of there are any .d files newer than Makefile is\nsound.  Checking the result was less so.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "e3d818588056ec8fed501e1f5970ef9b5b057fc5",
+    "date": "2016-04-02 20:10:03",
+    "parent_hash": "fa0a9d715e7e35d4f597683c16b643343245fa26"
+}

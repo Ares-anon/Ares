@@ -1,0 +1,8 @@
+{
+    "summary": "Check return value of time() when getting additional data for the DRBG",
+    "author": "Kurt Roeckx",
+    "description": "Check return value of time() when getting additional data for the DRBG\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Dr. Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>\nReviewed-by: Paul Dale <paul.dale@oracle.com>\nGH: #5400\n",
+    "hash": "60595292ae83b112a1854a59379a51f210c04b6c",
+    "date": "2018-02-21 20:44:11",
+    "parent_hash": "32bda2b2e4900308cb025020d8c8692e1d3c2ba9"
+}

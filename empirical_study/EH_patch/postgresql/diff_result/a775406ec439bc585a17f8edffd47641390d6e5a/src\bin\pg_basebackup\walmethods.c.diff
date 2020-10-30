@@ -1,0 +1,21 @@
+src/bin/pg_basebackup/walmethods.c
+=======================================================
+lhs: 100644 | 1ecc23c2560b83bcd3414444997c105e288e14b2
+rhs: 100644 | 40c8a5c697c38c53a99dae3c4fbf077f0f674e83
+---@@ -442,9 +442,14 @@ tar_write_padding_data(TarMethodFile * f, size_t bytes)
+ 		ssize_t		r = tar_write(f, zerobuf, bytestowrite);
+ 
+ 		if (r < 0)
++		{
++			pg_free(zerobuf);
+ 			return false;
++		}
+ 		bytesleft -= r;
+ 	}
++
++	pg_free(zerobuf);
+ 	return true;
+ }
+ 
+
+---

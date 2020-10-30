@@ -1,0 +1,8 @@
+{
+    "summary": "Enforce return values section check",
+    "author": "Paul Yang",
+    "description": "Enforce return values section check\n\nTo avoid check failure, make dummy RETURN VALUES sections in the docs\nwhich have no real functions decribed inside...\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4976)\n",
+    "hash": "a085f43fc47cbc38567a0141af1c0718b1885de1",
+    "date": "2018-01-16 17:34:08",
+    "parent_hash": "1f13ad311367c07fe71c9f911195cd25948184d7"
+}

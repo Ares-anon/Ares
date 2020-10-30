@@ -1,0 +1,8 @@
+{
+    "author": "Michael Paquier",
+    "description": "Add missing NO_INSTALLCHECK in commit_ts and test_rls_hooks\n\nThis bypasses installcheck if specified, which makes sense for those\nmodules as they require non-default configuration, something which\ntypical users don't have.  Those have been missing from the start, still\nno back-patch is done.\n\nThis will be used by an upcoming patch for MSVC scripts adding support\nfor NO_INSTALLCHECK as installcheck is the default mode for contrib and\nmodules for performance reasons in the buildfarm.\n\nAuthor: Michael Paquier\nReviewed-by: Andrew Dunstan\nDiscussion: https://postgr.es/m/20181126054302.GI1776@paquier.xyz\n",
+    "summary": "Add missing NO_INSTALLCHECK in commit_ts and test_rls_hooks",
+    "date": "2018-11-29 09:39:07",
+    "parent_hash": "4c703369af3e34cd7289d99c1b6f10e3b3bbbb4d",
+    "hash": "d79fb5d2370cc9166029b7afd17a26355598730a"
+}

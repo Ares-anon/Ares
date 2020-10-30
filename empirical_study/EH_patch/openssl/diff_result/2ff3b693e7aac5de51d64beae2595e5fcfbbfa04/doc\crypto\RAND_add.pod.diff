@@ -1,0 +1,15 @@
+doc/crypto/RAND_add.pod
+=======================================================
+lhs: 100644 | d1910071b6ae6027c77d98b0a79f5e333815041a
+rhs: 100644 | f70b32906ace75f13f45cbb80314195a65bc4513
+---@@ -47,7 +47,7 @@ RAND_seed() is equivalent to RAND_add() when B<num == entropy>.
+ RAND_status() returns 1 if the PRNG has been seeded
+ with enough data, 0 otherwise.
+ 
+-RAND_event() calls RAND_poll() and returns RAND_seed().
++RAND_event() calls RAND_poll() and returns RAND_status().
+ 
+ RAND_screen calls RAND_poll().
+ 
+
+---

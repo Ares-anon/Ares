@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks to the return value of EVP_Cipher to prevent silent encryption failure.",
+    "author": "Matt Caswell",
+    "description": "Add checks to the return value of EVP_Cipher to prevent silent encryption failure.\n\nPR#1767\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "fe78f08d1541211566a5656395186bfbdc61b6f8",
+    "date": "2014-11-27 21:39:47",
+    "parent_hash": "fc3968a25ce0c16cab8730ec0d68a59856158029"
+}

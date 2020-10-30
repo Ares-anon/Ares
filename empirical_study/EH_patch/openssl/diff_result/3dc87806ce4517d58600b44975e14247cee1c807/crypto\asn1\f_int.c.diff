@@ -1,0 +1,14 @@
+crypto/asn1/f_int.c
+=======================================================
+lhs: 100644 | 0f16ac0bbbddc842bed08d196237a32b6da6da90
+rhs: 100644 | f1ed6bbe652794f0df77f39dfeb7ae2ebbb16709
+---@@ -112,6 +112,7 @@ int a2i_ASN1_INTEGER(BIO *bp, ASN1_INTEGER *bs, char *buf, int size)
+         i -= again;
+         if (i % 2 != 0) {
+             ASN1err(ASN1_F_A2I_ASN1_INTEGER, ASN1_R_ODD_NUMBER_OF_CHARS);
++            OPENSSL_free(s);
+             return 0;
+         }
+         i /= 2;
+
+---

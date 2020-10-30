@@ -1,0 +1,15 @@
+ssl/d1_pkt.c
+=======================================================
+lhs: 100644 | ed246a007807c9c59e96664e28f9154254150377
+rhs: 100644 | 2952bccc5eb58ab8dfd3796581851cb73ae62c95
+---@@ -1632,7 +1632,7 @@ int do_dtls1_write(SSL *s, int type, const unsigned char *buf, unsigned int len,
+ 	if (eivlen)
+ 		wr->length += eivlen;
+ 
+-	s->method->ssl3_enc->enc(s,1);
++	if(s->method->ssl3_enc->enc(s,1) < 1) goto err;
+ 
+ 	/* record length after mac and block padding */
+ /*	if (type == SSL3_RT_APPLICATION_DATA ||
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Magnus Hagander",
+    "description": "Move permissions check from do_pg_start_backup to pg_start_backup\n\nAnd the same for do_pg_stop_backup. The code in do_pg_* is not allowed\nto access the catalogs. For manual base backups, the permissions\ncheck can be handled in the calling function, and for streaming\nbase backups only users with the required permissions can get past\nthe authentication step in the first place.\n\nReported by Antonin Houska, diagnosed by Andres Freund\n",
+    "summary": "Move permissions check from do_pg_start_backup to pg_start_backup",
+    "date": "2014-01-07 17:50:56",
+    "parent_hash": "b168c5ef2730d0ecaa7462f0b90345b0a3798c16",
+    "hash": "9544cc0d657ea09d27667c8c70302b06fbe0121b"
+}

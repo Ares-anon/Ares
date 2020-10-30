@@ -1,0 +1,8 @@
+{
+    "summary": "Fix comment about return value of ct_extract_tls_extension_scts",
+    "author": "Rob Percival",
+    "description": "Fix comment about return value of ct_extract_tls_extension_scts\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "6b13bd1dc236126644ee91b0b52ee00d1e6347ea",
+    "date": "2016-08-24 13:58:19",
+    "parent_hash": "56f3f714ef3f347898706826daae56eb4b2682ed"
+}

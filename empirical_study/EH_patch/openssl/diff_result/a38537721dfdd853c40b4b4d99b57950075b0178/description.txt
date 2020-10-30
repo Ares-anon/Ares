@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak",
+    "author": "Rich Salz",
+    "description": "Fix memory leak\n\nIt should have freed them when != NULL, not when == NULL.\n\nReviewed-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Viktor Dukhovni <openssl-users@dukhovni.org>\n",
+    "hash": "a38537721dfdd853c40b4b4d99b57950075b0178",
+    "date": "2015-04-11 20:31:29",
+    "parent_hash": "8ec5c5dd361343d9017eff8547b19e86e4944ebc"
+}

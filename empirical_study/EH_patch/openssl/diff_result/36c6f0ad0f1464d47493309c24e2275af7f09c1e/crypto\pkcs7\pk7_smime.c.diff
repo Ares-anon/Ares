@@ -1,0 +1,14 @@
+crypto/pkcs7/pk7_smime.c
+=======================================================
+lhs: 100644 | b146f6813733ec465b1f60a6ad522d4a46c30f56
+rhs: 100644 | 7c2d5c9895cd4e0628c8bf48bc1bb0901e178c28
+---@@ -328,6 +328,7 @@ int PKCS7_verify(PKCS7 *p7, STACK_OF(X509) *certs, X509_STORE *store,
+             i = X509_verify_cert(cert_ctx);
+             if (i <= 0)
+                 j = X509_STORE_CTX_get_error(cert_ctx);
++            X509_STORE_CTX_cleanup(cert_ctx);
+             if (i <= 0) {
+                 PKCS7err(PKCS7_F_PKCS7_VERIFY,
+                          PKCS7_R_CERTIFICATE_VERIFY_ERROR);
+
+---

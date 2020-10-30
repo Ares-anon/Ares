@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing NULL checks in key_share processing",
+    "author": "Matt Caswell",
+    "description": "Fix missing NULL checks in key_share processing\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "884a790e17a22eed42f1fe41ccaebd8c1fe18902",
+    "date": "2016-11-23 22:39:27",
+    "parent_hash": "b599ce3b64b695cc7430f731a33e0f5bb83ae62c"
+}

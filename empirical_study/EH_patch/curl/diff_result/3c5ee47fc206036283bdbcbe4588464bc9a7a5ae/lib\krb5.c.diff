@@ -1,0 +1,14 @@
+lib/krb5.c
+=======================================================
+lhs: 100644 | 8b5a24720d5beb70c8d593cd1d64cfa690302de5
+rhs: 100644 | 46c56085bb0e462f44b1cf86a489e9aad6d6a2c8
+---@@ -265,6 +265,7 @@ krb5_auth(void *app_data, struct connectdata *conn)
+           result = CURLE_OUT_OF_MEMORY;
+ 
+         free(p);
++        free(cmd);
+ 
+         if(result) {
+           ret = -2;
+
+---

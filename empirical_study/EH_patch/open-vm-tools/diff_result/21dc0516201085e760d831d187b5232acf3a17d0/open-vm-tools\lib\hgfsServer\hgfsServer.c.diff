@@ -1,0 +1,18 @@
+open-vm-tools/lib/hgfsServer/hgfsServer.c
+=======================================================
+lhs: 100644 | 31733218d23e21cea8e91206295c2d52e273c973
+rhs: 100644 | 1087000dc7c32aae5fa3c4c5527af62902036393
+---@@ -3986,6 +3986,11 @@ HgfsServer_ExitState(void)
+       HgfsServerOplockDestroy();
+    }
+    if (gHgfsDirNotifyActive) {
++      DblLnkLst_Links emptySharesList;
++      DblLnkLst_Init(&emptySharesList);
++
++      /* Make all existing shared folders stale and delete them. */
++      HgfsServerSharesReset(&emptySharesList);
+       HgfsNotify_Exit();
+       gHgfsDirNotifyActive = FALSE;
+       Log("%s: exit notification - inactive.\n", __FUNCTION__);
+
+---

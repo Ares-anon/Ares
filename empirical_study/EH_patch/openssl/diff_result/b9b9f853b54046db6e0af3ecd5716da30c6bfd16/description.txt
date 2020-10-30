@@ -1,0 +1,8 @@
+{
+    "summary": "SetBlob: free rgSetBlob on error path",
+    "author": "Jonas Maebe",
+    "description": "SetBlob: free rgSetBlob on error path\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "b9b9f853b54046db6e0af3ecd5716da30c6bfd16",
+    "date": "2014-08-15 22:35:11",
+    "parent_hash": "865886553dfb842464600e76b6e8f127b377a1ca"
+}

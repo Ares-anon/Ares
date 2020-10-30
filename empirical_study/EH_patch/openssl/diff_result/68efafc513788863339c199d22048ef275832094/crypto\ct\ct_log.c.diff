@@ -1,0 +1,18 @@
+crypto/ct/ct_log.c
+=======================================================
+lhs: 100644 | 6fc21b7269e3e44625d2d28567bc3997aa05a4d9
+rhs: 100644 | 7298f1bfd44ee50a5b1bcacb97277938163bd60a
+---@@ -182,7 +182,10 @@ static int ctlog_store_load_log(const char *log_name, int log_name_len,
+         return 1;
+     }
+ 
+-    sk_CTLOG_push(load_ctx->log_store->logs, ct_log);
++    if (!sk_CTLOG_push(load_ctx->log_store->logs, ct_log)) {
++        CTLOG_free(ct_log);
++        return -1;
++    }
+     return 1;
+ }
+ 
+
+---

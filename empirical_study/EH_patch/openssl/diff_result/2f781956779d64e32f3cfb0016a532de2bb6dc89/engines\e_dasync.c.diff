@@ -1,0 +1,15 @@
+engines/e_dasync.c
+=======================================================
+lhs: 100644 | 1f5cc0215ba3511564bc8413e7d7822aa34e0ced
+rhs: 100644 | 0e10f6dfdd4840f60b40410d36117b826f139475
+---@@ -674,7 +674,7 @@ static int dasync_cipher_init_key_helper(EVP_CIPHER_CTX *ctx,
+         pipe_ctx->inner_cipher_data = OPENSSL_zalloc(
+             EVP_CIPHER_impl_ctx_size(cipher));
+         if (pipe_ctx->inner_cipher_data == NULL) {
+-            DASYNCerr(DASYNC_F_DASYNC_AES128_INIT_KEY,
++            DASYNCerr(DASYNC_F_DASYNC_CIPHER_INIT_KEY_HELPER,
+                         ERR_R_MALLOC_FAILURE);
+             return 0;
+         }
+
+---

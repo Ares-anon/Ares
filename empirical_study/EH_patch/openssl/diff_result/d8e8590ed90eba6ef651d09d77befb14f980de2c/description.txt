@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing return value checks in SCTP",
+    "author": "Matt Caswell",
+    "description": "Fix missing return value checks in SCTP\n\nThere are some missing return value checks in the SCTP code. In master this\nwas causing a compilation failure when config'd with\n\"--strict-warnings sctp\".\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "d8e8590ed90eba6ef651d09d77befb14f980de2c",
+    "date": "2015-08-11 22:16:38",
+    "parent_hash": "6142f5c640f98429d4798b8418e8cc2cf6cc1fb8"
+}

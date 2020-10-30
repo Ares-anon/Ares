@@ -1,0 +1,8 @@
+{
+    "summary": "Free an ASN1_OBJECT in an error path",
+    "author": "Matt Caswell",
+    "description": "Free an ASN1_OBJECT in an error path\n\nThe r2i_certpol() function allocates an ASN1_OBJECT but can fail to free\nit in an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "34b9acbd3f81b46967f692c0af49020c8c405746",
+    "date": "2016-04-28 13:13:09",
+    "parent_hash": "5e8129f278f5358243b4a8b3651e795d6a32696d"
+}

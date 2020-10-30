@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak reporting.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak reporting.\n\nFree up bio_err after memory leak data has been printed to it.\n\nIn int_free_ex_data if ex_data is NULL there is nothing to free up\nso return immediately and don't reallocate it.\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "9c7a780bbebc1b6d87dc38a6aa3339033911a8bb",
+    "date": "2015-02-09 12:53:36",
+    "parent_hash": "259c360d0b4faad28c89c97352291219903ee3c5"
+}

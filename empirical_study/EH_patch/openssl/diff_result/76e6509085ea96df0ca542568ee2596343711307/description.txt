@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in SSL_new if errors occur.",
+    "author": "Matt Caswell",
+    "description": "Fix memory leak in SSL_new if errors occur.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "76e6509085ea96df0ca542568ee2596343711307",
+    "date": "2014-12-08 16:42:59",
+    "parent_hash": "7bca0a1db5f0fc2d2c671eddac19e9e92075a5f4"
+}

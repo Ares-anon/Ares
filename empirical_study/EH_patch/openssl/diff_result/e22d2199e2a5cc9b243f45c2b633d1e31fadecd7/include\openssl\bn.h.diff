@@ -1,0 +1,14 @@
+include/openssl/bn.h
+=======================================================
+lhs: 100644 | f13760547d1eaa036dbc61a4fcd95bf70a597943
+rhs: 100644 | 5a2e8db3dce0f75e665ac5bbf98c7aabfd949053
+---@@ -730,6 +730,7 @@ void ERR_load_BN_strings(void);
+ # define BN_F_BN_NEW                                      113
+ # define BN_F_BN_RAND                                     114
+ # define BN_F_BN_RAND_RANGE                               122
++# define BN_F_BN_SET_WORDS                                144
+ # define BN_F_BN_USUB                                     115
+ 
+ /* Reason codes. */
+
+---

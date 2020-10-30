@@ -1,0 +1,8 @@
+{
+    "summary": "Properly check return type of DH_compute_key()",
+    "author": "Pascal Cuoq",
+    "description": "Properly check return type of DH_compute_key()\n\nIt returns -1 on error, not 0.\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Rich Salz <rsalz@openssl.org>\nMR #1231\n",
+    "hash": "d6e92c0bd6c36fc68291e79ef5753fd7f0420695",
+    "date": "2015-10-07 18:54:12",
+    "parent_hash": "f92768e6f5259069bd21dbed2b98b3423c1dfca4"
+}

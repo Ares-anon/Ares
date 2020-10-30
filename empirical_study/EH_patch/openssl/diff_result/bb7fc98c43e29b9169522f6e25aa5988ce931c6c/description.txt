@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak with -issuer option.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak with -issuer option.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "bb7fc98c43e29b9169522f6e25aa5988ce931c6c",
+    "date": "2015-10-18 14:36:21",
+    "parent_hash": "7f3e6f8c243710b8dc89f385196987ad83c7848d"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "e50a2002bd450a4800a165d2874ed79c95b33a07",
+    "date": "2018-10-08 08:39:24",
+    "author": "Rick Deist",
+    "description": "hostip: fix check on Curl_shuffle_addr return value\n\nCloses #3110\n",
+    "summary": "hostip: fix check on Curl_shuffle_addr return value",
+    "hash": "3349a633b8b181bfd1825b36d8cca51f5a20defd"
+}

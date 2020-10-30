@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix worst memory leaks in tqueue.c.\n\nTupleQueueReaderNext() leaks like a sieve if it has to do any tuple\ndisassembly/reconstruction.  While we could try to clean up its allocations\npiecemeal, it seems like a better idea just to insist that it should be run\nin a short-lived memory context, so that any transient space goes away\nautomatically.  I chose to have nodeGather.c switch into its existing\nper-tuple context before the call, rather than inventing a separate\ncontext inside tqueue.c.\n\nThis is sufficient to stop all leakage in the simple case I exhibited\nearlier today (see link below), but it does not deal with leaks induced\nin more complex cases by tqueue.c's insistence on using TopMemoryContext\nfor data that it's not actually trying hard to keep track of.  That issue\nis intertwined with another major source of inefficiency, namely failure\nto cache lookup results across calls, so it seems best to deal with it\nseparately.\n\nIn passing, improve some comments, and modify gather_readnext's method for\ndeciding when it's visited all the readers so that it's more obviously\ncorrect.  (I'm not actually convinced that the previous code *is*\ncorrect in the case of a reader deletion; it certainly seems fragile.)\n\nDiscussion: <32763.1469821037@sss.pgh.pa.us>\n",
+    "summary": "Fix worst memory leaks in tqueue.c.",
+    "date": "2016-07-29 19:31:06",
+    "parent_hash": "bf4ae685ae6f37b7fe83336abacf44298431b2f0",
+    "hash": "af33039317ddc4a0e38a02e2255c2bf453115fd2"
+}

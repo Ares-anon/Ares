@@ -1,0 +1,8 @@
+{
+    "summary": "apps/speed.c: add missing checks for RAND_bytes()",
+    "author": "\u6377\u6210\u5434",
+    "description": "apps/speed.c: add missing checks for RAND_bytes()\n\nFunction RAND_bytes() may return 0 or -1 on error, simply\ngoto end label when it fails.\n\nFixes #6567\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>\n(Merged from https://github.com/openssl/openssl/pull/6582)\n",
+    "hash": "3445872e22735ff864d6b363d2d2b8acde740912",
+    "date": "2018-06-24 20:26:37",
+    "parent_hash": "dc6c374bdb4872f6d5d727e73a2ed834e972842c"
+}

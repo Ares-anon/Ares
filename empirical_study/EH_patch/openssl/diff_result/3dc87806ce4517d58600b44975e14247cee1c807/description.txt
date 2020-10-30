@@ -1,0 +1,8 @@
+{
+    "summary": "Free buffer in a2i_ASN1_INTEGER() on error path.",
+    "author": "Dr. Stephen Henson",
+    "description": "Free buffer in a2i_ASN1_INTEGER() on error path.\n\nThank to Shi Lei for reporting this bug.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "3dc87806ce4517d58600b44975e14247cee1c807",
+    "date": "2016-08-05 16:36:17",
+    "parent_hash": "684bc13e58c3c53b414a5a775b1118f04ad78bd7"
+}

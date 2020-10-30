@@ -1,0 +1,29 @@
+lib/curl_sasl.c
+=======================================================
+lhs: 100644 | 7d5a63d61e86a275e12d6f4d2731c5b9148fd978
+rhs: 100644 | 1edeb20176b39385ee20d692d61d8bb22ee4b10a
+---@@ -1046,20 +1046,20 @@ CURLcode Curl_sasl_create_digest_http_message(struct SessionHandle *data,
+   if(digest->opaque) {
+     /* Append the opaque */
+     tmp = aprintf("%s, opaque=\"%s\"", response, digest->opaque);
++    free(response);
+     if(!tmp)
+       return CURLE_OUT_OF_MEMORY;
+ 
+-    free(response);
+     response = tmp;
+   }
+ 
+   if(digest->algorithm) {
+     /* Append the algorithm */
+     tmp = aprintf("%s, algorithm=\"%s\"", response, digest->algorithm);
++    free(response);
+     if(!tmp)
+       return CURLE_OUT_OF_MEMORY;
+ 
+-    free(response);
+     response = tmp;
+   }
+ 
+
+---

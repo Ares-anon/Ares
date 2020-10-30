@@ -1,0 +1,15 @@
+src/pl/plpython/plpy_procedure.h
+=======================================================
+lhs: 100644 | 6d4b00ba7c88a795c1136c396390e6aa540001a6
+rhs: 100644 | 9fc8db079724a10980a9fcdcdd5d7e32b95d93c2
+---@@ -14,6 +14,8 @@ extern void init_procedure_caches(void);
+ /* cached procedure data */
+ typedef struct PLyProcedure
+ {
++	MemoryContext mcxt;			/* context holding this PLyProcedure and its
++								 * subsidiary data */
+ 	char	   *proname;		/* SQL name of procedure */
+ 	char	   *pyname;			/* Python name of procedure */
+ 	TransactionId fn_xmin;
+
+---

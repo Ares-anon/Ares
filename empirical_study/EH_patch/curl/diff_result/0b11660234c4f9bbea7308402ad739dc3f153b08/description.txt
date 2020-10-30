@@ -1,0 +1,8 @@
+{
+    "parent_hash": "61046e7bd59fc5f2ab2e7b1f0b89e2b5a90ae8c7",
+    "date": "2017-08-05 00:23:24",
+    "author": "Isaac Boukris",
+    "description": "gssapi: fix memory leak of output token in multi round context\n\nWhen multiple rounds are needed to establish a security context\n(usually ntlm), we overwrite old token with a new one without free.\nFound by proposed gss tests using stub a gss implementation (by\nvalgrind error), though I have confirmed the leak with a real\ngssapi implementation as well.\n\nCloses https://github.com/curl/curl/pull/1733\n",
+    "summary": "gssapi: fix memory leak of output token in multi round context",
+    "hash": "0b11660234c4f9bbea7308402ad739dc3f153b08"
+}

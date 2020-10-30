@@ -1,0 +1,8 @@
+{
+    "author": "Bruce Momjian",
+    "description": "chkpass:  check for NULL return value from crypt()\n\nReport from Jozef Mlich using Coverity\n",
+    "summary": "chkpass:  check for NULL return value from crypt()",
+    "date": "2014-01-31 20:19:53",
+    "parent_hash": "85317e88ccae270ef77bd01c2d3d55a900df2d72",
+    "hash": "6afe200ceea818c82e3a1a754c5043e7df1efa10"
+}

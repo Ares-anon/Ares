@@ -1,0 +1,8 @@
+{
+    "parent_hash": "ca9c93e3e19f971030ec1da70c9e318ce493bffd",
+    "date": "2018-01-18 12:10:58",
+    "author": "Daniel Stenberg",
+    "description": "openssl: fix potential memory leak in SSLKEYLOGFILE logic\n\nCoverity CID 1427646.\n",
+    "summary": "openssl: fix potential memory leak in SSLKEYLOGFILE logic",
+    "hash": "9e4ad1e2af22f00eeca533b745b67956f57319cb"
+}

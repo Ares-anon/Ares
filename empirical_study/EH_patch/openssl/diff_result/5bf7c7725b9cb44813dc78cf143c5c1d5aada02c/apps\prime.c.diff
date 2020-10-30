@@ -1,0 +1,17 @@
+apps/prime.c
+=======================================================
+lhs: 100644 | 940fd4502a391d16dab828db6ce2f2095e204641
+rhs: 100644 | b0f5969a2203d6c87310bc146ca33d473720facf
+---@@ -119,9 +119,8 @@ int prime_main(int argc, char **argv)
+         }
+     }
+ 
+-    BN_free(bn);
+-
+     ret = 0;
+  end:
++    BN_free(bn);
+     return ret;
+ }
+
+---

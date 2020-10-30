@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in library deinit",
+    "author": "Emilia Kasper",
+    "description": "Fix memory leak in library deinit\n\nENGINE_cleanup calls CRYPTO_free_ex_data and therefore,\nCRYPTO_cleanup_all_ex_data - which cleans up the method pointers - must\nrun after ENGINE_cleanup.\n\nAdditionally, don't needlessly initialize the EX_CALLBACKS stack during\ne.g. CRYPTO_free_ex_data. The only time this is actually needed is when\nreserving the first ex data index. Specifically, since sk_num returns -1\non NULL input, the rest of the code already handles a NULL method stack\ncorrectly.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "8cab4e9bc73a66b64aae179db86493fd28c39b64",
+    "date": "2016-03-12 21:47:01",
+    "parent_hash": "36cc1390f265ce5f07a8841c106a6e1e7e021678"
+}

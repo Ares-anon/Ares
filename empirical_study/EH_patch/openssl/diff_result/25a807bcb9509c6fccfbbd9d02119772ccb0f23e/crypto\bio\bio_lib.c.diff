@@ -1,0 +1,16 @@
+crypto/bio/bio_lib.c
+=======================================================
+lhs: 100644 | 94c97da369d5c038f408e938d97ed3737f47afe6
+rhs: 100644 | 6ddc19fc9ae0f2a44ba7486245b74bbbc452a888
+---@@ -93,7 +93,8 @@ int BIO_set(BIO *bio, const BIO_METHOD *method)
+     bio->references = 1;
+     bio->num_read = 0L;
+     bio->num_write = 0L;
+-    CRYPTO_new_ex_data(CRYPTO_EX_INDEX_BIO, bio, &bio->ex_data);
++    if (!CRYPTO_new_ex_data(CRYPTO_EX_INDEX_BIO, bio, &bio->ex_data))
++        return 0;
+ 
+     bio->lock = CRYPTO_THREAD_lock_new();
+     if (bio->lock == NULL) {
+
+---

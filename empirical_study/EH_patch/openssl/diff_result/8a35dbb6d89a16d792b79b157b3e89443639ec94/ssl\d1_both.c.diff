@@ -1,0 +1,16 @@
+ssl/d1_both.c
+=======================================================
+lhs: 100644 | f2ff94300135ea1b3e405c0712dbdf28513a14d5
+rhs: 100644 | 2324675579f4df1538414d07a2cb9e1aa8d4470f
+---@@ -211,8 +211,7 @@ dtls1_hm_fragment_new(unsigned long frag_len, int reassembly)
+ 	return frag;
+ 	}
+ 
+-static void
+-dtls1_hm_fragment_free(hm_fragment *frag)
++void dtls1_hm_fragment_free(hm_fragment *frag)
+ 	{
+ 
+ 	if (frag->msg_header.is_ccs)
+
+---

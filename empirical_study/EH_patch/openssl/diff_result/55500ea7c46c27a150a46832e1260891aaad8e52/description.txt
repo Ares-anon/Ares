@@ -1,0 +1,8 @@
+{
+    "summary": "GH354: Memory leak fixes",
+    "author": "Alessandro Ghedini",
+    "description": "GH354: Memory leak fixes\n\nFix more potential leaks in X509_verify_cert()\nFix memory leak in ClientHello test\nFix memory leak in gost2814789 test\nFix potential memory leak in PKCS7_verify()\nFix potential memory leaks in X509_add1_reject_object()\nRefactor to use \"goto err\" in cleanup.\n\nSigned-off-by: Rich Salz <rsalz@akamai.com>\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "55500ea7c46c27a150a46832e1260891aaad8e52",
+    "date": "2015-08-28 11:18:04",
+    "parent_hash": "f00a10b89734e84fe80f98ad9e2e77b557c701ae"
+}

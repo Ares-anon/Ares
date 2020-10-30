@@ -1,0 +1,8 @@
+{
+    "parent_hash": "64736dd1bed9f98f6a295dc7f164cee2ade9146d",
+    "date": "2015-03-05 15:43:38",
+    "author": "Daniel Stenberg",
+    "description": "multi: fix memory-leak on timeout (regression)\n\nSince 1342a96ecfe0d44, a timeout detected in the multi state machine didn't\nnecesarily clear everything up, like formpost data.\n\nBug: https://github.com/bagder/curl/issues/147\nReported-by: Michel Promonet\nPatched-by: Michel Promonet\n",
+    "summary": "multi: fix memory-leak on timeout (regression)",
+    "hash": "492dfca65d0147f2920b38d724186fdf39b2541b"
+}

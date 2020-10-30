@@ -1,0 +1,8 @@
+{
+    "summary": "capi_get_provname: Check return values",
+    "author": "Kurt Roeckx",
+    "description": "capi_get_provname: Check return values\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "f6fa7c53479d79073cf959d7cdc496be2b2372c6",
+    "date": "2014-12-04 23:48:44",
+    "parent_hash": "f5905ba341ad0fa3731469f10f7fba6f92ecd787"
+}

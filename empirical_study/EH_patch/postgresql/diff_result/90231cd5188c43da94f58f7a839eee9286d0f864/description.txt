@@ -1,0 +1,8 @@
+{
+    "author": "Andres Freund",
+    "description": "Add missing check for wal_debug GUC.\n\n9a20a9b2 added a new elog(), enabled when WAL_DEBUG is defined. The\nother WAL_DEBUG dependant messages check for the wal_debug GUC, but this\none did not. While at it replace 'upto' with 'up to'.\n\nDiscussion: 20150610110253.GF3832@alap3.anarazel.de\n\nBackpatch to 9.4, the first release containing 9a20a9b2.\n",
+    "summary": "Add missing check for wal_debug GUC.",
+    "date": "2015-06-21 18:37:09",
+    "parent_hash": "103382abf87453d6555755da8f9fbef0b9965f81",
+    "hash": "90231cd5188c43da94f58f7a839eee9286d0f864"
+}

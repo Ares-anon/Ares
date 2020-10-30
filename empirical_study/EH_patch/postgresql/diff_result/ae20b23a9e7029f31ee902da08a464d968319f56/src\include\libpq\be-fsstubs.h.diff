@@ -1,0 +1,18 @@
+src/include/libpq/be-fsstubs.h
+=======================================================
+lhs: 100644 | 96bcaa0f0867376eaa32243197662781cd213c57
+rhs: 100644 | e8107a2c9f04621e49893de332c64c89b35115c7
+---@@ -15,11 +15,6 @@
+ #define BE_FSSTUBS_H
+ 
+ /*
+- * compatibility option for access control
+- */
+-extern bool lo_compat_privileges;
+-
+-/*
+  * These are not fmgr-callable, but are available to C code.
+  * Probably these should have had the underscore-free names,
+  * but too late now...
+
+---

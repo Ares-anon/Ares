@@ -1,0 +1,8 @@
+{
+    "author": "Andrew Gierth",
+    "description": "Avoid query-lifetime memory leaks in XMLTABLE (bug #15321)\n\nMultiple calls to XMLTABLE in a query (e.g. laterally applying it to a\ntable with an xml column, an important use-case) were leaking large\namounts of memory into the per-query context, blowing up memory usage.\n\nRepair by reorganizing memory context usage in nodeTableFuncscan; use\nthe usual per-tuple context for row-by-row evaluations instead of\nperValueCxt, and use the explicitly created context -- renamed from\nperValueCxt to perTableCxt -- for arguments and state for each\nindividual table-generation operation.\n\nBackpatch to PG10 where this code was introduced.\n\nOriginal report by IRC user begriffs; analysis and patch by me.\nReviewed by Tom Lane and Pavel Stehule.\n\nDiscussion: https://postgr.es/m/153394403528.10284.7530399040974170549@wrigleys.postgresql.org\n",
+    "summary": "Avoid query-lifetime memory leaks in XMLTABLE (bug #15321)",
+    "date": "2018-08-13 01:59:45",
+    "parent_hash": "46b5e7c4b5befbf6ac86d827a3a58f1f02c7338e",
+    "hash": "07172d5aff8f43cd6ce09f57a0b56a535d7eaf45"
+}

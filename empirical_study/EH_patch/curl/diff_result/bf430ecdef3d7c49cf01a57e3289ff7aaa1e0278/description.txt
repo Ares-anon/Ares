@@ -1,0 +1,8 @@
+{
+    "parent_hash": "bcc8f485e5e364deb6b5ad8502635b4358aaa277",
+    "date": "2016-07-14 02:52:56",
+    "author": "Miroslav Franc",
+    "description": "library: Fix memory leaks found during static analysis\n\nCloses https://github.com/curl/curl/pull/913\n",
+    "summary": "library: Fix memory leaks found during static analysis",
+    "hash": "bf430ecdef3d7c49cf01a57e3289ff7aaa1e0278"
+}

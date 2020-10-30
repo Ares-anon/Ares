@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak.\n\nPR#2531\n",
+    "hash": "44724beeadf95712a42a8b21dc71bf110e89a262",
+    "date": "2014-06-29 13:51:30",
+    "parent_hash": "76ed5a42ea68dd08bba44e4003b7e638e5d8a4a3"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix checking the return value of getentropy()",
+    "author": "Kurt Roeckx",
+    "description": "Fix checking the return value of getentropy()\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nGH: #6405\n",
+    "hash": "1e653d0ff7fc2e06a1cb1e05c01feecde84e67d3",
+    "date": "2018-06-03 12:14:32",
+    "parent_hash": "2545f9446e4a924548f393cc9e7391e6b10ed1b5"
+}

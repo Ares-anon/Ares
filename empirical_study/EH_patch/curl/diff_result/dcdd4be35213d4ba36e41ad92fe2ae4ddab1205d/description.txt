@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c6d3fa11e687808ea9f0047d591a39135a4b9f4e",
+    "date": "2016-07-20 23:21:49",
+    "author": "Saurav Babu",
+    "description": "vauth: Fixed memory leak due to function returning without free\n\nThis patch allocates memory to \"output_token\" only when it is required\nso that memory is not leaked if function returns.\n",
+    "summary": "vauth: Fixed memory leak due to function returning without free",
+    "hash": "dcdd4be35213d4ba36e41ad92fe2ae4ddab1205d"
+}

@@ -1,0 +1,15 @@
+crypto/ex_data.c
+=======================================================
+lhs: 100644 | 4caddcebb4d049e3c87cbfb799e287f9097ce28d
+rhs: 100644 | d55985ba0aed6d5a6baacd5a06f68018a5a4a3a4
+---@@ -500,6 +500,8 @@ static void int_free_ex_data(int class_index, void *obj, CRYPTO_EX_DATA *ad)
+     EX_CLASS_ITEM *item;
+     void *ptr;
+     CRYPTO_EX_DATA_FUNCS **storage = NULL;
++    if (ex_data == NULL)
++        return;
+     if ((item = def_get_class(class_index)) == NULL)
+         return;
+     CRYPTO_r_lock(CRYPTO_LOCK_EX_DATA);
+
+---

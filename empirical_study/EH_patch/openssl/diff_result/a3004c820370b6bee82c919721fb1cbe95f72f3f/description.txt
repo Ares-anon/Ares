@@ -1,0 +1,8 @@
+{
+    "summary": "Check for zero records and return immediately",
+    "author": "Jon Spillett",
+    "description": "Check for zero records and return immediately\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/2822)",
+    "hash": "a3004c820370b6bee82c919721fb1cbe95f72f3f",
+    "date": "2017-03-02 09:28:58",
+    "parent_hash": "fd74aba83652a8410a74b59de0b098232af74e33"
+}

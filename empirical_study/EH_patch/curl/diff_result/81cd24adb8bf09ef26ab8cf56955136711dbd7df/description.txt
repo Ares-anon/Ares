@@ -1,0 +1,8 @@
+{
+    "parent_hash": "713f96ee0c14d231d89f52f0ad0471336c147e97",
+    "date": "2014-07-23 09:23:56",
+    "author": "Daniel Stenberg",
+    "description": "http2: more and better error checking\n\n1 - fixes the warnings when built without http2 support\n\n2 - adds CURLE_HTTP2, a new error code for errors detected by nghttp2\nbasically when they are about http2 specific things.\n",
+    "summary": "http2: more and better error checking",
+    "hash": "81cd24adb8bf09ef26ab8cf56955136711dbd7df"
+}

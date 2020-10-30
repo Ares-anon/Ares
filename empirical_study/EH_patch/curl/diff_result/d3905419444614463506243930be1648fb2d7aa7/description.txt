@@ -1,0 +1,8 @@
+{
+    "parent_hash": "7f5e5706166442186ce0ccbf89f34603781ac94a",
+    "date": "2018-07-28 22:36:15",
+    "author": "Daniel Stenberg",
+    "description": "mime: check Curl_rand_hex's return code\n\nBug: https://curl.haxx.se/mail/archive-2018-07/0015.html\nReported-by: Jeffrey Walton\nCloses #2795\n",
+    "summary": "mime: check Curl_rand_hex's return code",
+    "hash": "d3905419444614463506243930be1648fb2d7aa7"
+}

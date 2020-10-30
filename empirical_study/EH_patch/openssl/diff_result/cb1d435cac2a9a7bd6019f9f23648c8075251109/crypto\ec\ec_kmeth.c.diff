@@ -1,0 +1,14 @@
+crypto/ec/ec_kmeth.c
+=======================================================
+lhs: 100644 | 003421eabe8e350db5029550a7fe0c32d7b1c7af
+rhs: 100644 | 75e58d53165d5ba0afe91a899c519fbae0c5c0e4
+---@@ -166,6 +166,7 @@ EC_KEY *EC_KEY_new_method(ENGINE *engine)
+     ret->references = 1;
+ 
+     if (ret->meth->init != NULL && ret->meth->init(ret) == 0) {
++        ECerr(EC_F_EC_KEY_NEW_METHOD, ERR_R_INIT_FAIL);
+         EC_KEY_free(ret);
+         return NULL;
+     }
+
+---

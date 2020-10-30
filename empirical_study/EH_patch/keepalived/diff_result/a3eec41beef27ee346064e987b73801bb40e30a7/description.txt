@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak in check_include\n\nThe check_include function should always free the allocated strvec.\n",
+    "author": "Ryan O'Hara",
+    "parent_hash": "8408f9c1885db18edca92660fa3cc9e6ca9dd57b",
+    "summary": "Fix memory leak in check_include",
+    "date": "2014-01-16 13:08:12",
+    "hash": "a3eec41beef27ee346064e987b73801bb40e30a7"
+}

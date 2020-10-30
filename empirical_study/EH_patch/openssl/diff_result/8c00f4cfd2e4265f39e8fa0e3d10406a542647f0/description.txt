@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in the apps",
+    "author": "Kurt Roeckx",
+    "description": "Fix memory leak in the apps\n\nThe BIO_free() allocated ex_data again that we already freed.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "8c00f4cfd2e4265f39e8fa0e3d10406a542647f0",
+    "date": "2014-12-30 16:46:46",
+    "parent_hash": "32dfde107636ac9bc62a5b3233fe2a54dbc27008"
+}

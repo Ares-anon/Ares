@@ -1,0 +1,28 @@
+crypto/bio/bio_lib.c
+=======================================================
+lhs: 100644 | 19cd06983f06c0da7ca8bfe23bdcc4a5ea40cc3d
+rhs: 100644 | cc859da74012e25adb220c9d75dfd4e1e181e29b
+---@@ -535,8 +535,10 @@ BIO *BIO_dup_chain(BIO *in)
+ 
+         /* copy app data */
+         if (!CRYPTO_dup_ex_data(CRYPTO_EX_INDEX_BIO, &new_bio->ex_data,
+-                                &bio->ex_data))
++                                &bio->ex_data)) {
++            BIO_free(new_bio);
+             goto err;
++        }
+ 
+         if (ret == NULL) {
+             eoc = new_bio;
+@@ -548,7 +550,8 @@ BIO *BIO_dup_chain(BIO *in)
+     }
+     return (ret);
+  err:
+-    BIO_free(ret);
++    BIO_free_all(ret);
++
+     return (NULL);
+ }
+ 
+
+---

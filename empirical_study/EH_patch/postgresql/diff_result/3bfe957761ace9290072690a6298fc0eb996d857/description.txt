@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "Fix logic error in add_paths_to_partial_grouping_rel.\n\nCommit 3bf05e096b9f8375e640c5d7996aa57efd7f240c sometimes uses the\ncheapest_partial_path variable in this function to mean the cheapest\none from the input rel and at other times the cheapest one from the\npartially grouped rel, but it never resets it, so we can end up with\nbad plans, leading to \"ERROR: Aggref found in non-Agg plan node\".\n\nJeevan Chalke, per a report from Andreas Joseph Krogh and a separate\noff-list report from Rajkumar Raghuwanshi\n\nDiscussion: http://postgr.es/m/CAM2+6=X9kxQoL2ZqZ00E6asBt9z+rfyWbOmhXJ0+8fPAyMZ9Jg@mail.gmail.com\n",
+    "summary": "Fix logic error in add_paths_to_partial_grouping_rel.",
+    "date": "2018-02-27 13:23:50",
+    "parent_hash": "be42eb9d624cc14a9326e21ec75fdc571a7cb188",
+    "hash": "3bfe957761ace9290072690a6298fc0eb996d857"
+}

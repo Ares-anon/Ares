@@ -1,0 +1,8 @@
+{
+    "summary": "ASN1_verify, ASN1_item_verify: cleanse and free buf_in on error path",
+    "author": "Jonas Maebe",
+    "description": "ASN1_verify, ASN1_item_verify: cleanse and free buf_in on error path\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "c9c63b0180f658561f16afeb64e88d125d0ab4ca",
+    "date": "2014-08-15 22:36:34",
+    "parent_hash": "b9b9f853b54046db6e0af3ecd5716da30c6bfd16"
+}

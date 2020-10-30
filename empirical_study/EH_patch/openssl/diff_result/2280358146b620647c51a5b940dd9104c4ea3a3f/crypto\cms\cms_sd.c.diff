@@ -1,0 +1,15 @@
+crypto/cms/cms_sd.c
+=======================================================
+lhs: 100644 | 151f40f9a54f07c261cd27e52ef1ba653a4a04f3
+rhs: 100644 | e4739b39d9e1a219cb61248e417ed12c621b6c08
+---@@ -588,7 +588,7 @@ static int cms_SignerInfo_content_sign(CMS_ContentInfo *cms,
+ 
+     if (!si->pkey) {
+         CMSerr(CMS_F_CMS_SIGNERINFO_CONTENT_SIGN, CMS_R_NO_PRIVATE_KEY);
+-        return 0;
++        goto err;
+     }
+ 
+     if (!cms_DigestAlgorithm_find_ctx(mctx, chain, si->digestAlgorithm))
+
+---

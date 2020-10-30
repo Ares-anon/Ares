@@ -1,0 +1,18 @@
+ssl/s3_pkt.c
+=======================================================
+lhs: 100644 | cf02e49f766cd27ef157fa5255f28a7559454907
+rhs: 100644 | 4f81f1a222ccb389dd2d112d256f9f6dfebc5acb
+---@@ -1320,7 +1320,10 @@ int ssl3_read_bytes(SSL *s, int type, unsigned char *buf, int len, int peek)
+         }
+ #ifndef OPENSSL_NO_HEARTBEATS
+         else if (rr->type == TLS1_RT_HEARTBEAT) {
+-            tls1_process_heartbeat(s);
++            /* We can ignore 0 return values */
++            if(tls1_process_heartbeat(s) < 0) {
++                return -1;
++            }
+ 
+             /* Exit and notify application to read again */
+             rr->length = 0;
+
+---

@@ -1,0 +1,8 @@
+{
+    "description": "Fix return value in get_time_rtt() error path\n",
+    "author": "Rikard Falkeborn",
+    "parent_hash": "ea2abedcced543b36baefa2cb0ce3677440d109e",
+    "summary": "Fix return value in get_time_rtt() error path",
+    "date": "2018-11-07 10:06:49",
+    "hash": "5ec1fff9105412f7829fb847d3b76232901e07e4"
+}

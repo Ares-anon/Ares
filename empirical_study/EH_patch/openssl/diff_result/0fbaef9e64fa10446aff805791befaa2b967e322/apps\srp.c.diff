@@ -1,0 +1,18 @@
+apps/srp.c
+=======================================================
+lhs: 100644 | b213c6010dff87e71733e63163acca7cf23cc53f
+rhs: 100644 | be4a4b43d352b2c016bcb1728d8f9f22927ebefe
+---@@ -92,10 +92,8 @@ static int update_index(CA_DB *db, char **row)
+     int i;
+ 
+     irow = app_malloc(sizeof(*irow) * (DB_NUMBER + 1), "row pointers");
+-    for (i = 0; i < DB_NUMBER; i++) {
++    for (i = 0; i < DB_NUMBER; i++)
+         irow[i] = row[i];
+-        row[i] = NULL;
+-    }
+     irow[DB_NUMBER] = NULL;
+ 
+     if (!TXT_DB_insert(db->db, irow)) {
+
+---

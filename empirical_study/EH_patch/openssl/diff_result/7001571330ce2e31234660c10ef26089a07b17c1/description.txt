@@ -1,0 +1,8 @@
+{
+    "summary": "Check for a NULL return value from a call to X509_STORE_CTX_new()",
+    "author": "Matt Caswell",
+    "description": "Check for a NULL return value from a call to X509_STORE_CTX_new()\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "7001571330ce2e31234660c10ef26089a07b17c1",
+    "date": "2016-04-29 16:47:41",
+    "parent_hash": "138388fe33707529683e1a41b0fe47d60313e7c1"
+}

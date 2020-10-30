@@ -1,0 +1,15 @@
+configure.ac
+=======================================================
+lhs: 100644 | e1dbbee84a89ce532da10e3dbfcb7b6b6684e8a5
+rhs: 100644 | 3c00ae10771a05d2c77761797782cd2862fca8e7
+---@@ -892,7 +892,7 @@ else
+   fi
+ 
+   if test -z "$OPT_ZLIB" ; then
+-    PKG_CHECK_MODULES(ZLIB, zlib,
++    PKG_CHECK_MODULES([ZLIB], [zlib],
+         [ LIBS="${ZLIB_LIBS} $LIBS"
+           CPPFLAGS="${ZLIB_CFLAGS} $CPPFLAGS"
+           HAVE_LIBZ="1"
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "Fix broken error check in _hash_doinsert.\n\nYou can't just cast a HashMetaPage to a Page, because the meta page\ndata is stored after the page header, not at offset 0.  Fortunately,\nthis didn't break anything because it happens to find hashm_bsize\nat the offset at which it expects to find pd_pagesize_version, and\nthe values are close enough to the same that this works out.\n\nStill, it's a bug, so back-patch to all supported versions.\n\nMithun Cy, revised a bit by me.\n",
+    "summary": "Fix broken error check in _hash_doinsert.",
+    "date": "2016-12-22 13:59:01",
+    "parent_hash": "2f802d95b4904dbed3dfdca1b3a607cd085d2e20",
+    "hash": "097e41439d69e11fb870e009b1ac64dda4f01c3d"
+}

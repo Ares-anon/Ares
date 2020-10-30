@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "pg_upgrade: Improve error checking in rewriteVisibilityMap.\n\nIn the old logic, if read() were to return an error, we'd silently stop\nrewriting the visibility map at that point in the file.  That's safe,\nbut reporting the error is better, so do that instead.\n\nReport by Andres Freund.  Patch by Masahiko Sawada, with one correction\nby me.\n",
+    "summary": "pg_upgrade: Improve error checking in rewriteVisibilityMap.",
+    "date": "2016-06-06 06:17:10",
+    "parent_hash": "6201a8ef3ab1f44853ab3e4b16afeefc969a58bf",
+    "hash": "aba8943082f1ccbfb19f2e7ff02ba3be0fcb6c9d"
+}

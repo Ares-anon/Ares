@@ -1,0 +1,8 @@
+{
+    "summary": "Add missing return value check in pkcs8 app",
+    "author": "Matt Caswell",
+    "description": "Add missing return value check in pkcs8 app\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "bcc31778e3695e23d7c4cd6274126a8e3d58db72",
+    "date": "2016-04-21 10:51:57",
+    "parent_hash": "e69f2a223cf7e2d7f5bcea43e68ce38818813b81"
+}

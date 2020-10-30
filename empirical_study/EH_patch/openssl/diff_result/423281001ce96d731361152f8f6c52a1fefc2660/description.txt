@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory on X509_TRUST_add() error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory on X509_TRUST_add() error path\n\nThe X509_TRUST_add() function was leaking an X509_TRUST object on error.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "423281001ce96d731361152f8f6c52a1fefc2660",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "69e2bd32efb756b59cea75af22d869679c448e91"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "add malloc fail check & fix memory leak",
+    "author": "Hongze Zhu",
+    "description": "add malloc fail check & fix memory leak\n\nSigned-off-by: Hongze Zhu <hongze.zhu@gmail.com>\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "f562aedae47c5702b37fb842f96f48b95019d106",
+    "date": "2015-12-14 17:38:56",
+    "parent_hash": "b311b74d78ebaa6e72d4fa3cfc92d33d926e7a27"
+}

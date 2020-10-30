@@ -1,0 +1,19 @@
+test/ssltest.c
+=======================================================
+lhs: 100644 | 94aeebe9c067de1816a55b4673b10f23562b4c5e
+rhs: 100644 | 8d9b2c8b1d5801731688c05ead66932d781fd5f1
+---@@ -3617,6 +3617,12 @@ static int do_test_cipherlist(void)
+     int i = 0;
+     const SSL_METHOD *meth;
+     const SSL_CIPHER *ci, *tci = NULL;
++
++    /*
++     * This is required because ssltest "cheats" and uses internal headers to
++     * call functions, thus avoiding auto-init
++     */
++    OPENSSL_init_crypto(0, NULL);
+ #endif
+ 
+ #ifndef OPENSSL_NO_SSL3
+
+---

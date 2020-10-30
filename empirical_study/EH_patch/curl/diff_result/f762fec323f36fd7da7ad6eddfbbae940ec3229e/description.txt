@@ -1,0 +1,8 @@
+{
+    "parent_hash": "13120f28b309e6276690383b2daa977ec9aa99c8",
+    "date": "2018-06-25 16:36:10",
+    "author": "Daniel Stenberg",
+    "description": "url: check Curl_conncache_add_conn return code\n\n... it was previously unchecked in two places and thus errors could\nremain undetected and cause trouble.\n\nCloses #2681\n",
+    "summary": "url: check Curl_conncache_add_conn return code",
+    "hash": "f762fec323f36fd7da7ad6eddfbbae940ec3229e"
+}

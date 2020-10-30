@@ -1,0 +1,15 @@
+src/backend/executor/execSRF.c
+=======================================================
+lhs: 100644 | 8bc90a6c7e83003070d28c991e007ce0519687ad
+rhs: 100644 | 1be683db83d36e0bfe7503ffe54b889202bf5116
+---@@ -467,6 +467,8 @@ ExecInitFunctionResultSet(Expr *expr,
+  * function itself.  The argument expressions may not contain set-returning
+  * functions (the planner is supposed to have separated evaluation for those).
+  *
++ * This should be called in a short-lived (per-tuple) context.
++ *
+  * This is used by nodeProjectSet.c.
+  */
+ Datum
+
+---

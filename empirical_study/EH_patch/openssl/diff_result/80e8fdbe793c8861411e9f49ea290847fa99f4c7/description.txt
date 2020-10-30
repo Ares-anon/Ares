@@ -1,0 +1,8 @@
+{
+    "summary": "CT: check some GeneralizedTime return values",
+    "author": "Benjamin Kaduk",
+    "description": "CT: check some GeneralizedTime return values\n\nSome of the ASN.1 routines for the GeneralizedTime type can return\nerrors; check for these and do not continue past failure, so as\nto appease coverity.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "80e8fdbe793c8861411e9f49ea290847fa99f4c7",
+    "date": "2016-03-09 20:52:19",
+    "parent_hash": "b805b4440dbda5444da2426c98ccd40f93d8cfa5"
+}

@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix query-lifespan memory leakage in repeatedly executed hash joins.\n\nExecHashTableCreate allocated some memory that wasn't freed by\nExecHashTableDestroy, specifically the per-hash-key function information.\nThat's not a huge amount of data, but if one runs a query that repeats\na hash join enough times, it builds up.  Fix by arranging for the data\nin question to be kept in the hashtable's hashCxt instead of leaving it\n\"loose\" in the query-lifespan executor context.  (This ensures that we'll\nalso clean up anything that the hash functions allocate in fn_mcxt.)\n\nPer report from Amit Khandekar.  It's been like this forever, so back-patch\nto all supported branches.\n\nDiscussion: https://postgr.es/m/CAJ3gD9cFofAWGvcxLOxDHC=B0hjtW8yGmUsF2hdGh97CM38=7g@mail.gmail.com\n",
+    "summary": "Fix query-lifespan memory leakage in repeatedly executed hash joins.",
+    "date": "2018-03-16 16:03:45",
+    "parent_hash": "013c0baaddd9df7e1f940184a8ab8e478214b46c",
+    "hash": "9e17bdb8a525ff89c4535cd153dc0f2fa813ea59"
+}

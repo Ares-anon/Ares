@@ -1,0 +1,8 @@
+{
+    "summary": "Fixes potential double free and memory leak in ct_b64.c",
+    "author": "Rob Percival",
+    "description": "Fixes potential double free and memory leak in ct_b64.c\n\nReviewed-by: Ben Laurie <ben@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "e9fd74ac96c27cbee33d4b91a2caa0017c304975",
+    "date": "2016-03-01 11:59:28",
+    "parent_hash": "8c6afbc55cc8e2d036c0af5adbaff82d8117c6b2"
+}

@@ -1,0 +1,56 @@
+lib/vtls/curl_schannel.c
+=======================================================
+lhs: 100644 | e4e595eaa984fff9eea52a578fde139e0324ae4b
+rhs: 100644 | 925df37a02069b8ed84a8c58a4ace7a3cb9b72cb
+---@@ -1145,29 +1145,29 @@ int Curl_schannel_shutdown(struct connectdata *conn, int sockindex)
+               " (bytes written: %zd)\n", curl_easy_strerror(code), written);
+       }
+     }
++  }
+ 
+-    /* free SSPI Schannel API security context handle */
+-    if(connssl->ctxt) {
+-      infof(data, "schannel: clear security context handle\n");
+-      s_pSecFn->DeleteSecurityContext(&connssl->ctxt->ctxt_handle);
+-      Curl_safefree(connssl->ctxt);
+-    }
++  /* free SSPI Schannel API security context handle */
++  if(connssl->ctxt) {
++    infof(data, "schannel: clear security context handle\n");
++    s_pSecFn->DeleteSecurityContext(&connssl->ctxt->ctxt_handle);
++    Curl_safefree(connssl->ctxt);
++  }
+ 
+-    /* free SSPI Schannel API credential handle */
+-    if(connssl->cred) {
+-      /* decrement the reference counter of the credential/session handle */
+-      if(connssl->cred->refcount > 0) {
+-        connssl->cred->refcount--;
+-        infof(data, "schannel: decremented credential handle refcount = %d\n",
+-              connssl->cred->refcount);
+-      }
++  /* free SSPI Schannel API credential handle */
++  if(connssl->cred) {
++    /* decrement the reference counter of the credential/session handle */
++    if(connssl->cred->refcount > 0) {
++      connssl->cred->refcount--;
++      infof(data, "schannel: decremented credential handle refcount = %d\n",
++            connssl->cred->refcount);
++    }
+ 
+-      /* if the handle was not cached and the refcount is zero */
+-      if(!connssl->cred->cached && connssl->cred->refcount == 0) {
+-        infof(data, "schannel: clear credential handle\n");
+-        s_pSecFn->FreeCredentialsHandle(&connssl->cred->cred_handle);
+-        Curl_safefree(connssl->cred);
+-      }
++    /* if the handle was not cached and the refcount is zero */
++    if(!connssl->cred->cached && connssl->cred->refcount == 0) {
++      infof(data, "schannel: clear credential handle\n");
++      s_pSecFn->FreeCredentialsHandle(&connssl->cred->cred_handle);
++      Curl_safefree(connssl->cred);
+     }
+   }
+ 
+
+---

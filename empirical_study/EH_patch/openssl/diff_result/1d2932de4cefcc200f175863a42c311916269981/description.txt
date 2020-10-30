@@ -1,0 +1,8 @@
+{
+    "summary": "Missing OPENSSL_free on error path.",
+    "author": "Eric Dequin",
+    "description": "Missing OPENSSL_free on error path.\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "1d2932de4cefcc200f175863a42c311916269981",
+    "date": "2015-02-12 11:14:57",
+    "parent_hash": "7b4a4b71b52c704580f5ef043017f06d4fb97e7e"
+}

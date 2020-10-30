@@ -1,0 +1,8 @@
+{
+    "summary": "Fix return value checking for BIO_sock_init",
+    "author": "Paul Yang",
+    "description": "Fix return value checking for BIO_sock_init\n\nBIO_sock_init returns '-1' on error, not '0', so it's needed to check\nexplicitly istead of using '!'.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\n(Merged from https://github.com/openssl/openssl/pull/3766)\n",
+    "hash": "9e1d5e8dff693cb2b658f66db4f10709d8364690",
+    "date": "2017-06-26 15:19:12",
+    "parent_hash": "e8e5597606d10fcb5620399dd751be4ecf3dcd1d"
+}

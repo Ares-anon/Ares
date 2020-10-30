@@ -1,0 +1,16 @@
+crypto/x509v3/v3_addr.c
+=======================================================
+lhs: 100644 | 49d0d4d3929cc1cb9c65e561798adb42c3c80535
+rhs: 100644 | f68f937ffa9542a9ac60b74a7625752be2b41249
+---@@ -897,7 +897,8 @@ static int IPAddressOrRanges_canonize(IPAddressOrRanges *aors,
+         IPAddressOrRange *a = sk_IPAddressOrRange_value(aors, j);
+         if (a != NULL && a->type == IPAddressOrRange_addressRange) {
+             unsigned char a_min[ADDR_RAW_BUF_LEN], a_max[ADDR_RAW_BUF_LEN];
+-            extract_min_max(a, a_min, a_max, length);
++            if (!extract_min_max(a, a_min, a_max, length))
++                return 0;
+             if (memcmp(a_min, a_max, length) > 0)
+                 return 0;
+         }
+
+---

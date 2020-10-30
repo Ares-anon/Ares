@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak when using of FIFOs\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "7af3cee60395939cd88c0ec3af3728a1c85b857b",
+    "summary": "Fix memory leak when using of FIFOs",
+    "date": "2018-05-11 16:14:00",
+    "hash": "9b26f3c80b615696b9583b35dbf60dcb82f46d3e"
+}

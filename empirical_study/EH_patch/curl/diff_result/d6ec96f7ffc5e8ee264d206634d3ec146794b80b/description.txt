@@ -1,0 +1,8 @@
+{
+    "parent_hash": "979b012eeb1908e7e3ad13c736fb1dbc73187780",
+    "date": "2017-11-24 13:30:38",
+    "author": "Daniel Stenberg",
+    "description": "metalink: fix memory-leak and NULL pointer dereference\n\nReported by scan-build\n\nCloses #2109\n",
+    "summary": "metalink: fix memory-leak and NULL pointer dereference",
+    "hash": "d6ec96f7ffc5e8ee264d206634d3ec146794b80b"
+}

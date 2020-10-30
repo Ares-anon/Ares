@@ -1,0 +1,8 @@
+{
+    "summary": "Memory leak in state machine in error path",
+    "author": "Todd Short",
+    "description": "Memory leak in state machine in error path\n\nWhen EC is disabled, and an error occurs in ssl_generate_master_secret()\nor RAND_bytes(), the error path does not free rsa_decrypt.\n\nRT#4197\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "c849c6d9d3bf806fecfe0c16eaa55d361979ff7f",
+    "date": "2015-12-23 13:33:28",
+    "parent_hash": "87a595e554f9e753c3e653c8caae62739c7958b0"
+}

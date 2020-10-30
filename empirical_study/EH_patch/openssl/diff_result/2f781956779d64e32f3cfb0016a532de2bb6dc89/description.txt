@@ -1,0 +1,8 @@
+{
+    "summary": "Use correct function ID in error path",
+    "author": "Alessandro Ghedini",
+    "description": "Use correct function ID in error path\n\nThis fixes \"make update\".\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "2f781956779d64e32f3cfb0016a532de2bb6dc89",
+    "date": "2016-03-09 01:20:53",
+    "parent_hash": "a060574458752ad1f914221be4627598efff62df"
+}

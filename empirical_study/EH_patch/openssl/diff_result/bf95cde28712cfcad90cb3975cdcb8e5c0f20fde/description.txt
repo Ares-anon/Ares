@@ -1,0 +1,8 @@
+{
+    "summary": "Fix SRP memory leaks",
+    "author": "Matt Caswell",
+    "description": "Fix SRP memory leaks\n\nThere were some memory leaks in the creation of an SRP verifier (both on\nsuccessful completion and also on some error paths).\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "bf95cde28712cfcad90cb3975cdcb8e5c0f20fde",
+    "date": "2015-09-21 10:17:58",
+    "parent_hash": "dfd6211ce3536cdf6a2d455ac108fb35ab1b865d"
+}

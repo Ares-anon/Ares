@@ -1,0 +1,14 @@
+keepalived/core/main.c
+=======================================================
+lhs: 100644 | 0c3c8e89a232d63f863213fa854bb7b6c2d57dbc
+rhs: 100644 | 6b62c0c31929f7dd54d8991466725471e5e7ba3a
+---@@ -193,6 +193,7 @@ free_parent_mallocs_exit(void)
+ #endif
+ 
+ 	FREE_PTR(instance_name);
++	FREE_PTR(config_id);
+ }
+ 
+ char *
+
+---

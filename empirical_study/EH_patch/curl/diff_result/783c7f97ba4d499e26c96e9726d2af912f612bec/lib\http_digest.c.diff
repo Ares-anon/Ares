@@ -1,0 +1,14 @@
+lib/http_digest.c
+=======================================================
+lhs: 100644 | 75251a8b6d4647ba0bce6cfc7d45f6bb4c944e6d
+rhs: 100644 | a75ca9d59b3ebc23aefc7586f764c73b6e9621c4
+---@@ -154,6 +154,7 @@ CURLcode Curl_output_digest(struct connectdata *conn,
+   *allocuserpwd = aprintf("%sAuthorization: Digest %s\r\n",
+                           proxy ? "Proxy-" : "",
+                           response);
++  free(response);
+   if(!*allocuserpwd)
+     return CURLE_OUT_OF_MEMORY;
+ 
+
+---

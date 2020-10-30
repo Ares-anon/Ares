@@ -1,0 +1,8 @@
+{
+    "summary": "Better check of return values from app_isdir and app_access",
+    "author": "Richard Levitte",
+    "description": "Better check of return values from app_isdir and app_access\n\n[extended tests]\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6033)\n",
+    "hash": "c36e9093914aab4bfc42af1db35558a9272607b5",
+    "date": "2018-04-25 11:44:26",
+    "parent_hash": "96de2e590bad00575baa7c2c6be5767b43aa017c"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in GENERAL_NAME_set0_othername.",
+    "author": "Xiangyu Bu",
+    "description": "Fix memory leak in GENERAL_NAME_set0_othername.\n\nCLA: trivial\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4544)\n",
+    "hash": "04761b557a53f026630dd5916b2b8522d94579db",
+    "date": "2017-10-23 17:46:02",
+    "parent_hash": "590bbdfdf43b97abf8817f506f8ab46687d1eadd"
+}

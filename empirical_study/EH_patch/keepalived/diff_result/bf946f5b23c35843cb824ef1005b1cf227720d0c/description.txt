@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak if SMTP_CHECK helo_name specified\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "88693500e3aa84f5e430406637c9dc237c03ad0d",
+    "summary": "Fix memory leak if SMTP_CHECK helo_name specified",
+    "date": "2017-09-13 14:34:27",
+    "hash": "bf946f5b23c35843cb824ef1005b1cf227720d0c"
+}

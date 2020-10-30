@@ -1,0 +1,8 @@
+{
+    "parent_hash": "b6baa108fac4d5c251fd4951867444d7cb92fe96",
+    "date": "2015-11-12 19:11:40",
+    "author": "Stefan B\u00fchler",
+    "description": "sasl_sspi: fix identity memory leak in digest authentication\n",
+    "summary": "sasl_sspi: fix identity memory leak in digest authentication",
+    "hash": "077fd8f1fa873337b99845805273e11cf968b498"
+}

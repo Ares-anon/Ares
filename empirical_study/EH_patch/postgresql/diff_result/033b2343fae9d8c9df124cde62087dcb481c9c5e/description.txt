@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "Fix inadvertent semantics change in last patch to plug memory leaks.\n\nCommit a5bca4ef034f71175d46462963af2329d22068c2 accidentally changed\nthe semantics when the \"skipping missing configuration file\" is\nemitted, because it forced OK to true instead of leaving the value\nuntouched.\n\nSpotted by Tom Lane.\n",
+    "summary": "Fix inadvertent semantics change in last patch to plug memory leaks.",
+    "date": "2014-01-21 11:42:37",
+    "parent_hash": "5709b8acc67d80584e9623a1d355374b580c95e8",
+    "hash": "033b2343fae9d8c9df124cde62087dcb481c9c5e"
+}

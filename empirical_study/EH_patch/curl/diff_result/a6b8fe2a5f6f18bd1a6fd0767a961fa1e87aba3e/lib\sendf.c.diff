@@ -1,0 +1,27 @@
+lib/sendf.c
+=======================================================
+lhs: 100644 | 812f69daebe8506d777b670cdb8e28061f7f8b4b
+rhs: 100644 | 96899f466ad313cf775e06f31eee64ac0b4a4d6e
+---@@ -52,7 +52,7 @@ static size_t convert_lineends(struct SessionHandle *data,
+ 
+   /* sanity check */
+   if((startPtr == NULL) || (size < 1)) {
+-    return(size);
++    return size;
+   }
+ 
+   if(data->state.prev_block_had_trailing_cr) {
+@@ -114,9 +114,9 @@ static size_t convert_lineends(struct SessionHandle *data,
+       /* tidy up by null terminating the now shorter data */
+       *outPtr = '\0';
+ 
+-    return(outPtr - startPtr);
++    return (outPtr - startPtr);
+   }
+-  return(size);
++  return size;
+ }
+ #endif /* CURL_DO_LINEEND_CONV */
+ 
+
+---

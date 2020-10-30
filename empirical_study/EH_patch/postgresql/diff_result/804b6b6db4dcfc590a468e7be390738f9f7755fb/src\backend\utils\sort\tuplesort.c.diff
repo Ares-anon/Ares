@@ -1,0 +1,33 @@
+src/backend/utils/sort/tuplesort.c
+=======================================================
+lhs: 100644 | b6e302fc9ca4270130d7c100a78813e4e92975b6
+rhs: 100644 | b8494a2f86fa7e13d705fcf0360a1ecf6f8074d3
+---@@ -3508,6 +3508,7 @@ comparetup_index_btree(const SortTuple *a, const SortTuple *b,
+ 	{
+ 		Datum		values[INDEX_MAX_KEYS];
+ 		bool		isnull[INDEX_MAX_KEYS];
++		char	   *key_desc;
+ 
+ 		/*
+ 		 * Some rather brain-dead implementations of qsort (such as the one in
+@@ -3518,13 +3519,15 @@ comparetup_index_btree(const SortTuple *a, const SortTuple *b,
+ 		Assert(tuple1 != tuple2);
+ 
+ 		index_deform_tuple(tuple1, tupDes, values, isnull);
++
++		key_desc = BuildIndexValueDescription(state->indexRel, values, isnull);
++
+ 		ereport(ERROR,
+ 				(errcode(ERRCODE_UNIQUE_VIOLATION),
+ 				 errmsg("could not create unique index \"%s\"",
+ 						RelationGetRelationName(state->indexRel)),
+-				 errdetail("Key %s is duplicated.",
+-						   BuildIndexValueDescription(state->indexRel,
+-													  values, isnull)),
++				 key_desc ? errdetail("Key %s is duplicated.", key_desc) :
++							errdetail("Duplicate keys exist."),
+ 				 errtableconstraint(state->heapRel,
+ 								 RelationGetRelationName(state->indexRel))));
+ 	}
+
+---

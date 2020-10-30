@@ -1,0 +1,22 @@
+test/crltest.c
+=======================================================
+lhs: 100644 | 5ea9cdc4ee343c09ee69a525769374e13234d8e0
+rhs: 100644 | 738ca23ce571e667654091b8f238f6dfd2d52c6f
+---@@ -267,6 +267,7 @@ static int verify(X509 *leaf, X509 *root, STACK_OF(X509_CRL) *crls,
+     if (flags)
+         X509_VERIFY_PARAM_set_flags(param, flags);
+     X509_STORE_CTX_set0_param(ctx, param);
++    param = NULL;
+ 
+     ERR_clear_error();
+     status = X509_verify_cert(ctx) == 1 ? X509_V_OK
+@@ -274,6 +275,7 @@ static int verify(X509 *leaf, X509 *root, STACK_OF(X509_CRL) *crls,
+ err:
+     sk_X509_pop_free(roots, X509_free);
+     sk_X509_CRL_pop_free(crls, X509_CRL_free);
++    X509_VERIFY_PARAM_free(param);
+     X509_STORE_CTX_free(ctx);
+     X509_STORE_free(store);
+     return status;
+
+---

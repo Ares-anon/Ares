@@ -1,0 +1,14 @@
+crypto/ec/ec2_smpl.c
+=======================================================
+lhs: 100644 | 66bff0dadc30adfb257ea6753472bb388605ac66
+rhs: 100644 | 6d6be307943ac80cfcdb9098bd1fc98cfddc47e3
+---@@ -742,6 +742,7 @@ int ec_GF2m_simple_make_affine(const EC_GROUP *group, EC_POINT *point,
+         goto err;
+     if (!BN_one(point->Z))
+         goto err;
++    point->Z_is_one = 1;
+ 
+     ret = 1;
+ 
+
+---

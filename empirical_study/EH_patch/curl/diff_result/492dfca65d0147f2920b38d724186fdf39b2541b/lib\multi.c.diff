@@ -1,0 +1,14 @@
+lib/multi.c
+=======================================================
+lhs: 100644 | 41648271d5aef68dbdac7a1bb06e1197649b415a
+rhs: 100644 | caf51de7710c3fac7f75d37584623f89310eee37
+---@@ -1016,6 +1016,7 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
+           disconnect_conn = TRUE;
+         }
+         result = CURLE_OPERATION_TIMEDOUT;
++        (void)Curl_done(&data->easy_conn, result, TRUE);
+         /* Skip the statemachine and go directly to error handling section. */
+         goto statemachine_end;
+       }
+
+---

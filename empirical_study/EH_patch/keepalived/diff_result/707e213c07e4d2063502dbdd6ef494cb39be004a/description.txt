@@ -1,0 +1,8 @@
+{
+    "description": "Check if return value from read_value_block() is null before using\n\nIssue #847 identified that an empty notification_email block in the\nconfiguration caused keepalived to segfault. The patch provided with\nthe issue report has been used, and added to for all other uses of\nread_value_block(), also printing warning messages.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "58ae2ba75fa57896bc690c57a892958eb9816cd4",
+    "summary": "Check if return value from read_value_block() is null before using",
+    "date": "2018-04-26 13:30:51",
+    "hash": "707e213c07e4d2063502dbdd6ef494cb39be004a"
+}

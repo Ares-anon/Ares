@@ -1,0 +1,19 @@
+keepalived/vrrp/vrrp_data.c
+=======================================================
+lhs: 100644 | 9303229db31e14666200cd62cb6647353e8af508
+rhs: 100644 | c429502f8a6e44964bc65c0df549924fc03abac7
+---@@ -108,6 +108,12 @@ free_vgroup(void *data)
+ 	}
+ 	FREE(vgroup->gname);
+ 	free_list(&vgroup->vrrp_instances);
++	free_list(&vgroup->track_ifp);
++	free_list(&vgroup->track_script);
++	free_list(&vgroup->track_file);
++#ifdef _WITH_BFD_
++	free_list(&vgroup->track_bfd);
++#endif
+ 	free_notify_script(&vgroup->script_backup);
+ 	free_notify_script(&vgroup->script_master);
+ 	free_notify_script(&vgroup->script_fault);
+
+---

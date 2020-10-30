@@ -1,0 +1,15 @@
+keepalived/check/check_smtp.c
+=======================================================
+lhs: 100644 | 0bfb15768f869464913f04dac5e0365d5027e1d6
+rhs: 100644 | 6b30f4fc14ff8fd1dceb6c977abb82498010ce7d
+---@@ -200,6 +200,8 @@ static void
+ smtp_helo_name_handler(vector_t *strvec)
+ {
+ 	smtp_checker_t *smtp_checker = CHECKER_GET();
++	if (smtp_checker->helo_name)
++		FREE(smtp_checker->helo_name);
+ 	smtp_checker->helo_name = CHECKER_VALUE_STRING(strvec);
+ }
+ 
+
+---

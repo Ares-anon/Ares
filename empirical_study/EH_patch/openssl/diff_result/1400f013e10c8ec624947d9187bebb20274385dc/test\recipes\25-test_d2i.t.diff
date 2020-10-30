@@ -1,0 +1,27 @@
+test/recipes/25-test_d2i.t
+=======================================================
+lhs: None
+rhs: 100644 | a9c259d118a468737ada83407c09f539b68c46c6
+file added in rhs
+---@@ -0,0 +1,19 @@
++#! /usr/bin/perl
++
++use strict;
++use warnings;
++
++use File::Spec;
++use OpenSSL::Test qw/:DEFAULT srctop_file/;
++
++setup("test_d2i");
++
++plan tests => 2;
++
++ok(run(test(["d2i_test", "x509",
++             srctop_file('test','d2i-tests','bad_cert.der')])),
++   "Running d2i_test bad_cert.der");
++
++ok(run(test(["d2i_test", "generalname",
++             srctop_file('test','d2i-tests','bad_generalname.der')])),
++   "Running d2i_test bad_generalname.der");
+
+---

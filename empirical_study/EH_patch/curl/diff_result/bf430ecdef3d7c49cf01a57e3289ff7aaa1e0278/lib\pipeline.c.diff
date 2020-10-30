@@ -1,0 +1,25 @@
+lib/pipeline.c
+=======================================================
+lhs: 100644 | 211194b25ae4f8d4143aa2305959ecfb0fbec9ab
+rhs: 100644 | 0ff82f0863e55c4bf2c7e66cfc96333740b0e90f
+---@@ -299,11 +299,16 @@ CURLMcode Curl_pipeline_set_server_blacklist(char **servers,
+       char *server_name;
+ 
+       server_name = strdup(*servers);
+-      if(!server_name)
++      if(!server_name) {
++        Curl_llist_destroy(new_list, NULL);
+         return CURLM_OUT_OF_MEMORY;
++      }
+ 
+-      if(!Curl_llist_insert_next(new_list, new_list->tail, server_name))
++      if(!Curl_llist_insert_next(new_list, new_list->tail, server_name)) {
++        Curl_llist_destroy(new_list, NULL);
++        Curl_safefree(server_name);
+         return CURLM_OUT_OF_MEMORY;
++      }
+ 
+       servers++;
+     }
+
+---

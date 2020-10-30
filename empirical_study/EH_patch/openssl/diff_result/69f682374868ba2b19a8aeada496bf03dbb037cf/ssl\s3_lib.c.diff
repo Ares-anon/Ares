@@ -1,0 +1,16 @@
+ssl/s3_lib.c
+=======================================================
+lhs: 100644 | 3e6530e32ba08ec099709f484fd79f7ebdfda286
+rhs: 100644 | d40a181ebe88fd2bdf591f5f279d4abbed4abb9d
+---@@ -3114,7 +3114,8 @@ int ssl3_new(SSL *s)
+     s->s3 = s3;
+ 
+ #ifndef OPENSSL_NO_SRP
+-    SSL_SRP_CTX_init(s);
++    if(!SSL_SRP_CTX_init(s))
++          goto err;
+ #endif
+     s->method->ssl_clear(s);
+     return (1);
+
+---

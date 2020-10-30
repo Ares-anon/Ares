@@ -1,0 +1,15 @@
+crypto/ocsp/ocsp_cl.c
+=======================================================
+lhs: 100644 | 118b66a2f5015fb2fe27ac0483d0b6c00127a106
+rhs: 100644 | f6101e1532e4e9ae2645cce3ace6a079a1c4dd5e
+---@@ -230,7 +230,7 @@ int OCSP_resp_get1_id(const OCSP_BASICRESP *bs,
+     } else {
+         return 0;
+     }
+-    if (pname == NULL && pid == NULL)
++    if (*pname == NULL && *pid == NULL)
+         return 0;
+     return 1;
+ }
+
+---

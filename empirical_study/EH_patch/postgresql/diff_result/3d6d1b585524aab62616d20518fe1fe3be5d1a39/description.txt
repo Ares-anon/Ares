@@ -1,0 +1,8 @@
+{
+    "author": "Robert Haas",
+    "description": "Move out-of-memory error checks from aset.c to mcxt.c\n\nThis potentially allows us to add mcxt.c interfaces that do something\nother than throw an error when memory cannot be allocated. We'll\nhandle adding those interfaces in a separate commit.\n\nMichael Paquier, with minor changes by me\n",
+    "summary": "Move out-of-memory error checks from aset.c to mcxt.c",
+    "date": "2015-01-29 10:23:38",
+    "parent_hash": "1c993b3aceb7e0ccf32b59280b266b1f4f7b077e",
+    "hash": "3d6d1b585524aab62616d20518fe1fe3be5d1a39"
+}

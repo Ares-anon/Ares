@@ -1,0 +1,15 @@
+src/core/servers-setup.c
+=======================================================
+lhs: 100644 | cd5fe406d48d0815bbe055fee58b5a8bd9fd0c70
+rhs: 100644 | 771e399990ab87d1e02d66aee3145c90706c5ce5
+---@@ -509,7 +509,7 @@ void server_setup_remove_chatnet(const char *chatnet)
+ {
+ 	GSList *tmp, *next;
+ 
+-	g_return_val_if_fail(chatnet != NULL, NULL);
++	g_return_if_fail(chatnet != NULL);
+ 
+ 	for (tmp = setupservers; tmp != NULL; tmp = next) {
+ 		SERVER_SETUP_REC *rec = tmp->data;
+
+---

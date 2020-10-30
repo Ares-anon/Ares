@@ -1,0 +1,21 @@
+src/include/executor/executor.h
+=======================================================
+lhs: 100644 | e6569e1038b0e79df1349aea0226ccfd748005e5
+rhs: 100644 | a782fae0f8342fc0982369d45686ff5adad7c3b1
+---@@ -187,9 +187,12 @@ extern ResultRelInfo *ExecGetTriggerResultRel(EState *estate, Oid relid);
+ extern void ExecCleanUpTriggerState(EState *estate);
+ extern bool ExecContextForcesOids(PlanState *planstate, bool *hasoids);
+ extern void ExecConstraints(ResultRelInfo *resultRelInfo,
+-				TupleTableSlot *slot, EState *estate);
+-extern void ExecPartitionCheck(ResultRelInfo *resultRelInfo,
++				TupleTableSlot *slot, EState *estate,
++				bool check_partition_constraint);
++extern bool ExecPartitionCheck(ResultRelInfo *resultRelInfo,
+ 				   TupleTableSlot *slot, EState *estate);
++extern void ExecPartitionCheckEmitError(ResultRelInfo *resultRelInfo,
++									TupleTableSlot *slot, EState *estate);
+ extern void ExecWithCheckOptions(WCOKind kind, ResultRelInfo *resultRelInfo,
+ 					 TupleTableSlot *slot, EState *estate);
+ extern LockTupleMode ExecUpdateLockMode(EState *estate, ResultRelInfo *relinfo);
+
+---

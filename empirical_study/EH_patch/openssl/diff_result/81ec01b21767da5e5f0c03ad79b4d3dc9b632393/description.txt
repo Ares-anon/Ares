@@ -1,0 +1,8 @@
+{
+    "summary": "Check EVP_Cipher return values for SSL2",
+    "author": "Matt Caswell",
+    "description": "Check EVP_Cipher return values for SSL2\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "81ec01b21767da5e5f0c03ad79b4d3dc9b632393",
+    "date": "2014-11-27 21:40:39",
+    "parent_hash": "4b87706d20f0a2fdf2e8f1b90256e141c487ef47"
+}

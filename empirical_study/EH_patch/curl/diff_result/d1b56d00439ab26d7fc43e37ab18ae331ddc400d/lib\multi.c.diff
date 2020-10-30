@@ -1,0 +1,14 @@
+lib/multi.c
+=======================================================
+lhs: 100644 | ed2920c53ec8aa9c4f36519a6ba90e2bbbad6aa4
+rhs: 100644 | 04aba9d0f1c945abef68d00afcff38610ef20226
+---@@ -1365,6 +1365,7 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
+           else {
+             /* Have error handler disconnect conn if we can't retry */
+             disconnect_conn = TRUE;
++            free(newurl);
+           }
+         }
+         else {
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Fix double free bug in error path",
+    "author": "Matt Caswell",
+    "description": "Fix double free bug in error path\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "998f2cb8c4d354ef0a5ebf22f1b2ee48cda97664",
+    "date": "2016-04-09 10:10:55",
+    "parent_hash": "cf430d059304200e2eac8c02f6ebfbfff3bbdf16"
+}

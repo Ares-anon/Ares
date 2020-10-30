@@ -1,0 +1,16 @@
+test/clienthellotest.c
+=======================================================
+lhs: 100644 | 66fc27f48b144bfb81425b537a6f41c652cd12b8
+rhs: 100644 | d9ae758987be2521737051207d3fed7e90f92d3f
+---@@ -217,7 +217,8 @@ int main(int argc, char *argv[])
+     EVP_cleanup();
+     CRYPTO_cleanup_all_ex_data();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks(err);
++    if (CRYPTO_mem_leaks(err) <= 0)
++        testresult = 0;
+ #endif
+     BIO_free(err);
+ 
+
+---

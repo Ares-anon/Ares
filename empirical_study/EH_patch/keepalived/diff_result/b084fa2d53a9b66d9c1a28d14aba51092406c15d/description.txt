@@ -1,0 +1,8 @@
+{
+    "description": "Check virtual route has an interface before returning ifindex to SNMP\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "61fbd3b67d14aad5816c4919978ad551c0de491b",
+    "summary": "Check virtual route has an interface before returning ifindex to SNMP",
+    "date": "2016-04-07 10:47:26",
+    "hash": "b084fa2d53a9b66d9c1a28d14aba51092406c15d"
+}

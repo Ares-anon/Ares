@@ -1,0 +1,14 @@
+src/pl/plpython/plpy_main.h
+=======================================================
+lhs: 100644 | b13e2c21a111b045f61fdc4da23ba583003e0ed4
+rhs: 100644 | 10426c43236b9c52274b9280352039446cd20cce
+---@@ -25,4 +25,7 @@ typedef struct PLyExecutionContext
+ /* Get the current execution context */
+ extern PLyExecutionContext *PLy_current_execution_context(void);
+ 
++/* Get the scratch memory context for specified execution context */
++extern MemoryContext PLy_get_scratch_context(PLyExecutionContext *context);
++
+ #endif   /* PLPY_MAIN_H */
+
+---

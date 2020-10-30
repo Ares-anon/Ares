@@ -1,0 +1,8 @@
+{
+    "summary": "Fixes memory leaks in CT code",
+    "author": "Rob Percival",
+    "description": "Fixes memory leaks in CT code\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "147e54a77ed43b1522f343114d79f8b4c8a6bfb2",
+    "date": "2016-03-07 14:44:04",
+    "parent_hash": "c6912adf0c07227b18be3d8ef12d92ad7fc4318a"
+}

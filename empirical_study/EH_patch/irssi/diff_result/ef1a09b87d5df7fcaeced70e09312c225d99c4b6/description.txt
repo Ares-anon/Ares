@@ -1,0 +1,8 @@
+{
+    "description": "Fix return value of server_setup_remove_chatnet\n",
+    "parent_hash": "6ca7dc68478772258dea114d29625dc2c87999f9",
+    "author": "isundil",
+    "date": "2015-10-01 22:53:34",
+    "hash": "ef1a09b87d5df7fcaeced70e09312c225d99c4b6",
+    "summary": "Fix return value of server_setup_remove_chatnet"
+}

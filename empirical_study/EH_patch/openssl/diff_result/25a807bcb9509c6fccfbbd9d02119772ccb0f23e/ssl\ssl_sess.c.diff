@@ -1,0 +1,20 @@
+ssl/ssl_sess.c
+=======================================================
+lhs: 100644 | d5b7fe33109325d95c389035645fb75227329311
+rhs: 100644 | 3b9a9f75359e59b77a1179b26dccc3500673a404
+---@@ -198,8 +198,11 @@ SSL_SESSION *SSL_SESSION_new(void)
+         return NULL;
+     }
+ 
+-    CRYPTO_new_ex_data(CRYPTO_EX_INDEX_SSL_SESSION, ss, &ss->ex_data);
+-
++    if (!CRYPTO_new_ex_data(CRYPTO_EX_INDEX_SSL_SESSION, ss, &ss->ex_data)) {
++        CRYPTO_THREAD_lock_free(ss->lock);
++        OPENSSL_free(ss);
++        return NULL;
++    }
+     return ss;
+ }
+ 
+
+---

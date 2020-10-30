@@ -1,0 +1,17 @@
+crypto/bio/bio_lib.c
+=======================================================
+lhs: 100644 | 9c9646afa8a22c3a6a208877c76e7f92d8458f31
+rhs: 100644 | 4793a453e4afa22f3431c9daf39eec93e71fc020
+---@@ -132,8 +132,8 @@ int BIO_free(BIO *a)
+ 
+ 	CRYPTO_free_ex_data(CRYPTO_EX_INDEX_BIO, a, &a->ex_data);
+ 
+-	if ((a->method == NULL) || (a->method->destroy == NULL)) return(1);
+-	a->method->destroy(a);
++	if ((a->method != NULL) && (a->method->destroy != NULL))
++		a->method->destroy(a);
+ 	OPENSSL_free(a);
+ 	return(1);
+ 	}
+
+---

@@ -1,0 +1,8 @@
+{
+    "summary": "Use sk_CONF_VALUE_pop_free in do_ext_nconf error path.",
+    "author": "David Benjamin",
+    "description": "Use sk_CONF_VALUE_pop_free in do_ext_nconf error path.\n\n8605abf13523579ecab8b1f2a4bcb8354d94af79 fixed the nval leak, but it\nused free instead of pop_free. nval owns its contents, so it should be\nfreed with pop_free. See the pop_free call a few lines down.\n\nThis is a no-op as, in this codepath, we must have nval == NULL or\nsk_CONF_VALUE_num(nval) == 0. In those cases, free and pop_free are\nidentical. However, variables should be freed consistently.\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1351)",
+    "hash": "e125c12f5718cf589b3469aa40a54421a2536bd2",
+    "date": "2016-07-26 16:03:42",
+    "parent_hash": "abdb0c7b4ec73d6e94d4d8a0d6ee027e3b8db428"
+}

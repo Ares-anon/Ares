@@ -1,0 +1,24 @@
+test/build.info
+=======================================================
+lhs: 100644 | 74f83a38173c3ad8d79f8052c8c1c7edc5328955
+rhs: 100644 | 083412cba833feeac071a1e2e9e9bb998bd08c1f
+---@@ -14,7 +14,7 @@ PROGRAMS=\
+         danetest heartbeat_test p5_crpt2_test \
+         constant_time_test verify_extra_test clienthellotest \
+         packettest asynctest secmemtest srptest memleaktest \
+-        dtlsv1listentest ct_test threadstest afalgtest
++        dtlsv1listentest ct_test threadstest afalgtest d2i_test
+ 
+ SOURCE[aborttest]=aborttest.c
+ INCLUDE[aborttest]={- rel2abs(catdir($builddir,"../include")) -} ../include
+@@ -220,4 +220,8 @@ SOURCE[afalgtest]=afalgtest.c
+ INCLUDE[afalgtest]={- rel2abs(catdir($builddir,"../include")) -} .. ../include
+ DEPEND[afalgtest]=../libcrypto
+ 
++SOURCE[d2i_test]=d2i_test.c testutil.c
++INCLUDE[d2i_test]={- rel2abs(catdir($builddir,"../include")) -} .. ../include
++DEPEND[d2i_test]=../libcrypto
++
+ INCLUDE[testutil.o]=..
+
+---

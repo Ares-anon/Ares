@@ -1,0 +1,15 @@
+tests/libtest/lib1502.c
+=======================================================
+lhs: 100644 | 5b75e2f2abe3c27b0272a523c92e0c17f3d4233f
+rhs: 100644 | bd7c7c86404cae45e2de7360015a144510ab9e52
+---@@ -79,6 +79,8 @@ int test(char *URL)
+     easy = dup;
+   }
+   else {
++    curl_slist_free_all(dns_cache_list);
++    curl_easy_cleanup(easy);
+     return CURLE_OUT_OF_MEMORY;
+   }
+ 
+
+---

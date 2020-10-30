@@ -1,0 +1,21 @@
+src/interfaces/ecpg/preproc/variable.c
+=======================================================
+lhs: 100644 | 2ad7b5d255eddf4f38d580cccb4c1a41f262ba4d
+rhs: 100644 | bb4b664b859ec996d0daf86435916efb2348a713
+---@@ -437,11 +437,13 @@ remove_variable_from_list(struct arguments ** list, struct variable * var)
+ void
+ dump_variables(struct arguments * list, int mode)
+ {
+-	char	   *str_zero = mm_strdup("0");
++	char	   *str_zero;
+ 
+ 	if (list == NULL)
+ 		return;
+ 
++	str_zero = mm_strdup("0");
++
+ 	/*
+ 	 * The list is build up from the beginning so lets first dump the end of
+ 	 * the list:
+
+---

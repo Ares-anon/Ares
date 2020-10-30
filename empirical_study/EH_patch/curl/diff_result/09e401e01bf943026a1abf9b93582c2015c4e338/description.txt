@@ -1,0 +1,8 @@
+{
+    "parent_hash": "fe60cbfbbfc2aa5a2bd46165a7304e3031041fd0",
+    "date": "2018-07-30 17:59:36",
+    "author": "Daniel Stenberg",
+    "description": "smb: fix memory leak on early failure\n\n... by making sure connection related data (->share) is stored in the\nconnection and not in the easy handle.\n\nDetected by OSS-fuzz\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=9369\nFixes #2769\nCloses #2810\n",
+    "summary": "smb: fix memory leak on early failure",
+    "hash": "09e401e01bf943026a1abf9b93582c2015c4e338"
+}

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "3f8a727611b9fb048c407ee865e6e3a3f3150c9c",
+    "date": "2018-01-30 17:23:35",
+    "author": "Max Dymond",
+    "description": "file: Check the return code from Curl_range and bail out on error\n",
+    "summary": "file: Check the return code from Curl_range and bail out on error",
+    "hash": "811d96e9e210f94486ce90073fc0613b189cc368"
+}

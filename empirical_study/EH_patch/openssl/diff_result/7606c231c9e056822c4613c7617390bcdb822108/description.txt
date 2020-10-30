@@ -1,0 +1,8 @@
+{
+    "summary": "Simplify buffer limit checking, and reuse BIO_snprintf returned value.",
+    "author": "FdaSilvaYY",
+    "description": "Simplify buffer limit checking, and reuse BIO_snprintf returned value.\n\nReviewed-by: Matt Caswell <matt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1284)",
+    "hash": "7606c231c9e056822c4613c7617390bcdb822108",
+    "date": "2016-07-20 01:35:38",
+    "parent_hash": "edbff8da9b95d22dba22475bcf69ccf1ed15cab7"
+}

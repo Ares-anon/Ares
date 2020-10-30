@@ -1,0 +1,8 @@
+{
+    "summary": "fix BN_hex2bn()/BN_dec2bn() memory leak",
+    "author": "huangqinjin",
+    "description": "fix BN_hex2bn()/BN_dec2bn() memory leak\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "58c03e3b9225fe1a8e3f6b8c23c45b33e26fedb5",
+    "date": "2016-05-27 10:04:26",
+    "parent_hash": "753be41d592e53189fc3905a2d45fd51de9aeaea"
+}

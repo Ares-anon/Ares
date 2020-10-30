@@ -1,0 +1,22 @@
+src/backend/access/heap/heapam.c
+=======================================================
+lhs: 100644 | c63dfa0bafc606ea3dc1ee9c7427d92c28ed09d4
+rhs: 100644 | 6a27ef4140091b0c53d3a68f9d947824b2ffe8c2
+---@@ -3802,6 +3802,7 @@ l2:
+ 			ReleaseBuffer(vmbuffer);
+ 		bms_free(hot_attrs);
+ 		bms_free(key_attrs);
++		bms_free(id_attrs);
+ 		return result;
+ 	}
+ 
+@@ -4268,6 +4269,7 @@ l2:
+ 
+ 	bms_free(hot_attrs);
+ 	bms_free(key_attrs);
++	bms_free(id_attrs);
+ 
+ 	return HeapTupleMayBeUpdated;
+ }
+
+---

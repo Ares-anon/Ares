@@ -1,0 +1,14 @@
+docs/libcurl/opts/CURLOPT_WILDCARDMATCH.3
+=======================================================
+lhs: 100644 | cb47fd18e4c7ded3a93dfb30a860b4dda5b3a107
+rhs: 100644 | b567045e366af61204d35064a4a946eb304d6b7a
+---@@ -81,5 +81,7 @@ This feature is only supported for FTP download.
+ See http://curl.haxx.se/libcurl/c/ftp-wildcard.html
+ .SH AVAILABILITY
+ Added in 7.21.0
++.SH RETURN VALUE
++Returns CURLE_OK if the option is supported, and CURLE_UNKNOWN_OPTION if not.
+ .SH "SEE ALSO"
+ .BR CURLOPT_FNMATCH_FUNCTION "(3), " CURLOPT_URL "(3), "
+
+---

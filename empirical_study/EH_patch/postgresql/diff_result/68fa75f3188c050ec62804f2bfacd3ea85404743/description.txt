@@ -1,0 +1,8 @@
+{
+    "author": "Heikki Linnakangas",
+    "description": "Fix query-duration memory leak with GIN rescans.\n\nThe requiredEntries / additionalEntries arrays were not freed in\nfreeScanKeys() like other per-key stuff.\n\nIt's not obvious, but startScanKey() was only ever called after the keys\nhave been initialized with ginNewScanKey(). That's why it doesn't need to\nworry about freeing existing arrays. The ginIsNewKey() test in gingetbitmap\nwas never true, because ginrescan free's the existing keys, and it's not OK\nto call gingetbitmap twice in a row without calling ginrescan in between.\nTo make that clear, remove the unnecessary ginIsNewKey(). And just to be\nextra sure that nothing funny happens if there is an existing key after all,\ncall freeScanKeys() to free it if it exists. This makes the code more\nstraightforward.\n\n(I'm seeing other similar leaks in testing a query that rescans an GIN index\nscan, but that's a different issue. This just fixes the obvious leak with\nthose two arrays.)\n\nBackpatch to 9.4, where GIN fast scan was added.\n",
+    "summary": "Fix query-duration memory leak with GIN rescans.",
+    "date": "2015-01-30 17:58:23",
+    "parent_hash": "cff1bd2a3c36fdf014367dd97f140495ef6ed47e",
+    "hash": "68fa75f3188c050ec62804f2bfacd3ea85404743"
+}

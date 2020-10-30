@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in EC_GROUP_get_ecparameters()",
+    "author": "Kazuki Yamaguchi",
+    "description": "Fix a memory leak in EC_GROUP_get_ecparameters()\n\nThe variable 'buffer', allocated by EC_POINT_point2buf(), isn't\nfree'd on the success path.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "0110a4703608430c2131237c6afcf932a28c27ff",
+    "date": "2016-08-22 15:10:03",
+    "parent_hash": "9ba6f347fedbe103a06c8fd303912b358eacb11c"
+}

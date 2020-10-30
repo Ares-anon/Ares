@@ -1,0 +1,16 @@
+test/jpaketest.c
+=======================================================
+lhs: 100644 | 7569f2e167321012002675e365eec285ed5ef1a5
+rhs: 100644 | 7b59855d23f9d2e8a3f9bad5c0cac893d2d2508a
+---@@ -179,7 +179,8 @@ int main(int argc, char **argv)
+     ERR_remove_thread_state(NULL);
+     ERR_free_strings();
+ #ifndef OPENSSL_NO_CRYPTO_MDEBUG
+-    CRYPTO_mem_leaks(bio_err);
++    if (CRYPTO_mem_leaks(bio_err) <= 0)
++        return 1;
+ #endif
+ 
+     return 0;
+
+---

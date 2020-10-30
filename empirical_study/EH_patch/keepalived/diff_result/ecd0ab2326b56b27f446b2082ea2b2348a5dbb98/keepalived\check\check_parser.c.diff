@@ -1,0 +1,27 @@
+keepalived/check/check_parser.c
+=======================================================
+lhs: 100644 | 8e86be0db19caa9353ae2eb6e7b4ce32377de84b
+rhs: 100644 | a4676b4f853a795deed0e5c24cbf83035a1c72d6
+---@@ -363,12 +363,20 @@ static void
+ quorum_up_handler(vector_t *strvec)
+ {
+ 	virtual_server_t *vs = LIST_TAIL_DATA(check_data->vs);
++	if (vs->quorum_up) {
++		log_message(LOG_INFO, "(%s): quorum_up script already specified - ignoring %s", vs->vsgname, FMT_STR_VSLOT(strvec,1));
++		return;
++	}
+ 	vs->quorum_up = set_check_notify_script(strvec);
+ }
+ static void
+ quorum_down_handler(vector_t *strvec)
+ {
+ 	virtual_server_t *vs = LIST_TAIL_DATA(check_data->vs);
++	if (vs->quorum_down) {
++		log_message(LOG_INFO, "(%s): quorum_down script already specified - ignoring %s", vs->vsgname, FMT_STR_VSLOT(strvec,1));
++		return;
++	}
+ 	vs->quorum_down = set_check_notify_script(strvec);
+ }
+ static void
+
+---

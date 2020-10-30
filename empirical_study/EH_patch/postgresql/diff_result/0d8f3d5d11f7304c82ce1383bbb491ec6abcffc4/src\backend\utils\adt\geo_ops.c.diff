@@ -1,0 +1,23 @@
+src/backend/utils/adt/geo_ops.c
+=======================================================
+lhs: 100644 | a3af08ad6b00e160e7a4528d6e1e8ad34f861082
+rhs: 100644 | ad48dfcb4b712846c454a1f2c5b94560127d4b0a
+---@@ -20,6 +20,7 @@
+ #include <ctype.h>
+ 
+ #include "libpq/pqformat.h"
++#include "miscadmin.h"
+ #include "utils/builtins.h"
+ #include "utils/geo_decls.h"
+ 
+@@ -3931,6 +3932,8 @@ lseg_inside_poly(Point *a, Point *b, POLYGON *poly, int start)
+ 	{
+ 		Point	   *interpt;
+ 
++		CHECK_FOR_INTERRUPTS();
++
+ 		s.p[1] = poly->p[i];
+ 
+ 		if (on_ps_internal(t.p, &s))
+
+---

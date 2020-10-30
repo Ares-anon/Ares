@@ -1,0 +1,14 @@
+keepalived/vrrp/vrrp_parser.c
+=======================================================
+lhs: 100644 | b629a70707a109f891fa7134c066b0483e9e1f65
+rhs: 100644 | bfc96fbf142c0f4b409a921ad169f9e46d9db740
+---@@ -1190,7 +1190,6 @@ garp_group_end_handler(void)
+ 		}
+ 
+ 		free_list_element(garp_delay, garp_delay->tail);
+-		FREE_PTR(delay);
+ 	}
+ }
+ 
+
+---

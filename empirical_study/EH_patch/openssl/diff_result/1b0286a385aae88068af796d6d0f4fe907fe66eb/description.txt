@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak\n\nWhen we call tls_collect_extensions() we need to free up the raw\nextensions data later.\n\nPerl changes reviewed by Richard Levitte. Non-perl changes reviewed by Rich\nSalz\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "1b0286a385aae88068af796d6d0f4fe907fe66eb",
+    "date": "2016-12-08 17:20:34",
+    "parent_hash": "7caf619f1a7c7901a63b8257ac7133dd1c584243"
+}

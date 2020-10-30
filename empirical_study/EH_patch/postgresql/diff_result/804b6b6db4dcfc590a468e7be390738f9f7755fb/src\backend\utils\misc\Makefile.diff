@@ -1,0 +1,15 @@
+src/backend/utils/misc/Makefile
+=======================================================
+lhs: 100644 | 449d5b47ea2155542106a4d3ef5c94105e4f6dcd
+rhs: 100644 | 378b77e0bc53c16994580cc9c75b14dfe44d05a9
+---@@ -14,7 +14,7 @@ include $(top_builddir)/src/Makefile.global
+ 
+ override CPPFLAGS := -I. -I$(srcdir) $(CPPFLAGS)
+ 
+-OBJS = guc.o help_config.o pg_rusage.o ps_status.o \
++OBJS = guc.o help_config.o pg_rusage.o ps_status.o rls.o \
+        superuser.o timeout.o tzparser.o
+ 
+ # This location might depend on the installation directories. Therefore
+
+---

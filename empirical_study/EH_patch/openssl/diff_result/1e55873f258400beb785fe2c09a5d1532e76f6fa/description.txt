@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a memory leak in the new TAP filter BIO",
+    "author": "Matt Caswell",
+    "description": "Fix a memory leak in the new TAP filter BIO\n\n[extended tests]\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3760)\n",
+    "hash": "1e55873f258400beb785fe2c09a5d1532e76f6fa",
+    "date": "2017-06-23 20:30:27",
+    "parent_hash": "404c76f4ee1dc51c0d200e2b60a6340aadb44e38"
+}

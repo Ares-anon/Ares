@@ -1,0 +1,8 @@
+{
+    "summary": "Fix missing NULL checks in CKE processing",
+    "author": "Matt Caswell",
+    "description": "Fix missing NULL checks in CKE processing\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "b599ce3b64b695cc7430f731a33e0f5bb83ae62c",
+    "date": "2016-11-23 22:39:27",
+    "parent_hash": "7acb8b64c32617788959aee2733ac14fd7b97e5f"
+}

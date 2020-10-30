@@ -1,0 +1,20 @@
+crypto/asn1/ameth_lib.c
+=======================================================
+lhs: 100644 | f317204d9cf21b672e02ba6873fff5447e2465f0
+rhs: 100644 | 7df3076e3fbdcd6ad79a92ee0e78a0ecfd27b60c
+---@@ -262,7 +262,12 @@ int EVP_PKEY_asn1_add_alias(int to, int from)
+ 	if (!ameth)
+ 		return 0;
+ 	ameth->pkey_base_id = to;
+-	return EVP_PKEY_asn1_add0(ameth);
++	if (!EVP_PKEY_asn1_add0(ameth))
++		{
++		EVP_PKEY_asn1_free(ameth);
++		return 0;
++		}
++	return 1;
+ 	}
+ 
+ int EVP_PKEY_asn1_get0_info(int *ppkey_id, int *ppkey_base_id, int *ppkey_flags,
+
+---

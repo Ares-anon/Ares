@@ -1,0 +1,18 @@
+crypto/ec/ec_ameth.c
+=======================================================
+lhs: 100644 | 66437e0da5755be92022acd51211ef0b2bf3bb4a
+rhs: 100644 | fa5bd0318ca70b348e71171f402ffb8b63bd9137
+---@@ -254,8 +254,10 @@ static int eckey_priv_encode(PKCS8_PRIV_KEY_INFO *p8, const EVP_PKEY *pkey)
+     }
+ 
+     if (!PKCS8_pkey_set0(p8, OBJ_nid2obj(NID_X9_62_id_ecPublicKey), 0,
+-                         ptype, pval, ep, eplen))
++                         ptype, pval, ep, eplen)) {
++        OPENSSL_free(ep);
+         return 0;
++    }
+ 
+     return 1;
+ }
+
+---

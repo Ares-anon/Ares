@@ -1,0 +1,8 @@
+{
+    "summary": "Check conversion return in ASN1_INTEGER_print_bio.",
+    "author": "Pauli",
+    "description": "Check conversion return in ASN1_INTEGER_print_bio.\n\nAlso streamline the code by relying on ASN1_INTEGER_to_BN to allocate the\nBN instead of doing it separately.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6821)\n",
+    "hash": "35c9408108f3608eb572acd7f64a93cf4f43f4f6",
+    "date": "2018-07-31 11:37:05",
+    "parent_hash": "201b305a2409d9eb13b5e4bfbd4967e04e155a60"
+}

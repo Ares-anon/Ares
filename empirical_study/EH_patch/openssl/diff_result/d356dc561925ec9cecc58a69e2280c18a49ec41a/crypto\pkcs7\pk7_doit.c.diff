@@ -1,0 +1,16 @@
+crypto/pkcs7/pk7_doit.c
+=======================================================
+lhs: 100644 | 1333e4df4d2d093091f3afad4406c320cd1a4748
+rhs: 100644 | 24022416d225401d6272fdfd0178c50382a6f071
+---@@ -775,7 +775,8 @@ int PKCS7_dataFinal(PKCS7 *p7, BIO *bio)
+             goto err;
+         if (!EVP_DigestFinal_ex(mdc, md_data, &md_len))
+             goto err;
+-        ASN1_OCTET_STRING_set(p7->d.digest->digest, md_data, md_len);
++        if (!ASN1_OCTET_STRING_set(p7->d.digest->digest, md_data, md_len))
++            goto err;
+     }
+ 
+     if (!PKCS7_is_detached(p7)) {
+
+---

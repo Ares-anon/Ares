@@ -1,0 +1,8 @@
+{
+    "parent_hash": "9168e2470d5203661faa5500361b7eb493aa24dd",
+    "date": "2017-04-15 23:29:25",
+    "author": "Larry Stefani",
+    "description": "mbedtls: fix memory leak in error path\n\nAdd missing our_ssl_sessionid free call in mbed_connect_step3().\n\nCloses #1417\n",
+    "summary": "mbedtls: fix memory leak in error path",
+    "hash": "fc347820a27c5e5ed1ccfe1c81c4c4eb2a59f9fe"
+}

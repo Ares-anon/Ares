@@ -1,0 +1,8 @@
+{
+    "summary": "Check the return value from ASN1_INTEGER_set",
+    "author": "Matt Caswell",
+    "description": "Check the return value from ASN1_INTEGER_set\n\nFound by Coverity\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7169)\n",
+    "hash": "512d811719fc955f574090af4c3586a9aba46fa7",
+    "date": "2018-09-10 17:33:02",
+    "parent_hash": "d689f313cc5ebe2763fb26d1e7f8cd53b7da6a4a"
+}

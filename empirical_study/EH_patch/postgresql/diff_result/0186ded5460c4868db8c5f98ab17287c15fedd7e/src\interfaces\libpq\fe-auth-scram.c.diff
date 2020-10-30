@@ -1,0 +1,18 @@
+src/interfaces/libpq/fe-auth-scram.c
+=======================================================
+lhs: 100644 | 4598774a963432cd7f10796de8d469f84e23ffdd
+rhs: 100644 | d8a5bbc712a2325f61cbaa9a3896d07e3024accc
+---@@ -638,7 +638,11 @@ pg_fe_scram_build_verifier(const char *password)
+ 
+ 	/* Generate a random salt */
+ 	if (!pg_frontend_random(saltbuf, SCRAM_DEFAULT_SALT_LEN))
++	{
++		if (prep_password)
++			free(prep_password);
+ 		return NULL;
++	}
+ 
+ 	result = scram_build_verifier(saltbuf, SCRAM_DEFAULT_SALT_LEN,
+ 								  SCRAM_DEFAULT_ITERATIONS, password);
+
+---

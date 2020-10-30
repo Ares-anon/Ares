@@ -1,0 +1,8 @@
+{
+    "description": "Use report_config_error() in check_parser.c\n\nThis should have been included in commit ead70947 -\n\"Update config-test\".\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "af64106c7fe6938d9b30f5747d8ebbd464821f00",
+    "summary": "Use report_config_error() in check_parser.c",
+    "date": "2018-07-28 07:45:04",
+    "hash": "cf8130ace6dd3be6f45f10b67af28b0a83957022"
+}

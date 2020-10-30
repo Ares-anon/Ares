@@ -1,0 +1,15 @@
+keepalived/check/check_dns.c
+=======================================================
+lhs: 100644 | adf1be76ca17d1e1a62036250ecb9bc785cf6690
+rhs: 100644 | fa5ce35703531dcff7ff0bc5a9a0f5a0f203bc6f
+---@@ -462,7 +462,7 @@ dns_type_handler(vector_t * strvec)
+ 
+ 	dns_type = dns_type_lookup(CHECKER_VALUE_STRING(strvec));
+ 	if (!dns_type)
+-		log_message(LOG_INFO, "Unknown DNS check type %s - defaulting to SOA", vector_size(strvec) < 2 ? "[blank]" : FMT_STR_VSLOT(strvec, 1));
++		report_config_error(CONFIG_GENERAL_ERROR, "Unknown DNS check type %s - defaulting to SOA", vector_size(strvec) < 2 ? "[blank]" : FMT_STR_VSLOT(strvec, 1));
+ 	else
+ 		dns_check->type = dns_type;
+ }
+
+---

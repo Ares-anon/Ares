@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a NULL ptr deref in error path in tls_process_cke_dhe()",
+    "author": "Matt Caswell",
+    "description": "Fix a NULL ptr deref in error path in tls_process_cke_dhe()\n\nFixes #6574\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6593)\n",
+    "hash": "b6ff436fcb597663ffcfe6d724d207cf120e7250",
+    "date": "2018-07-02 14:42:13",
+    "parent_hash": "5281bb2252be6575ebb7a8b683e6bd160476fa2a"
+}

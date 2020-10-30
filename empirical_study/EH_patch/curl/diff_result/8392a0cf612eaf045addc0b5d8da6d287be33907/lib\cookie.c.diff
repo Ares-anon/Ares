@@ -1,0 +1,14 @@
+lib/cookie.c
+=======================================================
+lhs: 100644 | 1d7defd848683dfe05b62a38ccedbd9598de66de
+rhs: 100644 | 271f6d49d38c7a8087626a41644e969b17da5aff
+---@@ -499,6 +499,7 @@ Curl_cookie_add(struct Curl_easy *data,
+             badcookie = TRUE; /* out of memory bad */
+             break;
+           }
++          free(co->spath); /* if this is set again */
+           co->spath = sanitize_cookie_path(co->path);
+           if(!co->spath) {
+             badcookie = TRUE; /* out of memory bad */
+
+---

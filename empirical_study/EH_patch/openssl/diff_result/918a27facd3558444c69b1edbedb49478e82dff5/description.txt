@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak on lookup failure",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak on lookup failure\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4503)\n",
+    "hash": "918a27facd3558444c69b1edbedb49478e82dff5",
+    "date": "2017-10-12 00:03:32",
+    "parent_hash": "c2976edf4b22691d8bebb0e3ca2db18b3d0c71c6"
+}

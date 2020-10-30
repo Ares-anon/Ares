@@ -1,0 +1,15 @@
+src/backend/libpq/auth-scram.c
+=======================================================
+lhs: 100644 | 8b3da736b1a0960b2445608625387f46c35a30b1
+rhs: 100644 | 3acc2acfe417aebc2452ce695748184e518fea2f
+---@@ -411,6 +411,8 @@ pg_be_scram_build_verifier(const char *password)
+ 		ereport(LOG,
+ 				(errcode(ERRCODE_INTERNAL_ERROR),
+ 				 errmsg("could not generate random salt")));
++		if (prep_password)
++			pfree(prep_password);
+ 		return NULL;
+ 	}
+ 
+
+---

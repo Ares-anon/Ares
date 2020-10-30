@@ -1,0 +1,15 @@
+crypto/asn1/a_time.c
+=======================================================
+lhs: 100644 | cb19e8024aa7886b73948cfd1c2037a7ebff9532
+rhs: 100644 | 1babb9636054c627598989fa207bf7525514c331
+---@@ -543,7 +543,7 @@ int ASN1_TIME_compare(const ASN1_TIME *a, const ASN1_TIME *b)
+ {
+     int day, sec;
+ 
+-    if (!ASN1_TIME_diff(&day, &sec, a, b))
++    if (!ASN1_TIME_diff(&day, &sec, b, a))
+         return -2;
+     if (day > 0 || sec > 0)
+         return 1;
+
+---

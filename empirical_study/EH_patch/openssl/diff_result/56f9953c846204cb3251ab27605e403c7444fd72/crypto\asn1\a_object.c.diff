@@ -1,0 +1,15 @@
+crypto/asn1/a_object.c
+=======================================================
+lhs: 100644 | 463469d188bc5536809873c021a00105ee1a2d95
+rhs: 100644 | 6fc7681c235b07731d1fb5217e2a2a9b2299ad74
+---@@ -26,7 +26,7 @@ int i2d_ASN1_OBJECT(const ASN1_OBJECT *a, unsigned char **pp)
+         return (0);
+ 
+     objsize = ASN1_object_size(0, a->length, V_ASN1_OBJECT);
+-    if (pp == NULL)
++    if (pp == NULL || objsize == -1)
+         return objsize;
+ 
+     p = *pp;
+
+---

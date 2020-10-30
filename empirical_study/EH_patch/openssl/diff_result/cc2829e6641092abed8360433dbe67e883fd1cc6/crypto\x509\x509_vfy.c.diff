@@ -1,0 +1,16 @@
+crypto/x509/x509_vfy.c
+=======================================================
+lhs: 100644 | 26867cb4c205f3de5e5edf2044523ccbb8b4a49e
+rhs: 100644 | 6b1f7febff56421821f5c720293768975ec7970c
+---@@ -348,7 +348,8 @@ int X509_verify_cert(X509_STORE_CTX *ctx)
+             if (!sk_X509_push(ctx->chain, x)) {
+                 X509_free(xtmp);
+                 X509err(X509_F_X509_VERIFY_CERT, ERR_R_MALLOC_FAILURE);
+-                return 0;
++                ok = 0;
++                goto done;
+             }
+             num++;
+         }
+
+---

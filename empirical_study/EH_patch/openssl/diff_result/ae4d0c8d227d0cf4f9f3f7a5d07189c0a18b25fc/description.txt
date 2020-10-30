@@ -1,0 +1,8 @@
+{
+    "summary": "Add comment explaining why we don't check a return value",
+    "author": "Matt Caswell",
+    "description": "Add comment explaining why we don't check a return value\n\nA call to X509_verify_cert() is used to build a chain of certs for the\nserver to send back to the client. It isn't *actually* used for verifying\nthe cert at all - just building the chain. Therefore the return value is\nignored.\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\n",
+    "hash": "ae4d0c8d227d0cf4f9f3f7a5d07189c0a18b25fc",
+    "date": "2015-11-17 11:21:17",
+    "parent_hash": "d73ca3efa74bbb620a1e74deb5eec6f3d10203d5"
+}

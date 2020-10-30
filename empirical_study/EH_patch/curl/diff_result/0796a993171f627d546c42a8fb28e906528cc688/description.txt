@@ -1,0 +1,8 @@
+{
+    "parent_hash": "2497c42172307485fb60100474b68c1620041df5",
+    "date": "2016-08-19 14:46:07",
+    "author": "Miroslav Franc",
+    "description": "spnego_sspi: fix memory leak in case *outlen is zero (#970)\n\n",
+    "summary": "spnego_sspi: fix memory leak in case *outlen is zero (#970)",
+    "hash": "0796a993171f627d546c42a8fb28e906528cc688"
+}

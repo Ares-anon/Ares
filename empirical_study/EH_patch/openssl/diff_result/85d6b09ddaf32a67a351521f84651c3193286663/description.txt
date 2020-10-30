@@ -1,0 +1,8 @@
+{
+    "summary": "Fix mem leak on error path",
+    "author": "Matt Caswell",
+    "description": "Fix mem leak on error path\n\nThe mem pointed to by cAB can be leaked on an error path.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "85d6b09ddaf32a67a351521f84651c3193286663",
+    "date": "2016-08-23 00:19:15",
+    "parent_hash": "c72b8e069de6a8863123d5be05e41b833abe09ee"
+}

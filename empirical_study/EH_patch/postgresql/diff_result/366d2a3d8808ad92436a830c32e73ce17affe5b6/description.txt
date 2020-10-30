@@ -1,0 +1,8 @@
+{
+    "author": "Peter Eisentraut",
+    "description": "pg_dump: Fix minor memory leak\n\nMissing a destroyPQExpBuffer() in the early exit branch.  The early\nexits aren't really necessary.  Most similar functions just proceed\nrunning the rest of the code zero times and clean up at the end.\n",
+    "summary": "pg_dump: Fix minor memory leak",
+    "date": "2017-01-23 08:28:39",
+    "parent_hash": "56549129079465a9d25fd6e5abc1439363922b7c",
+    "hash": "366d2a3d8808ad92436a830c32e73ce17affe5b6"
+}

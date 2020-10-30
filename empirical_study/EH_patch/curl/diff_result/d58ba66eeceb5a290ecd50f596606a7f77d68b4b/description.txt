@@ -1,0 +1,8 @@
+{
+    "parent_hash": "d56637113092ebc6721601812510ef5e3e5126e4",
+    "date": "2016-01-18 03:48:10",
+    "author": "Jay Satiro",
+    "description": "mbedtls: Fix pinned key return value on fail\n\n- Switch from verifying a pinned public key in a callback during the\ncertificate verification to inline after the certificate verification.\n\nThe callback method had three problems:\n\n1. If a pinned public key didn't match, CURLE_SSL_PINNEDPUBKEYNOTMATCH\nwas not returned.\n\n2. If peer certificate verification was disabled the pinned key\nverification did not take place as it should.\n\n3. (related to #2) If there was no certificate of depth 0 the callback\nwould not have checked the pinned public key.\n\nThough all those problems could have been fixed it would have made the\ncode more complex. Instead we now verify inline after the certificate\nverification in mbedtls_connect_step2.\n\nRef: http://curl.haxx.se/mail/lib-2016-01/0047.html\nRef: https://github.com/bagder/curl/pull/601\n",
+    "summary": "mbedtls: Fix pinned key return value on fail",
+    "hash": "d58ba66eeceb5a290ecd50f596606a7f77d68b4b"
+}

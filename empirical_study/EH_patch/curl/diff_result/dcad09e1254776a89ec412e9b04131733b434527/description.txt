@@ -1,0 +1,8 @@
+{
+    "parent_hash": "338b64137093f366aaeec40f4058a2b493e6c8f1",
+    "date": "2014-11-07 00:11:20",
+    "author": "Steve Holme",
+    "description": "http_digest: Fixed some memory leaks introduced in commit 6f8d8131b1\n\nFixed a couple of memory leaks as a result of moving code that used to\npopulate allocuserpwd and relied on it's clean up.\n",
+    "summary": "http_digest: Fixed some memory leaks introduced in commit 6f8d8131b1",
+    "hash": "dcad09e1254776a89ec412e9b04131733b434527"
+}

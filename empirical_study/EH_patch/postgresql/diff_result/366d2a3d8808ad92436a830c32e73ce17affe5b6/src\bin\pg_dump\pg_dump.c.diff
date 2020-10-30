@@ -1,0 +1,38 @@
+src/bin/pg_dump/pg_dump.c
+=======================================================
+lhs: 100644 | 6cbefac250f412635dcf281da1ca760d8c9cfbd2
+rhs: 100644 | 049c9cdfd7e168f440fbd9b81499daf81f7c40a7
+---@@ -3360,15 +3360,6 @@ getPublications(Archive *fout)
+ 
+ 	ntups = PQntuples(res);
+ 
+-	if (ntups == 0)
+-	{
+-		/*
+-		 * There are no publications defined. Clean up and return.
+-		 */
+-		PQclear(res);
+-		return;
+-	}
+-
+ 	i_tableoid = PQfnumber(res, "tableoid");
+ 	i_oid = PQfnumber(res, "oid");
+ 	i_pubname = PQfnumber(res, "pubname");
+@@ -3637,15 +3628,6 @@ getSubscriptions(Archive *fout)
+ 
+ 	ntups = PQntuples(res);
+ 
+-	if (ntups == 0)
+-	{
+-		/*
+-		 * There are no subscriptions defined. Clean up and return.
+-		 */
+-		PQclear(res);
+-		return;
+-	}
+-
+ 	i_tableoid = PQfnumber(res, "tableoid");
+ 	i_oid = PQfnumber(res, "oid");
+ 	i_subname = PQfnumber(res, "subname");
+
+---

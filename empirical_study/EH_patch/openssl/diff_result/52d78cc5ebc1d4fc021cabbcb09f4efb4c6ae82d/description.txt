@@ -1,0 +1,8 @@
+{
+    "summary": "Extend the BIO callback tests to check the return value semantics",
+    "author": "Matt Caswell",
+    "description": "Extend the BIO callback tests to check the return value semantics\n\nCheck that different return values passed to the BIO callback are\ncorrectly handled.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7344)\n",
+    "hash": "52d78cc5ebc1d4fc021cabbcb09f4efb4c6ae82d",
+    "date": "2018-10-04 14:16:16",
+    "parent_hash": "d97ce8d9a0619c1d9d1222dc1b44dbebb58dd966"
+}

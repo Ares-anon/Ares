@@ -1,0 +1,8 @@
+{
+    "summary": "Applying same fix as in dtls1_process_out_of_seq_message. A truncated DTLS fragment would cause *ok to be clear, but the return value would still be the number of bytes read.",
+    "author": "Matt Caswell",
+    "description": "Applying same fix as in dtls1_process_out_of_seq_message. A truncated DTLS fragment would cause *ok to be clear, but the return value would still be the number of bytes read.\n\nProblem identified by Emilia K\u00e4sper, based on previous issue/patch by Adam\nLangley.\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "f6663338cb0f5c21b8635d0b84d69554b0f51b56",
+    "date": "2014-08-06 20:36:40",
+    "parent_hash": "b74d1d260f07bf0836610d6b1a53b32101913886"
+}

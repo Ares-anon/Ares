@@ -1,0 +1,16 @@
+lib/curl_sasl_sspi.c
+=======================================================
+lhs: 100644 | 0135d308e251c11edc76bc0b10bd033a237a0fbc
+rhs: 100644 | 8f6c225910930a5285d0905550dc23828a9b9605
+---@@ -110,6 +110,9 @@ CURLcode Curl_sasl_create_digest_md5_message(struct SessionHandle *data,
+     return CURLE_NOT_BUILT_IN;
+   }
+ 
++  /* Release the package buffer as it is not required anymore */
++  s_pSecFn->FreeContextBuffer(SecurityPackage);
++
+   /* Calculate our SPN */
+   spn = aprintf("%s/%s", service, data->easy_conn->host.name);
+   if(!spn)
+
+---

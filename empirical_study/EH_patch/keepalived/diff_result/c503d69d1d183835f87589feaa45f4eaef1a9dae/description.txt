@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak in parser.c\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "499b4649da8f99ca2af8f2ce2e280e5f05f37ec1",
+    "summary": "Fix memory leak in parser.c",
+    "date": "2018-03-05 20:36:41",
+    "hash": "c503d69d1d183835f87589feaa45f4eaef1a9dae"
+}

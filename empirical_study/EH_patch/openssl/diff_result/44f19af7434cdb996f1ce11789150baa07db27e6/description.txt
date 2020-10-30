@@ -1,0 +1,8 @@
+{
+    "summary": "Fix an s_client memory leak",
+    "author": "Matt Caswell",
+    "description": "Fix an s_client memory leak\n\nWe were using OPENSSL_strdup() unnecessarily and then failing to free it. There is\nno reason to use OPENSSL_strdup() in this scenario - so just remove it.\n\nReviewed-by: Ben Kaduk <kaduk@mit.edu>\n(Merged from https://github.com/openssl/openssl/pull/4699)\n",
+    "hash": "44f19af7434cdb996f1ce11789150baa07db27e6",
+    "date": "2017-11-09 17:01:18",
+    "parent_hash": "b6705d4893d1566c3a5427e387ce99344497758d"
+}

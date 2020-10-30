@@ -1,0 +1,14 @@
+crypto/dh/dh_ameth.c
+=======================================================
+lhs: 100644 | b5c9c24303b042a7fd2f30c647afdebfb18f5745
+rhs: 100644 | 14d291f3097a0e4e76576aade216f77a851c335a
+---@@ -248,6 +248,7 @@ static int dh_priv_decode(EVP_PKEY *pkey, PKCS8_PRIV_KEY_INFO *p8)
+     DHerr(DH_F_DH_PRIV_DECODE, EVP_R_DECODE_ERROR);
+  dherr:
+     DH_free(dh);
++    ASN1_INTEGER_free(privkey);
+     return 0;
+ }
+ 
+
+---

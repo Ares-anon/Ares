@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory from notice_section function on error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory from notice_section function on error path\n\nThe notice_section() function allocates a STACK_OF(CONF_VALUE) but\nthen fails to free it on an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "6eb311eea6fca45495b3a48c396f5aa8e8f7e714",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "97323d57cd6dbbd0c06383dea3cc1b90d11f2557"
+}

@@ -1,0 +1,22 @@
+lib/curl_sasl.c
+=======================================================
+lhs: 100644 | 8f6aab2e858024d0ad3b57f0753b3177d1a5f6e6
+rhs: 100644 | 7e2b8afaf1316c20a31baea7ec10c491cab1f0e7
+---@@ -569,6 +569,7 @@ CURLcode Curl_sasl_create_digest_md5_message(struct SessionHandle *data,
+                      "qop=%s",
+                      userp, realm, nonce,
+                      cnonce, nonceCount, spn, resp_hash_hex, qop);
++  Curl_safefree(spn);
+   if(!response)
+     return CURLE_OUT_OF_MEMORY;
+ 
+@@ -576,7 +577,6 @@ CURLcode Curl_sasl_create_digest_md5_message(struct SessionHandle *data,
+   result = Curl_base64_encode(data, response, 0, outptr, outlen);
+ 
+   Curl_safefree(response);
+-  Curl_safefree(spn);
+ 
+   return result;
+ }
+
+---

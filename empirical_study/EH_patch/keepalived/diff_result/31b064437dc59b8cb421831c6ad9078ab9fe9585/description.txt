@@ -1,0 +1,8 @@
+{
+    "description": "Check return values of SSL_new() and BIO_new_socket()\n\nIssue #1004 identified that genhash didn't check the return value\nof SSL_new(). This commit makes genhash check the return value of\nSSL_new() and also BIO_new_socket(), and also fixes the same\nproblem in keepalived check_ssl.c/ssl_commect().\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "8b663cda0081fa72ec1a55e82947cce96e36bcee",
+    "summary": "Check return values of SSL_new() and BIO_new_socket()",
+    "date": "2018-09-19 11:44:23",
+    "hash": "31b064437dc59b8cb421831c6ad9078ab9fe9585"
+}

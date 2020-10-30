@@ -1,0 +1,20 @@
+crypto/dh/dh_rfc7919.c
+=======================================================
+lhs: 100644 | d01ba6fdf3c9510ad170b70a34546a92319f3dc7
+rhs: 100644 | a54b468e552ce11c3304ad322a7a2e888d6d4e0a
+---@@ -66,10 +66,9 @@ int DH_get_nid(const DH *dh)
+         BIGNUM *q = BN_dup(dh->p);
+ 
+         /* Check q = p * 2 + 1 we already know q is odd, so just shift right */
+-        if (q == NULL || !BN_rshift1(q, q) || !BN_cmp(dh->q, q)) {
+-            BN_free(q);
+-            return NID_undef;
+-        }
++        if (q == NULL || !BN_rshift1(q, q) || !BN_cmp(dh->q, q))
++            nid = NID_undef;
++        BN_free(q);
+     }
+     return nid;
+ }
+
+---

@@ -1,0 +1,8 @@
+{
+    "author": "Alvaro Herrera",
+    "description": "plperl: Fix memory leak in hek2cstr\n\nBackpatch all the way back to 9.1, where it was introduced by commit\n50d89d42.\n\nReported by Sergey Burladyan in #9223\nAuthor: Alex Hunsaker\n",
+    "summary": "plperl: Fix memory leak in hek2cstr",
+    "date": "2014-03-16 23:22:21",
+    "parent_hash": "0268d21e5d3c732bf5543d68a6d870e4eee7e673",
+    "hash": "bd1154edec5484390d7dcd05d12287ccc81c30e8"
+}

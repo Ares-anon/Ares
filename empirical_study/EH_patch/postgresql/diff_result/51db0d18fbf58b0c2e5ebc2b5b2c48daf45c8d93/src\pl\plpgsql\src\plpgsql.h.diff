@@ -1,0 +1,14 @@
+src/pl/plpgsql/src/plpgsql.h
+=======================================================
+lhs: 100644 | c2449f03cf9ea1b7ab4159ac9727c95f99cef4fb
+rhs: 100644 | 26a7344e9a6c829e73bbf1769c03c77cfab6f7bc
+---@@ -915,6 +915,7 @@ typedef struct PLpgSQL_function
+ 	int			fn_rettyplen;
+ 	bool		fn_retbyval;
+ 	bool		fn_retistuple;
++	bool		fn_retisdomain;
+ 	bool		fn_retset;
+ 	bool		fn_readonly;
+ 
+
+---

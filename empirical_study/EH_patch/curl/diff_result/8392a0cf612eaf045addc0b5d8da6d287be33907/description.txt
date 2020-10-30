@@ -1,0 +1,8 @@
+{
+    "parent_hash": "cecffff561b4cb5707510cfbc0bc41fe0e5b346a",
+    "date": "2017-09-30 23:40:50",
+    "author": "Daniel Stenberg",
+    "description": "cookie: fix memory leak if path was set twice in header\n\n... this will let the second occurance override the first.\n\nAdded test 1161 to verify.\n\nReported-by: Max Dymond\nFixes #1932\nCloses #1933\n",
+    "summary": "cookie: fix memory leak if path was set twice in header",
+    "hash": "8392a0cf612eaf045addc0b5d8da6d287be33907"
+}

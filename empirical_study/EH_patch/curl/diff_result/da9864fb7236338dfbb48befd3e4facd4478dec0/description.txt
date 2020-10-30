@@ -1,0 +1,8 @@
+{
+    "parent_hash": "755dc2f058c6b01cb8161a7c07367ffaabb84ccc",
+    "date": "2014-01-24 00:22:08",
+    "author": "Dan Fandrich",
+    "description": "multi: Fixed a memory leak on OOM condition\n",
+    "summary": "multi: Fixed a memory leak on OOM condition",
+    "hash": "da9864fb7236338dfbb48befd3e4facd4478dec0"
+}

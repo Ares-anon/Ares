@@ -1,0 +1,16 @@
+open-vm-tools/vgauth/lib/impersonate.c
+=======================================================
+lhs: 100644 | 924107c0dd05482129d620a3aaf929de4faa1f59
+rhs: 100644 | e07fd8c4569e8784e5f3ddba71a08bc6910252c4
+---@@ -296,7 +296,8 @@ VGAuth_UserHandleFree(VGAuthUserHandle *handle)
+ 
+    g_free(handle->userName);
+ 
+-   if (handle->details.type == VGAUTH_AUTH_TYPE_SAML) {
++   if (handle->details.type == VGAUTH_AUTH_TYPE_SAML ||
++       handle->details.type == VGAUTH_AUTH_TYPE_SAML_INFO_ONLY) {
+       g_free(handle->details.val.samlData.subject);
+       VGAuth_FreeAliasInfoContents(&(handle->details.val.samlData.aliasInfo));
+    }
+
+---

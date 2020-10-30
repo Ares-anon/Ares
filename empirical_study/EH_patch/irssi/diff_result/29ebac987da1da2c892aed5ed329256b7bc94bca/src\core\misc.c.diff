@@ -1,0 +1,16 @@
+src/core/misc.c
+=======================================================
+lhs: 100644 | ce49925b1454267d0edafd011904a00706e58b55
+rhs: 100644 | 0b2d8e77634d6e7877278ae5edbf098296453b72
+---@@ -560,6 +560,9 @@ char *my_asctime(time_t t)
+         int len;
+ 
+ 	tm = localtime(&t);
++	if (tm == NULL)
++	    return g_strdup("???");
++
+ 	str = g_strdup(asctime(tm));
+ 
+ 	len = strlen(str);
+
+---

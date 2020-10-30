@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak if duplicate SSL context values specified\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "9f4e8dc6835c6dccc9260c73383ff73e611debd1",
+    "summary": "Fix memory leak if duplicate SSL context values specified",
+    "date": "2017-10-17 13:04:37",
+    "hash": "1497f4d09cea0b5a6cb76e269abbd7c1008d57ba"
+}

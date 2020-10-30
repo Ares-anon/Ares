@@ -1,0 +1,14 @@
+ssl/d1_srvr.c
+=======================================================
+lhs: 100644 | aef38bb75429817e8c2b2c018795f2c45330d882
+rhs: 100644 | 0cdc51be23e63047fea2ebc5815ccef0e31c0c38
+---@@ -251,6 +251,7 @@ int dtls1_accept(SSL *s)
+ 					}
+ 				if (!BUF_MEM_grow(buf,SSL3_RT_MAX_PLAIN_LENGTH))
+ 					{
++					BUF_MEM_free(buf);
+ 					ret= -1;
+ 					goto end;
+ 					}
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "1514977bcde37c59f863a0f40c7d9f66d9e33370",
+    "date": "2015-05-22 16:52:41",
+    "author": "Daniel Stenberg",
+    "description": "security: fix \"Unchecked return value\" from sscanf()\n\nBy (void) prefixing it and adding a comment. Did some minor related\ncleanups.\n\nCoverity CID 1299423.\n",
+    "summary": "security: fix \"Unchecked return value\" from sscanf()",
+    "hash": "e582cd16ff7fc5b7ade202a1d5a348513b08ddd3"
+}

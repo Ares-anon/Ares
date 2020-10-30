@@ -1,0 +1,19 @@
+src/backend/utils/adt/pg_locale.c
+=======================================================
+lhs: 100644 | 4be735e918d7e0e9558a6c47aff446fb03c2ad96
+rhs: 100644 | 84215e07a772a43defac8e9aa9880b83edd4557f
+---@@ -183,6 +183,12 @@ pg_perm_setlocale(int category, const char *locale)
+ 	 */
+ 	if (category == LC_CTYPE)
+ 	{
++		static char save_lc_ctype[LC_ENV_BUFSIZE];
++
++		/* copy setlocale() return value before callee invokes it again */
++		strlcpy(save_lc_ctype, result, sizeof(save_lc_ctype));
++		result = save_lc_ctype;
++
+ #ifdef ENABLE_NLS
+ 		SetMessageEncoding(pg_bind_textdomain_codeset(textdomain(NULL)));
+ #else
+
+---

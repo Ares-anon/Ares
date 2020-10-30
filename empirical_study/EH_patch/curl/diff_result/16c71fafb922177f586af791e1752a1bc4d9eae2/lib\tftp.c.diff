@@ -1,0 +1,14 @@
+lib/tftp.c
+=======================================================
+lhs: 100644 | f6f4bce5b1f8b033b79a2f0e928aafcacad84b2a
+rhs: 100644 | 6477e64edba764e97968c9fe3a3454858821cb71
+---@@ -493,6 +493,7 @@ static CURLcode tftp_send_first(tftp_state_data_t *state, tftp_event_t event)
+ 
+     if(strlen(filename) > (state->blksize - strlen(mode) - 4)) {
+       failf(data, "TFTP file name too long\n");
++      free(filename);
+       return CURLE_TFTP_ILLEGAL; /* too long file name field */
+     }
+ 
+
+---

@@ -1,0 +1,14 @@
+lib/parser.c
+=======================================================
+lhs: 100644 | 97f06739a5e2e4afd58ba40d215beea432993118
+rhs: 100644 | c64d1496fb3f18222508af6bb7c2680d2397075c
+---@@ -276,6 +276,7 @@ check_include(char *buf)
+ 			log_message(LOG_INFO, "chdir(%s) error (%s)\n"
+ 					    , prev_path, strerror(errno));
+ 		}
++		free_strvec(strvec);
+ 		return 1;
+ 	}
+ 	free_strvec(strvec);
+
+---

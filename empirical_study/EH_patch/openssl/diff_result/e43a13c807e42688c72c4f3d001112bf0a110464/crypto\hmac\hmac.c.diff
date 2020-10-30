@@ -1,0 +1,14 @@
+crypto/hmac/hmac.c
+=======================================================
+lhs: 100644 | 572393e2c705dbe1f6fcada642720f78875876b3
+rhs: 100644 | d50fabb7c11faa4c96e42b28ffb2db13ea2c086f
+---@@ -219,6 +219,7 @@ unsigned char *HMAC(const EVP_MD *evp_md, const void *key, int key_len,
+     HMAC_CTX_cleanup(&c);
+     return md;
+  err:
++    HMAC_CTX_cleanup(&c);
+     return NULL;
+ }
+ 
+
+---

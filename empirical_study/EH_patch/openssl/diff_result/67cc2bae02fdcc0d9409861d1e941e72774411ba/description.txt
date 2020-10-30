@@ -1,0 +1,8 @@
+{
+    "summary": "[SM2_sign] fix double free and return value",
+    "author": "Nicola Tuveri",
+    "description": "[SM2_sign] fix double free and return value\n\nCurrently, critical bugs prevent using SM2 signatures through the\n`EVP_PKEY` interface: any application that managed to satisfy the\nrequirement of forcing SM3 as the message digest \u2013 even if this is\ncurrently not possible transparently through the `EVP_PKEY` interface\nand requires manually forcing the MD selection \u2013 would crash with a\nsegmentation fault upon calling the `SM2_sign()` function.\n\nThis is easily verified using the OpenSSL CLI to execute this critical\ncode path under the right conditions:\n`openssl dgst -sm3 -hex -sign sm2.eckey /path/to/file/to/sign`\n\nThe issue is caused by a double free at the end of `SM2_sign()` in\n`crypto/sm2/sm2_sign.c` in case of successful signature generation.\nIn addition, even if the double free was not causing segfaults,\nthe function returns the wrong return value in case of success (it\nwould return 0 rather than 1).\n\nThis patch fixes both problems.\n\nReviewed-by: Bernd Edlinger <bernd.edlinger@hotmail.de>\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6066)\n",
+    "hash": "67cc2bae02fdcc0d9409861d1e941e72774411ba",
+    "date": "2018-04-25 10:24:43",
+    "parent_hash": "ca50cd911ca3c9dc9ec8dd956f8eb45557585a98"
+}

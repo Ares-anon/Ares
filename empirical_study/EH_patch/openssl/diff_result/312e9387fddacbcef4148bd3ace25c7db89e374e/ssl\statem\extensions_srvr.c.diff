@@ -1,0 +1,14 @@
+ssl/statem/extensions_srvr.c
+=======================================================
+lhs: 100644 | 83fb71313afe5acb9c47958296eaa025cff8fed7
+rhs: 100644 | ab3ad468fb99bf2f9f442d7e23c76ddc234c718d
+---@@ -796,6 +796,7 @@ int tls_parse_ctos_psk(SSL *s, PACKET *pkt, unsigned int context, X509 *x,
+     s->session = sess;
+     return 1;
+ err:
++    SSL_SESSION_free(sess);
+     return 0;
+ }
+ 
+
+---

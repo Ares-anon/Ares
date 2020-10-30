@@ -1,0 +1,18 @@
+crypto/bn/bn_exp.c
+=======================================================
+lhs: 100644 | 61ab56d0df6ce5bd509c18edc23e3ae41a581d4d
+rhs: 100644 | feeb7649a5dc5af3ebf665710805637dc9329867
+---@@ -78,8 +78,9 @@ int BN_exp(BIGNUM *r, const BIGNUM *a, const BIGNUM *p, BN_CTX *ctx)
+                 goto err;
+         }
+     }
+-    if (r != rr)
+-        BN_copy(r, rr);
++    if (r != rr && BN_copy(r, rr) == NULL)
++        goto err;
++
+     ret = 1;
+  err:
+     BN_CTX_end(ctx);
+
+---

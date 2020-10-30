@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in DSA redo case.",
+    "author": "David Benjamin",
+    "description": "Fix memory leak in DSA redo case.\n\nFound by clang scan-build.\n\nSigned-off-by: Kurt Roeckx <kurt@roeckx.be>\nReviewed-by: Richard Levitte <levitte@openssl.org>\n\nRT: #4184, MR: #1496\n",
+    "hash": "679d87515d23ca31491effdc264edc81c695a72a",
+    "date": "2015-12-22 11:05:51",
+    "parent_hash": "91cf7551a1dd4bc9a482c5577b5081adbae96ada"
+}

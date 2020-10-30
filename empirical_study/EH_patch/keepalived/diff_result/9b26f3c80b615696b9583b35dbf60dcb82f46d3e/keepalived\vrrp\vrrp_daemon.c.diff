@@ -1,0 +1,19 @@
+keepalived/vrrp/vrrp_daemon.c
+=======================================================
+lhs: 100644 | b67396a8ff0c057f209809c23961846877bb7608
+rhs: 100644 | 7b90bdb7d0d4dee371451796af06a2962228dcc9
+---@@ -368,10 +368,8 @@ start_vrrp(void)
+ #if !defined _DEBUG_ && defined _WITH_LVS_
+ 	/* Only one process must run the script to process the global fifo,
+ 	 * so let the checker process do so. */
+-	if (running_checker()) {
+-		FREE_PTR(global_data->notify_fifo.script);
+-		global_data->notify_fifo.script = NULL;
+-	}
++	if (running_checker())
++		free_notify_script(&global_data->notify_fifo.script);
+ #endif
+ 
+ 	/* Create a notify FIFO if needed, and open it */
+
+---

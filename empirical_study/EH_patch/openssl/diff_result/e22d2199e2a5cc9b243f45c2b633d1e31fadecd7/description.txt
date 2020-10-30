@@ -1,0 +1,8 @@
+{
+    "summary": "Error checking and memory leak fixes in NISTZ256.",
+    "author": "Emilia Kasper",
+    "description": "Error checking and memory leak fixes in NISTZ256.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "e22d2199e2a5cc9b243f45c2b633d1e31fadecd7",
+    "date": "2015-04-27 16:21:48",
+    "parent_hash": "2f5997b7b9dc6b4206780ecadcb3de2eac88216e"
+}

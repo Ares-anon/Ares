@@ -1,0 +1,23 @@
+lib/vtls/openssl.c
+=======================================================
+lhs: 100644 | 6d9e81d3b7f7801ccb54b7dd723d57b53e9ca91d
+rhs: 100644 | 89f873342c1caf320fbcf7fdd98b3431549a3dad
+---@@ -904,7 +904,7 @@ static int x509_name_oneline(X509_NAME *a, char *buf, size_t size)
+ static int Curl_ossl_init(void)
+ {
+ #ifdef ENABLE_SSLKEYLOGFILE
+-  const char *keylog_file_name;
++  char *keylog_file_name;
+ #endif
+ 
+   OPENSSL_load_builtin_modules();
+@@ -957,6 +957,7 @@ static int Curl_ossl_init(void)
+         keylog_file_fp = NULL;
+       }
+     }
++    Curl_safefree(keylog_file_name);
+   }
+ #endif
+ 
+
+---

@@ -1,0 +1,8 @@
+{
+    "parent_hash": "aa0f41a5fc1086bd5d6700db6645751176dac935",
+    "date": "2018-05-22 08:37:10",
+    "author": "Daniel Stenberg",
+    "description": "configure: add missing m4/ax_compile_check_sizeof.m4\n\nfollow-up to mistake in 6876ccf90b4\n",
+    "summary": "configure: add missing m4/ax_compile_check_sizeof.m4",
+    "hash": "679fa59ed8d1e714c3887b37b4dc4c865dcd4953"
+}

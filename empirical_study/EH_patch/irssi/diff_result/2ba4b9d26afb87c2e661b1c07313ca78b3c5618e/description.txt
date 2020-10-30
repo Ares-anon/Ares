@@ -1,0 +1,8 @@
+{
+    "description": "net_gethosterror: Handle EAI_SYSTEM (\"System error\") properly\n\nThat error code means \"check errno\". A few users got it and we never\nfigured out what happened - it usually fixed itself after restarting\nsomething - so hopefully with this we'll have more information the next\ntime.\n",
+    "parent_hash": "1349755bb57a5f1f3a101b3382b550da50854957",
+    "author": "dequis",
+    "date": "2016-04-07 07:26:19",
+    "hash": "2ba4b9d26afb87c2e661b1c07313ca78b3c5618e",
+    "summary": "net_gethosterror: Handle EAI_SYSTEM (\"System error\") properly"
+}

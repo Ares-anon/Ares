@@ -1,0 +1,15 @@
+crypto/cms/cms_enc.c
+=======================================================
+lhs: 100644 | f9556acc2e632228c073a31e964b98636d29b5d8
+rhs: 100644 | 16b42251d19224253b73e8c033e4b22e11a5d420
+---@@ -194,7 +194,7 @@ BIO *cms_EncryptedContent_init_bio(CMS_EncryptedContentInfo *ec)
+     ok = 1;
+ 
+  err:
+-    if (!keep_key) {
++    if (!keep_key || !ok) {
+         OPENSSL_clear_free(ec->key, ec->keylen);
+         ec->key = NULL;
+     }
+
+---

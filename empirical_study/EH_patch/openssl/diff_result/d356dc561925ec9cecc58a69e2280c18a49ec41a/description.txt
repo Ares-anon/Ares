@@ -1,0 +1,8 @@
+{
+    "summary": "Add some missing return value checks",
+    "author": "Matt Caswell",
+    "description": "Add some missing return value checks\n\nSome misc return value checks\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "d356dc561925ec9cecc58a69e2280c18a49ec41a",
+    "date": "2016-06-13 17:38:39",
+    "parent_hash": "c887104f4ac27a2743c0c830d20c1e341180a48b"
+}

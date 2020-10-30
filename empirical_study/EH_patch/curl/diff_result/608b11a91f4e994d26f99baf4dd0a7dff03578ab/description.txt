@@ -1,0 +1,8 @@
+{
+    "parent_hash": "d6604524ad24daf4581efbe0020da058d2b3af84",
+    "date": "2016-08-01 10:43:10",
+    "author": "Martin Vejn\u00e1r",
+    "description": "win32: fix a potential memory leak in Curl_load_library\n\nIf a call to GetSystemDirectory fails, the `path` pointer that was\npreviously allocated would be leaked. This makes sure that `path` is\nalways freed.\n\nCloses #938\n",
+    "summary": "win32: fix a potential memory leak in Curl_load_library",
+    "hash": "608b11a91f4e994d26f99baf4dd0a7dff03578ab"
+}

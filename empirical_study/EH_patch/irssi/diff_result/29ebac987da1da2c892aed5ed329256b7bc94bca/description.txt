@@ -1,0 +1,8 @@
+{
+    "description": "Check return value of localtime\n\nFixes #10",
+    "parent_hash": "2b209348bd2a90afbe1782b0b321d99892b7002b",
+    "author": "Nei",
+    "date": "2017-06-29 13:48:44",
+    "hash": "29ebac987da1da2c892aed5ed329256b7bc94bca",
+    "summary": "Check return value of localtime"
+}

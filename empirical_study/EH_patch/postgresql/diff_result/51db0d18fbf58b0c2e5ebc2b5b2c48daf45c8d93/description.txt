@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix plpgsql to enforce domain checks when returning a NULL domain value.\n\nIf a plpgsql function is declared to return a domain type, and the domain's\nconstraints forbid a null value, it was nonetheless possible to return\nNULL, because we didn't bother to check the constraints for a null result.\nI'd noticed this while fooling with domains-over-composite, but had not\ngotten around to fixing it immediately.\n\nAdd a regression test script exercising this and various other domain\ncases, largely borrowed from the plpython_types test.\n\nAlthough this is clearly a bug fix, I'm not sure whether anyone would\nthank us for changing the behavior in stable branches, so I'm inclined\nnot to back-patch.\n",
+    "summary": "Fix plpgsql to enforce domain checks when returning a NULL domain value.",
+    "date": "2018-02-15 16:25:19",
+    "parent_hash": "439c7bc1a070d746fab69d8696fca78673e64ba9",
+    "hash": "51db0d18fbf58b0c2e5ebc2b5b2c48daf45c8d93"
+}

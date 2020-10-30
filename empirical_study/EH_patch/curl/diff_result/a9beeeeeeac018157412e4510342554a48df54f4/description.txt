@@ -1,0 +1,8 @@
+{
+    "parent_hash": "a8ec986981d6a218ce3abac27b9e0b0e76286863",
+    "date": "2014-10-02 23:01:45",
+    "author": "Daniel Stenberg",
+    "description": "imap_perform_authentication: fix memory leak\n\nCoverity CID 1215296. There's a potential risk for a memory leak in\nhere, and moving the free call to be unconditional seems like a cheap\nprice to remove the risk.\n",
+    "summary": "imap_perform_authentication: fix memory leak",
+    "hash": "a9beeeeeeac018157412e4510342554a48df54f4"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory on error path in dane_ctx_enable()",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory on error path in dane_ctx_enable()\n\nThe function dane_ctx_enable() allocated some memory that it did not\nfree in an error path.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "b3bd3d5af8ed31f438db4367ce3a4bd43067e764",
+    "date": "2016-04-28 13:13:09",
+    "parent_hash": "34b9acbd3f81b46967f692c0af49020c8c405746"
+}

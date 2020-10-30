@@ -1,0 +1,8 @@
+{
+    "author": "Stephen Frost",
+    "description": "Fix column-privilege leak in error-message paths\n\nWhile building error messages to return to the user,\nBuildIndexValueDescription, ExecBuildSlotValueDescription and\nri_ReportViolation would happily include the entire key or entire row in\nthe result returned to the user, even if the user didn't have access to\nview all of the columns being included.\n\nInstead, include only those columns which the user is providing or which\nthe user has select rights on.  If the user does not have any rights\nto view the table or any of the columns involved then no detail is\nprovided and a NULL value is returned from BuildIndexValueDescription\nand ExecBuildSlotValueDescription.  Note that, for key cases, the user\nmust have access to all of the columns for the key to be shown; a\npartial key will not be returned.\n\nFurther, in master only, do not return any data for cases where row\nsecurity is enabled on the relation and row security should be applied\nfor the user.  This required a bit of refactoring and moving of things\naround related to RLS- note the addition of utils/misc/rls.c.\n\nBack-patch all the way, as column-level privileges are now in all\nsupported versions.\n\nThis has been assigned CVE-2014-8161, but since the issue and the patch\nhave already been publicized on pgsql-hackers, there's no point in trying\nto hide this commit.\n",
+    "summary": "Fix column-privilege leak in error-message paths",
+    "date": "2015-01-28 12:31:30",
+    "parent_hash": "acc2b1e843ae04e97025880f33a82f326ab12d59",
+    "hash": "804b6b6db4dcfc590a468e7be390738f9f7755fb"
+}

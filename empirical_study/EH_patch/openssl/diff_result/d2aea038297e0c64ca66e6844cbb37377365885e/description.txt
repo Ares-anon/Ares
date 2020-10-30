@@ -1,0 +1,8 @@
+{
+    "summary": "Memory leak and NULL dereference fixes.",
+    "author": "Dr. Stephen Henson",
+    "description": "Memory leak and NULL dereference fixes.\n\nPR#3403\n",
+    "hash": "d2aea038297e0c64ca66e6844cbb37377365885e",
+    "date": "2014-06-27 14:35:07",
+    "parent_hash": "3b3b69ab25fbaba80a843dedec5ae9733fefca43"
+}

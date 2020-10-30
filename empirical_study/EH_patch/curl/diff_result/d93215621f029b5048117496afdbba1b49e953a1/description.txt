@@ -1,0 +1,8 @@
+{
+    "parent_hash": "4ba1569ad18f793be06d99a1098ab146b0247e1e",
+    "date": "2016-09-14 14:35:44",
+    "author": "Daniel Stenberg",
+    "description": "openssl: fix per-thread memory leak usiong 1.0.1 or 1.0.2\n\nOpenSSL 1.0.1 and 1.0.2 build an error queue that is stored per-thread\nso we need to clean it when easy handles are freed, in case the thread\nwill be killed in which the easy handle was used. All OpenSSL code in\nlibcurl should extract the error in association with the error already\nso clearing this queue here should be harmless at worst.\n\nFixes #964\n",
+    "summary": "openssl: fix per-thread memory leak usiong 1.0.1 or 1.0.2",
+    "hash": "d93215621f029b5048117496afdbba1b49e953a1"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "RAND_add(): fix heap corruption in error path",
+    "author": "Dr. Matthias St. Pierre",
+    "description": "RAND_add(): fix heap corruption in error path\n\nThis bug was introduced by #7382 which enhanced RAND_add() to\naccept large buffer sizes. As a consequence, RAND_add() now fails\nfor buffer sizes less than 32 bytes (i.e. less than 256 bits).\nIn addition, rand_drbg_get_entropy() forgets to reset the attached\ndrbg->pool in the case of an error, which leads to the heap corruption.\n\nThe problem occurred with RAND_load_file(), which reads the file in\nchunks of 1024 bytes each. If the size of the final chunk is less than\n32 bytes, then RAND_add() fails, whence RAND_load_file() fails\nsilently for buffer sizes n = k * 1024 + r with r = 1,...,31.\n\nThis commit fixes the heap corruption only. The other issues will\nbe addressed in a separate pull request.\n\nThanks to Gisle Vanem for reporting this issue.\n\nFixes #7449\n\nReviewed-by: Paul Dale <paul.dale@oracle.com>\n(Merged from https://github.com/openssl/openssl/pull/7455)\n",
+    "hash": "5b4cb385c18a5bb4e118e300f1c746bf7c2a5628",
+    "date": "2018-10-22 14:54:55",
+    "parent_hash": "d8cac50b023be249cdaba054f43acecf17025ce4"
+}

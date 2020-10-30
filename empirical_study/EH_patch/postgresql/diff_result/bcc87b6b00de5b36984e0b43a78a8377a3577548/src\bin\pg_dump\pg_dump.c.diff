@@ -1,0 +1,22 @@
+src/bin/pg_dump/pg_dump.c
+=======================================================
+lhs: 100644 | 1258cef6bc86e8247d97de186ce32210fd8a298c
+rhs: 100644 | 0e036b84aa8db714ef688f47434a0385489098c2
+---@@ -6660,6 +6660,7 @@ getTransforms(Archive *fout, int *numTransforms)
+ 			appendPQExpBuffer(&namebuf, "%s %s",
+ 							  typeInfo->dobj.name, lanname);
+ 		transforminfo[i].dobj.name = namebuf.data;
++		free(lanname);
+ 	}
+ 
+ 	PQclear(res);
+@@ -15735,6 +15736,7 @@ getExtensionMembership(Archive *fout, DumpOptions *dopt, ExtensionInfo extinfo[]
+ 		addObjectDependency(&contable->dataObj->dobj,
+ 							reftable->dataObj->dobj.dumpId);
+ 	}
++	PQclear(res);
+ 	destroyPQExpBuffer(query);
+ }
+ 
+
+---

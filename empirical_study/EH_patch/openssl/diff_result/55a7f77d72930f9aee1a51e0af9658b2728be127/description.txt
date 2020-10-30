@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a possible memory leak in engine_table_register",
+    "author": "Bernd Edlinger",
+    "description": "Fix a possible memory leak in engine_table_register\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5489)\n",
+    "hash": "55a7f77d72930f9aee1a51e0af9658b2728be127",
+    "date": "2018-03-03 19:58:18",
+    "parent_hash": "c03dc6427cb8d15ddce735b5e5beef606bdea51d"
+}

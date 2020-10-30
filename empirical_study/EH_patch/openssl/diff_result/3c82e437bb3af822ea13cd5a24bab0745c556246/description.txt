@@ -1,0 +1,8 @@
+{
+    "summary": "Add checks on sk_TYPE_push() returned result",
+    "author": "FdaSilvaYY",
+    "description": "Add checks on sk_TYPE_push() returned result\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\nReviewed-by: Matt Caswell <matt@openssl.org>\n",
+    "hash": "3c82e437bb3af822ea13cd5a24bab0745c556246",
+    "date": "2016-06-23 14:03:29",
+    "parent_hash": "687b48685931638ca5fca2a7d5e13516ad40ea4b"
+}

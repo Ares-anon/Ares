@@ -1,0 +1,15 @@
+src/include/utils/pg_locale.h
+=======================================================
+lhs: 100644 | 5e3711f00880a494f4c1bc0432a810e798a37217
+rhs: 100644 | a02d27ba266021f6ae900c30f0678ba842e4a56e
+---@@ -93,7 +93,7 @@ extern char *get_collation_actual_version(char collprovider, const char *collcol
+ 
+ #ifdef USE_ICU
+ extern int32_t icu_to_uchar(UChar **buff_uchar, const char *buff, size_t nbytes);
+-extern int32_t icu_from_uchar(char **result, UChar *buff_uchar, int32_t len_uchar);
++extern int32_t icu_from_uchar(char **result, const UChar *buff_uchar, int32_t len_uchar);
+ #endif
+ 
+ /* These functions convert from/to libc's wchar_t, *not* pg_wchar_t */
+
+---

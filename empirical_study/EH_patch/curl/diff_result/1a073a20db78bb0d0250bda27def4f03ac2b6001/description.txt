@@ -1,0 +1,8 @@
+{
+    "parent_hash": "63a0bd4270decef04e64fbe497b42f2c9e26c62b",
+    "date": "2014-08-22 21:40:05",
+    "author": "Dan Fandrich",
+    "description": "sasl: Fixed a memory leak on OOM\n",
+    "summary": "sasl: Fixed a memory leak on OOM",
+    "hash": "1a073a20db78bb0d0250bda27def4f03ac2b6001"
+}

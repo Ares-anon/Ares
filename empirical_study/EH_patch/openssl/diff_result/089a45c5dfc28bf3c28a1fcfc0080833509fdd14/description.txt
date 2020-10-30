@@ -1,0 +1,8 @@
+{
+    "summary": "Change exit_checker comment on returned status",
+    "author": "Richard Levitte",
+    "description": "Change exit_checker comment on returned status\n\nReviewed-by: Matt Caswell <matt@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3012)",
+    "hash": "089a45c5dfc28bf3c28a1fcfc0080833509fdd14",
+    "date": "2017-03-22 08:49:57",
+    "parent_hash": "34fffdb521040d3bc658c1ceaa9c79fbd191ded3"
+}

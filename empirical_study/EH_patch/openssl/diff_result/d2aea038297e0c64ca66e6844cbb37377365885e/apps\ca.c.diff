@@ -1,0 +1,16 @@
+apps/ca.c
+=======================================================
+lhs: 100644 | 934970d9e45e9742972e8ff263c5c317cd25bdb1
+rhs: 100644 | bc5778df1ce70e1c314cdb6bf4aa65559f4de5ba
+---@@ -2800,6 +2800,9 @@ char *make_revocation_str(int rev_type, char *rev_arg)
+ 
+ 	revtm = X509_gmtime_adj(NULL, 0);
+ 
++	if (!revtm)
++		return NULL;
++
+ 	i = revtm->length + 1;
+ 
+ 	if (reason) i += strlen(reason) + 1;
+
+---

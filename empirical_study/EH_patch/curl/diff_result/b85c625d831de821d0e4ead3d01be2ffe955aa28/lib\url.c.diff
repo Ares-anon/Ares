@@ -1,0 +1,17 @@
+lib/url.c
+=======================================================
+lhs: 100644 | 69a75e31086f791fa1d066465a9dff27d12bfe83
+rhs: 100644 | 0ee6fb042b152724442675b782be098bff0fe15b
+---@@ -4339,9 +4339,8 @@ static char *detect_proxy(struct connectdata *conn)
+       prox=curl_getenv(proxy_env);
+     }
+ 
+-    if(prox && *prox) { /* don't count "" strings */
++    if(prox)
+       proxy = prox; /* use this */
+-    }
+     else {
+       proxy = curl_getenv("all_proxy"); /* default proxy to use */
+       if(!proxy)
+
+---

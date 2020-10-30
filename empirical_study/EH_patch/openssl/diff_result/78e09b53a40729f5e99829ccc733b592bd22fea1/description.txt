@@ -1,0 +1,8 @@
+{
+    "summary": "Check return value of some BN functions.",
+    "author": "Rich Salz",
+    "description": "Check return value of some BN functions.\n\nFactorise multiple bn_get_top(group->field) calls\nAdd missing checks on some conditional BN_copy return value\nAdd missing checks on some BN_copy return value\nAdd missing checks on a few bn_wexpand return value\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/1626)\n",
+    "hash": "78e09b53a40729f5e99829ccc733b592bd22fea1",
+    "date": "2016-11-15 18:54:28",
+    "parent_hash": "dfc3ffe50251463b4af7deeac3d407667f9050a3"
+}

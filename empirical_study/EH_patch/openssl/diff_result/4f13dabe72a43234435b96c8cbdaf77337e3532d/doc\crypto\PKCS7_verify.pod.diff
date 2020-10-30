@@ -1,0 +1,17 @@
+doc/crypto/PKCS7_verify.pod
+=======================================================
+lhs: 100644 | dcad4f5ef3901e1c03b617b2b9ec633e491bf7b5
+rhs: 100644 | f083306b0dc34b21e1c90b3163f7ae536df9aea0
+---@@ -91,8 +91,8 @@ timestamp).
+ 
+ =head1 RETURN VALUES
+ 
+-PKCS7_verify() returns 1 for a successful verification and zero or a negative
+-value if an error occurs.
++PKCS7_verify() returns one for a successful verification and zero
++if an error occurs.
+ 
+ PKCS7_get0_signers() returns all signers or B<NULL> if an error occurred.
+ 
+
+---

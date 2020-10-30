@@ -1,0 +1,8 @@
+{
+    "summary": "Fix a NULL deref in an error path",
+    "author": "Matt Caswell",
+    "description": "Fix a NULL deref in an error path\n\nThe SRP_create_verifier_BN function goes to the |err| label if the |salt|\nvalue passed to it is NULL. It is then deref'd.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "3bbd1d63e2d77e4e36e869640086f74714b3a4ee",
+    "date": "2015-11-26 12:02:03",
+    "parent_hash": "e113c9c59dcb419dd00525cec431edb854a6c897"
+}

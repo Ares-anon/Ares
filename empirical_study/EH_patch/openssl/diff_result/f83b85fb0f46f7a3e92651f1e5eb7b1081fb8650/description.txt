@@ -1,0 +1,8 @@
+{
+    "summary": "Ensure an ASN1_OBJECT is freed in error paths",
+    "author": "Matt Caswell",
+    "description": "Ensure an ASN1_OBJECT is freed in error paths\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "f83b85fb0f46f7a3e92651f1e5eb7b1081fb8650",
+    "date": "2016-06-01 14:58:46",
+    "parent_hash": "7b0ee1353d0e3ece7986e12c6684f1aac7483cea"
+}

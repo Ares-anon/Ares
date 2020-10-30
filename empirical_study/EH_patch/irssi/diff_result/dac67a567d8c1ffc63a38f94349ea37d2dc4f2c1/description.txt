@@ -1,0 +1,8 @@
+{
+    "description": "Check return values from some syscalls and warn if they fail\n",
+    "parent_hash": "85d9fa1922a5f408dd40f18287f01135dd826e4d",
+    "author": "David Leadbeater",
+    "date": "2014-07-06 21:52:03",
+    "hash": "dac67a567d8c1ffc63a38f94349ea37d2dc4f2c1",
+    "summary": "Check return values from some syscalls and warn if they fail"
+}

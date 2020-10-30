@@ -1,0 +1,20 @@
+src/backend/access/transam/xlogreader.c
+=======================================================
+lhs: 100644 | a9e926c5a283d81d23ea00d330a15f5e0fd0b144
+rhs: 100644 | f1b209b1ad1a82ac3919555208213b1595e960ed
+---@@ -126,11 +126,8 @@ XLogReaderFree(XLogReaderState *state)
+ 
+ 	for (block_id = 0; block_id <= state->max_block_id; block_id++)
+ 	{
+-		if (state->blocks[block_id].in_use)
+-		{
+-			if (state->blocks[block_id].data)
+-				pfree(state->blocks[block_id].data);
+-		}
++		if (state->blocks[block_id].data)
++			pfree(state->blocks[block_id].data);
+ 	}
+ 	if (state->main_data)
+ 		pfree(state->main_data);
+
+---

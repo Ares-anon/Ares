@@ -1,0 +1,15 @@
+crypto/asn1/tasn_dec.c
+=======================================================
+lhs: 100644 | aad838a083003a8cecb7e8f7fac896b2f7c1e8c3
+rhs: 100644 | 64518ee24e213fb3e86e2c53c01db84e8118d15f
+---@@ -301,6 +301,8 @@ static int asn1_item_embed_d2i(ASN1_VALUE **pval, const unsigned char **in,
+                 const ASN1_TEMPLATE *seqtt;
+                 ASN1_VALUE **pseqval;
+                 seqtt = asn1_do_adb(pval, tt, 1);
++                if (!seqtt)
++                    continue;
+                 pseqval = asn1_get_field_ptr(pval, seqtt);
+                 asn1_template_free(pseqval, seqtt);
+             }
+
+---

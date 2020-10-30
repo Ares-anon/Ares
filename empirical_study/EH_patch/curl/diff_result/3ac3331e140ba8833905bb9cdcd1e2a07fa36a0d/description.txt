@@ -1,0 +1,8 @@
+{
+    "parent_hash": "163d29826d0bad44385a085d1a057469b8f27b78",
+    "date": "2015-03-06 23:14:25",
+    "author": "Daniel Stenberg",
+    "description": "metalink: add some error checks\n\nmalloc() and strdup() calls without checking return codes.\n\nReported-by: Markus Elfring\nBug: https://github.com/bagder/curl/issues/150\n",
+    "summary": "metalink: add some error checks",
+    "hash": "3ac3331e140ba8833905bb9cdcd1e2a07fa36a0d"
+}

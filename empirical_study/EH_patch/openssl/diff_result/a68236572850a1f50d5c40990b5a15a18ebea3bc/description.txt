@@ -1,0 +1,8 @@
+{
+    "summary": "Check the return from EVP_PKEY_get0_DH()",
+    "author": "Matt Caswell",
+    "description": "Check the return from EVP_PKEY_get0_DH()\n\nFixes #5934\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/5983)\n",
+    "hash": "a68236572850a1f50d5c40990b5a15a18ebea3bc",
+    "date": "2018-04-17 17:09:09",
+    "parent_hash": "7d4488bbd7ac34fffb776cccbfff6b4ac0387e03"
+}

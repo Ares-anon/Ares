@@ -1,0 +1,8 @@
+{
+    "summary": "Remove an NULL ptr deref in an error path",
+    "author": "Matt Caswell",
+    "description": "Remove an NULL ptr deref in an error path\n\nThe |passwd| variable in the code can be NULL if it goes to the err label.\nTherefore we cannot call strlen on it without first checking that it is non\nNULL.\n\nReviewed-by: Kurt Roeckx <kurt@openssl.org>\n",
+    "hash": "d73ca3efa74bbb620a1e74deb5eec6f3d10203d5",
+    "date": "2015-11-17 11:17:37",
+    "parent_hash": "e4693b4e2a0c3f6241d4d3e61460c34c7e0013f6"
+}

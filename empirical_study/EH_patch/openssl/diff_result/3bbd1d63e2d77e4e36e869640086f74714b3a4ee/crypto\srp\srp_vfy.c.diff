@@ -1,0 +1,15 @@
+crypto/srp/srp_vfy.c
+=======================================================
+lhs: 100644 | e81ae01779673a7061188d4b76da25ef1988e9da
+rhs: 100644 | b271c9904cc5d880dc53b40ec606dac871fde0c3
+---@@ -644,7 +644,7 @@ int SRP_create_verifier_BN(const char *user, const char *pass, BIGNUM **salt,
+     *salt = salttmp;
+ 
+  err:
+-    if (*salt != salttmp)
++    if (salt != NULL && *salt != salttmp)
+         BN_clear_free(salttmp);
+     BN_clear_free(x);
+     BN_CTX_free(bn_ctx);
+
+---

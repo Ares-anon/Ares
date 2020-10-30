@@ -1,0 +1,15 @@
+open-vm-tools/services/plugins/guestInfo/guestInfoServer.c
+=======================================================
+lhs: 100644 | 7e8d9f47bd81b22c41767007d231ff4141a381fc
+rhs: 100644 | fe55037a0c7bb317b72a1036f22223d430d32a90
+---@@ -356,6 +356,8 @@ GuestInfoSetConfigList(ToolsAppCtx *ctx,
+       *pList = list;
+ 
+       return TRUE;
++   } else {
++      g_free(listString);
+    }
+    return FALSE;
+ }
+
+---

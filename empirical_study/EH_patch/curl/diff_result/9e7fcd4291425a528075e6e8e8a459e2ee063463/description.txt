@@ -1,0 +1,8 @@
+{
+    "parent_hash": "c71b6a2795791f73fd6ca62abebc74da7104d8e6",
+    "date": "2016-02-06 17:51:51",
+    "author": "Michael Kaufmann",
+    "description": "idn_win32: Better error checking\n\n.. also fix a conversion bug in the unused function\ncurl_win32_ascii_to_idn().\n\nAnd remove wprintfs on error (Jay).\n\nBug: https://github.com/curl/curl/pull/637\n",
+    "summary": "idn_win32: Better error checking",
+    "hash": "9e7fcd4291425a528075e6e8e8a459e2ee063463"
+}

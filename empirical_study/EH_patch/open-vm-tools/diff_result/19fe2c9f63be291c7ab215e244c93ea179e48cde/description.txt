@@ -1,0 +1,8 @@
+{
+    "date": "2017-09-15 11:23:02",
+    "parent_hash": "c00cbf53a1477211b6413bcf561d0f2a8267dc52",
+    "description": "Fix some memory leaks in vgauth\n",
+    "author": "Oliver Kurth",
+    "hash": "19fe2c9f63be291c7ab215e244c93ea179e48cde",
+    "summary": "Fix some memory leaks in vgauth"
+}

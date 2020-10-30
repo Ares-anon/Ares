@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix two low-probability memory leaks in regular expression parsing.\n\nIf pg_regcomp failed after having invoked markst/cleanst, it would leak any\n\"struct subre\" nodes it had created.  (We've already detected all regex\nsyntax errors at that point, so the only likely causes of later failure\nwould be query cancel or out-of-memory.)  To fix, make sure freesrnode\nknows the difference between the pre-cleanst and post-cleanst cleanup\nprocedures.  Add some documentation of this less-than-obvious point.\n\nAlso, newlacon did the wrong thing with an out-of-memory failure from\nrealloc(), so that the previously allocated array would be leaked.\n\nBoth of these are pretty low-probability scenarios, but a bug is a bug,\nso patch all the way back.\n\nPer bug #10976 from Arthur O'Dwyer.\n",
+    "summary": "Fix two low-probability memory leaks in regular expression parsing.",
+    "date": "2014-07-18 13:00:27",
+    "parent_hash": "6cd471a6d46b463e5222e5bb2d859311ddc1d86a",
+    "hash": "1567e659a877d35ab4b85dafff41b2845d50990f"
+}

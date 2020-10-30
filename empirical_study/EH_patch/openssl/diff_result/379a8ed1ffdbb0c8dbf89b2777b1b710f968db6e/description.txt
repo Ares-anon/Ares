@@ -1,0 +1,8 @@
+{
+    "summary": "Don't leak memory in v2i_POLICY_MAPPINGS() on error path",
+    "author": "Matt Caswell",
+    "description": "Don't leak memory in v2i_POLICY_MAPPINGS() on error path\n\nThe v2i_POLICY_MAPPINGS() function leaked ASN1_OBJECT pointers on error\npaths.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "379a8ed1ffdbb0c8dbf89b2777b1b710f968db6e",
+    "date": "2016-06-01 18:00:53",
+    "parent_hash": "6eb311eea6fca45495b3a48c396f5aa8e8f7e714"
+}

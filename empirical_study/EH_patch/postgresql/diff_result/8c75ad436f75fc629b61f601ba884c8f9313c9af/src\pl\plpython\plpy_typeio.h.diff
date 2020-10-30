@@ -1,0 +1,21 @@
+src/pl/plpython/plpy_typeio.h
+=======================================================
+lhs: 100644 | b01151b0fc0f5f1105817fa23e8da0b78a7517db
+rhs: 100644 | 29fff61dc56b7df151de38a6aedc2a827350d903
+---@@ -88,10 +88,12 @@ typedef struct PLyTypeInfo
+ 	Oid			typ_relid;
+ 	TransactionId typrel_xmin;
+ 	ItemPointerData typrel_tid;
++
++	/* context for subsidiary data (doesn't belong to this struct though) */
++	MemoryContext mcxt;
+ } PLyTypeInfo;
+ 
+-extern void PLy_typeinfo_init(PLyTypeInfo *arg);
+-extern void PLy_typeinfo_dealloc(PLyTypeInfo *arg);
++extern void PLy_typeinfo_init(PLyTypeInfo *arg, MemoryContext mcxt);
+ 
+ extern void PLy_input_datum_func(PLyTypeInfo *arg, Oid typeOid, HeapTuple typeTup, Oid langid, List *trftypes);
+ extern void PLy_output_datum_func(PLyTypeInfo *arg, HeapTuple typeTup, Oid langid, List *trftypes);
+
+---

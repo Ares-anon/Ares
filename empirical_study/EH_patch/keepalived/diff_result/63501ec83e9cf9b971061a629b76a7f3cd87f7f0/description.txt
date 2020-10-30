@@ -1,0 +1,8 @@
+{
+    "description": "Fix memory leak re vrrp_sgroup_t track lists\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "7895399d2f5e9dae4d77198bceea90085b2f4dec",
+    "summary": "Fix memory leak re vrrp_sgroup_t track lists",
+    "date": "2018-09-24 14:02:34",
+    "hash": "63501ec83e9cf9b971061a629b76a7f3cd87f7f0"
+}

@@ -1,0 +1,8 @@
+{
+    "author": "Peter Eisentraut",
+    "description": "Improve LDAP cleanup code in error paths.\n\nAfter calling ldap_unbind_s() we probably shouldn't try to use the LDAP\nconnection again to call ldap_get_option(), even if it failed.  The OpenLDAP\nman page for ldap_unbind[_s] says \"Once it is called, the connection to the\nLDAP server is closed, and the ld structure is invalid.\"  Otherwise, as a\ngeneral rule we should probably call ldap_unbind() before returning in all\npaths to avoid leaking resources.  It is unlikely there is any practical\nleak problem since failure to authenticate currently results in the backend\nexiting soon afterwards.\n\nAuthor: Thomas Munro\nReviewed-By: Alvaro Herrera, Peter Eisentraut\nDiscussion: https://postgr.es/m/20170914141205.eup4kxzlkagtmfac%40alvherre.pgsql\n",
+    "summary": "Improve LDAP cleanup code in error paths.",
+    "date": "2017-10-12 22:37:14",
+    "parent_hash": "91d5f1a4a3e8aea2a6488243bac55806160408fb",
+    "hash": "1feff99fe4576d4685c14dff18d1f845a1456f10"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Tidy up PKCS12_newpass() fix memory leaks.",
+    "author": "Dr. Stephen Henson",
+    "description": "Tidy up PKCS12_newpass() fix memory leaks.\n\nPR#4466\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "d800d0f45b7618c30692c01d4dbf96042468b932",
+    "date": "2016-05-06 21:19:36",
+    "parent_hash": "708cf5ded249f871fcd5e3de27d9281b1f37ae71"
+}

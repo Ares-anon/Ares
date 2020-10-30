@@ -1,0 +1,8 @@
+{
+    "summary": "Include error messages on extension check failure.",
+    "author": "Dr. Stephen Henson",
+    "description": "Include error messages on extension check failure.\n\nReviewed-by: Emilia K\u00e4sper <emilia@openssl.org>\n",
+    "hash": "06f5d12f511ad81a05e82b3473832a1d1d560172",
+    "date": "2014-08-15 12:16:16",
+    "parent_hash": "f0ca9ccaef6614e87c7e0a2488026cede9cfd585"
+}

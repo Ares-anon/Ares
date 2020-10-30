@@ -1,0 +1,8 @@
+{
+    "summary": "Check return from BN_set_word.",
+    "author": "Pauli",
+    "description": "Check return from BN_set_word.\nIn ssl/t1_lib.c.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6613)\n",
+    "hash": "8eab767a718f44ccba9888eeb81a5328cff47bab",
+    "date": "2018-06-29 13:21:06",
+    "parent_hash": "10c3c1c1ec41ce16e51b92bb18fab92d1a42b49c"
+}

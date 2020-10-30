@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Check that result tupdesc has exactly 1 column in return_next scalar case.\n\nThis should always be true, but since we're relying on a tuple descriptor\npassed from outside pltcl itself, let's check.  Per a gripe from Coverity.\n",
+    "summary": "Check that result tupdesc has exactly 1 column in return_next scalar case.",
+    "date": "2016-11-15 16:48:19",
+    "parent_hash": "b40b4dd9e10ea701c8d47ccba9407fc32ed384e5",
+    "hash": "4ecd1974377ffb4d6d72874ba14fcd23965b1792"
+}

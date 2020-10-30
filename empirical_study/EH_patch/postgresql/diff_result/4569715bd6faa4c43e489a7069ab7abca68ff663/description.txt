@@ -1,0 +1,8 @@
+{
+    "author": "Andres Freund",
+    "description": "Fix unlikely shared memory leak after failure in dshash_create().\n\nTidy-up for commit 8c0d7bafad36434cb08ac2c78e69ae72c194ca20, based on a\ncomplaint from Andres Freund.\n\nAuthor: Thomas Munro\nReviewed-By: Andres Freund\nDiscussion: https://postgr.es/m/20170823054644.efuzftxjpfi6wwqs%40alap3.anarazel.de\n",
+    "summary": "Fix unlikely shared memory leak after failure in dshash_create().",
+    "date": "2017-08-24 16:58:30",
+    "parent_hash": "20fbf25533763c8c78c9c668b718d831236fb111",
+    "hash": "4569715bd6faa4c43e489a7069ab7abca68ff663"
+}

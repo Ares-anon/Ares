@@ -1,0 +1,8 @@
+{
+    "summary": "STORE: fix possible memory leak",
+    "author": "Richard Levitte",
+    "description": "STORE: fix possible memory leak\n\nIf scheme is NULL, the allocated res is leaked\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/3841)\n",
+    "hash": "59099d6b8a3aec77f7d9f310ebf8e31b09c2d518",
+    "date": "2017-07-04 18:00:09",
+    "parent_hash": "43a0449fe6ce18b750803be8a115a412a7235496"
+}

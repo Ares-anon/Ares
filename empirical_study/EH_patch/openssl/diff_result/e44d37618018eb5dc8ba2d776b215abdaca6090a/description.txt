@@ -1,0 +1,8 @@
+{
+    "summary": "Fix return value of ASN1_TIME_compare",
+    "author": "Todd Short",
+    "description": "Fix return value of ASN1_TIME_compare\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/4264)\n",
+    "hash": "e44d37618018eb5dc8ba2d776b215abdaca6090a",
+    "date": "2017-08-30 11:24:02",
+    "parent_hash": "54cf3b981afcbbd3754c8ba1114ab6a658d86c08"
+}

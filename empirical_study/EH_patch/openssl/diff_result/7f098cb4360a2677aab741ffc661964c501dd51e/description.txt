@@ -1,0 +1,8 @@
+{
+    "summary": "Check dgram_sctp_write() return value.",
+    "author": "Kurt Roeckx",
+    "description": "Check dgram_sctp_write() return value.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "7f098cb4360a2677aab741ffc661964c501dd51e",
+    "date": "2015-06-28 18:21:06",
+    "parent_hash": "03a1c85062b44d9d9aa0ab5808c4f93b3516071c"
+}

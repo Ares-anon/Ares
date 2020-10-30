@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak in crltest error case",
+    "author": "Benjamin Kaduk",
+    "description": "Fix memory leak in crltest error case\n\nThis would cut out some distracting noise in the test output\nif we ended up hitting these error cases.\n\nReported by Coverity.\n\nReviewed-by: Kurt Roeckx <kurt@roeckx.be>\n(Merged from https://github.com/openssl/openssl/pull/4602)\n",
+    "hash": "85155346b3ca2dcdecf018dc8db9df94ceebeb0d",
+    "date": "2017-10-30 10:38:01",
+    "parent_hash": "23fa978994b52ac60c1fcbe1e094d65d7c78c7bb"
+}

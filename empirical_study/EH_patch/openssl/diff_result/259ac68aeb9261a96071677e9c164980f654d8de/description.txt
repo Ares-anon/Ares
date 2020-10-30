@@ -1,0 +1,8 @@
+{
+    "summary": "do_ext_i2d: free ext_der or ext_oct on error path",
+    "author": "Jonas Maebe",
+    "description": "do_ext_i2d: free ext_der or ext_oct on error path\n\nSigned-off-by: Kurt Roeckx <kurt@openssl.org>\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "259ac68aeb9261a96071677e9c164980f654d8de",
+    "date": "2014-08-17 18:56:24",
+    "parent_hash": "54298141d39600c4a6872f4440f4f843bcf84669"
+}

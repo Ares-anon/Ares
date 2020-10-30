@@ -1,0 +1,8 @@
+{
+    "description": "Fail on all possible errors from vrrp_check_packet()\n\nSome return codes from vrrp_check_packet() weren't being checked\nfor from. This commit changes it so it fails it the return code is\n!OK.\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "26cb9931bc6c120eed843aa5b6bb0ec9927f7393",
+    "summary": "Fail on all possible errors from vrrp_check_packet()",
+    "date": "2016-10-17 13:17:25",
+    "hash": "5015207f806a2d4a92f566532cb8fc22f3b97b78"
+}

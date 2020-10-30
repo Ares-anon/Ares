@@ -1,0 +1,8 @@
+{
+    "summary": "doc/man3/SSL_set_bio.pod: Fix wrong function name in return values section",
+    "author": "James Callahan",
+    "description": "doc/man3/SSL_set_bio.pod: Fix wrong function name in return values section\n\nReviewed-by: Paul Yang <yang.yang@baishancloud.com>\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7035)\n",
+    "hash": "306bb728d75cac39302bd672ad48d8bf103eba4c",
+    "date": "2018-09-26 11:33:42",
+    "parent_hash": "eadde90bff01a6755399a4e1f6a3e4a9ed0fd61d"
+}

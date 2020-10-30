@@ -1,0 +1,21 @@
+src/backend/utils/cache/plancache.c
+=======================================================
+lhs: 100644 | 69c8d3ad45e820e98df08890ed45fdea00987568
+rhs: 100644 | 9a26a4efc5a512e103bfa93fc8a753860ba36117
+---@@ -60,13 +60,13 @@
+ #include "optimizer/prep.h"
+ #include "parser/analyze.h"
+ #include "parser/parsetree.h"
+-#include "rewrite/rowsecurity.h"
+ #include "storage/lmgr.h"
+ #include "tcop/pquery.h"
+ #include "tcop/utility.h"
+ #include "utils/inval.h"
+ #include "utils/memutils.h"
+ #include "utils/resowner_private.h"
++#include "utils/rls.h"
+ #include "utils/snapmgr.h"
+ #include "utils/syscache.h"
+ 
+
+---

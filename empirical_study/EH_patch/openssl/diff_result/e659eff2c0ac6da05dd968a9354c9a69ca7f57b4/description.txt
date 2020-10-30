@@ -1,0 +1,8 @@
+{
+    "summary": "Fix for SRTP Memory Leak",
+    "author": "Matt Caswell",
+    "description": "Fix for SRTP Memory Leak\n\nCVE-2014-3513\n\nThis issue was reported to OpenSSL on 26th September 2014, based on an original\nissue and patch developed by the LibreSSL project. Further analysis of the issue\nwas performed by the OpenSSL team.\n\nThe fix was developed by the OpenSSL team.\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n",
+    "hash": "e659eff2c0ac6da05dd968a9354c9a69ca7f57b4",
+    "date": "2014-10-15 08:56:16",
+    "parent_hash": "0b382a8e8df7773e46d6e147d484a563d807cd77"
+}

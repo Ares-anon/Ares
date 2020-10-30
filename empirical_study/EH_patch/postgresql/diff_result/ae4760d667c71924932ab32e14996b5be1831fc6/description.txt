@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix small query-lifespan memory leak in bulk updates.\n\nWhen there is an identifiable REPLICA IDENTITY index on the target table,\nheap_update leaks the id_attrs bitmapset.  That's not many bytes, but it\nadds up over enough rows, since the code typically runs in a query-lifespan\ncontext.  Bug introduced in commit e55704d8b, which did a rather poor job\nof cloning the existing use-pattern for RelationGetIndexAttrBitmap().\n\nPer bug #14293 from Zhou Digoal.  Back-patch to 9.4 where the bug was\nintroduced.\n\nReport: <20160824114320.15676.45171@wrigleys.postgresql.org>\n",
+    "summary": "Fix small query-lifespan memory leak in bulk updates.",
+    "date": "2016-08-24 22:20:25",
+    "parent_hash": "ca9cb940d23dc8869a635fa27a08e60837b17c07",
+    "hash": "ae4760d667c71924932ab32e14996b5be1831fc6"
+}

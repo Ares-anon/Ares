@@ -1,0 +1,8 @@
+{
+    "summary": "Fix memory leak and print out keygen errors.",
+    "author": "Dr. Stephen Henson",
+    "description": "Fix memory leak and print out keygen errors.\n\nReviewed-by: Rich Salz <rsalz@openssl.org>\n",
+    "hash": "f6de4eb77f667e14fa6fb4024107ccd094fdc9b1",
+    "date": "2016-02-01 15:11:18",
+    "parent_hash": "f1f07a2367e5381ff6e96a89b2512adfa3e14d0e"
+}

@@ -1,0 +1,14 @@
+include/openssl/tls1.h
+=======================================================
+lhs: 100644 | 071aed6c78f4d353a8c9172604ba3e43e540beee
+rhs: 100644 | d0cce092635f09823ffb8425d0494252507ee06e
+---@@ -70,6 +70,7 @@ extern "C" {
+ 
+ /* TODO(TLS1.3) REMOVE ME: Version indicator for draft -18 */
+ # define TLS1_3_VERSION_DRAFT            0x7f12
++# define TLS1_3_VERSION_DRAFT_TXT        "TLS 1.3 (draft 18)"
+ 
+ /* Special value for method supporting multiple versions */
+ # define TLS_ANY_VERSION                 0x10000
+
+---

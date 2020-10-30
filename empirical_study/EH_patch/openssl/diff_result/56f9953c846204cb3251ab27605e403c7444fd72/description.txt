@@ -1,0 +1,8 @@
+{
+    "summary": "Check for overlows and error return from ASN1_object_size()",
+    "author": "Dr. Stephen Henson",
+    "description": "Check for overlows and error return from ASN1_object_size()\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "56f9953c846204cb3251ab27605e403c7444fd72",
+    "date": "2016-08-02 13:40:32",
+    "parent_hash": "e9f17097e9fbba3e7664cd67e54eebf2bd438863"
+}

@@ -1,0 +1,8 @@
+{
+    "summary": "Check for a failure return from EVP_MD_CTX_new() in OCSP_basic_sign().",
+    "author": "Pauli",
+    "description": "Check for a failure return from EVP_MD_CTX_new() in OCSP_basic_sign().\n\nReviewed-by: Tim Hudson <tjh@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/7087)\n",
+    "hash": "a8d3dbe19b5c7e5b828792bfe7dcf8dc6d225c62",
+    "date": "2018-09-03 09:57:28",
+    "parent_hash": "59701e6363531cddef5b2114c0127b8453deb1f3"
+}

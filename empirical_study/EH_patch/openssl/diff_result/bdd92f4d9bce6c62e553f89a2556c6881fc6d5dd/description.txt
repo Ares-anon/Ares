@@ -1,0 +1,8 @@
+{
+    "summary": "Check a return value for success in ec_field_size()",
+    "author": "Matt Caswell",
+    "description": "Check a return value for success in ec_field_size()\n\nReviewed-by: Andy Polyakov <appro@openssl.org>\n(Merged from https://github.com/openssl/openssl/pull/6592)\n",
+    "hash": "bdd92f4d9bce6c62e553f89a2556c6881fc6d5dd",
+    "date": "2018-07-07 14:00:19",
+    "parent_hash": "1829ff4b5e7f1d1570ea9b9e4660a1a673e5da67"
+}

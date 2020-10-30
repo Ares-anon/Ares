@@ -1,0 +1,15 @@
+lib/hostip.c
+=======================================================
+lhs: 100644 | 0dd0cbcbabcff23ee8f6c233028761f606d7fdf1
+rhs: 100644 | f589a0b2c057e2882ee35a1200bde060407671ea
+---@@ -455,7 +455,7 @@ Curl_cache_addr(struct Curl_easy *data,
+   /* shuffle addresses if requested */
+   if(data->set.dns_shuffle_addresses) {
+     CURLcode result = Curl_shuffle_addr(data, &addr);
+-    if(!result)
++    if(result)
+       return NULL;
+   }
+ 
+
+---

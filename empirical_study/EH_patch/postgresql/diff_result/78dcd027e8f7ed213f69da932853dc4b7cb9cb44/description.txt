@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix potential memory leakage from HandleParallelMessages().\n\nHandleParallelMessages leaked memory into the caller's context.  Since it's\ncalled from ProcessInterrupts, there is basically zero certainty as to what\nCurrentMemoryContext is, which means we could be leaking into long-lived\ncontexts.  Over the processing of many worker messages that would grow to\nbe a problem.  Things could be even worse than just a leak, if we happened\nto service the interrupt while ErrorContext is current: elog.c thinks it\ncan reset that on its own whim, possibly yanking storage out from under\nHandleParallelMessages.\n\nGive HandleParallelMessages its own dedicated context instead, which we can\nreset during each call to ensure there's no accumulation of wasted memory.\n\nDiscussion: <16610.1472222135@sss.pgh.pa.us>\n",
+    "summary": "Fix potential memory leakage from HandleParallelMessages().",
+    "date": "2016-08-26 15:04:05",
+    "parent_hash": "45a36e68539dcd7095a257b49f6f38ae77dec30d",
+    "hash": "78dcd027e8f7ed213f69da932853dc4b7cb9cb44"
+}

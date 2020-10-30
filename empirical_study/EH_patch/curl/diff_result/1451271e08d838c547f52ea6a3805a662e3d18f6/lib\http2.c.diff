@@ -1,0 +1,14 @@
+lib/http2.c
+=======================================================
+lhs: 100644 | 270be071dd1e9af18682a48970ec0ad76829091f
+rhs: 100644 | 264c66700ed612b3cd99a7d03c1f912c996fb2e2
+---@@ -408,6 +408,7 @@ static int push_promise(struct Curl_easy *data,
+     stream = data->req.protop;
+     if(!stream) {
+       failf(data, "Internal NULL stream!\n");
++      (void)Curl_close(newhandle);
+       rv = 1;
+       goto fail;
+     }
+
+---

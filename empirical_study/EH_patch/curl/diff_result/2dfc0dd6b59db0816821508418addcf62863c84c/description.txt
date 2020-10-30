@@ -1,0 +1,8 @@
+{
+    "parent_hash": "2b3351b8e392cc0bd3d47536f54b6862c9f3dd86",
+    "date": "2018-09-29 15:03:57",
+    "author": "Daniel Stenberg",
+    "description": "multi: fix memory leak in content encoding related error path\n\n... a missing multi_done() call.\n\nCredit to OSS-Fuzz\nBug: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=10728\nCloses #3063\n",
+    "summary": "multi: fix memory leak in content encoding related error path",
+    "hash": "2dfc0dd6b59db0816821508418addcf62863c84c"
+}

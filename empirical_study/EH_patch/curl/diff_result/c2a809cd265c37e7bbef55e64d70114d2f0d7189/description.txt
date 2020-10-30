@@ -1,0 +1,8 @@
+{
+    "parent_hash": "ae7d6b715448101caf99ea3555c7b7448711676e",
+    "date": "2016-02-29 20:32:08",
+    "author": "Daniel Stenberg",
+    "description": "formpost: fix memory leaks in AddFormData error branches\n\nReported-by: Dmitry-Me\nFixes #688\n",
+    "summary": "formpost: fix memory leaks in AddFormData error branches",
+    "hash": "c2a809cd265c37e7bbef55e64d70114d2f0d7189"
+}

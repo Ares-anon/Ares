@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix latent costing error in create_merge_append_path.\n\ncreate_merge_append_path should use the path rowcount it just computed,\nnot rel->tuples, for costing purposes.  Those numbers should always be\nthe same at present, but if we ever support parameterized MergeAppend\npaths (a case this function is otherwise prepared for), the former would\nbe right and the latter wrong.\n\nNo need for back-patch since the problem is only latent.\n\nAshutosh Bapat\n\nDiscussion: <CAFjFpRek+cLCnTo24youuGtsq4zRphEB8EUUPjDxZjnL4n4HYQ@mail.gmail.com>\n",
+    "summary": "Fix latent costing error in create_merge_append_path.",
+    "date": "2016-11-19 15:06:45",
+    "parent_hash": "13671b4b22ae4bd345c62e7c0b41d717b8a2e19b",
+    "hash": "0832f2db68cc43524a240db47d0428cc9525723e"
+}

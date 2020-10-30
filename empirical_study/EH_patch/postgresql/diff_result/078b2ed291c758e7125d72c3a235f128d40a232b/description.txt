@@ -1,0 +1,8 @@
+{
+    "author": "Tom Lane",
+    "description": "Fix two ancient memory-leak bugs in relcache.c.\n\nRelationCacheInsert() ignored the possibility that hash_search(HASH_ENTER)\nmight find a hashtable entry already present for the same OID.  However,\nthat can in fact occur during recursive relcache load scenarios.  When it\ndid happen, we overwrote the pointer to the pre-existing Relation, causing\na session-lifespan leakage of that entire structure.  As far as is known,\nthe pre-existing Relation would always have reference count zero by the\ntime we arrive back at the outer insertion, so add code that deletes the\npre-existing Relation if so.  If by some chance its refcount is positive,\nelog a WARNING and allow the pre-existing Relation to be leaked as before.\n\nAlso, AttrDefaultFetch() was sloppy about leaking the cstring form of the\npg_attrdef.adbin value it's copying into the relcache structure.  This is\nonly a query-lifespan leakage, and normally not very significant, but it\nadds up during CLOBBER_CACHE testing.\n\nThese bugs are of very ancient vintage, but I'll refrain from back-patching\nsince there's no evidence that these leaks amount to anything in ordinary\nusage.\n",
+    "summary": "Fix two ancient memory-leak bugs in relcache.c.",
+    "date": "2014-05-18 16:51:46",
+    "parent_hash": "44cd47c1d49655c5dd9648bde8e267617c3735b4",
+    "hash": "078b2ed291c758e7125d72c3a235f128d40a232b"
+}

@@ -1,0 +1,8 @@
+{
+    "description": "Ensure always check return from inet_stosockaddr when parsing config\n\nSigned-off-by: Quentin Armitage <quentin@armitage.org.uk>\n",
+    "author": "Quentin Armitage",
+    "parent_hash": "0df1efb5aa81597904bd77c54c5502d857bcc139",
+    "summary": "Ensure always check return from inet_stosockaddr when parsing config",
+    "date": "2017-09-11 12:59:26",
+    "hash": "d98f07ceb85fc7de974e80e4122ab7a298cd4b42"
+}

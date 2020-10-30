@@ -1,0 +1,8 @@
+{
+    "summary": "Check libssl function returns",
+    "author": "Matt Caswell",
+    "description": "Check libssl function returns\n\nMark most functions returning a result defined in any libssl header file\nwith __owur to warn if they are used without checking the return value.\nUse -DUNUSED_RETURN compiler flag with gcc to activate these warnings.\nSome functions returning a result are skipped if it is common and valid to\nuse these functions without checking the return value.\n\nReviewed-by: Richard Levitte <levitte@openssl.org>\n",
+    "hash": "4bcdb4a6019e57b3de077b17940e18befe745531",
+    "date": "2015-03-23 15:23:00",
+    "parent_hash": "913f1042b3801bfa0e366922060507949e4af280"
+}

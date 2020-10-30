@@ -1,0 +1,8 @@
+{
+    "description": "Merge pull request #769 from horgh/horgh/error-check-server-connect\n\nSet host to an empty string on error",
+    "parent_hash": "b2865d6bcc5a18841cf1aaf9b05b56e9717026c0",
+    "author": "ailin-nemui",
+    "date": "2017-10-13 17:14:47",
+    "hash": "7b97edf9d1de8c270e4482c85d142303e07525c9",
+    "summary": "Merge pull request #769 from horgh/horgh/error-check-server-connect"
+}
