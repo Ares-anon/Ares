@@ -3,12 +3,12 @@
 ### What is in this repo?
 
 - Empirical Study
-  - [GitGrabber](./empirical_study/GitGrabber): a tool to extract commits based on the pre-defined keyword matching
+  - [GitGrabber](empirical_study/GitGrabber): a tool to extract commits based on the pre-defined keyword matching
   - Commits related to EH-bugs in the studied projects (study period from 2014-01-01 to 2019-01-01) 
 - Prototype Tool: Ares
   - Evaluation Process ([evaluation_data](evaluation_data))
     - 19 real world projects
-  - New bugs found by Ares
+  - New bugs found by Ares([bugs](evaluation_data/new_bugs))
   - Tools
     - build-capture
     - Ares toolkit ([tool](tool))
@@ -24,21 +24,20 @@ To better understand the properties of EH-bugs occur in real C projects, we manu
 |      PostgreSQL        |    10237 |  86 | 21 | 51
 |      Open-vm-tools        |    1157 |  8 | 0 | 0
 |      keepalived      |      2898 |  36 | 13 | 39  
-
 |     irssi     |      1434 | 12 | 6 | 7
 |   Total  |  33906 | 524 | 248 | 632
 
 #### GitGrabber
 
-[GitGrabber](./empirical_study/GitGrabber) is a tool to extract commits based on the pre-defined messgaes.  To help readers extract the commits message, changed files and patch files, we open source our GitGrabber tool. Any problems on GitGrabber, please feel free to contact us!
+[GitGrabber](empirical_study/GitGrabber) is a tool to extract commits based on the pre-defined messgaes.  To help readers extract the commits message, changed files and patch files, we open source our GitGrabber tool. Any problems on GitGrabber, please feel free to contact us!
 
-We describe the [usages](./empirical_study/GitGrabber/README.md) of the tool in detail.  We defined our info at the [config.yml](./empirical_study/GitGrabber/config.yml) file, then GitGrabber can extract the commits that matching our pre-defined info.  First, as shown in the [config.yml](./empirical_study/GitGrabber/config.yml) file, we extracted the bug fix related commits using the pre-defined the keywords (bug, fix, check, issue, mistake, etc.). Then, based on the first iteration results, we then used the keywords (error path, exception handle, error handle, error check, etc.) related to the EH-bug fixing. 
+We describe the [usages](empirical_study/GitGrabber/README.md) of the tool in detail.  We defined our info at the [config.yml](empirical_study/GitGrabber/config.yml) file, then GitGrabber can extract the commits that matching our pre-defined info.  First, as shown in the [config.yml](empirical_study/GitGrabber/config.yml) file, we extracted the bug fix related commits using the pre-defined the keywords (bug, fix, check, issue, mistake, etc.). Then, based on the first iteration results, we then used the keywords (error path, exception handle, error handle, error check, etc.) related to the EH-bug fixing. 
 
-For each extracted commit, we totally collect 4 types of items ([see this example](./empirical_study/Example)), including a description file, the source file before patching, the source file after patching, and a diff file that shows the changes of patching.
+For each extracted commit, we totally collect 4 types of items ([see this example](empirical_study/Example)), including a description file, the source file before patching, the source file after patching, and a diff file that shows the changes of patching.
 
 #### Commits
 
- We upload all the candidate EH-bugs commits in the studied subjects for further use. Furthermore, we provide a description file that records the confirmed EH-bug commits.  Readers can find them in [EH_patch](./empirical_study/EH_patch) folder.  *PS: Due to the upload file size limits, we can't upload all the commits collected from 2014-01-01 to 2019-01-01.*
+ We upload all the candidate EH-bugs commits in the studied subjects for further use. Furthermore, we provide a description file that records the confirmed EH-bug commits.  Readers can find them in [EH_patch](empirical_study/EH_patch) folder.  *PS: Due to the upload file size limits, we can't upload all the commits collected from 2014-01-01 to 2019-01-01.*
 
 
 
@@ -79,7 +78,7 @@ Furthermore, Ares is hundred times faster than APEx on most of the evaluated pro
 
 The main motivation of Ares is to infer EH-specifications and using the specifications to detect EH-bugs in real-world programs. Therefore, using the inferred specifications, we apply the specifications to an API-misuse detecting tool ([IMChecker](https://github.com/tomgu1991/IMChecker)).
 
-Up to now, 10 previously unknown EH-bugs have been confirmed by developers using the following specifications. 
+Up to now, 10 previously unknown EH-bugs ([bugs](evaluation_data/new_bugs)) have been confirmed by developers using the following specifications. 
 
 |      Project      | Error Specification
 | :---------------: | ---------:
