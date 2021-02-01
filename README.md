@@ -11,7 +11,7 @@
   - New bugs found by Ares* 
   - Tools
     - build-capture
-    - Ares* toolkit ([tool](tool))
+    - [Ares* toolkit](tool)
 
 ### Empirical Study
 
