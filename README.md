@@ -4,9 +4,9 @@
 
 - Empirical Study
   - [GitGrabber](empirical_study/Gitgrabber): a tool to extract commits based on the pre-defined keyword matching
-  - [Commits](empirical_study/EH_patch) related to EH-bugs in the studied projects (study period from 2014-01-01 to 2019-01-01) 
+  - [Commits](empirical_study/EH_patch): EH-bug fixes in the studied projects (study period from 2014-01-01 to 2019-01-01) 
 - Prototype Tool: Ares*
-  - Evaluation Process ([evaluation_data](evaluation_data))
+  - Evaluation Process
     - 19 real world projects
   - New bugs found by Ares* 
   - Tools
