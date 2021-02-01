@@ -1,4 +1,4 @@
-# An Empirical Study of EH-bugs in C language
+# An Empirical Study of EH-bugs in C programs
 
 ### What is in this repo?
 
@@ -41,35 +41,31 @@ For each extracted commit, we totally collect 4 types of items ([see this exampl
 
 ### Prototype tool: Ares*
 
-We present Ares*, a tool for automatically inferring error handling specifications and detecting EH-bugs for C language based on static analysis. The workflow of Ares* is shown below, which mainly contains three phases. 
-
-![avatar](./workflow.png)
-
-Ares* is still under development, and contains a lot of bugs and TODO lists. Any bugs or feature requests, feel free to open issues.
+We present Ares*, a tool for automatically inferring error handling specifications and detecting EH-bugs for C programs based on static analysis. Ares* is still under development, and contains a lot of bugs and TODO lists. Any bugs or feature requests, feel free to open issues.
 
 #### Evaluation Process
 
-We select 19 widely-used open-source [Real-World-Projects](evaluation_data/Real-World-Projects):
-[dma](https://github.com/corecode/dma):  an open-source Mail Transport Agent (MTA) designed for home and office use.
-[httping](https://github.com/flok99/httping):  an open-source project that provides the similar 'ping' service but for http-requests.
-[irssi](https://github.com/irssi/irssi):  an open-source modular chat client that is most commonly known for its text mode user interface.
-[sslsplit](https://github.com/droe/sslsplit):  an open-source tool that against man-in-the-middle attacks for SSL/TLS encrypted network connections.
-[thc-ipv6](https://github.com/vanhauser-thc/thc-ipv6):  an THC-IPV6-ATTACK-TOOLKIT.
-[open-vm-tools](https://github.com/vmware/open-vm-tools):  an open-source project that provide a set of services and modules that enable several features in VMware products for better management.
-[openssl](https://github.com/openssl/openssl): a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS) protocol formerly known as the Secure Sockets Layer (SSL) protocol.
-[nast](https://www.linuxlinks.com/nast/): Network Analyzer Sniffer Tool (nast) is a packet sniffer and a LAN analyzer based on Libnet and Libpcap, which is a free and open source software.
-[rdesktop](https://github.com/rdesktop/rdesktop): an open source client for Microsoft's RDP protocol.
-[keepalived](https://github.com/acassen/keepalived): an open source project that provides simple and robust facilities for loadbalancing and high-availability to Linux system and Linux based infrastructures.
-[dpkg](https://github.com/guillemj/dpkg): Debian's package maintenance system.
-[net-speeder](https://github.com/snooda/net-speeder): a program to speed up single thread download upon long delay and unstable network.
-[arping](https://github.com/ThomasHabets/arping):  it is a util to find out if a specific IP address on the LAN is 'taken'
+We select 19 widely-used open-source projects:
+- [dma](https://github.com/corecode/dma):  an open-source Mail Transport Agent (MTA) designed for home and office use.
+- [httping](https://github.com/flok99/httping):  an open-source project that provides the similar 'ping' service but for http-requests.
+- [irssi](https://github.com/irssi/irssi):  an open-source modular chat client that is most commonly known for its text mode user interface.
+- [sslsplit](https://github.com/droe/sslsplit):  an open-source tool that against man-in-the-middle attacks for SSL/TLS encrypted network connections.
+- [thc-ipv6](https://github.com/vanhauser-thc/thc-ipv6):  an THC-IPV6-ATTACK-TOOLKIT.
+- [open-vm-tools](https://github.com/vmware/open-vm-tools):  an open-source project that provide a set of services and modules that enable several features in VMware products for better management.
+- [openssl](https://github.com/openssl/openssl): a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS) protocol formerly known as the Secure Sockets Layer (SSL) protocol.
+- [nast](https://www.linuxlinks.com/nast/): Network Analyzer Sniffer Tool (nast) is a packet sniffer and a LAN analyzer based on Libnet and Libpcap, which is a free and open source software.
+- [rdesktop](https://github.com/rdesktop/rdesktop): an open source client for Microsoft's RDP protocol.
+- [keepalived](https://github.com/acassen/keepalived): an open source project that provides simple and robust facilities for loadbalancing and high-availability to Linux system and Linux based infrastructures.
+- [dpkg](https://github.com/guillemj/dpkg): Debian's package maintenance system.
+- [net-speeder](https://github.com/snooda/net-speeder): a program to speed up single thread download upon long delay and unstable network.
+- [arping](https://github.com/ThomasHabets/arping):  it is a util to find out if a specific IP address on the LAN is 'taken'
 and what MAC address owns it.
-[bonesi](https://github.com/Markus-Go/bonesi):  a Tool to simulate Botnet Traffic in a testbed environment on the wire.
-[bedops](https://github.com/bedops/bedops): high-performance genomic feature operations.
-[genwqe-user](https://github.com/ibm-genwqe/genwqe-user): (Generic Work Queue Engine) software supports the IBM PCIe3 FPGA or CAPI Compression Accelerator Adapters to speed up processing of the DEFLATE compression algorithm.
-[SZ](https://github.com/szcompressor/SZ): Error-bounded Lossy Compressor for HPC Data.
-[npk-tools](https://github.com/rsa9000/npk-tools): Mikrotik's NPK files managing tools.
-[matio](https://github.com/tbeu/matio): MATLAB MAT file I/O library.
+- [bonesi](https://github.com/Markus-Go/bonesi):  a Tool to simulate Botnet Traffic in a testbed environment on the wire.
+- [bedops](https://github.com/bedops/bedops): high-performance genomic feature operations.
+- [genwqe-user](https://github.com/ibm-genwqe/genwqe-user): (Generic Work Queue Engine) software supports the IBM PCIe3 FPGA or CAPI Compression Accelerator Adapters to speed up processing of the DEFLATE compression algorithm.
+- [SZ](https://github.com/szcompressor/SZ): Error-bounded Lossy Compressor for HPC Data.
+- [npk-tools](https://github.com/rsa9000/npk-tools): Mikrotik's NPK files managing tools.
+- [matio](https://github.com/tbeu/matio): MATLAB MAT file I/O library.
 
 For each project, Ares* finds EH-specifications using the EH-code structure and the EH-features. These projects are used for comparison with state-of-the-art [APEx](https://github.com/yujokang/APEx) in terms of precision and ratio.  As shown in the following table, Ares* is evaluated on 19 projects from 5 libraries. The results are compared with APEx, and both inferred EH-specifications from APEx and Ares* are verified manually against the official documentation. 
 
@@ -159,4 +155,4 @@ Ares* can be used with the following steps:
   - Ares* requires the Unix environment (Our environment is Ubuntu 16.04) with JDK 1.8.
   - Ares* requires the llvm-3.9 - for static analysis [We build our tool on llvm-3.9, other version may face some unpredictable problems.]
   - Make sure that target project can be compiled by clang-3.9, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files. Then using the captured results, we can generate the corresponding IR results which are shown in [Real-World-Projects](evaluation_data/Real-World-Projects).
-  - Trigger the major work using the command [./infer-spec.sh](tool) [Source_Dir]. Source_Dir is the target project to be analyzed where you can find in the [Real-World-Projects](evaluation_data/Real-World-Projects). 
+  - Trigger the major work using the command "[./infer-spec.sh](tool) [Source_Dir]". Source_Dir is the target project to be analyzed where you can find in the [Real-World-Projects](evaluation_data/Real-World-Projects). 
