@@ -79,7 +79,7 @@ Furthermore, Ares* is hundred times faster than APEx on most of the evaluated pr
 
 #### New Bugs
 
-The main motivation of Ares* is to infer EH-specifications and using the specifications to detect EH-bugs in real-world programs. Therefore, using the inferred specifications, we have already detected 40 EH-bugs that are confirmed by developers. Note that, sometimes we report several bugs in an issue.
+The main motivation of Ares* is to infer EH-specifications and using the specifications to detect EH-bugs in real-world programs. Therefore, using the inferred specifications, we have already detected 32 EH-bugs that are confirmed by developers. Note that, sometimes we report several bugs in an issue.
 
 |      Project      | Bugs
 | :---------------: | ---------:
@@ -89,7 +89,6 @@ The main motivation of Ares* is to infer EH-specifications and using the specifi
 |      httping      | https://github.com/flok99/httping/issues/41
 |      sslsplit     | https://github.com/droe/sslsplit/issues/224
 |      sslsplit     | https://github.com/droe/sslsplit/issues/225
-|      thc-ipv6     | https://github.com/vanhauser-thc/thc-ipv6/issues/28
 |      thc-ipv6     | https://github.com/vanhauser-thc/thc-ipv6/issues/29
 |      open-vm-tools| https://github.com/vmware/open-vm-tools/issues/291
 |      open-vm-tools| https://github.com/vmware/open-vm-tools/issues/292
@@ -97,23 +96,13 @@ The main motivation of Ares* is to infer EH-specifications and using the specifi
 |      rdesktop     | https://github.com/rdesktop/rdesktop/issues/280
 |      rdesktop     | https://github.com/rdesktop/rdesktop/issues/281
 |      matio        | https://github.com/tbeu/matio/issues/145
-|      matio        | https://github.com/tbeu/matio/issues/146
 |      openssl      | https://github.com/openssl/openssl/issues/12471
-|      openssl      | https://github.com/openssl/openssl/issues/12578
-|      openssl      | https://github.com/openssl/openssl/issues/6567
-|      openssl      | https://github.com/openssl/openssl/issues/6569
-|      openssl      | https://github.com/openssl/openssl/issues/6575
-|      openssl      | https://github.com/openssl/openssl/issues/6572
-|      openssl      | https://github.com/openssl/openssl/issues/6574
-|      openssl      | https://github.com/openssl/openssl/issues/6983
-|      openssl      | https://github.com/openssl/openssl/issues/7235
-|      openssl      | https://github.com/openssl/openssl/issues/6982
 |      openssl      | https://github.com/openssl/openssl/issues/6983
 |      openssl      | https://github.com/openssl/openssl/issues/6973
-|      openssl      | https://github.com/openssl/openssl/issues/6789
+|      openssl      | https://github.com/openssl/openssl/issues/6567
+|      openssl      | https://github.com/openssl/openssl/issues/6573
+|      openssl      | https://github.com/openssl/openssl/issues/6569
 |      openssl      | https://github.com/openssl/openssl/issues/6820
-|      openssl      | https://github.com/openssl/openssl/issues/6822
-|      openssl      | https://github.com/openssl/openssl/issues/6570
 
 
 ### Tools
